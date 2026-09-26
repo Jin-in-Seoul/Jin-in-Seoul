@@ -1,0 +1,142 @@
+:root {
+  color-scheme: light;
+  --ink: #171717;
+  --muted: #666;
+  --line: #d8d8d8;
+  --paper: #ffffff;
+  --link: #244e73;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+a { color: var(--link); }
+
+.shell {
+  width: min(820px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 72px 0 64px;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.subtitle {
+  margin: 12px 0 72px;
+  color: var(--muted);
+  font-size: 19px;
+}
+
+.breadcrumb,
+.language-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+.breadcrumb a,
+.language-nav a,
+.work-link {
+  text-decoration: none;
+}
+
+.breadcrumb a:hover,
+.language-nav a:hover,
+.work-link:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  margin: 0 0 22px;
+  font-size: clamp(36px, 6vw, 58px);
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+h2 {
+  margin: 60px 0 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.work-list { margin-top: 36px; }
+
+.work {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.work h3 {
+  margin: 0 0 8px;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.work p,
+.deck {
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.language-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 44px;
+}
+
+.language-list a {
+  padding: 18px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  text-align: center;
+  text-decoration: none;
+}
+
+.language-list a:hover {
+  border-color: var(--ink);
+}
+
+.prose {
+  margin-top: 54px;
+  font-size: 19px;
+  line-height: 1.82;
+}
+
+.prose p { margin: 0 0 1.3em; }
+
+html[lang="ko"] .prose {
+  font-family: "Noto Serif KR", Batang, serif;
+  line-height: 1.95;
+}
+
+footer {
+  margin-top: 90px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 620px) {
+  .shell { padding-top: 44px; }
+  .site-title { font-size: 40px; }
+  .subtitle { margin-bottom: 52px; }
+  .language-list { grid-template-columns: 1fr; }
+  .prose { font-size: 18px; }
+}
