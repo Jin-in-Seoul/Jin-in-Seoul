@@ -1,2 +1,2 @@
-# jin-archive
-Multilingual fiction archive by JIN
+# Jin-in-Seoul
+Multilingual fiction archive by Jin-in-Seoul
