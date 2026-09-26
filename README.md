@@ -1,2 +1,13 @@
 # Jin-in-Seoul
-Multilingual fiction archive by Jin-in-Seoul
+
+A Dictionary of Galactic Extinction
+
+A Dictionary of Galactic Extinction began with two images.
+One came from Men in Black: a tiny galaxy contained inside a bead hanging from a cat’s collar. The other came much later, from a simple question: what would happen if a candle burned inside a perfectly mirrored room and its light could never escape?
+Those two images gradually became questions about light, energy, civilization, and extinction. What interested me was not a story in which evil destroys civilization, but a more difficult problem: what happens when rational and well-intentioned people keep solving problems, and the accumulated consequences of those solutions eventually become catastrophic?
+The form of the novel grew from the same concern. Rather than tell the history of a vast civilization through a single protagonist and a single plot, I wanted the world to emerge through fragments of physics, history, people, words, records, and different kinds of documents.
+At first, I wanted to write a story about placing a galaxy inside a small object. In the end, it became something entirely different. I wanted to place human goodwill, desire, fear, language, and reason inside a galaxy, and see where they would lead if allowed to operate to their logical end.
+Serial Publication
+A Dictionary of Galactic Extinction is currently being published online in serialized form in English and French.
+Archive:
+https://jin-in-seoul.com
