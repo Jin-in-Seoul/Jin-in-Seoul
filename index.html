@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Jin-in-Seoul - Fiction Archive</title>
+
   <link rel="stylesheet" href="assets/style.css">
 
   <style>
@@ -11,83 +13,226 @@
       color: inherit;
       text-decoration: none;
     }
-    .about-work {
+
+    .featured-work,
+    .major-work {
       margin-top: 68px;
     }
-    .about-work p {
+
+    .featured-work p,
+    .major-work p {
       color: var(--muted);
       font-size: 17px;
       line-height: 1.72;
       margin: 0 0 1.15em;
     }
-    .about-work h3 {
+
+    .serial-title {
       margin: 34px 0 10px;
       font-size: 22px;
       font-weight: 400;
     }
+
+    .edition-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .edition-button {
+      display: block;
+      padding: 18px;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      text-align: center;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .edition-button:hover {
+      border-color: var(--ink);
+    }
+
+    .short-stories-section {
+      margin-top: 36px;
+      padding-top: 0;
+    }
+
+    .short-stories-section p {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.72;
+      margin: 0;
+    }
+
+    @media (max-width: 620px) {
+      .edition-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body>
+
   <main class="shell">
-    <h1 class="site-title"><a class="site-title-link" href="/">Jin-in-Seoul</a></h1>
+
+    <h1 class="site-title">
+      <a class="site-title-link" href="/">Jin-in-Seoul</a>
+    </h1>
+
     <p class="subtitle">A multilingual archive of fiction</p>
 
-    <h2>Works</h2>
-    <section class="work-list">
-      <article class="work">
-        <h3><a class="work-link" href="a-dictionary-of-galactic-extinction/en/">A Dictionary of Galactic Extinction</a></h3>
-        <p>A documentary novel of vanished light, impossible accounting, and a civilization that discovers too late that its systems of preservation have become the machinery of extinction.</p>
-        <p>English Edition</p>
-      </article>
 
-      <article class="work">
-        <h3><a class="work-link" href="a-dictionary-of-galactic-extinction/fr/">Dictionnaire de l’extinction galactique</a></h3>
-        <p>Un roman documentaire sur la lumière disparue, une comptabilité impossible et une civilisation qui découvre trop tard que ses systèmes de préservation sont devenus la machinerie de sa propre extinction.</p>
-        <p>Édition française</p>
-      </article>
+    <section class="featured-work">
 
-      <article class="work">
-        <h3><a class="work-link" href="sweater/en/">Sweater</a></h3>
-        <p>A year in the diary of a fourteen-year-old boy, following school, family, friendship, first love, books, and the small discoveries that quietly shape a life - told with the wit, speed, and sudden turns of a young sprinter.</p>
-        <p>English Edition</p>
-      </article>
+      <h2>A Dictionary of Galactic Extinction</h2>
 
-      <article class="work">
-        <h3><a class="work-link" href="sweater/fr/">Le Pull</a></h3>
-        <p>Une année dans le journal d’un garçon de quatorze ans, entre l’école, la famille, l’amitié, le premier amour, les livres et les petites découvertes qui façonnent peu à peu une vie - avec le regard curieux et méditatif d’un jeune philosophe en promenade.</p>
-        <p>Édition française</p>
-      </article>
+      <p>
+        <em>A Dictionary of Galactic Extinction</em> began with two images.
+      </p>
 
-      <article class="work">
-        <h3><a class="work-link" href="short-stories/">Short Stories</a></h3>
-        <p>Stories, records, and other works.</p>
-      </article>
+      <p>
+        One came from <em>Men in Black</em>: a tiny galaxy contained inside a bead
+        hanging from a cat’s collar. The other came much later, from a simple question:
+        what would happen if a candle burned inside a perfectly mirrored room and its
+        light could never escape?
+      </p>
+
+      <p>
+        Those two images gradually became questions about light, energy, civilization,
+        and extinction. What interested me was not a story in which evil destroys
+        civilization, but a more difficult problem: what happens when rational and
+        well-intentioned people keep solving problems, and the accumulated consequences
+        of those solutions eventually become catastrophic?
+      </p>
+
+      <p>
+        The form of the novel grew from the same concern. Rather than tell the history
+        of a vast civilization through a single protagonist and a single plot, I wanted
+        the world to emerge through fragments of physics, history, people, words,
+        records, and different kinds of documents.
+      </p>
+
+      <p>
+        At first, I wanted to write a story about placing a galaxy inside a small object.
+        In the end, it became something entirely different. I wanted to place human
+        goodwill, desire, fear, language, and reason inside a galaxy, and see where they
+        would lead if allowed to operate to their logical end.
+      </p>
+
+      <h3 class="serial-title">Serial Publication</h3>
+
+      <p>
+        <em>A Dictionary of Galactic Extinction</em> is currently being published
+        online in serialized form in <strong>English and French</strong>.
+      </p>
+
+      <div class="edition-grid">
+
+        <a
+          class="edition-button"
+          href="a-dictionary-of-galactic-extinction/en/"
+        >
+          English
+        </a>
+
+        <a
+          class="edition-button"
+          href="a-dictionary-of-galactic-extinction/fr/"
+        >
+          French
+        </a>
+
+      </div>
+
     </section>
 
-    <section class="about-work">
-      <h2>About A Dictionary of Galactic Extinction</h2>
 
-      <p><em>A Dictionary of Galactic Extinction</em> began with two images.</p>
+    <section class="major-work">
 
-      <p>One came from <em>Men in Black</em>: a tiny galaxy contained inside a bead hanging from a cat’s collar. The other came much later, from a simple question: what would happen if a candle burned inside a perfectly mirrored room and its light could never escape?</p>
+      <h2>Sweater</h2>
 
-      <p>Those two images gradually became questions about light, energy, civilization, and extinction. What interested me was not a story in which evil destroys civilization, but a more difficult problem: what happens when rational and well-intentioned people keep solving problems, and the accumulated consequences of those solutions eventually become catastrophic?</p>
+      <p>
+        <em>Sweater</em> follows a fourteen-year-old boy through one year of school,
+        family, friendship, first love, books, embarrassment, curiosity, and the small
+        discoveries that quietly change the shape of a life.
+      </p>
 
-      <p>The form of the novel grew from the same concern. Rather than tell the history of a vast civilization through a single protagonist and a single plot, I wanted the world to emerge through fragments of physics, history, people, words, records, and different kinds of documents.</p>
+      <p>
+        Told in the form of a diary, the novel moves quickly from one ordinary event
+        to another, but its real subject is the way a young person begins to understand
+        other people, himself, and the world around him.
+      </p>
 
-      <p>At first, I wanted to write a story about placing a galaxy inside a small object. In the end, it became something entirely different. I wanted to place human goodwill, desire, fear, language, and reason inside a galaxy, and see where they would lead if allowed to operate to their logical end.</p>
+      <p>
+        The voice is curious, restless, comic, and reflective — sometimes running ahead
+        like a young sprinter, sometimes slowing down long enough to notice what adults
+        have stopped seeing.
+      </p>
 
-      <h3>Serial Publication</h3>
-      <p><em>A Dictionary of Galactic Extinction</em> is currently being published online in serialized form in <strong>English and French</strong>.</p>
+      <div class="edition-grid">
+
+        <a
+          class="edition-button"
+          href="sweater/en/"
+        >
+          English
+        </a>
+
+        <a
+          class="edition-button"
+          href="sweater/fr/"
+        >
+          French
+        </a>
+
+      </div>
+
     </section>
+
+
+    <section class="short-stories-section">
+
+      <h2>
+        <a class="work-link" href="short-stories/">
+          Short Stories
+        </a>
+      </h2>
+
+      <p>
+        Stories, records, and other works.
+      </p>
+
+    </section>
+
 
     <section class="writer">
+
       <h2>Writer</h2>
-      <p><strong>Jin-in-Seoul</strong> studied philosophy at Hankuk University of Foreign Studies. He won the Grand Prize in the Essay category at the 2015 Esquire Montblanc Literary Award. His novel <em>Sweater</em> was published by Byeolsoop in 2018.</p>
-      <p><a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></p>
+
+      <p>
+        <strong>Jin-in-Seoul</strong> studied philosophy at Hankuk University of Foreign
+        Studies. He won the Grand Prize in the Essay category at the 2015 Esquire
+        Montblanc Literary Award. His novel <em>Sweater</em> was published by Byeolsoop
+        in 2018.
+      </p>
+
+      <p>
+        <a href="mailto:iamoutis@naver.com">
+          iamoutis@naver.com
+        </a>
+      </p>
+
     </section>
 
-    <footer>Copyright &copy; Jin-in-Seoul. All rights reserved.</footer>
+
+    <footer>
+      Copyright &copy; Jin-in-Seoul. All rights reserved.
+    </footer>
+
   </main>
+
 </body>
 </html>
