@@ -8,7 +8,10 @@
 
   <style>
     .breadcrumb {
-      margin-bottom: 64px;
+      margin-bottom: 30px;
+    }
+    .language-nav {
+      margin-bottom: 56px;
     }
     .part-label {
       font-size: clamp(24px, 2.2vw, 30px);
@@ -21,7 +24,8 @@
       margin: 0 0 52px;
     }
     @media (max-width: 620px) {
-      .breadcrumb { margin-bottom: 44px; }
+      .breadcrumb { margin-bottom: 24px; }
+      .language-nav { margin-bottom: 40px; }
       .part-label { font-size: 22px; margin-bottom: 16px; }
       .entry-title { font-size: 34px; margin-bottom: 40px; }
     }
@@ -38,7 +42,13 @@
       <a href="../../">A Dictionary of Galactic Extinction</a>
     </nav>
 
-    <p class="deck part-label">Part I — Conditions of Extinction</p>
+    
+    <nav class="language-nav" aria-label="Language selection">
+      <a href="/a-dictionary-of-galactic-extinction/en/" lang="en">English</a>
+      <a href="/a-dictionary-of-galactic-extinction/fr/" lang="fr">Français</a>
+      <a href="/a-dictionary-of-galactic-extinction/ko/" lang="ko">한국어</a>
+    </nav>
+<p class="deck part-label">Part I — Conditions of Extinction</p>
     <h1 class="entry-title">3. Travel</h1>
 
     <article class="prose">

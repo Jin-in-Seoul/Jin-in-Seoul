@@ -50,6 +50,10 @@
       margin-top: 30px;
     }
 
+    .edition-grid-three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .edition-button {
       display: block;
       padding: 18px;
@@ -147,10 +151,10 @@
 
       <p>
         <em>A Dictionary of Galactic Extinction</em> is currently being published
-        online in serialized form in <strong>English and French</strong>.
+        online in serialized form in <strong>English, French, and Korean</strong>.
       </p>
 
-      <div class="edition-grid">
+      <div class="edition-grid edition-grid-three">
 
         <a
           class="edition-button"
@@ -164,6 +168,13 @@
           href="a-dictionary-of-galactic-extinction/fr/"
         >
           French
+        </a>
+
+        <a
+          class="edition-button"
+          href="a-dictionary-of-galactic-extinction/ko/"
+        >
+          한국어
         </a>
 
       </div>
