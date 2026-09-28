@@ -15,7 +15,7 @@ a { color: var(--link); }
 .breadcrumb, .language-nav { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-bottom: 40px; }
 .breadcrumb { font-size: 20px; }
 .language-nav { font-size: 16px; }
-.breadcrumb a, .language-nav a, .work-link { text-decoration: none; }
+.breadcrumb a, .language-nav a, .work-link { text-decoration: underline; }
 .breadcrumb a:hover, .language-nav a:hover, .work-link:hover { text-decoration: underline; }
 h1 { margin: 0 0 26px; font-size: clamp(30px, 3.2vw, 40px); font-weight: 400; line-height: 1.16; }
 h2 { margin: 60px 0 12px; padding-bottom: 10px; border-bottom: 1px solid var(--line); font-size: 28px; font-weight: 400; }
@@ -33,7 +33,7 @@ h2 { margin: 60px 0 12px; padding-bottom: 10px; border-bottom: 1px solid var(--l
 .prose li { margin: 0 0 .55em; }
 .prose .entry-date { margin-top: 2.1em; font-weight: 700; }
 .chapter-footer { display: flex; justify-content: space-between; gap: 16px; margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 15px; }
-.chapter-footer a { text-decoration: none; }
+.chapter-footer a { text-decoration: underline; }
 .writer { margin-top: 68px; }
 .writer p { color: var(--muted); font-size: 16px; line-height: 1.7; }
 html[lang="ko"] .prose { font-family: "Noto Serif KR", Batang, serif; line-height: 1.95; }
