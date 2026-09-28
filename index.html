@@ -60,8 +60,8 @@
       margin-top: 30px;
     }
 
-    .edition-grid-three {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+    .edition-grid-four {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
     .edition-button {
@@ -76,6 +76,16 @@
 
     .edition-button:hover {
       border-color: var(--ink);
+    }
+
+    .edition-button-disabled {
+      color: var(--muted);
+      cursor: default;
+      opacity: 0.72;
+    }
+
+    .edition-button-disabled:hover {
+      border-color: var(--line);
     }
 
     .short-stories-section {
@@ -162,9 +172,10 @@
       <p>
         <em>A Dictionary of Galactic Extinction</em> is currently being published
         online in serialized form in <strong>English, French, and Korean</strong>.
+        A Japanese edition is in preparation.
       </p>
 
-      <div class="edition-grid edition-grid-three">
+      <div class="edition-grid edition-grid-four">
 
         <a
           class="edition-button"
@@ -172,6 +183,13 @@
         >
           English
         </a>
+
+        <span
+          class="edition-button edition-button-disabled"
+          aria-disabled="true"
+        >
+          日本語 (準備中)
+        </span>
 
         <a
           class="edition-button"
@@ -221,7 +239,7 @@
         have stopped seeing.
       </p>
 
-      <div class="edition-grid edition-grid-three">
+      <div class="edition-grid edition-grid-four">
 
         <a
           class="edition-button"
@@ -229,6 +247,13 @@
         >
           English
         </a>
+
+        <span
+          class="edition-button edition-button-disabled"
+          aria-disabled="true"
+        >
+          日本語 (準備中)
+        </span>
 
         <a
           class="edition-button"
