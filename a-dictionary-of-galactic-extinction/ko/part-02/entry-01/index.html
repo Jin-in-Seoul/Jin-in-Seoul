@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="ko">
 <head>
@@ -14,7 +16,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>1. 제1차 전쟁 - 은하 멸망 사전 - Jin-in-Seoul</title>
-  <link rel="stylesheet" href="../../../../assets/style.css">
+  <link rel="stylesheet" href="../../../../assets/style.css?v=045">
 
   <style>
     .breadcrumb { margin-bottom: 30px; }
@@ -40,13 +42,7 @@
 <body>
   <main class="shell">
 
-    <header class="topbar">
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-    </header>
+    {% include header.html %}
 
     <nav class="breadcrumb">
       <a href="../../../../">Home</a>
@@ -69,13 +65,7 @@
       <p>전쟁기록을 정리하는 과정에서는 또 다른 문제가 발견됐다. 서로 다른 항성계의 보고서가 같은 전투의 시작과 종료를 다른 순서로 기록하고 있었다. 종전협정은 책임을 배분했으나 책임을 판단할 공통의 시간은 마련하지 못했다.</p>
     </article>
 
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>

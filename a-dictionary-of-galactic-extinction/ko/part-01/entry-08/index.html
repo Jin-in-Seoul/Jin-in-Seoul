@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="ko">
 <head>
@@ -14,7 +16,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>8. 저장 - 은하 멸망 사전 - Jin-in-Seoul</title>
-  <link rel="stylesheet" href="../../../../assets/style.css">
+  <link rel="stylesheet" href="../../../../assets/style.css?v=045">
 
   <style>
     .breadcrumb { margin-bottom: 30px; }
@@ -40,13 +42,7 @@
 <body>
   <main class="shell">
 
-    <header class="topbar">
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-    </header>
+    {% include header.html %}
 
     <nav class="breadcrumb">
       <a href="../../../../">Home</a>
@@ -75,13 +71,7 @@
       <p>마지막 과학자는 저장할 물체는 그대로 두고 저장되는 동안 흐르는 시간을 바꾸었다. 시간이 멈춘 곳에서는 에너지가 들어갈 수도 나올 수도 없었기 때문에 입구가 작동하고 상태가 분류되려면 사건의 순서가 필요했다. 그는 내부의 한 순간이 외부의 수십억 년과 대응하도록 비율을 낮췄다. 외부에서 보면 광자는 경계를 통과한 뒤 정지한 것처럼 보였다. 내부에서 보면 수많은 광자가 거의 동시에 쏟아져 들어왔다. 서로 수백만 년 떨어진 항성의 빛도 저장소에서는 한 번의 섬광을 이루었다. 빛은 시간을 거슬러 가지 않았고 시간이 빛 앞에서 접혔던 것이다. 그 섬광이 한곳에 몰리면 저장이 시작되기 전에 열로 바뀔 수 있었다. 저장소는 들어온 에너지를 상태에 따라 분리해야 했다. 짧은 파장의 빛은 복사구역으로, 회전운동은 운동구역으로, 화학적 위치에너지는 물질구역으로 보내졌다. 각 구역은 서로 다른 시간률과 경계를 가졌다. 외부에서 고양이 목걸이보다 작게 보인 입구 뒤에는 수없이 많은 내부가 포개져 있었다. 마지막 과학자는 미래의 블랙홀 회전에너지로 저장소의 경계를 완성했다. 유출되던 에너지는 그제야 모일 곳을 얻었다. 광자 결손은 은하표준시가 완성된 뒤에야 하나의 현상으로 인식되었다. 저장소가 만들어지기 오래전, 웜홀망에 쌓인 시간차가 문턱을 넘으면서 새로운 유출 경로가 생겼고, 웜홀의 수와 시간차, 에너지 변환 횟수가 늘수록 결손률도 높아졌다. 마지막 과학자는 그 관계를 끝내 완전히 설명하지 못했다. 확실한 것은 결손의 첫 기록이 저장공간보다 오래되었다는 사실뿐이었다. 그러나 그에게 중요한 것은 과거가 아니라 미래였다. 그는 과거의 생명을 저장하지 않았다. 다시 생명이 시작될 수 있는 차이만 남겼다. 인간의 유전자와 기억조차 제외되었다.</p>
     </article>
 
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>

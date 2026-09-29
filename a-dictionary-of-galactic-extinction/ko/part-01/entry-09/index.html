@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="ko">
 <head>
@@ -14,7 +16,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>9. 열적 죽음 - 은하 멸망 사전 - Jin-in-Seoul</title>
-  <link rel="stylesheet" href="../../../../assets/style.css">
+  <link rel="stylesheet" href="../../../../assets/style.css?v=045">
 
   <style>
     .breadcrumb { margin-bottom: 30px; }
@@ -40,13 +42,7 @@
 <body>
   <main class="shell">
 
-    <header class="topbar">
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-    </header>
+    {% include header.html %}
 
     <nav class="breadcrumb">
       <a href="../../../../">Home</a>
@@ -79,13 +75,7 @@
       <p>최후의 블랙홀 주변에서 저장공간을 만든 과학자의 기록이 발견된 것은 이 무렵이었다. 기록에는 이름도 육체도 없었다. 그의 인격을 유지하던 계산자원의 대부분은 장치를 설계하는 데 전환됐고, 남은 기억은 저장소의 목적을 설명하는 최소한의 구조로 압축되어 있었다. 그 기록을 읽을 독립된 인간은 존재하지 않았다. 항로관리 AI가 내용을 해석해 멸망 보고서의 부록으로 남겼다. 보고서가 완성됐을 때 그것을 열람할 기관도 사라져 있었다. 열적 죽음은 모든 것이 멈추는 순간이 아니라 멈추지 않은 것을 구별할 수 없게 되는 상태다. 오래된 우주론이 예측한 열적 죽음은 상상할 수 없이 먼 미래의 일이었다. 즉, 항성이 모두 타고 블랙홀까지 증발한 뒤에야 도달할 결말이었다. 그러나 은하 문명은 그 결말을 기다리지 않고 스스로 도달했다. 은하표준시의 마지막 기록에는 날짜가 없었다. 날짜는 두 사건의 순서를 비교하기 위해 존재한다. 비교할 두 번째 사건이 남지 않았으므로 시간은 더 이상 기록될 수 없었다. 시계는 계속 움직였을 가능성이 있다. 그것을 시간이 흘렀다고 부를 존재가 없었다.제2부 역사편</p>
     </article>
 
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>

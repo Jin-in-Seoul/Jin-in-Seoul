@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="ko">
 <head>
@@ -14,7 +16,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>4. 제2차 전쟁 - 은하 멸망 사전 - Jin-in-Seoul</title>
-  <link rel="stylesheet" href="../../../../assets/style.css">
+  <link rel="stylesheet" href="../../../../assets/style.css?v=045">
 
   <style>
     .breadcrumb { margin-bottom: 30px; }
@@ -40,13 +42,7 @@
 <body>
   <main class="shell">
 
-    <header class="topbar">
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-    </header>
+    {% include header.html %}
 
     <nav class="breadcrumb">
       <a href="../../../../">Home</a>
@@ -68,13 +64,7 @@
       <p>전쟁은 항성연합이 통로 관리시설을 접수하면서 시작됐다. 전투는 주로 입구와 발전시설에서 벌어졌다. 각 항성계의 군대보다 먼저 식량과 의약품의 운송 일정이 서로의 공격 대상이 됐다. 피해의 규모가 커지자 두 연합은 협상 테이블에 앉았다. 그리고 통로 소유권과 연결권 사이에 공동부담 원칙을 넣는 종전협정을 맺었다. 이용량만으로 비용을 매기지 않고, 전체 항성계가 기본 유지비를 분담했다. 긴급물자의 운송은 납부 여부와 관계없이 보장됐다. 변방의 고립은 줄었다. 중심부도 더 이상 특정 통로의 비용을 혼자 부담하지 않았다. 협정으로 통로 소유권과 비용분담 문제는 일단 정리됐다. 공동부담금의 용도는 통로 유지에 한정되지 않았다. 어떤 운송이 긴급한지, 어느 거주지의 위험을 먼저 줄일지 결정하는 기관도 필요해졌다. 그 기관의 결정은 비용을 내는 모든 항성계에 적용됐다. 전쟁이 끝난 뒤에도 자원배분을 둘러싼 분쟁의 불씨는 꺼지지 않았다.</p>
     </article>
 
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>

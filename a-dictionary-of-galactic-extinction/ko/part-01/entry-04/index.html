@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="ko">
 <head>
@@ -14,7 +16,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>4. 통로 - 은하 멸망 사전 - Jin-in-Seoul</title>
-  <link rel="stylesheet" href="../../../../assets/style.css">
+  <link rel="stylesheet" href="../../../../assets/style.css?v=045">
 
   <style>
     .breadcrumb { margin-bottom: 30px; }
@@ -40,13 +42,7 @@
 <body>
   <main class="shell">
 
-    <header class="topbar">
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-    </header>
+    {% include header.html %}
 
     <nav class="breadcrumb">
       <a href="../../../../">Home</a>
@@ -77,13 +73,7 @@
       <p>결손량은 웜홀 유지에 사용되는 에너지에 비하면 무시할 수 있었고, 통로를 닫으면 수천 개 거주지의 생명유지체계가 중단될 수 있었다. 에너지의 행방을 확인하기 위해 문명을 멈추는 선택은 합리적이지 않았다. 결손률은 천천히 증가했다. 항로관리 AI는 입구마다 흐르는 에너지의 방향을 역산했다. 부족분은 어느 항성계에도 모이지 않았다. 그러나 모든 통로의 시간차를 하나의 좌표에 겹치자 관측되지 않는 방향이 나타났다. 그것은 은하의 동쪽이나 북쪽이 아니었고, 중심이나 외곽도 아니었다. 현재보다 앞에 놓인 미래 방향을 가리켰다. 결과는 비공개로 처리되었다. 미래는 장소가 아니므로 에너지가 이동할 방향이 될 수 없었다. 루시는 미래를 좌표에서 삭제하고 미확인 손실로 기록했다. 수십억 년 뒤 마지막 과학자가 저장공간을 완성했을 때, 그는 과거에 새로운 통로를 만들지 않았다. 새로운 입구를 운반할 빠른 배도 보내지 않았다. 웜홀의 시간차를 한 방향으로 맞추고, 유출의 경로가 미래의 저장공간에 닿도록 했다. 빛은 과거로 가지 않았다. 과거에서 사라진 빛은 미래에 완성된 저장공간에 도착했다.</p>
     </article>
 
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>

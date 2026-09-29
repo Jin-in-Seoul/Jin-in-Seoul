@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="ko">
 <head>
@@ -14,7 +16,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>3. 여행 - 은하 멸망 사전 - Jin-in-Seoul</title>
-  <link rel="stylesheet" href="../../../../assets/style.css">
+  <link rel="stylesheet" href="../../../../assets/style.css?v=045">
 
   <style>
     .breadcrumb { margin-bottom: 30px; }
@@ -40,13 +42,7 @@
 <body>
   <main class="shell">
 
-    <header class="topbar">
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-    </header>
+    {% include header.html %}
 
     <nav class="breadcrumb">
       <a href="../../../../">Home</a>
@@ -78,13 +74,7 @@
       <p>초기 느린 배가 사용한 에너지는 대부분 목적지에 남았다. 배는 해체되어 거주지가 되었고 연료는 거주지의 물질이 되었다. 후기 여행이 사용한 에너지는 아무것도 남기지 않았다. 출발지와 목적지는 이미 완성되어 있었고, 여행은 두 완성된 장소 사이에서 에너지를 폐열로 바꾸었다. 은하 문명은 여행 때문에 멸망하지 않았다고 오랫동안 주장했다. 여행은 전체 에너지 사용량의 작은 부분만을 차지했다. 그 계산에는 통로를 열린 상태로 유지하는 에너지, 관광행성의 기후를 고정하는 에너지, 여행자 복원시설과 항로관리 AI의 에너지가 포함되지 않았다. 그것들은 기반시설로 분류되었다. 마지막 항로가 개방되었을 때 은하에는 아직 방문되지 않은 항성계가 하나도 남지 않았다. 문명은 이를 공간에 대한 승리로 기록했다. 여행자들은 더 멀고 새로운 목적지를 요구했다. 가장 가까운 다른 은하까지 웜홀 입구를 운반할 느린 배는 건조하지 않았다. 배에 올라탈 지원자가 단 한 명도 없었기 때문이었다. 처음으로 거리가 다시 시간이 되었다. 그 뒤 여행은 특별한 시대로 향했다. 웜홀 입구들 사이에 축적된 시간차가 상품이 되었고, 과거의 빛과 미래의 결과를 같은 통로 안에서 연결하려는 실험이 시작되었다. 은하를 하나로 만든 길이 은하의 여러 시대를 잇기 시작했다. 그 통로를 이용한 마지막 여행자는 기록되어 있지 않다. 마지막에 이동한 것은 사람이 아니었다. 사람과 세계를 운반하던 길을 따라 빛이 먼저 떠났다.</p>
     </article>
 
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>

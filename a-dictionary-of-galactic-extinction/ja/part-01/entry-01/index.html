@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="ja">
 <head>
@@ -13,7 +15,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>1. 光子欠損 - 銀河滅亡辞典 - Jin-in-Seoul</title>
-  <link rel="stylesheet" href="../../../../assets/style.css">
+  <link rel="stylesheet" href="../../../../assets/style.css?v=045">
   <style>
     .breadcrumb { margin-bottom: 30px; }
     .language-nav { margin-bottom: 56px; }
@@ -29,13 +31,7 @@
 </head>
 <body>
   <main class="shell">
-    <header class="topbar">
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-    </header>
+    {% include header.html %}
     <nav class="breadcrumb">
       <a href="../../../../">Home</a>
       <a href="../../">銀河滅亡辞典</a>
@@ -62,13 +58,7 @@
       <p>中央記録所は、「光子欠損」の定義を初めて改訂した。検出されなかった光子ではなく、定められた宇宙論的時点において閉鎖系から除去された光子。「除去」という言葉は論争を呼んだ。除去には行為者が必要だが、自然法則は作用しても行動はせず、宇宙は時間を持っていても日付を選ぶことはないからだった。誰かが閾値を定めたという主張を裏づける観測資料は一つもなかった。それでも改訂された定義は破棄されなかった。他の言葉では、38件の欠損を一つの事件としてまとめることができなかった。すべての標準体が再稼働した。第417光子保存標準体にも、300年ぶりに電力が供給された。それは自らを欠陥品とした最後の判定をそのまま保存していたが、新しい計測システムはその判定を取り消した。第417光子保存標準体は間違っていなかった。光子は消えることがないと信じていた文明も、間違っていたわけではなかった。その信念は、それまで観測された宇宙の中では正しかった。誤りは「宇宙の中」という言葉にあった。エネルギーが存在しうるすべての場所を宇宙と定義していた文明は、最後までそれを検証する方法を見つけられなかった。最初の光子は消滅したのではない可能性が示された。壁を通り抜けたのでも、過去へ戻ったのでもなく、光子が進みうる経路の構造そのものが計測の途中で変化したという仮説だった。その場所を観測することはできなかった。方向も距離もなかった。光子がそこへ到着した時刻も定義できなかった。その存在を示す唯一の痕跡は、こちら側の宇宙の質量が光子一個分だけ軽くなったという事実だった。この仮説は長いあいだ最も非科学的な主張として扱われたが、後には最も保守的な説明という地位を得た。</p>
       <p>最初の欠損とともに失われたのは、すべてのエネルギーはいずれ同じ宇宙の中に残るという確信だった。その確信が崩れた後も、星々は以前と同じ明るさで輝き、ワームホールは開いたままで、観光船は銀河の両端を行き来していた。どの惑星の夜も暗くはならなかった。だから誰も、それを滅亡の始まりとは呼ばなかった。</p>
     </article>
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>

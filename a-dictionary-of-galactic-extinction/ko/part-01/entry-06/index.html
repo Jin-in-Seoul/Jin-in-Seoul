@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="ko">
 <head>
@@ -14,7 +16,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>6. 폐쇄계 - 은하 멸망 사전 - Jin-in-Seoul</title>
-  <link rel="stylesheet" href="../../../../assets/style.css">
+  <link rel="stylesheet" href="../../../../assets/style.css?v=045">
 
   <style>
     .breadcrumb { margin-bottom: 30px; }
@@ -40,13 +42,7 @@
 <body>
   <main class="shell">
 
-    <header class="topbar">
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-    </header>
+    {% include header.html %}
 
     <nav class="breadcrumb">
       <a href="../../../../">Home</a>
@@ -75,13 +71,7 @@
       <p>보존법칙은 한 번도 깨지지 않았다. 과거에 사라진 에너지는 미래의 저장공간에 쌓였다. 양쪽을 하나의 물리계로 계산하면 들어간 양과 나온 양은 일치했다. 그러나 과거의 관측자는 아직 존재하지 않는 저장공간을 자신의 계에 포함시킬 수 없었다. 미래의 관측자는 저장공간 안으로 들어가지 않는 한 축적된 에너지를 측정할 수 없었다. 각 시대는 자신이 볼 수 있는 것만 우주라고 불렀다. 그래서 모든 시대에서 에너지는 결손된 것처럼 보였다. 결손 연구자들은 경계면을 찾으려 했다. 에너지가 빠져나갔다면 어딘가에 출구가 있어야 했다. 그들은 은하 외곽, 블랙홀의 사건지평선, 웜홀의 목을 조사했다. 출구는 한 장소에 있지 않았다. 에너지가 방출되고 흡수되는 모든 과정이 경계가 되었다. 저장공간은 은하 밖 어딘가에 있지 않았다. 결손이 관측되던 시대에는 아직 만들어지지도 않은 곳이었다. 연구자들은 에너지가 사라지는 순간은 볼 수 있었지만, 그 에너지가 도착할 미래는 볼 수 없었다. 그러나 미래를 볼 수 없었기에 보존법칙에 대한 믿음은 더 확고해졌으며 이 믿음은 문명을 안심시켰다. 사라진 것이 아니라면 언젠가 되찾을 수 있다고 생각했다. 블랙홀의 결손이 확인되었을 때에도 같은 논리가 적용되었다. 블랙홀은 외부에서 측정한 질량과 회전과 전하로 그 상태를 알 수 있었다. 문명은 회전에너지를 끌어내 발전망에 공급했고, 그 에너지가 다른 곳으로 전달되는 과정에서도 작은 결손이 발생했다. 초기에는 채굴량과 출력의 계산오차로 처리되었다. 이후 블랙홀의 회전과 질량이 예상보다 빠르게 줄었지만, 주변 발전시설은 출력 저하를 보충하기 위해 더 깊이 에너지를 뽑았다. 채굴과 손실이 거듭되면서 사건지평선도 줄어들었다. 과거 문명은 그것을 블랙홀의 붕괴로 기록했다. 보존법칙은 어느 편도 들지 않았다. 법칙은 에너지의 총량만 같게 만들었다. 누가 그것을 잃고 누가 얻는지는 기록하지 않았다.</p>
     </article>
 
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>

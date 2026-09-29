@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="ko">
 <head>
@@ -14,7 +16,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>5. 유지비 - 은하 멸망 사전 - Jin-in-Seoul</title>
-  <link rel="stylesheet" href="../../../../assets/style.css">
+  <link rel="stylesheet" href="../../../../assets/style.css?v=045">
 
   <style>
     .breadcrumb { margin-bottom: 30px; }
@@ -40,13 +42,7 @@
 <body>
   <main class="shell">
 
-    <header class="topbar">
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-    </header>
+    {% include header.html %}
 
     <nav class="breadcrumb">
       <a href="../../../../">Home</a>
@@ -79,13 +75,7 @@
       <p>광자 결손이 웜홀망에서 발견되었을 때 관리 AI들은 손실을 유지비에 포함시켰다. 에너지가 어디로 가는지는 알 수 없었지만 통로를 열어두는 과정에서 발생했으므로 유지에 필요한 비용으로 처리했다. 결손률이 증가하자 더 많은 항성에너지가 안정화장에 투입되었다. 투입량이 늘수록 미래의 저장공간으로 빠져나가는 에너지도 늘었다. 누구도 은하를 파괴하는 버튼을 누른 적은 없었다. 웜홀을 유지하고, AI를 끄지 않고, 대기를 보존하고, 죽은 자의 복원 가능성을 남겨두는 모든 정상적인 결정이 유지되었을 뿐이었다.</p>
     </article>
 
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>

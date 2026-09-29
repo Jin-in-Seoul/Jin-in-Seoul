@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="ko">
 <head>
@@ -14,7 +16,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>7. 최초 결손 관측 - 은하 멸망 사전 - Jin-in-Seoul</title>
-  <link rel="stylesheet" href="../../../../assets/style.css">
+  <link rel="stylesheet" href="../../../../assets/style.css?v=045">
 
   <style>
     .breadcrumb { margin-bottom: 30px; }
@@ -40,13 +42,7 @@
 <body>
   <main class="shell">
 
-    <header class="topbar">
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-    </header>
+    {% include header.html %}
 
     <nav class="breadcrumb">
       <a href="../../../../">Home</a>
@@ -70,13 +66,7 @@
       <p>변화는 제9광자보존체에서 시작됐다. 오래된 제9 보존체에는 광자가 사라졌을 때 자신을 결함품으로 판정하는 규정이 없었다. 장치는 같은 이상보고를 중앙기록소로 계속 전송했다. 반복되는 보고를 정리하던 관리 AI는 저장공간을 줄이기 위해 과거의 유사기록을 하나로 묶기 시작했다. 서로 다른 기관에서 서로 다른 이름으로 보관하던 결손자료들이 같은 항목에 모였다. AI는 기록들의 시간과 조건을 다시 비교했고, 서로 무관하다고 처리됐던 현상들이 같은 우주 상태에서 발생했다는 사실을 발견했다. 관리 AI는 자료 압축을 중단하고 새로운 항목을 만들었다. ‘광자 결손.’ 이후 조사위원회는 수백 년 동안 계속된 연구사업의 실패 원인을 검토했다. 조사 결과 기관별 업무분할과 자료분산이 통합분석을 늦춘 주요 원인으로 지목됐다. 당시 행정체계에는 은하 전체의 결손자료를 통합해 조사하는 기능이 없었다. 제417 보존체의 최초 기록은 장치고장으로 분류됐으며, 그것이 은하 멸망과 관련된 현상의 일부라는 해석은 훨씬 뒤에 이루어졌다. 최초의 통합분석은 중앙기록소 관리 AI가 반복보고를 정리하는 과정에서 시작됐다.</p>
     </article>
 
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>

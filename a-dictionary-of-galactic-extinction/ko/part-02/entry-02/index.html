@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="ko">
 <head>
@@ -14,7 +16,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>2. 은하표준시 협정 - 은하 멸망 사전 - Jin-in-Seoul</title>
-  <link rel="stylesheet" href="../../../../assets/style.css">
+  <link rel="stylesheet" href="../../../../assets/style.css?v=045">
 
   <style>
     .breadcrumb { margin-bottom: 30px; }
@@ -40,13 +42,7 @@
 <body>
   <main class="shell">
 
-    <header class="topbar">
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-    </header>
+    {% include header.html %}
 
     <nav class="breadcrumb">
       <a href="../../../../">Home</a>
@@ -71,13 +67,7 @@
       <p>체결일에는 여러 행성에서 같은 표준시각에 축제를 시작했다. 어떤 행성에서는 그 시각이 한밤중이었고, 웜홀이 없는 변방 거주지는 축제신호를 17년 뒤에 받았다. 주민들은 신호를 받은 날 행사를 열었다. 중앙기록은 이미 끝난 축제의 뒤늦은 보고로 분류했다. 대중에게는 은하 전체가 하나의 시계를 사용한다는 설명이 보급됐다. 정확한 설명은 아니었으나 학교와 행정기관에서는 유용했다. 사람들은 각자의 시간을 유지하면서 공통시간이 있다는 말로 계약하고 여행했다. 협정 뒤 전쟁과 거래의 오래된 기록도 새 좌표로 옮겨졌다. 변환에는 수십 년이 걸렸다. 표준시 기준망은 이후 교통과 구조, 분쟁 판정에 계속 사용됐고, 그 범위만큼 유지시설도 커졌다. 후대의 결손 연구자들이 서로 다른 항성계의 기록을 비교할 수 있었던 것도 이 협정 덕분이었다. 협정 당시에는 아직 최초의 광자 결손이 관측되지 않았다. 은하표준시는 그 현상을 예상해 만들어진 체계가 아니었다.</p>
     </article>
 
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>

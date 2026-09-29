@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,7 +16,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>4. Second War - A Dictionary of Galactic Extinction - Jin-in-Seoul</title>
-  <link rel="stylesheet" href="../../../../assets/style.css">
+  <link rel="stylesheet" href="../../../../assets/style.css?v=045">
 
   <style>
     .breadcrumb { margin-bottom: 30px; }
@@ -40,13 +42,7 @@
 <body>
   <main class="shell">
 
-    <header class="topbar">
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-    </header>
+    {% include header.html %}
 
     <nav class="breadcrumb">
       <a href="../../../../">Home</a>
@@ -68,13 +64,7 @@
       <p>The war began when the star-system alliances took control of passage-management facilities. Fighting took place mainly around entrances and power facilities. Before the armies of the star systems themselves became targets, the transport schedules for food and medicine became targets of attack. As the scale of the damage grew, the two alliances came to the negotiating table. They concluded a peace agreement establishing the principle of shared responsibility between passage ownership and the right to connection. Costs were not charged solely according to usage; all star systems shared the basic maintenance expenses. The transport of emergency supplies was guaranteed regardless of whether payments had been made. Isolation in the periphery declined. The center no longer had to bear the cost of individual passages alone. The agreement temporarily settled the issues of passage ownership and cost sharing. The shared contributions were not used only for maintaining passages. An institution was also needed to decide which transports counted as emergencies and which settlements should receive priority in reducing risk. Its decisions applied to every star system that paid into the system. Even after the war ended, the dispute over the allocation of resources remained unresolved.</p>
     </article>
 
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>

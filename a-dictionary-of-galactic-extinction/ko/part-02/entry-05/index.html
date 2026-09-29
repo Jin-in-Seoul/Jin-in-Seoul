@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="ko">
 <head>
@@ -14,7 +16,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>5. 제3차 전쟁 - 은하 멸망 사전 - Jin-in-Seoul</title>
-  <link rel="stylesheet" href="../../../../assets/style.css">
+  <link rel="stylesheet" href="../../../../assets/style.css?v=045">
 
   <style>
     .breadcrumb { margin-bottom: 30px; }
@@ -40,13 +42,7 @@
 <body>
   <main class="shell">
 
-    <header class="topbar">
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-    </header>
+    {% include header.html %}
 
     <nav class="breadcrumb">
       <a href="../../../../">Home</a>
@@ -71,13 +67,7 @@
       <p>전쟁이 끝난 뒤 생명보호연합의 지지자는 줄지 않았다. 실제 재난이 발생한 세 지역의 생존자들이 연합을 옹호했다. 이후 선제적 대피에 반대하는 사람은 먼저 그 세 지역의 주민들에게 왜 그들이 남아 있어야 했는지를 설명해야 했다. 위험을 무시한 결과는 죽음으로 남았고, 과잉대피의 결과는 대부분 비용으로 남았다. 두 결과는 같은 방식으로 기억되지 않았다.생명보호연합은 이후 여러 차례 이름과 조직을 바꾸었다. 보호해야 할 대상도 현재 살아 있는 주민에서 냉동수면자, 인격복제본, 복원 가능한 기억체로 넓어졌다. 수만 년 뒤 이 계보는 선제적 생명보호 의무연합으로 이어졌다.제3차 전쟁 이후 은하의 재난정책에는 새로운 질문이 추가됐다. 사고가 일어날 가능성이 얼마나 높은지가 아니라, 알고 있던 위험을 외면했을 때 누가 책임질 것인가였다.</p>
     </article>
 
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>

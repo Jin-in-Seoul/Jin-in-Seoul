@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="ko">
 <head>
@@ -14,7 +16,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>3. 연결권 선언 - 은하 멸망 사전 - Jin-in-Seoul</title>
-  <link rel="stylesheet" href="../../../../assets/style.css">
+  <link rel="stylesheet" href="../../../../assets/style.css?v=045">
 
   <style>
     .breadcrumb { margin-bottom: 30px; }
@@ -40,13 +42,7 @@
 <body>
   <main class="shell">
 
-    <header class="topbar">
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-    </header>
+    {% include header.html %}
 
     <nav class="breadcrumb">
       <a href="../../../../">Home</a>
@@ -70,13 +66,7 @@
       <p>새 권리가 적용되자 예상하지 못한 신청도 늘었다. 한 사람이 먼저 행성에 거주등록을 하고 연결을 요구한 뒤, 통로가 생기면 정착권을 다른 회사에 넘기는 방식이었다. 일부 거주자는 통로 개통 전에 떠났다. 개척청은 신청을 취소하려 했고, 신청자는 돌아갈 예정이라고 통보했다. 떠난 사람의 귀환 가능성을 어디까지 보호할지는 선언에 적혀 있지 않았다. 이 문제는 뒤에 별도의 판결을 필요로 했다. 연결권을 시행하는 기관은 있었지만, 연결 의무가 언제 끝나는지 결정할 규칙은 마련되지 않았다. 선언 백주년 보고서는 고립으로 인한 사망이 99.8퍼센트 감소했다고 발표했다. 통로 유지비의 증가는 다른 항목에 기록됐다. 두 수치는 같은 결정의 결과였으나 같은 표에서 비교되지 않았다. 연결권은 변방의 생존을 보장하는 데 성공했다. 그 성공으로 새 정착지가 늘었고 문명이 유지해야 할 입구도 늘었다. 훗날 에너지 부족으로 통로 폐쇄가 논의될 때마다 제91외곽 거주지의 기록은 어김없이 제출되었다. 폐쇄를 제안한 쪽은 이번에는 구조선이 제때 도착하리라는 근거를 제시해야 했다.</p>
     </article>
 
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>

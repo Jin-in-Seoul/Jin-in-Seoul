@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="ja">
 <head>
@@ -13,7 +15,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>2. 銀河標準時 - 銀河滅亡辞典 - Jin-in-Seoul</title>
-  <link rel="stylesheet" href="../../../../assets/style.css">
+  <link rel="stylesheet" href="../../../../assets/style.css?v=045">
   <style>
     .breadcrumb { margin-bottom: 30px; }
     .language-nav { margin-bottom: 56px; }
@@ -29,13 +31,7 @@
 </head>
 <body>
   <main class="shell">
-    <header class="topbar">
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-    </header>
+    {% include header.html %}
     <nav class="breadcrumb">
       <a href="../../../../">Home</a>
       <a href="../../">銀河滅亡辞典</a>
@@ -60,13 +56,7 @@
       <p>最後の第9光子保存標準体が同じ報告を10億回送信した後、中央記録所は初めて、出来事の日付ではなく、出来事が起きたときの宇宙の状態を比較した。局所的な運動と重力効果を補正すると、38基の保存標準体が測定した宇宙背景放射の温度は一致した。その差は測定可能な最終桁よりも小さかった。各地域の暦では数十年にわたって散らばった出来事だったが、宇宙の膨張を基準にすると、一つの薄い境界面の上に並んでいた。光子は同じ瞬間に消えたのではなかった。同じ条件で消えたのだった。この違いは重要だった。瞬間は観測者によって異なるが、条件は場所が違っても繰り返され得る。もし誰かが宇宙背景放射の温度を閾値として選んだのであれば、銀河全域へ信号を送る必要はなかった。それぞれの場所で、宇宙が所定の状態に達した瞬間に自動的に作動できた。しかし、その仮説は否定された。38基の光子保存標準体には、そのような作動装置はなかった。互いに通信もしておらず、背景放射のデータは検出系から物理的に分離されていた。同じ条件は確認されたが、その条件を読み取って光子を除去した装置は発見されなかった。銀河標準時はこの事件を記録するため、初めて新しい時刻を作った。どこかの惑星の自転でも、原子の振動でも、ワームホール網の同期信号でもなく、宇宙の年齢そのものを座標とした。38件の欠損は、その座標上で一つの値に重なった。その後、その値は「欠損座標値」と呼ばれた。それは時間というより閾値だった。宇宙がその閾値を越えた後に作られたすべての閉鎖空洞では、光子の平均寿命が短くなった。最初は計算によってしか検出できない差だったが、それは年ごとに大きくなった。欠損座標値に達する以前の光子は、古い物理法則に従っていた。しかしその値を越えた後の光子は、同じ法則に従いながらも、説明のつかない経路をもう一つ持っていた。</p>
       <p>銀河標準時は、原因と結果を配列するために作られた。銀河標準時の体系の中で、光子欠損の原因が未来に存在する可能性が初めて入力された。ルーシーはその一文をエラーとして処理しなかった。ワームホール網の一部では、未来と過去の順序がすでに座標によって入れ替わっていたからだった。欠損座標値に到達して以後、銀河における「いつ」という問いは二つの意味を持つようになった。ある時計が何回振動したのか。そして、宇宙がある出来事を許すまでにどれほど老いたのか。人類は長いあいだ最初の問いだけで満足していた。しかし銀河の滅亡は、二つ目の問いによってしか記録することができなかった。</p>
     </article>
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>

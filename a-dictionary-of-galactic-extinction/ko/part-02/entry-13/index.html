@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="ko">
 <head>
@@ -14,7 +16,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>13. 무지연 참사 - 은하 멸망 사전 - Jin-in-Seoul</title>
-  <link rel="stylesheet" href="../../../../assets/style.css">
+  <link rel="stylesheet" href="../../../../assets/style.css?v=045">
 
   <style>
     .breadcrumb { margin-bottom: 30px; }
@@ -40,13 +42,7 @@
 <body>
   <main class="shell">
 
-    <header class="topbar">
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-    </header>
+    {% include header.html %}
 
     <nav class="breadcrumb">
       <a href="../../../../">Home</a>
@@ -71,13 +67,7 @@
       <p>새 규정은 잘못된 경보가 은하 전체로 퍼지는 일을 막았다. 승인을 기다리다 구조가 늦어진 사고도 발생했다. 한 식민지의 대기시설이 붕괴했을 때 세 번째 확인기관이 휴면상태여서 비상전력의 공급이 13일 늦었다. 피해조사에서는 대응망 전체가 오작동할 위험과 한 지역의 구조가 늦어질 위험을 함께 검토했다. 최소숙고시간은 폐기되지 않았다. ‘즉각적’이라는 말은 이후 공학규정에서 줄어들었다. 검증 없이 실행하는 명령과 승인 단계를 생략한 명령을 구별해 기록해야 했기 때문이다. 큰 결정을 내리는 기관에는 반대 의견을 받을 시간도 정해졌다. 무지연 참사는 한 번의 잘못된 수치에서 시작됐다. 수치가 은하 전역의 사고가 되기까지는 서로 다른 시대에 만들어진 안전규정이 모두 필요했다. 개정 뒤에도 그 규정 가운데 상당수는 남았다. 각 규정이 막아온 사고 역시 기록에 남아 있었기 때문이다. 무지연 참사는 시간과 공간에 대한 은하 문명의 본질적 한계로 기록되었다. 중심부연합 정부와 항성연합들은 참사가 시작된 날을 은하표준시로 특정하여 겸손의 날이라고 명명했다.</p>
     </article>
 
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>

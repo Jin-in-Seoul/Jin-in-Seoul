@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="fr">
 <head>
@@ -15,7 +17,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>3. Voyage - Dictionnaire de l’extinction galactique - Jin-in-Seoul</title>
-  <link rel="stylesheet" href="../../../../assets/style.css">
+  <link rel="stylesheet" href="../../../../assets/style.css?v=045">
 
   <style>
     .breadcrumb {
@@ -45,13 +47,7 @@
 <body>
   <main class="shell">
 
-    <header class="topbar">
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-    </header>
+    {% include header.html %}
     <nav class="breadcrumb">
       <a href="../../../../">Home</a>
       <a href="../../">Dictionnaire de l’extinction galactique</a>
@@ -87,13 +83,7 @@
       <p>Lorsque la dernière route fut ouverte, il ne restait plus dans la galaxie un seul système stellaire qui n’eût jamais été visité. La civilisation consigna cet événement comme une victoire sur l’espace. Les voyageurs demandèrent des destinations plus lointaines et plus nouvelles. Aucun vaisseau lent ne fut construit pour transporter une entrée de trou de ver jusqu’à la galaxie voisine la plus proche, car personne ne se porta volontaire pour embarquer. Pour la première fois, la distance redevint du temps. Après cela, le voyage entra dans une époque particulière. Les décalages temporels accumulés entre les entrées des trous de ver devinrent des marchandises, et des expériences commencèrent afin de relier, à l’intérieur d’un même passage, la lumière du passé aux résultats du futur. Les routes qui avaient fait de la galaxie un seul monde commencèrent à relier entre elles les différentes époques de la galaxie. Le dernier voyageur à avoir emprunté ce passage ne figure dans aucun registre. À la fin, ce qui se déplaça n’était pas un être humain. Le long des routes qui avaient transporté les humains et les mondes, la lumière partit la première.</p>
     </article>
 
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>

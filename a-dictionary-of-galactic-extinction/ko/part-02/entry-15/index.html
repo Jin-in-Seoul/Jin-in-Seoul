@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="ko">
 <head>
@@ -14,7 +16,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>15. 저장공간 연결 - 은하 멸망 사전 - Jin-in-Seoul</title>
-  <link rel="stylesheet" href="../../../../assets/style.css">
+  <link rel="stylesheet" href="../../../../assets/style.css?v=045">
 
   <style>
     .breadcrumb { margin-bottom: 30px; }
@@ -40,13 +42,7 @@
 <body>
   <main class="shell">
 
-    <header class="topbar">
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-    </header>
+    {% include header.html %}
 
     <nav class="breadcrumb">
       <a href="../../../../">Home</a>
@@ -71,13 +67,7 @@
       <p>노아 이후 어디에서도 새로운 인간이 태어났다는 기록은 없다. 저장공간에 모인 에너지가 끝내 별이나 생명이 됐는지도 확인되지 않았다. 바깥의 은하가 알 수 있었던 것은 이전에 목적지가 없던 흐름에 도착지가 생겼다는 사실뿐이었다. 노아는 과거의 문명을 멸망시키지 않았다. 과거의 문명은 그가 태어나기 전에 이미 자신의 시설을 유지할 에너지를 소진하고 있었다. 노아는 그 문명이 남긴 결손을 되돌리지도 못했다. 마지막에 도착한 사람이 할 수 있었던 일은 계속 흐르는 에너지를 보고 그것이 모일 경계를 남기는 것이었다. 다음 페이지는 남아 있었지만 그것을 읽을 존재는 아직 없었다.</p>
     </article>
 
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>
