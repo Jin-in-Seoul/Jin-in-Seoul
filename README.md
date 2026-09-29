@@ -40,3 +40,7 @@ GitHub Pages expands these includes when the site is published, so future site-w
 - Added public Translation Principles pages for A Dictionary of Galactic Extinction in English, Japanese, and French.
 - Added homepage links beneath Short Stories.
 - Added the three pages to sitemap.xml.
+
+
+## Download tracking
+Free Digital Editions links emit the GA4 event `digital_edition_download` with work, part, language, format, version, file name, and URL metadata. GA4 Enhanced Measurement may also record its standard `file_download` event.
