@@ -1,13 +1,13 @@
 :root {
   color-scheme: light;
-  --ink: #171717;
-  --muted: #666;
+  --ink: #202020;
+  --muted: #666666;
   --line: #d8d8d8;
   --paper: #ffffff;
   --link: #244e73;
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif; font-weight: 400; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Times New Roman", Times, serif; font-weight: 400; }
 a { color: var(--link); }
 .shell { width: min(820px, calc(100% - 40px)); margin: 0 auto; padding: 72px 0 64px; }
 .site-title { margin: 0; font-size: 48px; font-weight: 400; }
@@ -27,7 +27,7 @@ h2 { margin: 60px 0 12px; padding-bottom: 10px; border-bottom: 1px solid var(--l
 .language-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 44px; }
 .language-list a { padding: 18px; border: 1px solid var(--line); color: var(--ink); text-align: center; text-decoration: none; }
 .language-list a:hover { border-color: var(--ink); }
-.prose { margin-top: 54px; font-size: 19px; line-height: 1.82; }
+.prose { margin-top: 54px; font-size: 18.5px; line-height: 1.78; }
 .prose p { margin: 0 0 1.3em; }
 .prose ol, .prose ul { margin: 0 0 1.5em 1.6em; padding: 0; }
 .prose li { margin: 0 0 .55em; }
@@ -40,18 +40,25 @@ html[lang="ja"] body {
   font-family: "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Noto Serif JP", "MS PMincho", serif;
   font-weight: 400;
 }
+html[lang="ja"] .prose {
+  font-size: 18px;
+  line-height: 1.90;
+}
 html[lang="ko"] body {
-  font-family: "Noto Serif KR", "Nanum Myeongjo", Batang, "BatangChe", serif;
+  font-family: Batang, "BatangChe", "Nanum Myeongjo", "Noto Serif KR", serif;
   font-weight: 400;
 }
-html[lang="ko"] .prose { line-height: 1.95; }
+html[lang="ko"] .prose {
+  font-size: 18px;
+  line-height: 1.95;
+}
 footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
 @media (max-width: 620px) {
   .shell { padding-top: 44px; }
   .site-title { font-size: 36px; }
   .subtitle { margin-bottom: 52px; }
   .language-list { grid-template-columns: 1fr; }
-  .prose { font-size: 18px; }
+  .prose { font-size: 17.5px; }
   .chapter-footer { flex-direction: column; }
 }
 
