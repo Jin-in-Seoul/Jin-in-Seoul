@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,7 +15,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Free Digital Editions - Jin-in-Seoul</title>
-  <link rel="stylesheet" href="/assets/style.css?v=044">
+  <link rel="stylesheet" href="/assets/style.css?v=045">
   <style>
     .downloads { max-width: 700px; margin-top: 46px; }
     .downloads-intro { font-size: 17px; line-height: 1.72; margin: 0 0 42px; }
@@ -31,16 +33,7 @@
 </head>
 <body>
   <main class="shell">
-    <header class="topbar">
-      <div class="topbar-home">
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/downloads/">Free Digital Editions</a>
-      </div>
-    </header>
+    {% include header.html %}
 
     <nav class="breadcrumb"><a href="/">Home</a></nav>
     <h1>Free Digital Editions</h1>
@@ -79,13 +72,7 @@
       </section>
     </div>
 
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>

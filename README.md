@@ -17,3 +17,13 @@ At first, I wanted to write a story about placing a galaxy inside a small object
 *A Dictionary of Galactic Extinction* is currently being published online in serialized form in **English and French**.
 
 [Read the archive](https://jin-in-seoul.com)
+
+## Shared site chrome
+
+The site-wide header and footer are maintained as Jekyll includes:
+
+- `_includes/header.html`
+- `_includes/footer.html`
+
+Reader-facing HTML pages use `{% include header.html %}` and `{% include footer.html %}`.
+GitHub Pages expands these includes when the site is published, so future site-wide header/footer changes require editing only the corresponding include file.

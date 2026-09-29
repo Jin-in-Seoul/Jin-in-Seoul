@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="ja">
 <head>
@@ -14,18 +16,12 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>5月　ヘイ、ウェイト…… - セーター - Jin-In-Seoul</title>
-  <link rel="stylesheet" href="../../../assets/style.css">
+  <link rel="stylesheet" href="../../../assets/style.css?v=045">
 </head>
 <body>
   <main class="shell">
 
-    <header class="topbar">
-      <div class="topbar-links">
-        <a class="domain-link" href="/publication-log/">Publication Log</a>
-        <span aria-hidden="true">·</span>
-        <a class="domain-link" href="/">Jin-in-Seoul.com</a>
-      </div>
-    </header>
+    {% include header.html %}
     <nav class="breadcrumb"><a href="../../../">Home</a><a href="../">セーター</a></nav>
     <nav class="language-nav" aria-label="Language selection">
       <a href="/sweater/en/" lang="en">English</a>
@@ -330,13 +326,7 @@
 <p>担任の先生が、来週の金曜日に英語のリスニングテストをすると言った。うちの家系に霊感のある人がいるかどうか、調べてみなければならない。</p>
     </section>
     <nav class="chapter-footer"><a href="../chapter-02/">← 4月</a><a href="../">目次</a><span></span></nav>
-    <footer class="site-footer">
-      <div class="site-footer-left">
-        <span class="site-opened">Site opened on September 26, 2026.</span>
-        <span>Copyright &copy; Jin-in-Seoul. All rights reserved.</span>
-      </div>
-      <span>Contact me: <a href="mailto:iamoutis@naver.com">iamoutis@naver.com</a></span>
-    </footer>
+    {% include footer.html %}
   </main>
 </body>
 </html>

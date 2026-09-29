@@ -83,6 +83,7 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 .topbar-home {
   display: flex;
   align-items: center;
+  flex: 0 0 auto;
   margin-right: auto;
 }
 
@@ -90,6 +91,7 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-left: auto;
 }
 .topbar-links span {
   color: var(--muted);
