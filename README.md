@@ -34,3 +34,9 @@ GitHub Pages expands these includes when the site is published, so future site-w
 - Reader/body pages use one localized Contents link only: `Contents`, `Sommaire`, `目次`, or `목차`.
 - Redundant page-local Home, language/month navigation, and Sweater previous/next chapter navigation were removed.
 
+
+
+## 049
+- Added public Translation Principles pages for A Dictionary of Galactic Extinction in English, Japanese, and French.
+- Added homepage links beneath Short Stories.
+- Added the three pages to sitemap.xml.
