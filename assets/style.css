@@ -57,6 +57,17 @@ html[lang="ko"] .prose {
   font-size: 19px;
   line-height: 1.90;
 }
+
+.contents-nav {
+  margin: 0 0 46px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.contents-nav a {
+  color: var(--link);
+  text-decoration: underline;
+}
+
 footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
 @media (max-width: 620px) {
   .shell { padding-top: 44px; }
@@ -85,6 +96,11 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
   align-items: center;
   flex: 0 0 auto;
   margin-right: auto;
+}
+.topbar-home .domain-link {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
 .topbar-links {
@@ -124,6 +140,13 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
   text-decoration: underline;
 }
 @media (max-width: 620px) {
+  .topbar-home .domain-link {
+    font-size: 17px;
+  }
+  .contents-nav {
+    margin-bottom: 36px;
+    font-size: 19px;
+  }
   .topbar {
     margin-bottom: 30px;
     padding-bottom: 16px;

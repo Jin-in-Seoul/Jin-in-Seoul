@@ -27,3 +27,10 @@ The site-wide header and footer are maintained as Jekyll includes:
 
 Reader-facing HTML pages use `{% include header.html %}` and `{% include footer.html %}`.
 GitHub Pages expands these includes when the site is published, so future site-wide header/footer changes require editing only the corresponding include file.
+
+## Shared navigation (v046)
+- `_includes/header.html` is the single site-wide home/publication/download header.
+- `_includes/footer.html` is the single site-wide footer.
+- Reader/body pages use one localized Contents link only: `Contents`, `Sommaire`, `目次`, or `목차`.
+- Redundant page-local Home, language/month navigation, and Sweater previous/next chapter navigation were removed.
+
