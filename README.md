@@ -44,3 +44,9 @@ GitHub Pages expands these includes when the site is published, so future site-w
 
 ## Download tracking
 Free Digital Editions links emit the GA4 event `digital_edition_download` with work, part, language, format, version, file name, and URL metadata. GA4 Enhanced Measurement may also record its standard `file_download` event.
+
+
+## 053
+- Added English A Dictionary of Galactic Extinction, Part II, Chapters 7–9.
+- Activated the new chapter links in the English contents page.
+- Updated sitemap.xml and Publication Log for September 30, 2026.
