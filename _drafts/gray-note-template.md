@@ -1,7 +1,7 @@
 ---
 layout: gray-note-post
-title: "글 제목"
+title: "Title"
 date: 2026-09-30
 ---
 
-여기에 본문을 씁니다.
+Write the essay here.

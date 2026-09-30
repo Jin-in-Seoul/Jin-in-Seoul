@@ -1,7 +1,7 @@
 ---
 ---
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-72EG8XPTN7"></script>
@@ -14,15 +14,15 @@
   <meta charset="utf-8">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>회색노트 - Jin-in-Seoul</title>
+  <title>Gray Note - Jin-in-Seoul</title>
   <link rel="stylesheet" href="/assets/style.css?v=056">
 </head>
 <body>
   <main class="shell">
     {% include header.html %}
 
-    <h1>회색노트</h1>
-    <p class="deck">짧은 에세이와 기록.</p>
+    <h1>Gray Note</h1>
+    <p class="deck">Essays on minimal things, small moments, and the ordinary.</p>
 
     <div class="gray-note-list">
       {% if site.posts.size > 0 %}
@@ -33,7 +33,7 @@
           </article>
         {% endfor %}
       {% else %}
-        <p class="gray-note-empty">아직 글이 없습니다.</p>
+        <p class="gray-note-empty">No entries yet.</p>
       {% endif %}
     </div>
 
