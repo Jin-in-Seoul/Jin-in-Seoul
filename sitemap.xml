@@ -1,3 +1,5 @@
+---
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -355,4 +357,13 @@
   <url>
     <loc>https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/en/part-02/entry-13/</loc>
   </url>
+  <url>
+    <loc>https://jin-in-seoul.com/gray-note/</loc>
+  </url>
+{% for post in site.posts %}
+  <url>
+    <loc>https://jin-in-seoul.com{{ post.url }}</loc>
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+  </url>
+{% endfor %}
 </urlset>

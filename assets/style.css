@@ -161,3 +161,59 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
     align-items: flex-start;
   }
 }
+
+/* Gray Note */
+.gray-note-section {
+  margin-top: 54px;
+}
+.gray-note-section p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.72;
+}
+.gray-note-list {
+  margin-top: 44px;
+  border-top: 1px solid var(--line);
+}
+.gray-note-list-item {
+  padding: 22px 0 24px;
+  border-bottom: 1px solid var(--line);
+}
+.gray-note-list-item time,
+.gray-note-date {
+  color: var(--muted);
+  font-size: 15px;
+}
+.gray-note-list-item h2 {
+  margin: 7px 0 0;
+  padding: 0;
+  border: 0;
+  font-family: "Noto Serif KR", Batang, serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.gray-note-list-item h2 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+.gray-note-list-item h2 a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.gray-note-empty {
+  margin: 26px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+}
+.gray-note-post h1 {
+  margin-bottom: 10px;
+  font-family: "Noto Serif KR", Batang, serif;
+}
+.gray-note-date {
+  margin: 0 0 42px;
+}
+.gray-note-prose {
+  margin-top: 0;
+}

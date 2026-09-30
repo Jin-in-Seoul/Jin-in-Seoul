@@ -1,0 +1,43 @@
+---
+---
+<!doctype html>
+<html lang="ko">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-72EG8XPTN7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-72EG8XPTN7');
+</script>
+  <meta charset="utf-8">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>회색노트 - Jin-in-Seoul</title>
+  <link rel="stylesheet" href="/assets/style.css?v=056">
+</head>
+<body>
+  <main class="shell">
+    {% include header.html %}
+
+    <h1>회색노트</h1>
+    <p class="deck">짧은 에세이와 기록.</p>
+
+    <div class="gray-note-list">
+      {% if site.posts.size > 0 %}
+        {% for post in site.posts %}
+          <article class="gray-note-list-item">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          </article>
+        {% endfor %}
+      {% else %}
+        <p class="gray-note-empty">아직 글이 없습니다.</p>
+      {% endif %}
+    </div>
+
+    {% include footer.html %}
+  </main>
+</body>
+</html>

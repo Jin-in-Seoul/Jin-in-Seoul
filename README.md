@@ -50,3 +50,28 @@ Free Digital Editions links emit the GA4 event `digital_edition_download` with w
 - Added English A Dictionary of Galactic Extinction, Part II, Chapters 7–9.
 - Activated the new chapter links in the English contents page.
 - Updated sitemap.xml and Publication Log for September 30, 2026.
+
+## 055 — 회색노트 self-publishing
+- Added `/gray-note/` as a Jekyll-managed essay/notes section.
+- New posts are created by adding one Markdown file to `_posts/`; the list page updates automatically in reverse chronological order.
+- Post URLs are generated automatically as `/gray-note/YYYY/MM/DD/slug/`.
+- `sitemap.xml` now automatically includes future Gray Note posts.
+- Gray Note posts use `_layouts/gray-note-post.html`, the shared site header/footer, GA4, and the site's Korean serif typography.
+
+### How to publish a new 회색노트 post without rebuilding the site
+In GitHub, create a new file inside `_posts/` with a filename like:
+
+`2026-09-30-my-note.md`
+
+Paste this at the top:
+
+```yaml
+---
+layout: gray-note-post
+title: "글 제목"
+date: 2026-09-30
+---
+```
+
+Then write the body below the closing `---` in ordinary Markdown and commit the file.
+The `/gray-note/` index and sitemap update automatically when GitHub Pages rebuilds the site.
