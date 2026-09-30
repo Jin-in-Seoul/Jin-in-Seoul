@@ -366,4 +366,28 @@
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
   </url>
 {% endfor %}
+  <url>
+    <loc>https://jin-in-seoul.com/scarecrow-distance/en/</loc>
+  </url>
+  <url>
+    <loc>https://jin-in-seoul.com/scarecrow-distance/en/chapter-01/</loc>
+  </url>
+  <url>
+    <loc>https://jin-in-seoul.com/scarecrow-distance/ja/</loc>
+  </url>
+  <url>
+    <loc>https://jin-in-seoul.com/scarecrow-distance/ja/chapter-01/</loc>
+  </url>
+  <url>
+    <loc>https://jin-in-seoul.com/scarecrow-distance/fr/</loc>
+  </url>
+  <url>
+    <loc>https://jin-in-seoul.com/scarecrow-distance/fr/chapter-01/</loc>
+  </url>
+  <url>
+    <loc>https://jin-in-seoul.com/scarecrow-distance/ko/</loc>
+  </url>
+  <url>
+    <loc>https://jin-in-seoul.com/scarecrow-distance/ko/chapter-01/</loc>
+  </url>
 </urlset>
