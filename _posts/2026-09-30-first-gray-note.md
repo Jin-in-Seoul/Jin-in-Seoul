@@ -7,6 +7,7 @@ date: 2026-09-30
 Available in English · 日本語 · Français · 한국어 — scroll down to read.
 
 A Galaxy That Began with a Single Candle
+
 About thirty years ago, while watching Men in Black, one strange image caught my attention. Inside a small bead hanging from a cat’s collar was an entire galaxy. Of all the scenes in the film, that one stayed with me for a strangely long time. The idea that an immense world could exist inside something so small was startling. I thought that someday I would like to write a novel from that image. But for a long time, the thought remained only a thought.
 
 Not long ago, I asked myself a very simple question. What would happen if a single candle were lit inside a sealed room lined with mirrors? The candle would emit the same amount of light. But if the walls kept reflecting it, more light would remain inside the room than in an ordinary room. Then what would happen if light could be trapped perfectly? How long could a single photon exist? If more and more light were continually added, how much could accumulate?
@@ -25,6 +26,7 @@ Looking back, I think there were two very different images at the starting point
 
 
 一本の蝋燭から始まった銀河
+
 三十年ほど前、『メン・イン・ブラック』を見ていたとき、妙に心に引っかかる場面があった。猫の首輪にぶら下がった小さな玉の中に、一つの銀河が入っていた。映画の数ある場面の中で、なぜかそれだけが長く記憶に残った。小さなものの中に巨大な世界が入っているという発想が衝撃的だった。いつかこれを題材に小説を書いてみたいと思った。しかし、その考えは長いあいだ、考えのまま残っていた。
 
 少し前、私はごく些細な疑問を一つ持った。密閉された鏡張りの部屋の中で、一本の蝋燭を灯したらどうなるのだろう。蝋燭が放つ光の量そのものは変わらない。けれども壁が光を反射し続けるなら、普通の部屋よりも多くの光がその空間にとどまるはずだ。では、もし光を完全に閉じ込めることができたらどうなるのか。一個の光子はどれほど長く存在できるのか。そこへ光を絶えず注ぎ込み続けたら、どこまで蓄積できるのか。
@@ -43,6 +45,7 @@ Looking back, I think there were two very different images at the starting point
 
 
 Une galaxie née d’une seule bougie
+
 Il y a une trentaine d’années, en regardant Men in Black, je suis resté accroché à une scène étrange. Une galaxie entière se trouvait à l’intérieur d’une petite bille suspendue au collier d’un chat. Parmi toutes les scènes du film, celle-là est restée curieusement longtemps dans ma mémoire. L’idée qu’un monde immense puisse tenir à l’intérieur de quelque chose de minuscule m’avait frappé. Je me suis dit qu’un jour, j’aimerais écrire un roman à partir de cette image. Mais pendant longtemps, cette idée n’est restée qu’une idée.
 
 Il y a quelque temps, je me suis posé une question très simple. Que se passerait-il si l’on allumait une bougie dans une pièce hermétiquement close dont les murs seraient couverts de miroirs ? La bougie émettrait la même quantité de lumière. Mais si les murs continuaient à la réfléchir, davantage de lumière resterait dans cet espace que dans une pièce ordinaire. Alors, que se passerait-il si l’on pouvait emprisonner parfaitement la lumière ? Combien de temps un seul photon pourrait-il exister ? Et si l’on continuait à y injecter toujours plus de lumière, jusqu’où pourrait-elle s’accumuler ?
@@ -61,6 +64,7 @@ Avec le recul, il me semble qu’au point de départ se trouvaient deux images t
 
 
 촛불 하나에서 시작된 은하
+
 30년쯤 전 영화 《맨 인 블랙》을 보다가 이상한 장면 하나에 붙잡혔다. 고양이 목걸이에 달린 작은 구슬 안에 하나의 은하가 들어 있었다. 영화의 수많은 장면 가운데 이상하게도 그것만 오래 남았다. 작은 것 안에 거대한 세계가 들어 있다는 발상이 충격적이었다. 언젠가 이것을 소재로 소설을 쓰고 싶다고 생각했다. 그러나 생각은 오래도록 생각으로만 남아 있었다.
 
 얼마 전 아주 사소한 질문을 하나 했다. 밀폐된 거울방 안에서 촛불 하나를 켜면 어떻게 될까. 촛불은 똑같은 양의 빛을 내놓는다. 그러나 벽이 빛을 계속 반사한다면 평범한 방보다 더 많은 빛이 그 공간 안에 머물 것이다. 그렇다면 빛을 완벽하게 가둘 수 있다면 어떻게 될까. 광자 하나는 얼마나 오래 존재할까. 수많은 빛을 계속 집어넣으면 그것은 어디까지 축적될까.
@@ -76,5 +80,3 @@ Avec le recul, il me semble qu’au point de départ se trouvaient deux images t
 형식에 대해서는 다른 고민이 있었다. 거대한 문명의 역사를 한 사람의 생애와 하나의 줄거리로 설명하고 싶지 않았다. 너무 많은 시간이 흐르고 너무 많은 사람이 등장하며 무엇보다 누구도 전체를 보지 못하는 세계를 만들고 싶었다. 보르헤스는 복잡한 세계를 짧은 문장과 가짜 문헌과 사전과 주석 속에 집어넣을 수 있다는 것을 보여주었다. 《하자르 사전》은 이야기가 반드시 처음에서 시작해 끝으로 흘러갈 필요가 없다는 사실을 다시 생각하게 했다. 하나의 단어를 읽고 다른 단어로 건너가고 서로 모순되는 기록을 따라가다 보면 독자의 머릿속에서 보이지 않던 세계가 만들어질 수도 있었다. 그래서 사전이라는 형식을 생각했다. 각각의 단어는 작다. 그러나 단어 하나를 끝까지 따라가면 그 뒤에 하나의 제도와 한 시대와 수많은 사람의 삶이 나타난다. 그리고 그 단어들을 모두 읽고 나면 독자는 어느 순간 한 문명의 탄생과 멸망을 보게 된다. 그렇게 《은하 멸망 사전》이 시작되었다.
 
 돌이켜보면 출발점에는 두 개의 아주 다른 이미지가 있었던 것 같다. 하나는 고양이 목걸이에 매달려 있던 작은 은하였다. 다른 하나는 거울로 둘러싸인 방 안에서 타고 있는 촛불 하나였다. 하나는 30년 동안 내 머릿속에 남아 있었고 다른 하나는 어느 날 갑자기 질문을 시작했다. 그 둘 사이에 토인비와 콜린 윌슨이 있었고 돈키호테와 김수영이 있었고 보르헤스와 파비치가 있었다. 그리고 오랫동안 읽고 생각했던 문명의 역사와 인간에 대한 의심이 있었다. 나는 처음에 작은 구슬 안에 은하를 넣는 소설을 쓰고 싶었다. 그런데 쓰기 시작하고 보니 전혀 다른 이야기가 되어 있었다. 구슬 속에 은하를 넣는 대신 인간의 선의와 욕망과 두려움과 언어를 은하 하나에 집어넣고 그것이 끝까지 작동하면 어디에 도착하는지를 보고 싶어졌다. 《은하 멸망 사전》은 그 결과다.
-
-
