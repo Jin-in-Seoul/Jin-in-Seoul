@@ -29,7 +29,7 @@
       {% if site.posts.size > 0 %}
         {% for post in site.posts %}
           <article class="gray-note-list-item">
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
             <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
           </article>
         {% endfor %}
