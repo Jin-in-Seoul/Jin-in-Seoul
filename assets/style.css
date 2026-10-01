@@ -218,6 +218,27 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
   margin-top: 0;
 }
 
+.gray-note-photo-essay {
+  margin-top: 54px;
+}
+.gray-note-photo-essay img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 34px;
+}
+.gray-note-photo-essay img:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 620px) {
+  .gray-note-photo-essay {
+    margin-top: 42px;
+  }
+  .gray-note-photo-essay img {
+    margin-bottom: 24px;
+  }
+}
+
 /* Music */
 .music-section {
   margin-top: 54px;
