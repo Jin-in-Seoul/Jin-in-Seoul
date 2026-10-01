@@ -217,3 +217,133 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 .gray-note-prose {
   margin-top: 0;
 }
+
+/* Music */
+.music-section {
+  margin-top: 54px;
+}
+.music-section p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.72;
+}
+.music-list {
+  margin-top: 44px;
+}
+.music-list > h2 {
+  margin-top: 0;
+}
+.music-list-item {
+  padding: 22px 0 24px;
+  border-bottom: 1px solid var(--line);
+}
+.music-list-item h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: "Noto Serif KR", Batang, serif;
+}
+.music-list-item h3 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+.music-list-item h3 a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.music-list-item p,
+.music-origin,
+.music-language-note,
+.music-credit {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.music-post h1 {
+  margin-bottom: 10px;
+  font-family: "Noto Serif KR", Batang, serif;
+  font-weight: 400;
+}
+.music-title-translation {
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  font-size: 0.72em;
+  font-weight: 400;
+}
+.music-origin {
+  margin: 0 0 28px;
+}
+.music-player {
+  display: block;
+  width: min(100%, 700px);
+  margin: 0 0 30px;
+}
+.music-language-note {
+  margin: 0 0 58px;
+}
+.lyrics-wrap {
+  max-width: 700px;
+}
+.lyrics-section {
+  margin: 0 0 78px;
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  line-height: 1.82;
+}
+.lyrics-section h2 {
+  margin: 0 0 22px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+.lyrics-section h3 {
+  margin: 0 0 30px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.lyrics-section p {
+  margin: 0 0 1.65em;
+}
+.lyrics-ja {
+  font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-weight: 500;
+  line-height: 1.90;
+}
+.lyrics-ko {
+  font-family: "Noto Serif KR", Batang, serif;
+  font-weight: 400;
+  line-height: 1.90;
+}
+.music-credit {
+  max-width: 700px;
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.music-credit p {
+  margin: 0;
+}
+@media (max-width: 620px) {
+  .music-title-translation {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.72em;
+  }
+  .music-language-note {
+    margin-bottom: 46px;
+  }
+  .lyrics-section {
+    margin-bottom: 64px;
+    font-size: 18px;
+  }
+  .lyrics-section h2 {
+    font-size: 20px;
+  }
+  .lyrics-section h3 {
+    font-size: 22px;
+  }
+}
