@@ -368,3 +368,59 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
     font-size: 22px;
   }
 }
+
+/* Haiku */
+.haiku-section {
+  margin-top: 54px;
+}
+.haiku-section p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.72;
+  margin: 0;
+}
+.haiku-list {
+  margin-top: 42px;
+}
+.haiku-list-item {
+  padding: 0 0 28px;
+  margin: 0 0 28px;
+  border-bottom: 1px solid var(--line);
+}
+.haiku-list-item time,
+.haiku-date {
+  color: var(--muted);
+  font-size: 15px;
+}
+.haiku-list-item h2 {
+  margin: 8px 0 0;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+.haiku-list-item h2 a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.haiku-post h1 {
+  margin-bottom: 8px;
+}
+.haiku-date {
+  margin: 0 0 34px;
+}
+.haiku-prose {
+  max-width: 700px;
+}
+.haiku-prose section {
+  margin: 0 0 44px;
+}
+.haiku-prose h2 {
+  margin: 0 0 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+.haiku-prose p {
+  margin: 0 0 20px;
+}
