@@ -1,0 +1,44 @@
+name: Restore Sweater French structure
+
+on:
+  push:
+    paths:
+      - '.github/workflows/restore-sweater-fr-structure.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install parser
+        run: pip install beautifulsoup4 lxml
+      - name: Restore French chapter structure
+        run: python tools/restore_sweater_fr_structure.py
+      - name: Verify only French Sweater chapters changed
+        run: |
+          python - <<'PY'
+          import subprocess,sys
+          out=subprocess.check_output(['git','status','--short'],text=True)
+          changed=[line[3:] for line in out.splitlines() if line.strip()]
+          bad=[p for p in changed if not p.startswith('sweater/fr/chapter-')]
+          if bad:
+              raise SystemExit('Unexpected changed files: '+repr(bad))
+          if not changed:
+              raise SystemExit('No French chapter files changed')
+          print('\n'.join(changed))
+          PY
+      - name: Commit and clean helpers
+        run: |
+          rm -f tools/restore_sweater_fr_structure.py
+          rm -f .github/workflows/restore-sweater-fr-structure.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Restore Le Pull paragraph structure"
+          git push
