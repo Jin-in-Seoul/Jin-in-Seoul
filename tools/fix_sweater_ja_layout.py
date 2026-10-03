@@ -8,7 +8,7 @@ OUT=R/'assets/downloads/sweater/ja'
 PDF=OUT/'sweater-ja-20261003-ver-001.pdf'
 EPUB=OUT/'sweater-ja-20261003-ver-001.epub'
 
-date_re=re.compile(r'^\\s*\\d{1,2}月\\d{1,2}日(?:\\s|　)')
+date_re=re.compile(r'^\s*\d{1,2}月\d{1,2}日(?:\s|　)')
 chapters=[]
 for i in range(1,13):
     s=BeautifulSoup((R/f'sweater/ja/chapter-{i:02d}/index.html').read_text(encoding='utf-8'),'lxml')
