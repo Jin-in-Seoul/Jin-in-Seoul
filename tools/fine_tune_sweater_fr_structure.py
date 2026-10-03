@@ -78,7 +78,7 @@ for idx in range(1,13):
 checks={
   2:['<p>15. Écouteurs</p>','<p>* Ce qui n’est finalement pas rentré'],
   4:['<p>07 h 40 Réveil.</p>','<p>07 h 50 Hee-jeong appelle'],
-  6:['<p>06 h 00 Réveil tout seul.</p>','<p>07 h 00 Papa me secoue'],
+  6:['<p>06 h 00 Réveil tout seul.','<p>07 h 00 Papa me secoue'],
   10:['<p>• Voiture 1.','<p>• Voiture 2.','<p>• Voiture 3.','<p>07 h 00. Tout le monde se retrouve'],
 }
 for idx,needles in checks.items():
