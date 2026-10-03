@@ -1,0 +1,170 @@
+name: One-time publishing metadata cleanup
+
+on:
+  push:
+    paths:
+      - '.github/workflows/one-time-publishing-metadata-cleanup.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install pymupdf
+          sudo apt-get update
+          sudo apt-get install -y fonts-nanum
+
+      - name: Remove independent-publishing wording
+        shell: bash
+        run: |
+          python <<'PY'
+          import fitz, os, zipfile, tempfile, shutil
+
+          pdf_jobs = [
+              ("assets/downloads/sweater/en/sweater-en-20260930-ver-001.pdf",
+               "Published independently by Jin-in-Seoul",
+               "Published by Jin-in-Seoul",
+               "Times-Roman", None),
+              ("assets/downloads/sweater/fr/le-pull-fr-20260930-ver-001.pdf",
+               "Publié indépendamment par Jin-in-Seoul",
+               "Publié par Jin-in-Seoul",
+               "Times-Roman", None),
+              ("assets/downloads/a-dictionary-of-galactic-extinction/part-01/en/a-dictionary-of-galactic-extinction-part-01-en-20260929-ver-001.pdf",
+               "Published independently by Jin-in-Seoul",
+               "Published by Jin-in-Seoul",
+               "RepFont", "/usr/share/fonts/truetype/nanum/NanumMyeongjo.ttf"),
+              ("assets/downloads/a-dictionary-of-galactic-extinction/part-01/ko/a-dictionary-of-galactic-extinction-part-01-ko-20260929-ver-001.pdf",
+               "Published independently by Jin-in-Seoul",
+               "Published by Jin-in-Seoul",
+               "RepFont", "/usr/share/fonts/truetype/nanum/NanumMyeongjo.ttf"),
+          ]
+
+          for path, old, new, fontname, fontfile in pdf_jobs:
+              doc = fitz.open(path)
+              hit_count = 0
+              for page in doc:
+                  target = None
+                  for block in page.get_text("dict")["blocks"]:
+                      for line in block.get("lines", []):
+                          for span in line.get("spans", []):
+                              if old in span["text"]:
+                                  target = span
+                                  break
+                          if target:
+                              break
+                      if target:
+                          break
+                  if target:
+                      hit_count += 1
+                      rect = fitz.Rect(target["bbox"])
+                      erase = fitz.Rect(rect.x0 - 0.5, rect.y0 - 0.5, rect.x1 + 2, rect.y1 + 0.5)
+                      page.add_redact_annot(erase, fill=(1, 1, 1))
+                      page.apply_redactions()
+                      if fontfile:
+                          page.insert_font(fontname=fontname, fontfile=fontfile)
+                      page.insert_text(
+                          target["origin"],
+                          new,
+                          fontname=fontname,
+                          fontsize=target["size"],
+                          color=(0, 0, 0),
+                      )
+              if hit_count != 1:
+                  raise RuntimeError(f"{path}: expected exactly one copyright-line match, got {hit_count}")
+              tmp = path + ".tmp.pdf"
+              doc.save(tmp, garbage=4, deflate=True)
+              doc.close()
+              os.replace(tmp, path)
+
+              check = fitz.open(path)
+              txt = "\n".join(p.get_text() for p in check)
+              check.close()
+              if old in txt or new not in txt:
+                  raise RuntimeError(f"{path}: PDF verification failed")
+
+          epub_jobs = [
+              ("assets/downloads/sweater/en/sweater-en-20260930-ver-001.epub",
+               "Published independently by Jin-in-Seoul",
+               "Published by Jin-in-Seoul"),
+              ("assets/downloads/sweater/fr/le-pull-fr-20260930-ver-001.epub",
+               "Publié indépendamment par Jin-in-Seoul",
+               "Publié par Jin-in-Seoul"),
+              ("assets/downloads/a-dictionary-of-galactic-extinction/part-01/en/a-dictionary-of-galactic-extinction-part-01-en-20260929-ver-001.epub",
+               "Published independently by Jin-in-Seoul",
+               "Published by Jin-in-Seoul"),
+              ("assets/downloads/a-dictionary-of-galactic-extinction/part-01/ko/a-dictionary-of-galactic-extinction-part-01-ko-20260929-ver-001.epub",
+               "Published independently by Jin-in-Seoul",
+               "Published by Jin-in-Seoul"),
+          ]
+
+          for path, old, new in epub_jobs:
+              tmpdir = tempfile.mkdtemp()
+              try:
+                  with zipfile.ZipFile(path, "r") as z:
+                      z.extractall(tmpdir)
+                  hits = 0
+                  for root, _, files in os.walk(tmpdir):
+                      for fn in files:
+                          p = os.path.join(root, fn)
+                          try:
+                              with open(p, "r", encoding="utf-8") as f:
+                                  s = f.read()
+                          except (UnicodeDecodeError, OSError):
+                              continue
+                          n = s.count(old)
+                          if n:
+                              hits += n
+                              with open(p, "w", encoding="utf-8") as f:
+                                  f.write(s.replace(old, new))
+                  if hits != 1:
+                      raise RuntimeError(f"{path}: expected exactly one EPUB match, got {hits}")
+
+                  out = path + ".tmp"
+                  with zipfile.ZipFile(out, "w") as z:
+                      mimetype = os.path.join(tmpdir, "mimetype")
+                      z.write(mimetype, "mimetype", compress_type=zipfile.ZIP_STORED)
+                      for root, _, files in os.walk(tmpdir):
+                          for fn in files:
+                              p = os.path.join(root, fn)
+                              rel = os.path.relpath(p, tmpdir)
+                              if rel == "mimetype":
+                                  continue
+                              z.write(p, rel, compress_type=zipfile.ZIP_DEFLATED)
+                  with zipfile.ZipFile(out, "r") as z:
+                      if z.testzip() is not None:
+                          raise RuntimeError(f"{path}: EPUB ZIP verification failed")
+                      text = ""
+                      for name in z.namelist():
+                          if name.endswith((".xhtml", ".html", ".opf", ".ncx", ".xml")):
+                              try:
+                                  text += z.read(name).decode("utf-8")
+                              except UnicodeDecodeError:
+                                  pass
+                      if old in text or new not in text:
+                          raise RuntimeError(f"{path}: EPUB text verification failed")
+                  os.replace(out, path)
+              finally:
+                  shutil.rmtree(tmpdir, ignore_errors=True)
+          PY
+
+      - name: Commit cleaned editions and remove this one-time workflow
+        run: |
+          rm -f .github/workflows/one-time-publishing-metadata-cleanup.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Remove independent publishing wording from digital editions"
+          git push
