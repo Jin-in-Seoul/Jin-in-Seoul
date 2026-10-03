@@ -1,0 +1,65 @@
+name: Fix Japanese Sweater date spacing
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-sweater-ja-date-spacing.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install
+        run: |
+          pip install beautifulsoup4 lxml weasyprint pymupdf
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk
+      - name: Rebuild
+        run: python tools/fix_sweater_ja_date_spacing.py
+      - name: Verify spacing direction
+        run: |
+          python - <<'PY'
+          import fitz,re
+          p='assets/downloads/sweater/ja/sweater-ja-20261003-ver-001.pdf'
+          d=fitz.open(p)
+          # Find 3/2 and compare gap above vs gap below.
+          found=False
+          for page in d:
+              lines=[]
+              for b in page.get_text('dict')['blocks']:
+                  for l in b.get('lines',[]):
+                      txt=''.join(s['text'] for s in l.get('spans',[])).strip()
+                      if txt:
+                          lines.append((l['bbox'][1],l['bbox'][3],txt))
+              lines.sort()
+              for i,(y0,y1,txt) in enumerate(lines):
+                  if re.match(r'^3月2日',txt):
+                      prev=lines[i-1] if i>0 else None
+                      nxt=lines[i+1] if i+1<len(lines) else None
+                      assert prev and nxt, (prev,nxt)
+                      gap_above=y0-prev[1]
+                      gap_below=nxt[0]-y1
+                      print('gaps',gap_above,gap_below)
+                      assert gap_above > gap_below + 10, (gap_above,gap_below)
+                      found=True
+                      break
+              if found: break
+          assert found, '3月2日 not found'
+          d.close()
+          PY
+      - name: Commit and clean helpers
+        run: |
+          rm -f tools/fix_sweater_ja_date_spacing.py
+          rm -f .github/workflows/fix-sweater-ja-date-spacing.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Move Japanese diary spacing before dates"
+          git push
