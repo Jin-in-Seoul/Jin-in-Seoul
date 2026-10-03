@@ -27,10 +27,7 @@ for i in range(1,13):
     chapters.append((title,blocks))
 
 # Japanese PDF
-font='/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc'
-bold='/usr/share/fonts/opentype/noto/NotoSerifCJK-Bold.ttc'
-pdfmetrics.registerFont(TTFont('JP',font,subfontIndex=0))
-pdfmetrics.registerFont(TTFont('JPB',bold,subfontIndex=0))
+pdfmetrics.registerFont(UnicodeCIDFont('HeiseiMin-W3'))\npdfmetrics.registerFont(UnicodeCIDFont('HeiseiKakuGo-W5'))
 outdir=R/'assets/downloads/sweater/ja'
 outdir.mkdir(parents=True,exist_ok=True)
 pdfp=outdir/'sweater-ja-20261003-ver-001.pdf'
