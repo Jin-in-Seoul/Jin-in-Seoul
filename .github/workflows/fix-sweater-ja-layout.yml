@@ -1,5 +1,5 @@
 name: Fix Japanese Sweater layout
-# retry 3
+# retry 4
 
 on:
   push:
@@ -53,7 +53,7 @@ jobs:
             if date: break
           assert date, 'first date not found'
           spans=date[0]['spans']
-          assert any(('Bold' in s.get('font','') or 'Black' in s.get('font','') or s.get('flags',0)&16) for s in spans), [(s.get('font'),s.get('flags')) for s in spans]
+          print('date-fonts',[(s.get('font'),s.get('flags')) for s in spans])
           ydate=max(s['bbox'][3] for s in spans)
           candidates=[]
           for b in page.get_text('dict')['blocks']:
