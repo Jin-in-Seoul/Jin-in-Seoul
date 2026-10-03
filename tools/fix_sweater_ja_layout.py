@@ -86,7 +86,7 @@ for ci,(t,blocks) in enumerate(chapters,1):
     after_date=False
     for x in blocks:
         is_date=bool(date_re.match(x))
-        noindent=after_date or bool(re.match(r'^(?:\\d+\\.|―|「|『|\\(|（)',x))
+        noindent=after_date or bool(re.match(r'^(?:\d+\.|―|「|『|\(|（)',x))
         cls='date' if is_date else ('noindent' if noindent else '')
         txt='<br/>'.join(html.escape(z) for z in x.split('\\n'))
         body.append(f'<p class="{cls}">{txt}</p>')
