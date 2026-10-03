@@ -24,7 +24,7 @@ for i in range(1,13):
 css=r'''
 @page { size: A4; margin: 72pt; }
 @page fixed { size: A4; margin: 0; }
-html,body { margin:0; padding:0; font-family:"Noto Serif CJK JP","Noto Serif JP",serif; font-size:12pt; color:#111; }
+html,body { margin:0; padding:0; font-family:'JinJP',serif; font-size:12pt; color:#111; }
 .fixed { page: fixed; position:relative; width:595.28pt; height:841.89pt; page-break-after:always; }
 .cover .edition { position:absolute; left:72pt; top:70pt; font-weight:700; line-height:16pt; }
 .cover .title { position:absolute; left:72pt; right:72pt; top:278pt; text-align:center; font-size:20pt; font-weight:400; line-height:24pt; }
@@ -48,7 +48,7 @@ html,body { margin:0; padding:0; font-family:"Noto Serif CJK JP","Noto Serif JP"
 .prose { font-size:12pt; line-height:27.6pt; }
 .prose p { margin:0; padding:0; text-indent:36pt; }
 .prose p.noindent { text-indent:0; }
-.prose p.date { text-indent:0; font-family:"Noto Sans CJK JP","Noto Sans JP",sans-serif; font-weight:700; margin-top:0; margin-bottom:27.6pt; }
+.prose p.date { text-indent:0; font-family:'JinJP',serif; font-weight:700; margin-top:0; margin-bottom:27.6pt; }
 '''
 
 cover='''<section class="fixed cover">
