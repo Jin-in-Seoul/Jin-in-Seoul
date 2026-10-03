@@ -8,7 +8,7 @@ from reportlab.lib.enums import TA_CENTER
 from reportlab.lib.units import inch
 from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,PageBreak
 from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.pdfbase.cidfonts import UnicodeCIDFont
 
 R=Path('.')
 date_re=re.compile(r'^\s*\d{1,2}月\d{1,2}日(?:\s|　)')
@@ -35,9 +35,9 @@ outdir=R/'assets/downloads/sweater/ja'
 outdir.mkdir(parents=True,exist_ok=True)
 pdfp=outdir/'sweater-ja-20261003-ver-001.pdf'
 D=SimpleDocTemplate(str(pdfp),pagesize=A4,leftMargin=inch,rightMargin=inch,topMargin=inch,bottomMargin=inch)
-base=ParagraphStyle('base',fontName='JP',fontSize=12,leading=20,spaceAfter=0)
+base=ParagraphStyle('base',fontName='HeiseiMin-W3',fontSize=12,leading=20,spaceAfter=0)
 center=ParagraphStyle('center',parent=base,alignment=TA_CENTER)
-date=ParagraphStyle('date',parent=base,fontName='JPB',spaceBefore=12,spaceAfter=14,firstLineIndent=0)
+date=ParagraphStyle('date',parent=base,fontName='HeiseiKakuGo-W5',spaceBefore=12,spaceAfter=14,firstLineIndent=0)
 body=ParagraphStyle('body',parent=base,firstLineIndent=36)
 noindent=ParagraphStyle('noindent',parent=base,firstLineIndent=0)
 story=[Spacer(1,20),Paragraph('無料デジタル版',center),Spacer(1,30),Paragraph('<font size="22">セーター</font>',center),Spacer(1,30),Paragraph('文芸小説',center),PageBreak()]
