@@ -44,6 +44,9 @@ try:
         if len(ss)==12:
             src=cand; soup=cs; sections=ss; break
     if src is None:
+        for cand in tmp.rglob('*.xhtml'):
+            cs=BeautifulSoup(cand.read_text(encoding='utf-8'),'xml')
+            print('candidate',cand,[h.get_text(' ',strip=True) for h in cs.find_all(['h1','h2'])])
         raise RuntimeError('Could not locate XHTML containing all 12 chapters')
     print('source',src)
 
