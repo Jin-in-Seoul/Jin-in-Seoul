@@ -35,11 +35,17 @@ tmp=Path(tempfile.mkdtemp())
 try:
     with zipfile.ZipFile(EPUB) as z:
         z.extractall(tmp)
-    src=tmp/'EPUB/text/ch003.xhtml'
-    soup=BeautifulSoup(src.read_text(encoding='utf-8'),'xml')
-    sections=soup.find_all('section',class_=lambda c:c and 'chapter-heading' in c)
-    if len(sections)!=12:
-        raise RuntimeError(f'Expected 12 chapter sections, found {len(sections)}')
+    src=None
+    soup=None
+    sections=None
+    for cand in tmp.rglob('*.xhtml'):
+        cs=BeautifulSoup(cand.read_text(encoding='utf-8'),'xml')
+        ss=cs.find_all('section',class_=lambda c:c and 'chapter-heading' in c)
+        if len(ss)==12:
+            src=cand; soup=cs; sections=ss; break
+    if src is None:
+        raise RuntimeError('Could not locate XHTML containing all 12 chapters')
+    print('source',src)
 
     for idx,sec in enumerate(sections,1):
         page=ROOT/f'sweater/fr/chapter-{idx:02d}/index.html'
