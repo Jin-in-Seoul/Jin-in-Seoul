@@ -1,4 +1,4 @@
-name: Finalize digital editions
+name: Finalize digital editions\n# retry 2
 
 on:
   workflow_dispatch:
