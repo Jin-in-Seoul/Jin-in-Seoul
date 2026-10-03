@@ -27,7 +27,8 @@ for i in range(1,13):
     chapters.append((title,blocks))
 
 # Japanese PDF
-pdfmetrics.registerFont(UnicodeCIDFont('HeiseiMin-W3'))\npdfmetrics.registerFont(UnicodeCIDFont('HeiseiKakuGo-W5'))
+pdfmetrics.registerFont(UnicodeCIDFont('HeiseiMin-W3'))
+pdfmetrics.registerFont(UnicodeCIDFont('HeiseiKakuGo-W5'))
 outdir=R/'assets/downloads/sweater/ja'
 outdir.mkdir(parents=True,exist_ok=True)
 pdfp=outdir/'sweater-ja-20261003-ver-001.pdf'
