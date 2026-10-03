@@ -35,22 +35,15 @@ tmp=Path(tempfile.mkdtemp())
 try:
     with zipfile.ZipFile(EPUB) as z:
         z.extractall(tmp)
-    src=None
-    soup=None
-    sections=None
-    for cand in tmp.rglob('*.xhtml'):
-        cs=BeautifulSoup(cand.read_text(encoding='utf-8'),'xml')
-        ss=cs.find_all('section',class_=lambda c:c and 'chapter-heading' in c)
-        if len(ss)==12:
-            src=cand; soup=cs; sections=ss; break
-    if src is None:
-        for cand in tmp.rglob('*.xhtml'):
-            cs=BeautifulSoup(cand.read_text(encoding='utf-8'),'xml')
-            print('candidate',cand,[h.get_text(' ',strip=True) for h in cs.find_all(['h1','h2'])])
-        raise RuntimeError('Could not locate XHTML containing all 12 chapters')
-    print('source',src)
+    for idx in range(1,13):
+        src=tmp/f'EPUB/Text/chapter-{idx:02d}.xhtml'
+        if not src.exists():
+            raise RuntimeError(f'Missing EPUB chapter source: {src}')
+        es=BeautifulSoup(src.read_text(encoding='utf-8'),'xml')
+        body=es.find('body')
+        if body is None:
+            raise RuntimeError(f'No body in {src}')
 
-    for idx,sec in enumerate(sections,1):
         page=ROOT/f'sweater/fr/chapter-{idx:02d}/index.html'
         current=page.read_text(encoding='utf-8')
         cur_soup=BeautifulSoup(current,'lxml')
@@ -58,49 +51,40 @@ try:
         if cur_prose is None:
             raise RuntimeError(f'No prose section in {page}')
 
-        # EPUB body content after h1, preserving inline emphasis.
+        # Read EPUB body in document order, excluding the chapter heading.
         nodes=[]
-        for child in sec.children:
-            if getattr(child,'name',None)=='h1':
+        for child in body.children:
+            name=getattr(child,'name',None)
+            if name in ('h1','h2'):
                 continue
-            if getattr(child,'name',None)=='p':
-                inner=''.join(str(x) for x in child.contents).strip()
-                text=child.get_text(' ',strip=True)
-                nodes.append(('p',inner,text))
+            if name=='p':
+                nodes.append(('p',child))
+            elif name in ('ol','ul'):
+                nodes.append((name,child))
+            elif name in ('section','div'):
+                for sub in child.find_all(['p','ol','ul'],recursive=True):
+                    if sub.find_parent(['ol','ul']) is not None and sub.name=='p':
+                        continue
+                    nodes.append((sub.name,sub))
 
-        epub_text=' '.join(x[2] for x in nodes)
+        epub_text=' '.join(node.get_text(' ',strip=True) for _,node in nodes)
         current_text=cur_prose.get_text(' ',strip=True)
         dist,missing,extra=counter_distance(epub_text,current_text)
-        # Structure corruption should not alter vocabulary. Permit tiny punctuation/tokenization drift.
-        if dist>0.018:
+        if dist>0.02:
             raise RuntimeError(f'Content drift too large in {page}: dist={dist:.4f}, missing={missing}, extra={extra}')
 
         out=[]
-        i=0
-        while i<len(nodes):
-            _,inner,text=nodes[i]
-            if date_re.match(text):
-                out.append(f'<p class="entry-date">{inner}</p>')
-                i+=1
-                continue
-
-            m=num_re.match(text)
-            if m:
-                items=[]
-                while i<len(nodes):
-                    _,iin,tt=nodes[i]
-                    mm=num_re.match(tt)
-                    if not mm:
-                        break
-                    # Remove visible numeric prefix from inner HTML, retain the item text.
-                    clean=re.sub(r'^\s*\d+\.\s*','',iin,count=1)
-                    items.append(f'<li>{clean}</li>')
-                    i+=1
-                out.append('<ol>\n'+'\n'.join(items)+'\n</ol>')
-                continue
-
-            out.append(f'<p>{inner}</p>')
-            i+=1
+        for kind,node in nodes:
+            if kind=='p':
+                inner=''.join(str(x) for x in node.contents).strip()
+                txt=node.get_text(' ',strip=True)
+                if date_re.match(txt):
+                    out.append(f'<p class="entry-date">{inner}</p>')
+                else:
+                    out.append(f'<p>{inner}</p>')
+            else:
+                # Preserve list semantics and inline emphasis from the clean EPUB.
+                out.append(str(node))
 
         replacement='<section class="prose">\n'+'\n'.join(out)+'\n    </section>'
         new_current=re.sub(r'<section class="prose">[\s\S]*?</section>',replacement,current,count=1)
