@@ -1,0 +1,48 @@
+name: Build Galactic Extinction Part II EPUBs
+
+on:
+  push:
+    paths:
+      - 'tools/build_part2_epubs_20261004.py'
+      - '.github/workflows/build-part2-epubs-20261004.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install dependencies
+        run: python -m pip install beautifulsoup4 lxml
+      - name: Build and validate EPUBs
+        run: python tools/build_part2_epubs_20261004.py
+      - name: Final archive checks
+        run: |
+          python - <<'PY'
+          import zipfile, pathlib, re
+          root=pathlib.Path('assets/downloads/a-dictionary-of-galactic-extinction/part-02')
+          for lang in ('en','ko'):
+              p=root/lang/f'a-dictionary-of-galactic-extinction-part-02-{lang}-20261004-ver-001.epub'
+              with zipfile.ZipFile(p) as z:
+                  assert z.testzip() is None
+                  assert z.namelist()[0]=='mimetype'
+                  assert len([x for x in z.namelist() if re.fullmatch(r'EPUB/Text/entry-\d\d.xhtml',x)])==16
+              print(lang,p.stat().st_size)
+          PY
+      - name: Commit EPUBs and site links
+        run: |
+          rm -f tools/build_part2_epubs_20261004.py
+          rm -f .github/workflows/build-part2-epubs-20261004.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/downloads/a-dictionary-of-galactic-extinction/part-02/en/a-dictionary-of-galactic-extinction-part-02-en-20261004-ver-001.epub
+          git add assets/downloads/a-dictionary-of-galactic-extinction/part-02/ko/a-dictionary-of-galactic-extinction-part-02-ko-20261004-ver-001.epub
+          git add downloads/index.html publication-log/index.html
+          git add -u tools .github/workflows
+          git commit -m "Add Galactic Extinction Part II EPUB editions"
+          git push
