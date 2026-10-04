@@ -1,0 +1,33 @@
+name: Update home signature banner
+
+on:
+  push:
+    paths:
+      - '.github/workflows/update-home-signature-banner.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          pip install pillow
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk
+      - name: Update home page and banner
+        run: python tools/update_home_signature_banner.py
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/update-home-signature-banner.yml tools/update_home_signature_banner.py
+          git add index.html assets/images/sisyphus-signature.png
+          git commit -m "Refine home page and add signature banner"
+          git push
