@@ -1,0 +1,244 @@
+name: Build Japanese Part I EPUB review
+
+on:
+  push:
+    paths:
+      - '.github/workflows/build-ja-part1-epub-review.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          pip install beautifulsoup4 lxml
+      - name: Build Japanese Part I EPUB
+        shell: bash
+        run: |
+          python <<'PY'
+          from pathlib import Path
+          from bs4 import BeautifulSoup
+          import html, uuid, zipfile, tempfile, shutil, re
+
+          R=Path('.')
+          out=R/'review-output'
+          out.mkdir(exist_ok=True)
+          epub=out/'a-dictionary-of-galactic-extinction-part-01-ja-20261004-ver-001.epub'
+
+          chapters=[]
+          for i in range(1,10):
+              p=R/f'a-dictionary-of-galactic-extinction/ja/part-01/entry-{i:02d}/index.html'
+              s=BeautifulSoup(p.read_text(encoding='utf-8'),'lxml')
+              title=s.find('h1',class_='entry-title').get_text(' ',strip=True)
+              art=s.find('article',class_='prose')
+              ul=art.find('ul',recursive=False)
+              defs=[li.get_text(' ',strip=True) for li in ul.find_all('li',recursive=False)]
+              paras=[]
+              for q in art.find_all('p',recursive=False):
+                  for br in q.find_all('br'): br.replace_with('\n')
+                  paras.append(q.get_text().strip())
+              if len(defs)!=3:
+                  raise RuntimeError(f'entry {i}: expected 3 definitions, got {len(defs)}')
+              chapters.append((title,defs,paras))
+
+          td=Path(tempfile.mkdtemp())
+          try:
+              (td/'META-INF').mkdir()
+              (td/'EPUB/Styles').mkdir(parents=True)
+              (td/'EPUB/Text').mkdir(parents=True)
+              (td/'mimetype').write_text('application/epub+zip',encoding='utf-8')
+              (td/'META-INF/container.xml').write_text(
+                  '<?xml version="1.0" encoding="UTF-8"?>'
+                  '<container version="1.0" xmlns="urn:oasis:names:tc:opendocument:xmlns:container">'
+                  '<rootfiles><rootfile full-path="EPUB/package.opf" media-type="application/oebps-package+xml"/>'
+                  '</rootfiles></container>',encoding='utf-8')
+
+              css='''body{font-family:"Noto Serif CJK JP","Noto Serif JP",serif;line-height:1.75;margin:5%;}
+h1,h2{text-align:center;font-weight:400;}
+p{margin:0;text-indent:1.5em;}
+p.n{text-indent:0;}
+.c{text-align:center;text-indent:0;}
+.meta{margin:.2em 0;text-indent:0;}
+.defs{margin:1.5em 0 2em 1.2em;padding:0;}
+.defs li{margin:.2em 0;}
+.part{margin-top:35vh;text-align:center;font-size:1.4em;text-indent:0;}
+.epigraph{margin:20vh 8% 0 8%;padding-left:1em;border-left:1px solid #888;text-indent:0;}
+.src{margin-top:1em;text-indent:0;color:#555;}
+.entry-title{text-align:left;font-size:1.45em;margin:0 0 1em 0;}
+'''
+              (td/'EPUB/Styles/style.css').write_text(css,encoding='utf-8')
+
+              def page(title,body):
+                  return f'''<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head><meta charset="utf-8"/><title>{html.escape(title)}</title>
+<link rel="stylesheet" href="../Styles/style.css"/></head>
+<body>{body}</body></html>'''
+
+              # Cover/title
+              title_body='''<p class="c">無料デジタル版</p>
+<h1>銀河滅亡辞典</h1>
+<p class="c">第1部 — 滅亡の条件</p>'''
+              (td/'EPUB/Text/title.xhtml').write_text(page('銀河滅亡辞典',title_body),encoding='utf-8')
+
+              # Copyright, matching Japanese Sweater wording + work/part identification
+              cp_lines=[
+                  'Copyright © 2026 Jin-in-Seoul',
+                  'すべての権利を留保します。',
+                  '本書の著作権はJin-in-Seoulに帰属します。',
+                  '著作権者の許可なく、本書の全部または一部を複製、配布、送信、改変、または商業目的で利用することを禁じます。',
+                  '本デジタル版は無償で配布されています。',
+                  '無償での配布は、著作権の放棄または譲渡を意味するものではありません。',
+                  'デジタル初版、2026年',
+                  'Jin-in-Seoul 発行',
+                  'https://jin-in-seoul.com'
+              ]
+              cp_body='<p class="n">銀河滅亡辞典</p><p class="n">A Dictionary of Galactic Extinction</p><p class="n">第1部 — 滅亡の条件</p><br/>' + ''.join(
+                  f'<p class="meta">{html.escape(x)}</p>' for x in cp_lines
+              )
+              (td/'EPUB/Text/copyright.xhtml').write_text(page('著作権',cp_body),encoding='utf-8')
+
+              # Epigraph
+              epi='''<div class="epigraph">「いつになったら、大きさは重要ではないと分かるんだ？<br/>
+大切なものだからといって、<br/>
+とても、とても小さくないとは限らない。」<div class="src">— 映画 <em>Men in Black</em> より</div></div>'''
+              (td/'EPUB/Text/epigraph.xhtml').write_text(page('引用',epi),encoding='utf-8')
+
+              # Contents
+              toc_items=''.join(
+                  f'<li><a href="entry-{i:02d}.xhtml">{html.escape(t)}</a></li>'
+                  for i,(t,_,_) in enumerate(chapters,1)
+              )
+              (td/'EPUB/Text/contents.xhtml').write_text(
+                  page('目次',f'<h1>目次</h1><ol>{toc_items}</ol>'),encoding='utf-8')
+
+              # Part title
+              (td/'EPUB/Text/part-01.xhtml').write_text(
+                  page('第1部 — 滅亡の条件','<p class="part">第1部 — 滅亡の条件</p>'),encoding='utf-8')
+
+              # Entries
+              for i,(title,defs,paras) in enumerate(chapters,1):
+                  defs_html='<ul class="defs">'+''.join(f'<li>{html.escape(x)}</li>' for x in defs)+'</ul>'
+                  ps=''.join('<p>'+ '<br/>'.join(html.escape(z) for z in x.split('\n')) +'</p>' for x in paras)
+                  body=f'<h1 class="entry-title">{html.escape(title)}</h1>{defs_html}{ps}'
+                  (td/f'EPUB/Text/entry-{i:02d}.xhtml').write_text(page(title,body),encoding='utf-8')
+
+              uid='urn:uuid:'+str(uuid.uuid5(uuid.NAMESPACE_URL,'https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/ja/part-01/20261004/001'))
+
+              items=[
+                  '<item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>',
+                  '<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>',
+                  '<item id="css" href="Styles/style.css" media-type="text/css"/>',
+                  '<item id="title" href="Text/title.xhtml" media-type="application/xhtml+xml"/>',
+                  '<item id="copyright" href="Text/copyright.xhtml" media-type="application/xhtml+xml"/>',
+                  '<item id="epigraph" href="Text/epigraph.xhtml" media-type="application/xhtml+xml"/>',
+                  '<item id="contents" href="Text/contents.xhtml" media-type="application/xhtml+xml"/>',
+                  '<item id="part01" href="Text/part-01.xhtml" media-type="application/xhtml+xml"/>',
+              ]
+              spine=['title','copyright','epigraph','contents','part01']
+              for i in range(1,10):
+                  items.append(f'<item id="e{i}" href="Text/entry-{i:02d}.xhtml" media-type="application/xhtml+xml"/>')
+                  spine.append(f'e{i}')
+
+              opf=f'''<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="bookid">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+<dc:identifier id="bookid">{uid}</dc:identifier>
+<dc:title>銀河滅亡辞典 — 第1部 滅亡の条件</dc:title>
+<dc:creator>Jin-in-Seoul</dc:creator>
+<dc:language>ja</dc:language>
+<dc:publisher>Jin-in-Seoul</dc:publisher>
+<dc:rights>Copyright © 2026 Jin-in-Seoul. All rights reserved.</dc:rights>
+<dc:date>2026-10-04</dc:date>
+<meta property="dcterms:modified">2026-10-04T11:30:00Z</meta>
+</metadata>
+<manifest>{''.join(items)}</manifest>
+<spine toc="ncx">{''.join(f'<itemref idref="{x}"/>' for x in spine)}</spine>
+</package>'''
+              (td/'EPUB/package.opf').write_text(opf,encoding='utf-8')
+
+              navs=[
+                  ('title','銀河滅亡辞典'),
+                  ('copyright','著作権'),
+                  ('epigraph','引用'),
+                  ('contents','目次'),
+                  ('part-01','第1部 — 滅亡の条件'),
+              ]+[(f'entry-{i:02d}',t) for i,(t,_,_) in enumerate(chapters,1)]
+              nav=''.join(f'<li><a href="Text/{x}.xhtml">{html.escape(y)}</a></li>' for x,y in navs)
+              (td/'EPUB/nav.xhtml').write_text(
+                  f'''<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="ja">
+<head><title>目次</title></head><body><nav epub:type="toc"><ol>{nav}</ol></nav></body></html>''',
+                  encoding='utf-8')
+
+              np=''.join(
+                  f'<navPoint id="n{i}" playOrder="{i}"><navLabel><text>{html.escape(y)}</text></navLabel><content src="Text/{x}.xhtml"/></navPoint>'
+                  for i,(x,y) in enumerate(navs,1)
+              )
+              (td/'EPUB/toc.ncx').write_text(
+                  f'''<?xml version="1.0" encoding="utf-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+<head><meta name="dtb:uid" content="{uid}"/></head>
+<docTitle><text>銀河滅亡辞典 — 第1部 滅亡の条件</text></docTitle>
+<navMap>{np}</navMap></ncx>''',encoding='utf-8')
+
+              with zipfile.ZipFile(epub,'w') as z:
+                  z.write(td/'mimetype','mimetype',compress_type=zipfile.ZIP_STORED)
+                  for p in td.rglob('*'):
+                      if p.is_file() and p.name!='mimetype':
+                          z.write(p,p.relative_to(td).as_posix(),compress_type=zipfile.ZIP_DEFLATED)
+
+              # Validate
+              with zipfile.ZipFile(epub,'r') as z:
+                  if z.namelist()[0] != 'mimetype':
+                      raise RuntimeError('mimetype is not first')
+                  if z.getinfo('mimetype').compress_type != zipfile.ZIP_STORED:
+                      raise RuntimeError('mimetype must be stored')
+                  if z.testzip() is not None:
+                      raise RuntimeError('ZIP integrity failed')
+                  text='\n'.join(
+                      z.read(n).decode('utf-8')
+                      for n in z.namelist()
+                      if n.endswith('.xhtml') or n.endswith('.opf') or n.endswith('.ncx')
+                  )
+                  must=[
+                      '銀河滅亡辞典','A Dictionary of Galactic Extinction','第1部 — 滅亡の条件',
+                      'Copyright © 2026 Jin-in-Seoul','本デジタル版は無償で配布されています。',
+                      'Jin-in-Seoul 発行','1. 光子欠損','5. 維持費','9. 熱的死',
+                      'それを時間が流れたと呼ぶ存在はいなかった。'
+                  ]
+                  for x in must:
+                      if x not in text:
+                          raise RuntimeError(f'missing text: {x}')
+                  if '第2部 歴史篇' in text or '第2部　歴史篇' in text:
+                      raise RuntimeError('stray Part II label found')
+                  for i in range(1,10):
+                      if f'EPUB/Text/entry-{i:02d}.xhtml' not in z.namelist():
+                          raise RuntimeError(f'missing entry {i}')
+              print('built',epub)
+          finally:
+              shutil.rmtree(td,ignore_errors=True)
+          PY
+      - name: Upload EPUB review artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ja-part1-epub-review
+          path: review-output/a-dictionary-of-galactic-extinction-part-01-ja-20261004-ver-001.epub
+          if-no-files-found: error
+          retention-days: 7
+      - name: Remove temporary workflow
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/build-ja-part1-epub-review.yml
+          git commit -m "Remove temporary Japanese Part I EPUB review workflow"
+          git push
