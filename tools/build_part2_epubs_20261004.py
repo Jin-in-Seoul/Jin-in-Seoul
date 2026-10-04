@@ -94,7 +94,7 @@ def transform_contents(base_text,lang):
         ol=h2.find_next_sibling('ol')
         if not ol: continue
         txt=h2.get_text(' ',strip=True)
-        is_part2=('Part II' in txt) if lang=='en' else ('제2부' in txt)
+        is_part2=(txt==PART_LABEL[lang])
         if is_part2: found=True
         for i,li in enumerate(ol.find_all('li',recursive=False),1):
             label=li.get_text(' ',strip=True)
