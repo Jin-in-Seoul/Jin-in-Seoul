@@ -1,0 +1,179 @@
+name: Build Japanese Part I PDF review
+
+on:
+  push:
+    paths:
+      - '.github/workflows/build-ja-part1-pdf-review.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install beautifulsoup4 lxml weasyprint pymupdf
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk
+
+      - name: Build Japanese Part I PDF
+        shell: bash
+        run: |
+          python <<'PY'
+          from pathlib import Path
+          from bs4 import BeautifulSoup
+          from weasyprint import HTML
+          import fitz, html, re, shutil, os
+
+          R=Path('.')
+          out=R/'review-output'
+          out.mkdir(exist_ok=True)
+          pdf=out/'a-dictionary-of-galactic-extinction-part-01-ja-20261004-ver-001.pdf'
+
+          chapters=[]
+          for i in range(1,10):
+              p=R/f'a-dictionary-of-galactic-extinction/ja/part-01/entry-{i:02d}/index.html'
+              s=BeautifulSoup(p.read_text(encoding='utf-8'),'lxml')
+              title=s.find('h1',class_='entry-title').get_text(' ',strip=True)
+              art=s.find('article',class_='prose')
+              ul=art.find('ul',recursive=False)
+              defs=[li.get_text(' ',strip=True) for li in ul.find_all('li',recursive=False)]
+              paras=[]
+              for q in art.find_all('p',recursive=False):
+                  for br in q.find_all('br'): br.replace_with('\n')
+                  paras.append(q.get_text().strip())
+              if len(defs)!=3:
+                  raise RuntimeError(f'entry {i}: expected 3 definitions, got {len(defs)}')
+              chapters.append((title,defs,paras))
+
+          cp_lines=[
+              'Copyright © 2026 Jin-in-Seoul',
+              'すべての権利を留保します。',
+              '本書の著作権はJin-in-Seoulに帰属します。',
+              '著作権者の許可なく、本書の全部または一部を複製、配布、送信、改変、または商業目的で利用することを禁じます。',
+              '本デジタル版は無償で配布されています。',
+              '無償での配布は、著作権の放棄または譲渡を意味するものではありません。',
+              'デジタル初版、2026年',
+              'Jin-in-Seoul 発行',
+              'https://jin-in-seoul.com'
+          ]
+
+          css=r'''
+          @page { size:A4; margin:72pt 72pt 78pt 72pt; @bottom-center { content: "- " counter(page) " -"; font-family:"Noto Serif CJK JP"; font-size:9pt; } }
+          @page fixed { size:A4; margin:0; @bottom-center { content:none; } }
+          html,body { margin:0; padding:0; font-family:"Noto Serif CJK JP","Noto Serif JP",serif; color:#111; font-size:11.6pt; }
+          .fixed { page:fixed; position:relative; width:595.28pt; height:841.89pt; page-break-after:always; }
+          .cover .edition { position:absolute; left:72pt; top:70pt; font-weight:700; font-size:12pt; }
+          .cover .title { position:absolute; left:72pt; right:72pt; top:265pt; text-align:center; font-size:23pt; line-height:1.35; }
+          .cover .part { position:absolute; left:72pt; right:72pt; top:350pt; text-align:center; font-size:14pt; }
+          .copyright .ctitle { position:absolute; left:72pt; top:208pt; font-size:17pt; }
+          .copyright .cbody { position:absolute; left:72pt; top:265pt; width:451pt; font-size:11.4pt; line-height:25pt; }
+          .copyright .cbody p { margin:0; text-indent:0; }
+          .epigraph .ebox { position:absolute; left:95pt; right:80pt; top:250pt; border-left:1.2pt solid #888; padding-left:18pt; font-size:12pt; line-height:24pt; }
+          .epigraph .src { margin-top:16pt; font-size:10.5pt; color:#555; }
+          .toc .ttitle { position:absolute; left:72pt; right:72pt; top:145pt; text-align:center; font-size:17pt; }
+          .toc .tlist { position:absolute; top:225pt; left:50%; width:340pt; transform:translateX(-50%); font-size:12pt; line-height:28pt; }
+          .partpage .ptitle { position:absolute; left:72pt; right:72pt; top:330pt; text-align:center; font-size:20pt; }
+          .entry { page-break-before:always; }
+          .entry-head { margin:0 0 28pt 0; }
+          .entry-title { font-size:19pt; line-height:1.4; margin:0 0 22pt; font-weight:600; }
+          .defs { margin:0 0 28pt 1.2em; padding:0; line-height:23pt; }
+          .defs li { margin:0 0 4pt 0; padding-left:.25em; }
+          .prose { font-size:11.6pt; line-height:23.5pt; }
+          .prose p { margin:0 0 15pt 0; text-indent:1.5em; text-align:justify; }
+          '''
+
+          cover='''<section class="fixed cover">
+            <div class="edition">無料デジタル版</div>
+            <div class="title">銀河滅亡辞典</div>
+            <div class="part">第1部 — 滅亡の条件</div>
+          </section>'''
+
+          copyright='''<section class="fixed copyright">
+            <div class="ctitle">銀河滅亡辞典</div>
+            <div class="cbody">''' + ''.join(f'<p>{html.escape(x)}</p>' for x in cp_lines) + '</div></section>'
+
+          epigraph='''<section class="fixed epigraph">
+            <div class="ebox">
+              <div>「いつになったら、大きさは重要ではないと分かるんだ？<br/>
+              大切なものだからといって、<br/>
+              とても、とても小さくないとは限らない。」</div>
+              <div class="src">— 映画 <em>Men in Black</em> より</div>
+            </div>
+          </section>'''
+
+          toc='''<section class="fixed toc"><div class="ttitle">目次</div><div class="tlist">''' + ''.join(
+              f'<div>・{html.escape(t)}</div>' for t,_,_ in chapters
+          ) + '</div></section>'
+
+          partpage='''<section class="fixed partpage"><div class="ptitle">第1部 — 滅亡の条件</div></section>'''
+
+          entries=[]
+          for title,defs,paras in chapters:
+              d=''.join(f'<li>{html.escape(x)}</li>' for x in defs)
+              ps=''.join('<p>'+ '<br/>'.join(html.escape(z) for z in x.split('\n')) +'</p>' for x in paras)
+              entries.append(f'''<section class="entry">
+                <div class="entry-head">
+                  <div class="entry-title">{html.escape(title)}</div>
+                  <ul class="defs">{d}</ul>
+                </div>
+                <div class="prose">{ps}</div>
+              </section>''')
+
+          doc=f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><style>{css}</style></head>
+          <body>{cover}{copyright}{epigraph}{toc}{partpage}{''.join(entries)}</body></html>'''
+
+          HTML(string=doc,base_url=str(R.resolve())).write_pdf(str(pdf))
+
+          # Text/integrity checks
+          d=fitz.open(pdf)
+          alltext='\n'.join(p.get_text() for p in d)
+          if len(d) < 25:
+              raise RuntimeError(f'PDF unexpectedly short: {len(d)} pages')
+          must=[
+              '無料デジタル版','銀河滅亡辞典','第1部 — 滅亡の条件',
+              'Copyright © 2026 Jin-in-Seoul','本デジタル版は無償で配布されています。',
+              'Jin-in-Seoul 発行',
+              '1. 光子欠損','5. 維持費','9. 熱的死',
+              'それを時間が流れたと呼ぶ存在はいなかった。'
+          ]
+          for x in must:
+              if x not in alltext:
+                  raise RuntimeError(f'missing text: {x}')
+          if '第2部 歴史篇' in alltext or '第2部　歴史篇' in alltext:
+              raise RuntimeError('stray Part II label detected')
+          # ensure copyright is page 2 and TOC appears before body
+          if 'Copyright © 2026 Jin-in-Seoul' not in d[1].get_text():
+              raise RuntimeError('copyright not on page 2')
+          if '目次' not in d[3].get_text():
+              raise RuntimeError('TOC not on page 4')
+          print('pages',len(d))
+          print('page2',d[1].get_text()[:400])
+          print('last',d[-1].get_text()[-500:])
+          d.close()
+          PY
+
+      - name: Upload review PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: ja-part1-pdf-review
+          path: review-output/a-dictionary-of-galactic-extinction-part-01-ja-20261004-ver-001.pdf
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Remove temporary workflow
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/build-ja-part1-pdf-review.yml
+          git commit -m "Remove temporary Japanese Part I PDF review workflow"
+          git push
