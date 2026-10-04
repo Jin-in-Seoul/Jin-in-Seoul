@@ -98,7 +98,7 @@ def front_pages(reader, lang):
     else:
         cover=find_page_index(reader,['무료 디지털판','은하 멸망 사전'])
         quote=find_page_index(reader,['맨 인 블랙'])
-        toc=find_page_index(reader,['목 차','제1부 멸망의 조건','제2부 역사편'])
+        toc=find_page_index(reader,['광자 결손','제1차 전쟁','은하표준시 협정'])
     return [reader.pages[cover],reader.pages[quote],reader.pages[toc],reader.pages[toc+1],reader.pages[toc+2]]
 
 def rebuild_en():
@@ -144,7 +144,7 @@ def validate(path,lang):
     else:
         assert '무료 디지털판' in texts[0] and '은하 멸망 사전' in texts[0]
         assert '맨 인 블랙' in texts[1]
-        assert '목 차' in texts[2] and '제1부 멸망의 조건' in texts[2] and '제2부 역사편' in texts[2]
+        assert '광자 결손' in texts[2] and '제1차 전쟁' in texts[2] and '은하표준시 협정' in texts[2]
         assert '제3부 인물편' in texts[3]
         assert '부록' in texts[4] and '은하에서 길 잃은 자를 위한 색인' in texts[4]
         assert '제2부 역사편' in texts[5] and 'Copyright' not in texts[5]
