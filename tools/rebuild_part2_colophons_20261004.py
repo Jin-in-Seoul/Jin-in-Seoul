@@ -121,7 +121,7 @@ def rebuild_en():
     assert len(hits)==1, hits
     assert hits[0][0]==len(v.pages), hits[0][0]
     assert 'Part II - History' in hits[0][1]
-    assert 'Part I - Conditions of Extinction' not in hits[0][1] && 'Part I — Conditions of Extinction' not in hits[0][1]
+    assert 'Part I - Conditions of Extinction' not in hits[0][1] and 'Part I — Conditions of Extinction' not in hits[0][1]
     assert 'Published by Jin-in-Seoul' in hits[0][1]
     print('EN removed copyright pages:',removed,'final:',len(v.pages))
 
