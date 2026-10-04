@@ -83,11 +83,29 @@ def body_pages(reader, lang):
     if not out: raise RuntimeError(f'no body pages: {lang}')
     return out
 
+def find_page_index(reader, required):
+    for i,p in enumerate(reader.pages):
+        t=p.extract_text() or ''
+        if all(x in t for x in required):
+            return i
+    raise RuntimeError('page not found: '+repr(required))
+
+def front_pages(reader, lang):
+    if lang=='en':
+        cover=find_page_index(reader,['Free Digital Edition','A Dictionary of Galactic Extinction'])
+        quote=find_page_index(reader,['Men in Black'])
+        toc=find_page_index(reader,['CONTENTS','PART I','PART II'])
+    else:
+        cover=find_page_index(reader,['무료 디지털판','은하 멸망 사전'])
+        quote=find_page_index(reader,['맨 인 블랙'])
+        toc=find_page_index(reader,['목 차','제1부 멸망의 조건','제2부 역사편'])
+    return [reader.pages[cover],reader.pages[quote],reader.pages[toc],reader.pages[toc+1],reader.pages[toc+2]]
+
 def rebuild_en():
     ref=PdfReader(str(P1EN)); old=PdfReader(str(P2EN)); body=body_pages(old,'en')
     w=PdfWriter()
     if old.metadata: w.add_metadata({k:str(v) for k,v in old.metadata.items() if v is not None})
-    for i in range(5): w.add_page(ref.pages[i])
+    for p in front_pages(ref,'en'): w.add_page(p)
     w.add_page(en_title())
     for p in body: w.add_page(p)
     w.add_page(en_colophon())
@@ -99,7 +117,7 @@ def rebuild_ko():
     ref=PdfReader(str(P1KO)); old=PdfReader(str(P2KO)); body=body_pages(old,'ko')
     w=PdfWriter()
     if old.metadata: w.add_metadata({k:str(v) for k,v in old.metadata.items() if v is not None})
-    for i in range(5): w.add_page(ref.pages[i])
+    for p in front_pages(ref,'ko'): w.add_page(p)
     w.add_page(ko_title())
     for page_no,p in enumerate(body,start=7):
         p.merge_page(footer_overlay(page_no)); w.add_page(p)
