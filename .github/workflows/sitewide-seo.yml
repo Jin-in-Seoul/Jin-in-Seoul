@@ -1,0 +1,27 @@
+name: Sitewide SEO
+
+on:
+  push:
+    paths:
+      - '.github/workflows/sitewide-seo.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/sitewide_seo.py
+      - name: Commit sitewide SEO
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/sitewide-seo.yml tools/sitewide_seo.py
+          git add .
+          git commit -m "Apply sitewide multilingual SEO"
+          git push
