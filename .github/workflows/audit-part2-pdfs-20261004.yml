@@ -17,17 +17,13 @@ jobs:
           mkdir -p audit/en audit/ko
           EN="assets/downloads/a-dictionary-of-galactic-extinction/part-02/en/a-dictionary-of-galactic-extinction-part-02-en-20261004-ver-001.pdf"
           KO="assets/downloads/a-dictionary-of-galactic-extinction/part-02/ko/a-dictionary-of-galactic-extinction-part-02-ko-20261004-ver-001.pdf"
-          ENP=$(pdfinfo "$EN" | awk '/Pages:/ {print $2}')
-          KOP=$(pdfinfo "$KO" | awk '/Pages:/ {print $2}')
-          pdftoppm -f 1 -l 8 -png -r 120 "$EN" audit/en/page >/dev/null 2>&1
-          pdftoppm -f "$ENP" -l "$ENP" -png -r 120 "$EN" audit/en/last >/dev/null 2>&1
-          pdftoppm -f 1 -l 8 -png -r 120 "$KO" audit/ko/page >/dev/null 2>&1
-          pdftoppm -f "$KOP" -l "$KOP" -png -r 120 "$KO" audit/ko/last >/dev/null 2>&1
+          pdftoppm -png -r 55 "$EN" audit/en/page >/dev/null 2>&1
+          pdftoppm -png -r 55 "$KO" audit/ko/page >/dev/null 2>&1
           pdftotext "$EN" audit/en.txt
           pdftotext "$KO" audit/ko.txt
           pdfinfo "$EN" > audit/en-info.txt
           pdfinfo "$KO" > audit/ko-info.txt
       - uses: actions/upload-artifact@v4
         with:
-          name: part2-pdf-audit
+          name: part2-pdf-full-audit
           path: audit
