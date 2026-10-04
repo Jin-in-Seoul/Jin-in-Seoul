@@ -1,0 +1,111 @@
+name: Fix Korean Part I EPUB entry 9
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-ko-part1-epub-entry9.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Patch EPUB and validate
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import zipfile, tempfile, shutil
+
+          epub = Path("assets/downloads/a-dictionary-of-galactic-extinction/part-01/ko/a-dictionary-of-galactic-extinction-part-01-ko-20260929-ver-001.epub")
+          bad = "제2부 역사편"
+          replacement = ""
+
+          with zipfile.ZipFile(epub, "r") as zin:
+              infos = zin.infolist()
+              files = [(i, zin.read(i.filename)) for i in infos]
+
+          hits = 0
+          patched = []
+          target_files = []
+          for info, data in files:
+              if info.filename.lower().endswith((".xhtml", ".html", ".htm")):
+                  try:
+                      text = data.decode("utf-8")
+                  except UnicodeDecodeError:
+                      patched.append((info, data))
+                      continue
+                  n = text.count(bad)
+                  if n:
+                      hits += n
+                      target_files.append(info.filename)
+                      text = text.replace(bad, replacement)
+                      data = text.encode("utf-8")
+              patched.append((info, data))
+
+          if hits != 1:
+              raise SystemExit(f"Expected exactly 1 stray label, found {hits}; files={target_files}")
+
+          tmp = epub.with_suffix(".tmp.epub")
+          with zipfile.ZipFile(tmp, "w") as zout:
+              # EPUB requirement: mimetype first and uncompressed.
+              mime = next((x for x in patched if x[0].filename == "mimetype"), None)
+              if mime is None:
+                  raise SystemExit("mimetype missing")
+              zout.writestr("mimetype", mime[1], compress_type=zipfile.ZIP_STORED)
+              for info, data in patched:
+                  if info.filename == "mimetype":
+                      continue
+                  zi = zipfile.ZipInfo(info.filename, date_time=info.date_time)
+                  zi.comment = info.comment
+                  zi.extra = info.extra
+                  zi.internal_attr = info.internal_attr
+                  zi.external_attr = info.external_attr
+                  zi.create_system = info.create_system
+                  zi.flag_bits = info.flag_bits
+                  zi.compress_type = info.compress_type
+                  zout.writestr(zi, data)
+
+          with zipfile.ZipFile(tmp, "r") as z:
+              if z.namelist()[0] != "mimetype":
+                  raise SystemExit("mimetype is not first")
+              if z.getinfo("mimetype").compress_type != zipfile.ZIP_STORED:
+                  raise SystemExit("mimetype is compressed")
+              if z.testzip() is not None:
+                  raise SystemExit("ZIP integrity test failed")
+              remaining = 0
+              ending_ok = False
+              for name in z.namelist():
+                  if name.lower().endswith((".xhtml", ".html", ".htm")):
+                      try:
+                          t = z.read(name).decode("utf-8")
+                      except UnicodeDecodeError:
+                          continue
+                      remaining += t.count(bad)
+                      if "그것을 시간이 흘렀다고 부를 존재가 없었다." in t:
+                          ending_ok = True
+              if remaining != 0:
+                  raise SystemExit(f"Stray label remains: {remaining}")
+              if not ending_ok:
+                  raise SystemExit("Correct final sentence not found")
+
+          tmp.replace(epub)
+          print("Patched:", epub)
+          print("Removed stray label from:", target_files)
+          PY
+
+      - name: Commit patched EPUB and remove temporary workflow
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/downloads/a-dictionary-of-galactic-extinction/part-01/ko/a-dictionary-of-galactic-extinction-part-01-ko-20260929-ver-001.epub
+          git rm .github/workflows/fix-ko-part1-epub-entry9.yml
+          git commit -m "Fix stray Part II label in Korean Part I EPUB"
+          git push
