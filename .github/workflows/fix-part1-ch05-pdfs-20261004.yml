@@ -1,0 +1,50 @@
+name: Fix Part I chapter 5 PDFs
+
+on:
+  push:
+    paths:
+      - 'tools/fix_part1_ch05_pdf_20261004.py'
+      - '.github/workflows/fix-part1-ch05-pdfs-20261004.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install PDF dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-nanum poppler-utils
+          python -m pip install pymupdf reportlab pypdf
+      - name: Patch PDFs
+        run: python tools/fix_part1_ch05_pdf_20261004.py
+      - name: Render changed pages
+        run: |
+          mkdir -p /tmp/ko /tmp/en
+          KO=assets/downloads/a-dictionary-of-galactic-extinction/part-01/ko/a-dictionary-of-galactic-extinction-part-01-ko-20260929-ver-001.pdf
+          EN=assets/downloads/a-dictionary-of-galactic-extinction/part-01/en/a-dictionary-of-galactic-extinction-part-01-en-20260929-ver-001.pdf
+          KOPAGE=$(pdftotext -layout "$KO" - | grep -n "웜홀은 가장 중요한 예비 장치였다." >/dev/null && echo ok)
+          ENPAGE=$(pdftotext -layout "$EN" - | grep -n "Wormholes were the most important backup systems." >/dev/null && echo ok)
+          test "$KOPAGE" = ok
+          test "$ENPAGE" = ok
+          pdftoppm -f 1 -l 1 -png -r 72 "$KO" /tmp/ko/front >/dev/null 2>&1
+          pdftoppm -f 1 -l 1 -png -r 72 "$EN" /tmp/en/front >/dev/null 2>&1
+          test "$(find /tmp/ko -name '*.png' | wc -l)" -eq 1
+          test "$(find /tmp/en -name '*.png' | wc -l)" -eq 1
+      - name: Commit corrected PDFs
+        run: |
+          rm -f tools/fix_part1_ch05_pdf_20261004.py
+          rm -f .github/workflows/fix-part1-ch05-pdfs-20261004.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/downloads/a-dictionary-of-galactic-extinction/part-01/ko/a-dictionary-of-galactic-extinction-part-01-ko-20260929-ver-001.pdf
+          git add assets/downloads/a-dictionary-of-galactic-extinction/part-01/en/a-dictionary-of-galactic-extinction-part-01-en-20260929-ver-001.pdf
+          git add -u tools .github/workflows
+          git commit -m "Correct Part I chapter 5 PDFs"
+          git push
