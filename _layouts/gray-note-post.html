@@ -13,6 +13,29 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} - Gray Note - Jin-in-Seoul</title>
+  <!-- sitewide-gray-note-seo:start -->
+  <meta name="description" content="{{ page.title | append: ' — a multilingual Gray Note essay by Jin-in-Seoul on memory, places, objects, and passing moments.' | escape }}">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ page.title | escape }} - Gray Note - Jin-in-Seoul">
+  <meta property="og:description" content="{{ page.title | append: ' — a multilingual Gray Note essay by Jin-in-Seoul.' | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="Jin-in-Seoul">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ page.title | escape }} - Gray Note - Jin-in-Seoul">
+  <script type="application/ld+json" data-seo="site">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": {{ page.title | jsonify }},
+    "url": {{ page.url | absolute_url | jsonify }},
+    "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+    "inLanguage": ["en", "ja", "fr", "ko"],
+    "author": {"@type": "Person", "name": "Jin-in-Seoul", "url": "https://jin-in-seoul.com/"}
+  }
+  </script>
+  <!-- sitewide-gray-note-seo:end -->
   <link rel="stylesheet" href="/assets/style.css?v=057">
 </head>
 <body>
