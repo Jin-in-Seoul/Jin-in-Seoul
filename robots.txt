@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
 
-User-agent: meta-externalagent
-Allow: /
-
 Sitemap: https://jin-in-seoul.com/sitemap.xml
