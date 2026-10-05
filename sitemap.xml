@@ -587,4 +587,10 @@
   <url>
     <loc>https://jin-in-seoul.com{{ post.url }}</loc>
   </url>
+  <url>
+    <loc>https://jin-in-seoul.com/short-stories/books-rule/</loc>
+  </url>
+  <url>
+    <loc>https://jin-in-seoul.com/short-stories/books-rule/ko/</loc>
+  </url>
 </urlset>
