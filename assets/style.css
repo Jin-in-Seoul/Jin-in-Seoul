@@ -428,7 +428,8 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 
 /* Story illustrations */
 .story-illustration {
-  margin: 2.2em 0 2.6em;
+  width: min(560px, 100%);
+  margin: 2.2em auto 2.6em;
 }
 .story-illustration img {
   display: block;
@@ -438,6 +439,7 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 }
 @media (max-width: 620px) {
   .story-illustration {
-    margin: 1.8em 0 2.2em;
+    width: 100%;
+    margin: 1.8em auto 2.2em;
   }
 }
