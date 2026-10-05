@@ -424,3 +424,19 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 .haiku-prose p {
   margin: 0 0 20px;
 }
+
+
+/* Story illustrations */
+.story-illustration {
+  margin: 2.2em 0 2.6em;
+}
+.story-illustration img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 620px) {
+  .story-illustration {
+    margin: 1.8em 0 2.2em;
+  }
+}
