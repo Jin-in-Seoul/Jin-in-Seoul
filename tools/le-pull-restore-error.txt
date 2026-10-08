@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/runner/work/Jin-in-Seoul/Jin-in-Seoul/tools/debug_le_pull_restore.py", line 123, in <module>
+    raise RuntimeError(
+RuntimeError: TEXT MISMATCH ch01 at 9855
+HTML: t à la maison de Gugil-dong avant deux heures après le déjeuner. Pendant que nous mangions dans un restaurant au rez-de-chaussée de notre immeuble, une énorme averse s’est abattue. Mais heureusement, au moment où nous avons fini de manger et sommes sortis, la pluie s’est arrêtée net. Comme si elle n
+PDF : t à la maison de Gugil-dong avant deux heures après le déjeuner. Pendant que nous mangions dans un restaurant au rez-de- chaussée de notre immeuble, une énorme averse s’est abattue. Mais heureusement, au moment où nous avons fini de manger et sommes sortis, la pluie s’est arrêtée net. Comme si elle 
