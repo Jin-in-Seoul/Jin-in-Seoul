@@ -1,0 +1,24 @@
+name: Debug Le Pull paragraph restore
+on:
+  push:
+    paths:
+      - '.github/workflows/debug-le-pull-restore.yml'
+      - 'tools/debug_le_pull_restore.py'
+permissions:
+  contents: write
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pymupdf beautifulsoup4
+      - run: python tools/debug_le_pull_restore.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tools/le-pull-restore-error.txt
+          git commit -m "Add Le Pull restore debug report" || true
+          git push
