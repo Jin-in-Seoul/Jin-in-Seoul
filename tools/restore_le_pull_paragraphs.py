@@ -10,7 +10,8 @@ DATE_RE=re.compile(r"^(?:"+"|".join(WEEKDAYS)+r")\b")
 def norm(s):
     s=s.replace("\uf09f","•")
     s=unicodedata.normalize("NFC",s)
-    s=re.sub(r"-\s+", "-", s)\n    s=re.sub(r"\s+"," ",s).strip()
+    s=re.sub(r"-\s+", "-", s)
+    s=re.sub(r"\s+"," ",s).strip()
     return s
 
 doc=fitz.open(PDF)
