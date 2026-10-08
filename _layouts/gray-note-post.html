@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ page.lang | default: 'en' }}">
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-72EG8XPTN7"></script>
@@ -14,12 +14,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} - Gray Note - Jin-in-Seoul</title>
   <!-- sitewide-gray-note-seo:start -->
-  <meta name="description" content="{{ page.title | append: ' — a multilingual Gray Note essay by Jin-in-Seoul on memory, places, objects, and passing moments.' | escape }}">
+  <meta name="description" content="{{ page.title | append: ' — a Gray Note essay by Jin-in-Seoul.' | escape }}">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
+  {% if page.alternate_en %}
+  <link rel="alternate" hreflang="en" href="{{ page.alternate_en | absolute_url }}">
+  <link rel="alternate" hreflang="ja" href="{{ page.alternate_ja | absolute_url }}">
+  <link rel="alternate" hreflang="fr" href="{{ page.alternate_fr | absolute_url }}">
+  <link rel="alternate" hreflang="ko" href="{{ page.alternate_ko | absolute_url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ page.alternate_en | absolute_url }}">
+  {% endif %}
   <meta property="og:type" content="article">
   <meta property="og:title" content="{{ page.title | escape }} - Gray Note - Jin-in-Seoul">
-  <meta property="og:description" content="{{ page.title | append: ' — a multilingual Gray Note essay by Jin-in-Seoul.' | escape }}">
+  <meta property="og:description" content="{{ page.title | append: ' — a Gray Note essay by Jin-in-Seoul.' | escape }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:site_name" content="Jin-in-Seoul">
   <meta name="twitter:card" content="summary">
@@ -31,7 +38,7 @@
     "headline": {{ page.title | jsonify }},
     "url": {{ page.url | absolute_url | jsonify }},
     "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
-    "inLanguage": ["en", "ja", "fr", "ko"],
+    "inLanguage": {{ page.lang | default: "en" | jsonify }},
     "author": {"@type": "Person", "name": "Jin-in-Seoul", "url": "https://jin-in-seoul.com/"}
   }
   </script>
@@ -47,7 +54,7 @@
     </nav>
 
     <article class="gray-note-post">
-      <h1>{{ page.title }}</h1>
+      <h1 class="gray-note-post-title">{{ page.title }}</h1>
       <p class="gray-note-date">{{ page.date | date: "%Y.%m.%d" }}</p>
       <div class="prose gray-note-prose">
         {{ content }}
