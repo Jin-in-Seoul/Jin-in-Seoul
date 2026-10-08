@@ -6,6 +6,7 @@ ROOT=Path(".")
 PDF=ROOT/"assets/downloads/sweater/fr/le-pull-fr-20260930-ver-001.pdf"
 WEEKDAYS=("Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche")
 DATE_RE=re.compile(r"^(?:"+"|".join(WEEKDAYS)+r")\b")
+LIST_RE=re.compile(r"^(?:\d+[.)]\s|[•\uf09f*]\s)")
 
 def norm(s):
     s=s.replace("\uf09f","•")
