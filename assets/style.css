@@ -211,6 +211,20 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
   margin-bottom: 10px;
   font-family: "Noto Serif KR", Batang, serif;
 }
+.gray-note-post-title {
+  font-size: clamp(34px, 4.2vw, 46px);
+  line-height: 1.2;
+}
+.gray-note-language-links {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+.gray-note-language-links a {
+  color: var(--link);
+}
 .gray-note-date {
   margin: 0 0 42px;
 }
