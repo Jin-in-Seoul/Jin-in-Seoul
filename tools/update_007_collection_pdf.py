@@ -50,7 +50,7 @@ html,body { margin:0; padding:0; color:#111; font-family:"Nanum Myeongjo",serif;
 .toc ul { list-style:disc; padding-left:8mm; margin:0; font-size:14pt; line-height:1.72; }
 .story { page-break-before:always; }
 .story h1 { font-size:16pt; text-align:center; font-weight:700; margin:5.5mm 0 32mm; }
-.story p { margin:0; text-indent:11.4pt; line-height:26.9pt; text-align:justify; word-break:keep-all; }
+.story p { margin:0 0 6.6pt; text-indent:11.4pt; line-height:26.9pt; text-align:justify; word-break:keep-all; }
 .story p.section-number { text-indent:0; text-align:center; margin:0 0 26.9pt; font-weight:400; }
 '''
 cover='''<section class="fixed cover"><div class="edition">무료 디지털판</div><div class="edition-note">이 판본은 무료로 배포됩니다</div><div class="title">시간강사 K의 007 가방</div><div class="subtitle">단편소설집</div></section>'''
