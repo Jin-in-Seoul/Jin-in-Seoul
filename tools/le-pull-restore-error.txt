@@ -1,4 +1,8 @@
 Traceback (most recent call last):
-  File "/home/runner/work/Jin-in-Seoul/Jin-in-Seoul/tools/debug_le_pull_restore.py", line 147, in <module>
-    raise RuntimeError(f"boundary token mapping failed ch{ch:02d} token {tokpos}")
-RuntimeError: boundary token mapping failed ch02 token 3150
+  File "/home/runner/work/Jin-in-Seoul/Jin-in-Seoul/tools/debug_le_pull_restore.py", line 123, in <module>
+    pdfps=pdf_paragraphs(ch)
+          ^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/Jin-in-Seoul/Jin-in-Seoul/tools/debug_le_pull_restore.py", line 86, in pdf_paragraphs
+    if cur is not None and LIST_RE.match(cur["text"]) and not LIST_RE.match(text):
+                           ^^^^^^^
+NameError: name 'LIST_RE' is not defined
