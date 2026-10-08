@@ -1,0 +1,64 @@
+name: Publish Korean short-story collection digital edition
+
+on:
+  push:
+    paths:
+      - '.github/workflows/publish-007-collection.yml'
+      - 'tools/publish_007_collection.py'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-nanum fontconfig
+          pip install beautifulsoup4 lxml weasyprint pymupdf
+      - name: Build PDF and EPUB and update site pages
+        run: python tools/publish_007_collection.py
+      - name: Validate generated digital edition
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile, fitz
+          root=Path('assets/downloads/adjunct-lecturer-k-007-briefcase/ko')
+          pdf=root/'adjunct-lecturer-k-007-briefcase-ko-20261007-ver-001.pdf'
+          epub=root/'adjunct-lecturer-k-007-briefcase-ko-20261007-ver-001.epub'
+          assert pdf.exists() and pdf.stat().st_size > 300000
+          assert epub.exists() and epub.stat().st_size > 50000
+          d=fitz.open(pdf)
+          assert 110 <= len(d) <= 130, len(d)
+          txt='\n'.join(p.get_text() for p in d)
+          assert '거실 소파에 누웠다.' in txt
+          assert '시간강사 K의 007 가방' in txt
+          d.close()
+          with zipfile.ZipFile(epub) as z:
+              assert z.testzip() is None
+              assert z.namelist()[0]=='mimetype'
+              assert z.getinfo('mimetype').compress_type==zipfile.ZIP_STORED
+              assert 'EPUB/Text/title.xhtml' not in z.namelist()
+              assert len([n for n in z.namelist() if n.startswith('EPUB/Text/story-') and n.endswith('.xhtml')])==7
+              et='\n'.join(z.read(n).decode('utf-8') for n in z.namelist() if n.endswith('.xhtml'))
+              assert '거실 소파에 누웠다.' in et
+          dp=Path('downloads/index.html').read_text(encoding='utf-8')
+          lp=Path('publication-log/index.html').read_text(encoding='utf-8')
+          assert pdf.name in dp and epub.name in dp
+          assert 'Korean short-story collection' in lp
+          print('validation OK', len(fitz.open(pdf)), pdf.stat().st_size, epub.stat().st_size)
+          PY
+      - name: Commit final files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/publish-007-collection.yml tools/publish_007_collection.py
+          git add assets/downloads/adjunct-lecturer-k-007-briefcase/ko downloads/index.html publication-log/index.html
+          git commit -m "Publish Korean short-story collection PDF and EPUB"
+          git push
