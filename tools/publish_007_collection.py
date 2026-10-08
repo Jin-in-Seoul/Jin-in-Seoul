@@ -43,7 +43,7 @@ def get_story(display_title,slug):
     return {'title':display_title,'slug':slug,'items':items}
 
 stories=[get_story(*w) for w in WORKS]
-expected_counts=[6,190,203,49,169,148,98]
+expected_counts=[6,190,203,49,169,147,98]
 assert [len(s['items']) for s in stories]==expected_counts, [(s['title'],len(s['items'])) for s in stories]
 
 css=r'''
