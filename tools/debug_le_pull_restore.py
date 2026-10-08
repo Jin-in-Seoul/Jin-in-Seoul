@@ -12,7 +12,7 @@ try:
     def norm(s):
         s=s.replace("\uf09f","•")
         s=unicodedata.normalize("NFC",s)
-        s=re.sub(r"\s+"," ",s).strip()
+        s=re.sub(r"-\s+", "-", s)\n    s=re.sub(r"\s+"," ",s).strip()
         return s
     
     doc=fitz.open(PDF)
@@ -127,27 +127,31 @@ try:
             )
     
         # Use current website text as the textual source, and PDF only for paragraph boundaries.
-        # Since normalized full texts are identical, normalized PDF paragraph lengths map exactly.
+        # Map by normalized whitespace tokens so PDF line-wrap artifacts such as "rez-de- chaussée"
+        # cannot alter the website wording.
+        html_tokens=html_flat.split()
+        pdf_tokens=pdf_flat.split()
+        if html_tokens != pdf_tokens:
+            for ti,(a,b) in enumerate(zip(html_tokens,pdf_tokens)):
+                if a!=b:
+                    raise RuntimeError(f"token mismatch ch{ch:02d} token {ti}: HTML={a!r} PDF={b!r}")
+            raise RuntimeError(f"token count mismatch ch{ch:02d}: HTML={len(html_tokens)} PDF={len(pdf_tokens)}")
         rebuilt=[]
-        pos=0
+        tokpos=0
         for item in pdfps:
-            target=norm(item["text"])
-            seg=html_flat[pos:pos+len(target)]
-            if seg != target:
-                raise RuntimeError(f"boundary mapping failed ch{ch:02d} at {pos}: {seg[:80]!r} != {target[:80]!r}")
+            target_tokens=norm(item["text"]).split()
+            seg_tokens=html_tokens[tokpos:tokpos+len(target_tokens)]
+            if seg_tokens != target_tokens:
+                raise RuntimeError(f"boundary token mapping failed ch{ch:02d} token {tokpos}")
+            seg=" ".join(seg_tokens)
             esc=html.escape(seg,quote=False)
             if item["date"]:
                 rebuilt.append(f'<p class="entry-date">{esc}</p>')
             else:
                 rebuilt.append(f'<p>{esc}</p>')
-            pos += len(target)
-            # paragraphs are separated by exactly one normalized space in html_flat
-            if pos < len(html_flat):
-                if html_flat[pos] != " ":
-                    raise RuntimeError(f"expected separator ch{ch:02d} at {pos}")
-                pos += 1
-        if pos != len(html_flat):
-            raise RuntimeError(f"length mapping mismatch ch{ch:02d}: {pos} != {len(html_flat)}")
+            tokpos += len(target_tokens)
+        if tokpos != len(html_tokens):
+            raise RuntimeError(f"token length mapping mismatch ch{ch:02d}: {tokpos} != {len(html_tokens)}")
     
         new_section=m.group(1)+"\n".join(rebuilt)+m.group(3)
         new_raw=raw[:m.start()]+new_section+raw[m.end():]
