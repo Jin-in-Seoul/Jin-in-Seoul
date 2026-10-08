@@ -1,11 +1,14 @@
 name: Inspect Le Pull layout
+
 on:
   push:
     paths:
       - '.github/workflows/inspect-le-pull-layout.yml'
       - 'tools/inspect_le_pull_layout.py'
+
 permissions:
   contents: write
+
 jobs:
   inspect:
     runs-on: ubuntu-latest
@@ -16,7 +19,8 @@ jobs:
           python-version: '3.12'
       - run: pip install pymupdf
       - run: python tools/inspect_le_pull_layout.py
-      - run: |
+      - name: Commit report
+        run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add tools/le-pull-layout-sample.txt

@@ -1,20 +1,22 @@
 from pathlib import Path
 import fitz
 
-doc=fitz.open("assets/downloads/sweater/fr/le-pull-fr-20260930-ver-001.pdf")
-rows=[]
-for pi in range(3,25):
-    page=doc[pi]
-    d=page.get_text("dict")
-    rows.append(f"\n===== PAGE {pi+1} =====")
+pdf=Path("assets/downloads/sweater/fr/le-pull-fr-20260930-ver-001.pdf")
+doc=fitz.open(pdf)
+pages=[3,4,5,20,21,22,40,41,60,80,100,120,140,160,180]
+out=[]
+for pno in pages:
+    if pno>=doc.page_count: continue
+    p=doc[pno]
+    out.append(f"\n===== PAGE {pno+1} =====")
+    d=p.get_text("dict")
     for b in d["blocks"]:
         if "lines" not in b: continue
         for line in b["lines"]:
-            spans=line["spans"]
-            if not spans: continue
-            text="".join(s["text"] for s in spans).strip()
-            if not text: continue
-            x0=min(s["bbox"][0] for s in spans)
-            y0=min(s["bbox"][1] for s in spans)
-            rows.append(f"x={x0:.1f}\ty={y0:.1f}\t{text}")
-Path("tools/le-pull-layout-sample.txt").write_text("\n".join(rows),encoding="utf-8")
+            txt="".join(span["text"] for span in line["spans"]).strip()
+            if not txt: continue
+            x0=min(span["bbox"][0] for span in line["spans"])
+            y0=min(span["bbox"][1] for span in line["spans"])
+            out.append(f"{x0:7.2f}\t{y0:7.2f}\t{txt}")
+Path("tools/le-pull-layout-sample.txt").write_text("\n".join(out),encoding="utf-8")
+print("written",len(out))
