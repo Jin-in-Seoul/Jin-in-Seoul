@@ -448,3 +448,26 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 .galactic-prose p[style*="text-align: center"] {
   text-indent: 0;
 }
+
+/* Sweater book-style paragraph setting */
+.sweater-prose p {
+  margin: 0;
+  text-indent: 1em;
+}
+.sweater-prose p.entry-date,
+.sweater-prose p.section-number,
+.sweater-prose p[style*="text-align:center"],
+.sweater-prose p[style*="text-align: center"] {
+  text-indent: 0;
+}
+
+/* Scarecrow Distance book-style paragraph setting */
+.scarecrow-prose p {
+  margin: 0;
+  text-indent: 1em;
+}
+.scarecrow-prose p.section-number,
+.scarecrow-prose p[style*="text-align:center"],
+.scarecrow-prose p[style*="text-align: center"] {
+  text-indent: 0;
+}
