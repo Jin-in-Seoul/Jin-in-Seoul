@@ -471,3 +471,14 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 .scarecrow-prose p[style*="text-align: center"] {
   text-indent: 0;
 }
+
+/* Children's books book-style paragraph setting */
+.children-prose p {
+  margin: 0;
+  text-indent: 1em;
+}
+.children-prose p.section-number,
+.children-prose p[style*="text-align:center"],
+.children-prose p[style*="text-align: center"] {
+  text-indent: 0;
+}
