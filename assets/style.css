@@ -501,3 +501,24 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 .children-prose p[style*="text-align: center"] {
   text-indent: 0;
 }
+
+/* Fiction reading-page headings: shared size */
+main.shell:has(.galactic-prose) > h1.entry-title,
+main.shell:has(.short-story-prose) > h1,
+main.shell:has(.sweater-prose) > h1,
+main.shell:has(.scarecrow-prose) > h1,
+main.shell:has(.children-prose) > h1 {
+  font-size: clamp(26px, 2.6vw, 36px);
+  line-height: 1.28;
+  margin-bottom: 32px;
+}
+@media (max-width: 620px) {
+  main.shell:has(.galactic-prose) > h1.entry-title,
+  main.shell:has(.short-story-prose) > h1,
+  main.shell:has(.sweater-prose) > h1,
+  main.shell:has(.scarecrow-prose) > h1,
+  main.shell:has(.children-prose) > h1 {
+    font-size: 28px;
+    margin-bottom: 28px;
+  }
+}
