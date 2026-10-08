@@ -435,3 +435,16 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 .short-story-prose p[style*="text-align: center"] {
   text-indent: 0;
 }
+
+/* Galactic Extinction book-style paragraph setting */
+.galactic-prose p {
+  margin: 0;
+  text-indent: 1em;
+}
+.galactic-prose p.deck,
+.galactic-prose p.part-label,
+.galactic-prose p.section-number,
+.galactic-prose p[style*="text-align:center"],
+.galactic-prose p[style*="text-align: center"] {
+  text-indent: 0;
+}
