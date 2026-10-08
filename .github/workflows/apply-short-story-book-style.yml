@@ -1,0 +1,29 @@
+name: Apply short-story book paragraph style
+
+on:
+  push:
+    paths:
+      - '.github/workflows/apply-short-story-book-style.yml'
+      - 'tools/apply_short_story_book_style.py'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply scoped short-story style
+        run: python tools/apply_short_story_book_style.py
+      - name: Commit style update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/apply-short-story-book-style.yml tools/apply_short_story_book_style.py
+          git add assets/style.css short-stories
+          git commit -m "Apply book-style paragraph formatting to short stories"
+          git push
