@@ -1,745 +1,482 @@
 
 ===== PAGE 4 =====
-x=294.6	y=780.6	3
-x=261.5	y=71.4	CHAPITRE 1
-x=284.0	y=112.8	Mars
-x=247.6	y=143.5	Sauce soja mongole
-x=70.9	y=236.3	Mardi 1er mars (Jour du Mouvement du 1er Mars)
-x=70.9	y=257.0	Le réveil a sonné. Je me suis levé d’un bond, j’ai tiré les rideaux d’un geste et j’ai regardé
-x=70.9	y=277.7	dehors. Le ciel était chargé de gros nuages noirs, mais Dieu merci il ne pleuvait pas. La météo
-x=70.9	y=298.4	avait promis un vrai déluge dès l’aube. J’avais l’estomac noué. Aujourd’hui, c’est le jour où
-x=70.9	y=319.1	notre famille quitte l’appartement de Bamseom pour s’installer dans une maison individuelle
-x=70.9	y=339.9	à Gugil-dong. Nous avions tellement attendu que nous avions presque perdu la voix.
-x=99.3	y=360.6	Notre vieux bloc de Bamseom, exigu et antique, est plus âgé que mon père. J’y ai vécu
-x=70.9	y=381.3	treize ans et onze mois. Papa et Maman y ont vécu un an de plus que moi. Mais j’étais aussi
-x=70.9	y=402.0	dans le ventre de Maman. Donc pour être équitable, il faudrait ajouter neuf mois
-x=70.9	y=422.7	supplémentaires.
-x=99.3	y=443.4	Le bâtiment était long, plus large que haut, avec au rez-de-chaussée une longue rangée
-x=70.9	y=464.1	de boutiques. L’été, si on ouvrait les portes coulissantes du balcon, des odeurs de cuisine
-x=70.9	y=484.8	montaient en rubans, et parfois on entendait des ivrognes jurer. Comme c’est un immeuble à
-x=70.9	y=505.5	coursive, l’ascenseur était toujours bondé. Le couloir était pénible à traverser à cause des
-x=70.9	y=526.2	vélos, des poussettes, des pots de fleurs et aussi des sacs-poubelle posés là pour jeter plus tard.
-x=70.9	y=546.9	Papa grommelait souvent qu’il ne comprenait pas comment des gens assez âgés pour avoir
-x=70.9	y=567.6	appris deux ou trois choses pouvaient continuer à vivre ainsi.
-x=99.3	y=588.3	Dans l’ascenseur, toutes sortes d’avis étaient toujours collés de partout. Il y en avait un
-x=70.9	y=609.0	qui demandait de ne pas jeter de mégots dans le couloir parce qu’un passant pouvait se brûler
-x=70.9	y=629.7	ou qu’une voiture pouvait être marquée par une braise. Un autre expliquait que broyer les
-x=70.9	y=650.4	déchets alimentaires pour les verser dans l’évier ou les tirer dans les toilettes bouchait les
-x=70.9	y=671.1	canalisations et qu’il fallait utiliser les sacs pour déchets alimentaires. Un autre encore mettait
-x=70.9	y=691.7	en garde contre les chiens qui aboyaient. Presque chaque jour, un nouveau message
-x=70.9	y=712.4	d’avertissement apparaissait. Mais ce n’était rien.
-x=99.3	y=733.1	Ce qui a finalement chassé notre famille de l’endroit où je suis né, c’est le bruit venu
-x=70.9	y=753.8	d’en haut qui a commencé l’été dernier. Chaque nuit, sans exception. Boum. Boum. Boum. Et
+ 294.65	 780.58	3
+ 261.55	  71.41	CHAPITRE 1
+ 284.05	 112.83	Mars
+ 247.63	 143.53	Sauce soja mongole
+  70.90	 236.33	Mardi 1er mars (Jour du Mouvement du 1er Mars)
+  70.90	 257.03	Le réveil a sonné. Je me suis levé d’un bond, j’ai tiré les rideaux d’un geste et j’ai regardé
+  70.90	 277.73	dehors. Le ciel était chargé de gros nuages noirs, mais Dieu merci il ne pleuvait pas. La météo
+  70.90	 298.43	avait promis un vrai déluge dès l’aube. J’avais l’estomac noué. Aujourd’hui, c’est le jour où
+  70.90	 319.13	notre famille quitte l’appartement de Bamseom pour s’installer dans une maison individuelle
+  70.90	 339.86	à Gugil-dong. Nous avions tellement attendu que nous avions presque perdu la voix.
+  99.32	 360.56	Notre vieux bloc de Bamseom, exigu et antique, est plus âgé que mon père. J’y ai vécu
+  70.90	 381.26	treize ans et onze mois. Papa et Maman y ont vécu un an de plus que moi. Mais j’étais aussi
+  70.90	 401.96	dans le ventre de Maman. Donc pour être équitable, il faudrait ajouter neuf mois
+  70.90	 422.66	supplémentaires.
+  99.32	 443.36	Le bâtiment était long, plus large que haut, avec au rez-de-chaussée une longue rangée
+  70.90	 464.06	de boutiques. L’été, si on ouvrait les portes coulissantes du balcon, des odeurs de cuisine
+  70.90	 484.76	montaient en rubans, et parfois on entendait des ivrognes jurer. Comme c’est un immeuble à
+  70.90	 505.46	coursive, l’ascenseur était toujours bondé. Le couloir était pénible à traverser à cause des
+  70.90	 526.16	vélos, des poussettes, des pots de fleurs et aussi des sacs-poubelle posés là pour jeter plus tard.
+  70.90	 546.86	Papa grommelait souvent qu’il ne comprenait pas comment des gens assez âgés pour avoir
+  70.90	 567.56	appris deux ou trois choses pouvaient continuer à vivre ainsi.
+  99.32	 588.29	Dans l’ascenseur, toutes sortes d’avis étaient toujours collés de partout. Il y en avait un
+  70.90	 608.98	qui demandait de ne pas jeter de mégots dans le couloir parce qu’un passant pouvait se brûler
+  70.90	 629.68	ou qu’une voiture pouvait être marquée par une braise. Un autre expliquait que broyer les
+  70.90	 650.38	déchets alimentaires pour les verser dans l’évier ou les tirer dans les toilettes bouchait les
+  70.90	 671.08	canalisations et qu’il fallait utiliser les sacs pour déchets alimentaires. Un autre encore mettait
+  70.90	 691.68	en garde contre les chiens qui aboyaient. Presque chaque jour, un nouveau message
+  70.90	 712.38	d’avertissement apparaissait. Mais ce n’était rien.
+  99.32	 733.08	Ce qui a finalement chassé notre famille de l’endroit où je suis né, c’est le bruit venu
+  70.90	 753.78	d’en haut qui a commencé l’été dernier. Chaque nuit, sans exception. Boum. Boum. Boum. Et
 
 ===== PAGE 5 =====
-x=294.6	y=780.6	4
-x=70.9	y=71.4	pire que le bruit, il y avait les vibrations. Encore plus insupportables. Parfois, la fenêtre du
-x=70.9	y=92.1	salon tremblait sous l’impact. Brrr. Boum. Boum. Boum. Papa disait que quelqu’un passait en
-x=70.9	y=112.8	frappant le sol de ses talons. C’était cela qui provoquait les coups et les secousses.
-x=99.3	y=133.5	Une semaine après que cela ait commencé, le grand-père de l’appartement du dessous a
-x=70.9	y=154.2	sonné chez nous. Il croyait que c’était nous les coupables. Il n’est parti qu’après l’avoir
-x=70.9	y=174.9	entendu aussi. Là, dans notre salon. Boum. Boum. Boum. Ce soir-là, il a frappé à plus de dix
-x=70.9	y=195.6	portes pour trouver l’origine du bruit, sans succès. Les voisins ont commencé à se suspecter
-x=70.9	y=216.3	les uns les autres. Même lorsqu’on se croisait dans l’ascenseur ou le couloir, on ne se disait
-x=70.9	y=237.0	plus bonjour. À mesure que les nuits blanches s’accumulaient, Maman et Papa ont dû décider.
-x=70.9	y=257.7	Nous avons décidé de déménager.
-x=99.3	y=278.4	Au début, nous ne comptions pas emménager dans une maison individuelle. Il n’y en a
-x=70.9	y=299.1	pas une seule à Bamseom. Et si nous quittions Bamseom pour une maison, j’allais
-x=70.9	y=319.8	probablement devoir changer d’école. Je ne voulais pas. Pas même un tout petit peu. Alors
-x=70.9	y=340.6	nous avons cherché un appartement au dernier étage. Les gens disaient que les derniers étages
-x=70.9	y=361.3	étaient trop chauds l’été et trop froids l’hiver. Cela ne me tentait pas non plus, mais nous
-x=70.9	y=382.0	n’avions pas de meilleure solution. Sauf qu’après des mois d’attente, nous n’avons trouvé
-x=70.9	y=402.7	aucun appartement au dernier étage de la bonne taille pour nous trois. Papa appelait toutes les
-x=70.9	y=423.4	agences immobilières de Bamseom tous les week-ends. La réponse était toujours la même. «
-x=70.9	y=444.1	Attendez. »
-x=99.3	y=464.8	Puis un jour, le grand-père d’en bas a déménagé et un jeune couple a emménagé. Ils
-x=70.9	y=485.5	n’avaient pas d’enfant, mais ils avaient un chien de la taille d’un veau. Et quand ce chien
-x=70.9	y=506.2	commençait à aboyer, il ne s’arrêtait plus. Lorsque le couple partait travailler le matin, il
-x=70.9	y=526.9	aboyait toute la journée comme s’il avait une épine plantée dans la patte. Les plaintes ont
-x=70.9	y=547.6	explosé. La gestion de l’immeuble s’en est mêlée. Le jeune couple n’a pas bougé d’un pouce.
-x=70.9	y=568.3	Les résidents ont commencé à se crier dessus. La police est venue plus d’une fois. Rien n’a
-x=70.9	y=589.0	changé.
-x=99.3	y=609.7	Papa a supplié Maman. « N’importe où, mais déménageons maintenant. » Il ne se
-x=70.9	y=630.4	souciait plus du dernier étage. Il voulait partir dès le lendemain. Il avait l’air vraiment
-x=70.9	y=651.1	désespéré. Maman l’a calmé doucement, disant qu’il fallait réfléchir rationnellement. « Si on
-x=70.9	y=671.7	renonce au dernier étage et que l’on emménage, et que l’appartement au-dessus abrite King
-x=70.9	y=692.4	Kong, nous sommes fichus », a dit Maman. Et même si on échappait à King Kong par chance,
-x=70.9	y=713.1	rien ne garantissait qu’il n’y aurait pas un autre chien format veau dans l’appartement du
-x=70.9	y=733.8	dessous, ou dans l’immeuble d’en face, ou derrière. Papa avait l’air écrasé et ne disait plus
-x=70.9	y=754.5	rien. Lorsque Maman a conclu que le monde était devenu un endroit où l’on ne pouvait éviter
+ 294.65	 780.58	4
+  70.90	  71.41	pire que le bruit, il y avait les vibrations. Encore plus insupportables. Parfois, la fenêtre du
+  70.90	  92.11	salon tremblait sous l’impact. Brrr. Boum. Boum. Boum. Papa disait que quelqu’un passait en
+  70.90	 112.83	frappant le sol de ses talons. C’était cela qui provoquait les coups et les secousses.
+  99.32	 133.53	Une semaine après que cela ait commencé, le grand-père de l’appartement du dessous a
+  70.90	 154.23	sonné chez nous. Il croyait que c’était nous les coupables. Il n’est parti qu’après l’avoir
+  70.90	 174.93	entendu aussi. Là, dans notre salon. Boum. Boum. Boum. Ce soir-là, il a frappé à plus de dix
+  70.90	 195.63	portes pour trouver l’origine du bruit, sans succès. Les voisins ont commencé à se suspecter
+  70.90	 216.33	les uns les autres. Même lorsqu’on se croisait dans l’ascenseur ou le couloir, on ne se disait
+  70.90	 237.03	plus bonjour. À mesure que les nuits blanches s’accumulaient, Maman et Papa ont dû décider.
+  70.90	 257.74	Nous avons décidé de déménager.
+  99.32	 278.43	Au début, nous ne comptions pas emménager dans une maison individuelle. Il n’y en a
+  70.90	 299.13	pas une seule à Bamseom. Et si nous quittions Bamseom pour une maison, j’allais
+  70.90	 319.83	probablement devoir changer d’école. Je ne voulais pas. Pas même un tout petit peu. Alors
+  70.90	 340.56	nous avons cherché un appartement au dernier étage. Les gens disaient que les derniers étages
+  70.90	 361.26	étaient trop chauds l’été et trop froids l’hiver. Cela ne me tentait pas non plus, mais nous
+  70.90	 381.96	n’avions pas de meilleure solution. Sauf qu’après des mois d’attente, nous n’avons trouvé
+  70.90	 402.66	aucun appartement au dernier étage de la bonne taille pour nous trois. Papa appelait toutes les
+  70.90	 423.36	agences immobilières de Bamseom tous les week-ends. La réponse était toujours la même. «
+  70.90	 444.06	Attendez. »
+  99.32	 464.76	Puis un jour, le grand-père d’en bas a déménagé et un jeune couple a emménagé. Ils
+  70.90	 485.46	n’avaient pas d’enfant, mais ils avaient un chien de la taille d’un veau. Et quand ce chien
+  70.90	 506.16	commençait à aboyer, il ne s’arrêtait plus. Lorsque le couple partait travailler le matin, il
+  70.90	 526.86	aboyait toute la journée comme s’il avait une épine plantée dans la patte. Les plaintes ont
+  70.90	 547.56	explosé. La gestion de l’immeuble s’en est mêlée. Le jeune couple n’a pas bougé d’un pouce.
+  70.90	 568.26	Les résidents ont commencé à se crier dessus. La police est venue plus d’une fois. Rien n’a
+  70.90	 588.98	changé.
+  99.32	 609.68	Papa a supplié Maman. « N’importe où, mais déménageons maintenant. » Il ne se
+  70.90	 630.38	souciait plus du dernier étage. Il voulait partir dès le lendemain. Il avait l’air vraiment
+  70.90	 651.08	désespéré. Maman l’a calmé doucement, disant qu’il fallait réfléchir rationnellement. « Si on
+  70.90	 671.68	renonce au dernier étage et que l’on emménage, et que l’appartement au-dessus abrite King
+  70.90	 692.38	Kong, nous sommes fichus », a dit Maman. Et même si on échappait à King Kong par chance,
+  70.90	 713.08	rien ne garantissait qu’il n’y aurait pas un autre chien format veau dans l’appartement du
+  70.90	 733.78	dessous, ou dans l’immeuble d’en face, ou derrière. Papa avait l’air écrasé et ne disait plus
+  70.90	 754.48	rien. Lorsque Maman a conclu que le monde était devenu un endroit où l’on ne pouvait éviter
 
 ===== PAGE 6 =====
-x=294.6	y=780.6	5
-x=70.9	y=71.4	ni le bruit d’en haut ni les aboiements, les yeux de Papa se sont presque remplis. Puis Maman
-x=70.9	y=92.1	m’a dit : « Byeok, et si nous déménagions dans une maison individuelle ? »
-x=99.3	y=112.8	Papa a bondi de sa chaise en disant qu’il fallait aller visiter des maisons immédiatement.
-x=70.9	y=133.5	Avant même que je puisse répondre.
-x=99.3	y=154.2	Nous pensions qu’habiter une maison résoudrait tout. Mais après des semaines à visiter
-x=70.9	y=174.9	chaque week-end, nous avons peu à peu compris que la réalité était différente.
-x=99.3	y=216.3	— Avantages d’une maison individuelle —
-x=99.3	y=236.9	1. Pas de bruit venant d’en haut. Les voisins peuvent toujours faire du bruit, mais au
-x=99.3	y=257.7	moins on n’a pas les vibrations boum-boum-boum.
-x=99.3	y=278.3	2. Il y a une cour.
-x=99.3	y=299.0	3. Il y a des arbres dans le parterre.
-x=99.3	y=319.7	4. On a sa propre terrasse sur le toit.
-x=99.3	y=361.3	— Inconvénients d’une maison individuelle —
-x=99.3	y=381.8	1. Pas de gardien comme dans un immeuble. Le lieu est moins sûr.
-x=99.3	y=402.5	2. Même dans une maison, il est difficile d’échapper aux chiens qui aboient.
-x=99.3	y=423.2	3. Mauvaise isolation. Plus chaud en été et plus froid en hiver qu’un appartement.
-x=99.3	y=443.9	4. Personne pour réceptionner les livraisons.
-x=99.3	y=485.5	Nous avons décidé d’acheter une maison individuelle. Mais pour que je n’aie pas à
-x=70.9	y=506.2	changer d’école, nous avons cherché à Gugil-dong, dans le même secteur scolaire que
-x=70.9	y=526.9	Bamseom. Au bout de deux mois, nous avons enfin trouvé une maison en briques bleues à
-x=70.9	y=547.6	deux étages qui nous plaisait. Dans un parterre grand comme une motte de fumier, il y avait
-x=70.9	y=568.3	un plaqueminier et deux genévriers. Dans un coin de la cour, à peine grand comme une paume,
-x=70.9	y=589.0	un petit robinet était installé. Et étrangement, c’est cela que Maman préférait. Ce minuscule
-x=70.9	y=609.7	point d’eau. La maison avait été rénovée deux ans plus tôt, donc elle était claire et propre.
-x=70.9	y=630.4	Rez-de-chaussée : salon et cuisine. À l’étage : la chambre de mes parents et la mienne. Il y
-x=70.9	y=651.1	avait une salle de bain en bas et une autre en haut. Comparée à notre ancien appartement
-x=70.9	y=671.7	étriqué et absurdement cher de Bamseom, c’était pratiquement le paradis. Le seul regret était
-x=70.9	y=692.4	que pendant la rénovation, ils avaient oublié le sous-sol. Un jour, si nous le nettoyions
-x=70.9	y=713.1	correctement, cela pourrait devenir un petit repaire douillet.
-x=99.3	y=733.8	Sur le chemin du retour après la signature, Papa a dit que nous allions désormais payer
-x=70.9	y=754.5	un loyer à la banque. J’ai demandé si cela faisait de nous des propriétaires fauchés. Maman a
-
-===== PAGE 7 =====
-x=294.6	y=780.6	6
-x=70.9	y=71.4	éclaté de rire. Non, pas à ce point. Donc ne t’inquiète pas. Et elle m’a serré dans ses bras.
-x=70.9	y=92.1	Papa m’a ébouriffé les cheveux.
-x=99.3	y=112.8	Dehors, on aurait dit que la pluie pouvait commencer d’une seconde à l’autre. Je priais
-x=70.9	y=133.5	pour qu’il ne pleuve pas avant la fin du déménagement. Les déménageurs sont arrivés vingt
-x=70.9	y=154.2	minutes en avance. Après un rapide coup d’œil à l’appartement, l’un d’eux a laissé échapper
-x=70.9	y=174.9	un long soupir. « Première fois que je vois autant d’affaires dans un dix-huit pyeong. » C’était
-x=70.9	y=195.6	parce que nous n’avions pas déménagé une seule fois en quinze ans, mais surtout parce que
-x=70.9	y=216.3	Papa possédait plus d’un millier de livres. Papa a tendu une enveloppe blanche à l’homme
-x=70.9	y=237.0	barbu qui semblait être le chef. « Au moins pour le déjeuner. » Le chef a marmonné : « Oh, il
-x=70.9	y=257.7	ne fallait pas… » Puis il a crié : « Bon. On commence ! »
-x=99.3	y=278.4	Au moment où ils ont commencé, nous avons dû sortir de notre minuscule appartement.
-x=70.9	y=299.1	Papa a dit à l’un des déménageurs de ne pas jeter le sac-poubelle blanc dans la petite pièce. Ce
-x=70.9	y=319.8	n’était pas des ordures. C’était un globe déjà emballé, et ils devaient le prendre. Maman a dit
-x=70.9	y=340.6	que c’était dangereux. Qu’il risquait d’être perdu. Qu’il vaudrait mieux le mettre dans un
-x=70.9	y=361.3	autre sac ou une boîte. Mais Papa a insisté : « Les sacs-poubelle sont solides. Parfaits. »
-x=70.9	y=382.0	Quand Papa n’écoute pas Maman, il arrive toujours quelque chose de mauvais. J’avais déjà
-x=70.9	y=402.7	peur de ce qui allait arriver cette fois-ci.
-x=99.3	y=423.4	Pendant que Maman et Papa allaient régler certaines choses chez l’agent immobilier, je
-x=70.9	y=444.1	suis resté en bas pour regarder le chargement. Les cartons descendaient sans arrêt par le
-x=70.9	y=464.8	monte-meubles. C’était incroyable. Comment autant de choses pouvaient-elles sortir d’un
-x=70.9	y=485.5	appartement si petit ? Lorsqu’ils sont revenus, l’emballage était presque terminé. Nous avons
-x=70.9	y=506.2	jeté un dernier regard à l’appartement vide. Ce n’est qu’à ce moment que cela m’a vraiment
-x=70.9	y=526.9	frappé. Nous quittions l’endroit où nous avions vécu quinze ans. Dans la pile de déchets
-x=70.9	y=547.6	entassés dans la cuisine, Maman a trouvé le sac-poubelle blanc de Papa. Sans rien dire, elle
-x=70.9	y=568.3	lui a tendu le sac blanc contenant le globe. Papa a commencé à dire : « Mais… Je leur ai dit
-x=70.9	y=589.0	de ne pas le jeter, j’ai dit— » Et sa phrase s’est éteinte. Maman ne l’a pas sermonné sur le fait
-x=70.9	y=609.7	qu’il avait mis un globe dans un sac-poubelle. Étrangement, elle est plus effrayante quand elle
-x=70.9	y=630.4	ne dit rien.
-x=99.3	y=651.1	Le chef barbu est parti le premier, disant qu’ils arriveraient à la maison de Gugil-dong
-x=70.9	y=671.7	avant deux heures après le déjeuner. Pendant que nous mangions dans un restaurant au rez-de-
-x=70.9	y=692.4	chaussée de notre immeuble, une énorme averse s’est abattue. Mais heureusement, au
-x=70.9	y=713.1	moment où nous avons fini de manger et sommes sortis, la pluie s’est arrêtée net. Comme si
-x=70.9	y=733.8	elle n’avait jamais existé.
-x=99.3	y=754.5	Tout l’après-midi, les déménageurs ont rangé les choses sans se reposer. Ils étaient si
-
-===== PAGE 8 =====
-x=294.6	y=780.6	7
-x=70.9	y=71.4	forts et si rapides qu’en quelques heures tout était terminé. Maman a dit que tout ce dont nous
-x=70.9	y=92.1	n’avions pas besoin immédiatement pouvait rester dans des cartons et aller directement au
-x=70.9	y=112.8	sous-sol. Papa a approuvé. Nous prendrions notre temps pour déballer petit à petit.
-x=99.3	y=133.5	Nous avons dîné à la maison. Papa a proposé de sortir parce qu’il craignait que Maman
-x=70.9	y=154.2	soit fatiguée. Mais Maman a dit que sortir était encore plus fatigant et a préparé quelque chose
-x=70.9	y=174.9	de simple. J’étais trop épuisé pour vouloir aller n’importe où. Maman et Papa doivent
-x=70.9	y=195.6	travailler demain. Je suppose qu’il n’existe pas de règle disant qu’on a droit à un jour de
-x=70.9	y=216.3	congé juste parce qu’on a déménagé pendant un jour férié. La seule consolation, c’est que
-x=70.9	y=237.0	demain n’est pas un lundi mais un mercredi. Dans trois jours ce sera déjà le week-end, et
-x=70.9	y=257.7	Maman et Papa pourront se reposer.
-x=99.3	y=278.4	Demain, je commence la 4e année. Quelle aventure m’attend cette année ? Je me suis
-x=70.9	y=299.1	couché et j’ai fermé les yeux. Et dehors, j’ai entendu un chien aboyer. Ouaf. Ouaf. Ouaf.
-x=70.9	y=340.6	Mercredi 2 mars
-x=70.9	y=361.3	Jour de rentrée. Je suis en 4e, classe 3, numéro 17, au collège Bamseom. Ppagasari est devenu
-x=70.9	y=382.0	le professeur principal de la classe 4. Apparemment, l’enseignant qui devait prendre la classe
-x=70.9	y=402.7	4 a soudain demandé un congé. Les élèves de la classe 4 ressemblent tous à des condamnés.
-x=70.9	y=423.4	L’un d’eux dit même qu’il va supplier sa mère de le changer d’école. Ppagasari, qui enseigne
-x=70.9	y=444.1	les sciences sociales, est maigre comme un lieu séché. Et jusqu’à ce jour personne dans notre
-x=70.9	y=464.8	école ne l’a jamais vu sourire.
-x=99.3	y=485.5	Notre professeur principal est M. Kim Yun-sik, le professeur de coréen. Je suis assis à
-x=70.9	y=506.2	côté d’un nouveau. Go Dong-wan. Il vivait à Yongsan et a déménagé à Bamseom il n’y a pas
-x=70.9	y=526.9	longtemps. Dong-wan est plus grand que moi d’une bonne main. Sa peau est légèrement plus
-x=70.9	y=547.6	sombre, ce qui lui donne un air un peu étranger.
-x=99.3	y=568.3	La meilleure nouvelle de la journée. Kim Hee-jeong est dans notre classe. Hee-jeong est
-x=70.9	y=589.0	la plus jolie fille de l’école. Non. La plus jolie de Bamseom. Peut-être même la plus jolie du
-x=70.9	y=609.7	pays entier. Qui sait.
-x=99.3	y=630.4	Je lis La Lune et six sous de Somerset Maugham, emprunté sur l’étagère de Papa.
-x=70.9	y=671.7	Jeudi 3 mars
-x=70.9	y=713.1	Une révélation incroyable ! La mère de mon voisin de bureau, Dong-wan, est Mongole. Son
-x=70.9	y=733.8	père l’a rencontrée lorsqu’il travaillait en Mongolie et ils sont tombés amoureux. Dong-wan
-x=70.9	y=754.5	est né en Mongolie et y a vécu jusqu’à ses trois ans. Chaque été, il y passe environ deux
-
-===== PAGE 9 =====
-x=294.6	y=780.6	8
-x=70.9	y=71.4	semaines avec sa mère.
-x=99.3	y=92.1	Je lui ai demandé comment dire « bonjour » en mongol. Il me l’a appris. « Sain baina uu.
-x=70.9	y=112.8	» Dormir une nuit dans une immense tente mongole. Qu’est-ce que ça ferait ?
-x=99.3	y=133.5	Au cours privé, le professeur a hurlé parce que mes devoirs de maths étaient un désastre.
-x=70.9	y=154.2	Il a dit que si je rendais encore quelque chose d’aussi bâclé, il appellerait ma mère. Je veux
-x=70.9	y=174.9	vivre dans un monde sans maths.
-x=99.3	y=195.6	La Lune et six sous raconte l’histoire d’un homme irresponsable. Je ne comprends pas
-x=70.9	y=216.3	pourquoi Papa garde ce genre de livre sur son étagère.
-x=70.9	y=257.7	Vendredi 4 mars
-x=70.9	y=278.4	La rumeur s’est répandue. La mère de Dong-wan est Mongole. Le premier à bondir dessus est
-x=70.9	y=299.1	Jong-gu, le délinquant agaçant. Il a provoqué Dong-wan. — Hé ! Go Dong-wan, on dit que
-x=70.9	y=319.8	t’es multiculturel, hein ? Tu viens d’où ? D’Asie du Sud-Est ?
-x=99.3	y=340.6	Avant que Dong-wan ne puisse répondre, Cheol-jin a dit : — Non, apparemment il vient
-x=70.9	y=361.3	de Mongolie. Et Jong-gu a dit : — La Mongolie ? Très bien, alors à partir d’aujourd’hui t’es la
-x=70.9	y=382.0	sauce soja mongole.
-x=99.3	y=402.7	La clique de Jong-gu a commencé à l’appeler sauce soja mongole. Et d’autres élèves ont
-x=70.9	y=423.4	commencé à chuchoter aussi. « Il est multiculturel. » Mais Yeong-sik dans notre classe a une
-x=70.9	y=444.1	mère japonaise et personne ne se moque de lui. Si la mère de Dong-wan avait été japonaise…
-x=70.9	y=464.8	est-ce que cela aurait changé quelque chose ?
-x=70.9	y=506.2	Samedi 5 mars
-x=70.9	y=526.9	Je suis agacé contre Papa à cause de la télé. Je regardais Animal Kingdom et Papa a changé de
-x=70.9	y=547.6	chaîne disant qu’il devait regarder Flash Girl. Un homme de l’âge de Papa qui aime voir des
-x=70.9	y=568.3	idols danser et chanter. Je ne comprends pas. Je veux une télé à moi. J’achèterais un billet de
-x=70.9	y=589.0	loterie, mais je suis trop jeune. À quel moment devient-on adulte ?
-x=99.3	y=609.7	Pour fuir le vacarme de Flash Girl, je suis allé dans ma chambre et j’ai lu une nouvelle
-x=70.9	y=630.4	de Tchekhov. Elle s’appelait La Peur. Un type trompe son ami avec sa femme. Il y avait un
-x=70.9	y=651.1	personnage nommé les Quarante martyrs. Je ne sais pas pourquoi quelqu’un porterait un nom
-x=70.9	y=671.7	pareil. Les romans russes sont glacés. Probablement parce qu’il fait froid là-bas. Je devrais
-x=70.9	y=692.4	essayer un autre auteur russe.
-x=99.3	y=723.1	Papa fumait dans la cour et Maman l’a encore réprimandé. Elle lui a dit que pour
-x=70.9	y=743.8	obtenir la réduction bonne santé sur notre assurance il devait arrêter. Et a demandé combien
-
-===== PAGE 10 =====
-x=294.6	y=780.6	9
-x=70.9	y=71.4	de temps il comptait continuer à fumer. Elle a dit que s’il arrêtait maintenant cela
-x=70.9	y=92.1	économiserait plusieurs millions de wons en primes. Papa a ri : — D’accord d’accord. Et à la
-x=70.9	y=112.8	seconde où Maman est rentrée, il en a allumé une autre. Papa est un serpent. Un vrai. Puis il
-x=70.9	y=133.5	m’a dit : — Fils, n’apprends jamais à fumer. C’est vraiment difficile d’arrêter. Et il a aspiré
-x=70.9	y=154.2	comme si sa vie en dépendait.
-x=99.3	y=174.9	Il dit qu’il a commencé à l’armée avec une cigarette « 88 » distribuée comme ration.
-x=70.9	y=195.6	Avant ça il ne fumait pas. Il a promis que si j’arrivais premier de la classe il arrêterait. Alors je
-x=70.9	y=216.3	lui ai dit qu’en fait il valait mieux qu’il ne le fasse pas. Premier ? Pas dixième. Premier.
-x=70.9	y=237.0	Impossible.
-x=99.3	y=257.7	Aujourd’hui, j’ai appris qu’il y a des choses qu’il ne faut même pas dire pour plaisanter.
-x=70.9	y=299.1	Dimanche 6 mars
-x=70.9	y=319.8	Je suis allé tôt chez Grand-père. C’est un homme qui croit qu’il vaut cent fois mieux faire ce
-x=70.9	y=340.6	qu’on aime que d’avoir de bonnes notes. Avec lui je me sens calme. Nous avons regardé un
-x=70.9	y=361.3	western à la télé. The Brave
-x=99.3	y=382.0	C’est l’histoire d’une fille qui traque les bandits qui ont tué son père pour se venger.
-x=70.9	y=402.7	Une fille tachetée de rousseur, deux longues tresses de chaque côté. Elle ressemble à une
-x=70.9	y=423.4	version farouche d’Anne la maison aux pignons verts.
-x=99.3	y=444.1	Grand-père m’a dit que le titre original était True Grit. Et que dans un film plus ancien
-x=70.9	y=464.8	John Wayne jouait le shérif. J’ai demandé ce que signifiait true grit. Il a dit : — Le vrai
-x=70.9	y=485.5	courage. Puis il a ajouté : — Brave, c’est le courage, et grit, c’est aussi le courage mais pas le
-x=70.9	y=506.2	même. Grit, c’est le courage obstiné. Celui qui n’abandonne pas. Le simple brave, c’est être
-x=70.9	y=526.9	brave. Dans le film, cette Anne-rousse-au-revolver montrait vraiment ce true grit. Si j’étais
-x=70.9	y=547.6	elle, pourrais-je poursuivre l’assassin de mon père ? J’espère que cela n’arrivera jamais.
-x=99.3	y=568.3	Après le déjeuner, Grand-mère a demandé : — Byeok, qu’est-ce que tu veux faire plus
-x=70.9	y=589.0	tard ? J’ai dit : — Je ne sais pas encore. Grand-père a dit que c’était bien, même si ce n’était
-x=70.9	y=609.7	pas tout de suite, de trouver quelque chose que je voudrais faire. Avoir un but. Et ne pas
-x=70.9	y=630.4	négliger trop l’école non plus.
-x=99.3	y=651.1	Le soir, au lit, j’ai essayé de penser à ce que je veux faire plus tard, mais rien ne venait.
-x=70.9	y=671.7	Quand j’ai fermé les yeux, je voyais encore cette Anne rousse avec son arme.
-x=70.9	y=713.1	Lundi 7 mars
-x=70.9	y=733.8	À midi, le délinquant Jong-gu s’est encore moqué de Dong-wan en l’appelant sauce soja
-x=70.9	y=754.5	mongole. Il a repéré des raviolis sur le côté et a dit : — Hé, donne-moi un peu de sauce soja
-
-===== PAGE 11 =====
-x=291.6	y=780.6	10
-x=70.9	y=71.4	mongole pour tremper mes raviolis.
-x=99.3	y=92.1	La clique de Jong-gu s’est pliée de rire. Et même d’autres élèves ont ri avec eux. Je n’ai
-x=70.9	y=112.8	pas supporté. Je leur ai crié d’arrêter. Jong-gu s’est jeté sur moi. — Hé, tête d’âne, mêle-toi de
-x=70.9	y=133.5	tes affaires !
-x=99.3	y=154.2	Sans Dong-wan pour nous séparer, cela aurait fini en bagarre. Grâce à la clique de Jong-
-x=70.9	y=176.9	gu, dès aujourd’hui mon surnom est tête d’âne.
-x=99.3	y=206.0	Après l’école, Dong-wan et moi rentrions à pied et la clique de Jong-gu nous a suivis
-x=70.9	y=228.7	jusqu’au portail en scandant sauce soja mongole et tête d’âne. Comme Dong-wan — grand et
-x=70.9	y=257.9	solide — reste indifférent, on dirait que cela les pousse à l’embêter encore plus.
-x=99.3	y=278.5	La nuit dernière j’ai rêvé que je galopais à travers l’Ouest sur un énorme cheval. Hee-
-x=70.9	y=299.2	jeong partait venger son père et je devenais un shérif juste poursuivant des bandits. En les
-x=70.9	y=319.9	poursuivant, je me suis perdu quelque part au Texas et je me suis réveillé.
-x=99.3	y=340.7	Aujourd’hui, j’ai séché le cours de maths du privé. Je n’ai aucune envie d’y aller.
-x=70.9	y=382.1	Mardi 8 mars
-x=70.9	y=402.8	Aujourd’hui encore je ne suis pas allé au cours de maths. Le professeur a fini par appeler
-x=70.9	y=423.5	Maman et tout a été découvert. Maman a appelé Tante Jeong-su qui habite à Bamseom. Tante
-x=70.9	y=444.2	Jeong-su est la tutrice privée de maths la plus célèbre du quartier. Elle a dit que forcer un
-x=70.9	y=464.9	enfant qui n’a aucun intérêt pour les études à aller dans une académie était du gaspillage
-x=70.9	y=485.6	d’argent. Et qu’il vaudrait mieux arrêter de m’y envoyer. Quand Maman a demandé comment
-x=70.9	y=506.3	j’étais censé entrer à l’université si je n’étais pas bon en maths, Tante Jeong-su a dit qu’on
-x=70.9	y=527.0	pouvait simplement ne pas viser une bonne université. Maman a encore plus mal pris et a
-x=70.9	y=547.7	raccroché.
-x=99.3	y=568.4	Je lis De quoi vivent les hommes de Tolstoï.
-x=70.9	y=609.8	Mercredi 9 mars
-x=70.9	y=630.5	Hee-jeong est devenue vice-déléguée de classe. Moi, je n’ai aucun rôle. Pas vraiment une
-x=70.9	y=651.2	surprise.
-x=99.3	y=671.9	En sport, nous avons joué au foot. Comme je n’avais aucune envie de courir, je me suis
-x=70.9	y=692.6	mis dans les cages. Frapper le ballon dans tous les sens ne m’intéresse pas du tout. Debout là
-x=70.9	y=713.3	comme un sac de grains, j’ai laissé passer deux buts stupides et j’ai été remplacé.
-x=99.3	y=734.0	Même avec deux buts de retard, notre équipe a gagné grâce à Dong-wan. Il court vite et
-x=70.9	y=754.7	tire bien. Ils sont allés fêter ça avec du tteokbokki mais Dong-wan et moi n’y sommes pas
-
-===== PAGE 12 =====
-x=291.9	y=780.6	11
-x=70.9	y=71.4	allés.
-x=99.3	y=92.1	Maman m’a dit que je n’avais plus besoin d’aller au cours de maths. Mais à la place une
-x=70.9	y=112.8	« mesure exceptionnelle » serait prise bientôt. Une mesure exceptionnelle ? J’aurais peut-être
-x=70.9	y=133.5	mieux fait d’y aller normalement.
-x=99.3	y=154.2	La nuit, quand je me couche, je pense à Hee-jeong. La façon dont elle courait — rapide
-x=70.9	y=174.9	et légère — pendant le sport ne cesse de repasser dans ma tête. Je n’arrive pas à dormir.
-x=70.9	y=216.3	Jeudi 10 mars
-x=70.9	y=237.0	De quoi vivent les hommes est un livre profond. J’ai été vraiment touché par « Les Deux
-x=70.9	y=257.7	Vieillards ». Aider ceux qui souffrent est noble. Dépenser tout son argent de pèlerinage pour
-x=70.9	y=278.4	aider les autres. Tolstoï me donne quelque chose de proche d’une révélation religieuse.
-x=99.3	y=299.1	Cette semaine je n’ai pas vu Papa une seule fois. Il rentre tard chaque jour. J’ai décidé
-x=70.9	y=319.8	que quand je serai grand je ne serai pas programmeur comme lui.
-x=99.3	y=340.6	Après l’école je suis allé chez Tante Jeong-su. La mesure exceptionnelle de Maman était
-x=70.9	y=361.3	celle-ci. Un cours privé de maths chez Tante Jeong-su chaque samedi pendant une heure vingt.
-x=70.9	y=382.0	Je suis fichu. Tante Jeong-su est encore plus terrifiante que Ppagasari. Tout le monde connaît
-x=70.9	y=402.7	son mari comme un mari martyrisé. À ce niveau, c’est quasiment un représentant national.
-x=70.9	y=444.1	Vendredi 11 mars
-x=70.9	y=464.8	J’ai dit à Papa que la clique de Jong-gu embêtait Dong-wan sans raison. Qu’ils l’appelaient
-x=70.9	y=487.4	sauce soja mongole. Et que parce que j’étais proche de lui ils m’appelaient aussi tête d’âne.
-x=99.3	y=516.6	Papa a éclaté de rire. — Quel joli surnom ! Tête d’âne. Ça te va parfaitement — tu es
-x=70.9	y=537.3	têtu !
-x=99.3	y=558.0	Quand j’ai crié — Papa ! — il a ajouté en souriant encore. — D’accord, désolé. Fils, si
-x=70.9	y=578.7	quelqu’un te déteste sans raison, donne-lui une bonne raison de te détester. Une suffit.
-x=99.3	y=599.4	Maman, qui avait entendu, a dit sèchement : — Quelle éducation admirable…
-x=99.3	y=620.1	Papa a pris un air sérieux et a dit que je devais m’entendre avec mes camarades.
-x=99.3	y=640.8	Aujourd’hui j’ai découvert un point commun entre Papa, Oncle et mon professeur
-x=70.9	y=661.5	principal. Les trois manquent d’hormones masculines.
-x=70.9	y=702.9	Samedi 12 mars
-x=70.9	y=723.6	Je devais arriver chez Tante Jeong-su à 8 h 55. Je suis arrivé à 9 h pile. Cinq minutes de retard,
-x=70.9	y=744.3	dix minutes de réprimande.
-
-===== PAGE 13 =====
-x=291.6	y=780.6	12
-x=99.3	y=71.4	Tante Jeong-su fixe toujours les rendez-vous par tranches de cinq minutes. Elle pense
-x=70.9	y=92.1	que cela met la pression et fait respecter l’heure. J’ai envoyé deux signaux de détresse à Oncle
-x=70.9	y=112.8	mais il a juste haussé les épaules et a disparu dans la chambre.
-x=99.3	y=133.5	Tante Jeong-su m’a donné une heure de problèmes de maths puis est sortie au salon. J’ai
-x=70.9	y=154.2	transpiré seul dans le bureau. Il y avait deux problèmes d’eau salée. Si je pouvais juste
-x=70.9	y=174.9	tremper un doigt et goûter, je pourrais calculer la concentration. Rien que de les regarder me
-x=70.9	y=195.6	donne des frissons. Heureusement aucun problème de vitesse-distance cette fois.
-x=99.3	y=216.3	Une heure plus tard, la tante-tigre est revenue. Sur vingt questions j’en ai résolu cinq. Et
-x=70.9	y=237.0	sur ces cinq-là, j’en ai recopié deux de travers. Donc en réalité j’en ai trois. Alors que j’avais
-x=70.9	y=257.7	la tête basse, écrasé, elle m’a expliqué comment faire correctement les maths.
-x=99.3	y=299.0	1. Lire précisément l’énoncé jusqu’au bout.
-x=99.3	y=319.7	2. Écrire son raisonnement proprement.
-x=99.3	y=340.4	3. Ne pas abandonner avant la fin.
-x=99.3	y=382.0	Elle a dit que les maths ne se résolvent pas avec la tête mais avec le derrière. Puis elle
-x=70.9	y=402.7	m’a donné une montagne de devoirs. Adieu week-end perdu.
-x=99.3	y=423.4	À la maison, Maman et Papa se disputaient pour partager les tâches ménagères. Ils se
-x=70.9	y=444.1	chamaillaient comme des enfants. Maman a appelé Tante Jeong-su pour se plaindre. Oncle
-x=70.9	y=464.8	accomplit parfaitement chaque tâche que Tante Jeong-su lui confie. Maman devrait apprendre
-x=70.9	y=485.5	sa méthode.
-x=70.9	y=526.9	Dimanche 13 mars
-x=70.9	y=547.6	Dans l’après-midi Grand-père a appelé. Nous avons tous dîné chez lui. Au journal télévisé il y
-x=70.9	y=568.3	avait un reportage sur les anciennes « femmes de réconfort ». Grand-père a raconté l’histoire
-x=70.9	y=589.0	de mon arrière-grand-père, enrôlé de force comme travailleur par le Japon. Le navire sur
-x=70.9	y=609.7	lequel il se trouvait a été coulé par un bombardement américain en plein Pacifique. Il a
-x=70.9	y=630.4	survécu de justesse mais a été fait prisonnier un moment. Il est revenu en Corée après la
-x=70.9	y=651.1	libération, mais il était si affaibli qu’il est mort peu après.
-x=99.3	y=671.7	Grand-père s’est éclairci la gorge et est allé aux toilettes. Ses yeux étaient rouges.
-x=70.9	y=713.1	Lundi 14 mars
-x=70.9	y=733.8	À la fin des cours, notre professeur principal a demandé aux élèves issus de familles
-x=70.9	y=754.5	multiculturelles de rester. Dong-wan s’est levé brusquement et a dit : — Monsieur, je ne suis
-
-===== PAGE 14 =====
-x=291.6	y=780.6	13
-x=70.9	y=71.4	pas un élève de famille multiculturelle. Je suis juste Dong-wan. Dong-wan. S’il vous plaît ne
-x=70.9	y=92.1	m’appelez plus comme ça.
-x=99.3	y=112.8	Le professeur est resté sans voix, surpris. Puis il s’est excusé auprès de Dong-wan et de
-x=70.9	y=133.5	Yeong-sik. — Oui. Désolé. C’était mon erreur. Je ne vous appellerai plus ainsi.
-x=99.3	y=154.2	Après cela, les élèves ont cessé d’appeler Dong-wan sauce soja mongole. Enfin… sauf
-x=70.9	y=174.9	la bande de Jong-gu.
-x=70.9	y=216.3	Mardi 15 mars
-x=70.9	y=237.0	Après l’école je suis allé chez Dong-wan pour jouer. Son appartement est le plus vaste et le
-x=70.9	y=257.7	plus luxueux de Bamseom. Son salon est plus grand que toute notre maison. Sa mère est
-x=70.9	y=278.4	incroyablement belle.
-x=99.3	y=299.1	Nous avons mangé le goûter qu’elle avait préparé puis nous avons joué à un jeu de rôle.
-x=70.9	y=319.8	Je n’y avais presque jamais joué et je ne pouvais pas gagner. Comme je me suis vite ennuyé,
-x=70.9	y=340.6	Dong-wan m’a montré sa collection de mini-voitures. Ferrari Lamborghini Porsche. Il m’a
-x=70.9	y=361.3	expliqué chaque modèle. Ça ne m’intéressait pas. C’était ennuyeux.
-x=99.3	y=382.0	Ensuite il m’a montré le bureau de son père. Et c’était le paradis. Des milliers de DVD
-x=70.9	y=402.7	et de CD couvraient tout un mur jusqu’au plafond. Une énorme télé. Des enceintes presque
-x=70.9	y=423.4	aussi grandes que moi. Dong-wan a dit que je devrais revenir quand son père serait là pour
-x=70.9	y=444.1	regarder un film. Alors aujourd’hui je suis juste parti.
-x=99.3	y=464.8	Le père de Dong-wan est un immense fan d’un girl group appelé True Colors.
-x=70.9	y=506.2	Mercredi 16 mars
-x=70.9	y=526.9	Ces jours-ci je gravite autour de Hee-jeong comme un extraterrestre timide dans une
-x=70.9	y=547.6	soucoupe volante tournant autour des humains. Mais elle ne semble rien remarquer. À ses
-x=70.9	y=568.3	yeux je n’existe pas. Je veux me rapprocher mais je n’ai absolument aucune idée de comment
-x=70.9	y=589.0	faire. J’ai besoin d’un vrai courage.
-x=99.3	y=609.7	Sur l’étagère de Papa j’ai trouvé un vieux livre intitulé L’Âge de Gwancheol-dong. Je
-x=70.9	y=630.4	devrais chercher où se trouve Gwancheol-dong.
-x=70.9	y=671.7	Jeudi 17 mars
-x=70.9	y=692.4	La clique de Jong-gu s’est encore moquée de Dong-wan en l’appelant sauce soja mongole.
-x=70.9	y=713.1	J’ai donné un coup de pied dans ma chaise et j’ai crié d’arrêter et Jong-gu a sursauté. Sans la
-x=70.9	y=733.8	sonnerie nous serions peut-être allés jusqu’à la bagarre. Dong-wan est grand et courageux,
-x=70.9	y=754.5	pourtant il endure tout sans un mot. À cause de Jong-gu je crois que j’ai développé un trouble
-
-===== PAGE 15 =====
-x=291.6	y=780.6	14
-x=70.9	y=71.4	de gestion de la colère.
-x=99.3	y=92.1	Les professeurs pensent que Jong-gu est un élève modèle parce qu’il est riche et bon à
-x=70.9	y=112.8	l’école. Mais pour moi c’est un mauvais garçon. Récemment il a forcé Cheol-uk à aller
-x=70.9	y=133.5	manger du poulet frit avec eux puis l’a obligé à payer. Cheol-uk ne l’a pas dit à sa famille
-x=70.9	y=154.2	parce qu’il avait peur. Peut-être que la justice n’existe que dans les films. Le père de Jong-gu
-x=70.9	y=174.9	est chef de police. Si je le rencontre un jour j’aimerais lui dire de commencer par installer la
-x=70.9	y=195.6	justice chez lui.
-x=99.3	y=216.3	Voir Papa en semaine est devenu aussi rare qu’une étoile dans le ciel. Maman rentre tard
-x=70.9	y=237.0	aussi à cause de son travail à l’agence de voyages. Ce soir nous avons dîné chez Grand-père.
-x=70.9	y=257.7	J’ai fait la vaisselle. Grand-mère a dit : — Notre Byeok a grandi. Je veux devenir adulte vite.
-x=99.3	y=278.4	Sur le chemin du retour j’ai acheté un sachet de bungeo-ppang. Il n’y a même pas une
-x=70.9	y=299.1	heure que j’ai dîné mais j’ai déjà faim. Peut-être que ça veut dire que je grandis. Le vendeur
-x=70.9	y=319.8	de bungeo-ppang a dit que c’était un cadeau et en a glissé deux de plus. Je crois que je vais
-x=70.9	y=340.6	devenir un habitué.
-x=70.9	y=382.0	Vendredi 18 mars
-x=70.9	y=402.7	Faire les devoirs de maths que me donne Tante Jeong-su m’a aplati le derrière. Je ne
-x=70.9	y=423.4	comprends pas pourquoi on doit apprendre les maths. Savoir compter l’argent devrait suffire.
-x=99.3	y=444.1	Tante Jeong-su a appelé et m’a dit de ne pas être en retard demain quoi qu’il arrive. J’ai
-x=70.9	y=464.8	promis que je ne le serais absolument pas.
-x=70.9	y=506.2	Samedi 19 mars
-x=70.9	y=526.9	Ah. Je veux disparaître dans un trou de souris. Je suis encore arrivé dix minutes en retard chez
-x=70.9	y=547.6	Tante Jeong-su. Elle n’a rien dit et m’a fait me tenir dans un coin du salon les bras levés. Et
-x=70.9	y=568.3	puis. Hee-jeong est entrée. Kim Hee-jeong, la plus belle fille du collège Bamseom. Elle
-x=70.9	y=589.0	prenait aussi des cours de maths là-bas. Elle m’a vu puni, a esquissé un minuscule sourire et
-x=70.9	y=609.7	est entrée dans le bureau. Je voulais ramper dans un trou de fourmi. Mon visage brûlait
-x=70.9	y=630.4	comme s’il allait prendre feu si quelqu’un approchait une bougie.
-x=99.3	y=651.1	Un peu plus tard, Tante Jeong-su m’a dit de baisser les bras et m’a donné vingt
-x=70.9	y=671.7	questions. Cette fois j’en ai résolu sept. Et aucune n’était fausse à cause d’une mauvaise copie.
-x=70.9	y=692.4	Hee-jeong n’en a manqué qu’une sur vingt.
-x=99.3	y=713.1	Tante Jeong-su a préparé des nouilles pour le goûter. Hee-jeong a mangé avec moi. Ça
-x=70.9	y=733.8	faisait plus d’un an qu’elle prenait des cours là. Oncle m’a dit pendant que je mangeais : —
-x=70.9	y=754.5	Tu sais quel honneur c’est d’étudier avec ta tante ? Ta mère a supplié pour qu’elle accepte des
-
-===== PAGE 16 =====
-x=291.6	y=780.6	15
-x=70.9	y=71.4	cours le week-end. Alors ne sois plus jamais en retard. J’ai répondu « Oui » en manquant de
-x=70.9	y=92.1	m’étouffer. On dit qu’il ne faut pas déranger un chien pendant qu’il mange. Hee-jeong a souri
-x=70.9	y=112.8	légèrement, un peu crispée.
-x=99.3	y=133.5	Tante Jeong-su a conclu : — Rentre maintenant. Ne traîne nulle part. Et toi Byeok.
-x=70.9	y=154.2	Encore un seul retard et c’est fini. Celui qui ne peut pas respecter l’heure n’a pas besoin
-x=70.9	y=174.9	d’étudier les maths.
-x=99.3	y=195.6	J’ai filé comme si je m’échappais. Dans l’ascenseur Hee-jeong a dit : — Ta tante est une
-x=70.9	y=216.3	vraie tigresse.
-x=99.3	y=237.0	— Oui. Son surnom d’enfance était Tarzan.
-x=99.3	y=257.7	— Tarzan ? a-t-elle répété en riant.
-x=99.3	y=278.4	J’ai passé tout l’après-midi sur les devoirs de maths. Mes cheveux ont dû blanchir d’un
-x=70.9	y=299.1	coup. Qui a osé dire que la vie est belle ?
-x=70.9	y=340.6	Dimanche 20 mars
-x=70.9	y=361.3	Toute la matinée Papa a aidé Maman dans les tâches ménagères. Maman l’entraîne en utilisant
-x=70.9	y=382.0	les conseils de Tante Jeong-su.
-x=99.3	y=423.4	— Comment gérer son mari (selon Tante Jeong-su) —
-x=99.3	y=443.9	1. Ne pas demander vaguement. Donner des instructions précises. (Par exemple.
-x=99.3	y=464.8	Secouer la couette de la chambre deux fois devant-derrière. Passer l’aspirateur juste
-x=99.3	y=485.5	sous le canapé. Sortir les recyclables du débarras.)
-x=99.3	y=506.0	2. Abandonner sans hésiter tout ce que le mari refuse absolument de faire. (Par exemple.
-x=99.3	y=526.9	Sortir les déchets alimentaires.)
-x=99.3	y=547.4	3. Une fois la tâche accomplie, le féliciter. (Par exemple. Dauphin, chiot.)
-x=99.3	y=589.0	Le soir, Oncle a insisté pour que nous allions dans un PC café. Il ressemble à un bandit
-x=70.9	y=609.7	de montagne mais ses loisirs sont du niveau de l’école primaire. Après deux défaites d’affilée,
-x=70.9	y=630.4	je n’avais plus d’énergie. Sur le chemin du retour je lui ai demandé s’il n’avait pas peur de
-x=70.9	y=651.1	vivre avec Tante Jeong-su. Il a dit : — Non. C’est moi qui dirige la maison. Pourquoi ?
-x=99.3	y=671.7	On dit qu’on peut connaître dix brasses sous l’eau mais pas une seule dans le cœur d’un
-x=70.9	y=692.4	homme.
-x=70.9	y=733.8	Lundi 21 mars
-x=70.9	y=754.5	En cours d’éthique nous avons débattu de savoir si l’énergie nucléaire était indispensable. Le
-
-===== PAGE 17 =====
-x=291.6	y=780.6	16
-x=70.9	y=71.4	délégué de classe, Yeong-su, a dit que sans énergie nucléaire il y aurait une pénurie
-x=70.9	y=92.1	d’électricité donc qu’il suffisait de bien la gérer. Hee-jeong a affirmé qu’il valait mieux
-x=70.9	y=112.8	réduire la consommation et se passer du nucléaire.
-x=99.3	y=133.5	Puis Jong-gu a pris la parole et a dit que sans centrales nucléaires on ne pouvait pas
-x=70.9	y=154.2	fabriquer d’armes nucléaires et que notre pays devait en posséder le plus vite possible. Dong-
-x=70.9	y=174.9	wan a répondu qu’il ne fallait absolument pas fabriquer des armes aussi dangereuses. Après
-x=70.9	y=195.6	cela même les élèves endormis se sont réveillés pour participer. La classe s’est divisée en
-x=70.9	y=216.3	groupe pro-nucléaire et anti-nucléaire. Ils parlaient des armes nucléaires comme si c’étaient
-x=70.9	y=237.0	des jouets.
-x=99.3	y=257.7	Je regardais en spectateur, les bras croisés, penché contre ma chaise. M. Na Hee-cheol
-x=70.9	y=278.4	m’a réprimandé et a dit de m’asseoir correctement. Mon visage est devenu rouge comme si
-x=70.9	y=299.1	j’avais pris une bombe nucléaire en plein visage.
-x=99.3	y=319.8	Le professeur a dit que l’énergie nucléaire était une patate chaude et nous a donné un
-x=70.9	y=340.6	devoir. Écrire une opinion pour ou contre à rendre la semaine suivante.
-x=99.3	y=361.3	J’ai appelé Grand-père et lui ai demandé ce que patate chaude voulait dire. Il a dit que
-x=70.9	y=382.0	c’était quelque chose qui brûle ton palais si tu le mets dans ta bouche mais que si tu ne le
-x=70.9	y=402.7	manges pas tu restes affamé. C’est un peu comme : « Tu préfères résoudre un problème d’eau
-x=70.9	y=423.4	salée ou un problème de vitesse-distance ? »
-x=70.9	y=464.8	Mardi 22 mars
-x=70.9	y=485.5	Papa n’a pas pu aller travailler. Il a tellement mal au cou et aux épaules qu’il ne peut même
-x=70.9	y=506.2	pas tourner la tête. Maman lui a dit d’aller à l’hôpital, mais Papa a répondu qu’un jour de
-x=70.9	y=526.9	repos suffirait. Il aurait dû écouter Maman mais il s’est entêté et n’y est pas allé.
-x=99.3	y=547.6	J’ai terminé L’Âge de Gwancheol-dong. C’est un livre plein d’anecdotes sur de
-x=70.9	y=568.3	nombreux poètes et romanciers. Mais comme il est ancien, il y avait beaucoup d’auteurs que
-x=70.9	y=589.0	je ne connaissais pas. Shin Gyeong-rim, Cheon Sang-byeong, Kim Seong-dong, Kim Gwan-
-x=70.9	y=609.7	sik, Gu Ja-un. J’ai particulièrement aimé l’histoire où le poète Cheon Sang-byeong cache le
-x=70.9	y=630.4	stylo-plume Pelikan du romancier Oh Yeong-su. De nos jours cela finirait au tribunal, mais à
-x=70.9	y=651.1	l’époque il y avait une sorte de romance là-dedans.
-x=99.3	y=671.7	J’ai demandé à Papa ce qu’il penserait si je devenais écrivain plus tard. Il a dit de faire
-x=70.9	y=692.4	ce que je voulais mais que les écrivains étaient pauvres et avaient du mal à nourrir une famille.
-x=70.9	y=713.1	J’ai dit que je resterais célibataire même adulte. Papa a ri et a dit que c’était un excellent choix.
-x=70.9	y=733.8	Quand Maman lui a lancé un regard, il a vite ajouté : — Je plaisante.
-x=99.3	y=754.5	Ces jours-ci Papa ressemble de plus en plus à Oncle.
-
-===== PAGE 18 =====
-x=291.6	y=780.6	17
-x=70.9	y=92.1	Mercredi 23 mars
-x=70.9	y=112.8	Papa n’a toujours pas pu aller travailler. Il est enfin allé à l’hôpital tôt ce matin et a été
-x=70.9	y=133.5	diagnostiqué avec une hernie cervicale. Comme il a aussi de fortes douleurs à l’épaule et au
-x=70.9	y=154.2	dos, il doit se reposer complètement un moment. Papa a remis un certificat médical et une
-x=70.9	y=174.9	demande d’arrêt à son travail. Il a pris un mois de congé maladie. Et pourtant il est heureux
-x=70.9	y=195.6	comme un enfant en vacances d’été. Oui. Papa avait besoin de repos lui aussi.
-x=99.3	y=216.3	Maman a annoncé qu’à partir d’aujourd’hui nous entrions immédiatement en mode
-x=70.9	y=237.0	austérité. Comme si ce n’était pas déjà le cas. Elle a dit que mon cadeau d’anniversaire serait
-x=70.9	y=257.7	simple. Le smartphone que j’espérais a disparu comme de la fumée.
-x=99.3	y=278.4	Je dois être le seul élève de la classe sans smartphone. Tu peux oublier tes manuels,
-x=70.9	y=299.1	mais jamais ton smartphone.
-x=70.9	y=340.6	Jeudi 24 mars
-x=70.9	y=361.3	En marchant le long du fleuve Han avec Dong-wan, nous avons parlé de nos rêves pour
-x=70.9	y=382.0	l’avenir. Il faisait doux et agréable pour marcher. Dong-wan a dit que son rêve était de devenir
-x=70.9	y=402.7	le juge le plus juste du monde. Son rêve est un peu long. Juge, d’accord, mais le plus juste du
-x=70.9	y=423.4	monde ?
-x=99.3	y=444.1	Quand Dong-wan a dit qu’il voulait être juge, son père lui a conseillé d’avoir un objectif
-x=70.9	y=464.8	plus précis. Il lui a expliqué qu’il y avait de bons juges, de mauvais juges et des juges
-x=70.9	y=485.5	corrompus, et que sans un but clair, on pouvait finir parmi les mauvais. C’est pour ça que
-x=70.9	y=506.2	Dong-wan a décidé qu’il serait le juge le plus juste du monde.
-x=99.3	y=526.9	Ce soir-là en dînant chez Grand-père avec Papa, nous avons encore parlé du rêve de
-x=70.9	y=547.6	Dong-wan. Grand-père a dit que le père de Dong-wan semblait être une personne vraiment
-x=70.9	y=568.3	admirable. À côté, Papa a plaisanté : — Alors Byeok, quand tu seras grand, sois l’écrivain le
-x=70.9	y=589.0	plus juste du monde.
-x=99.3	y=609.7	Grand-père l’a aussitôt réprimandé. — Grandis un peu. Comment quelqu’un qui a
-x=70.9	y=630.4	étudié la philosophie peut-il être aussi immature…
-x=70.9	y=671.7	Vendredi 25 mars
-x=70.9	y=692.4	Papa est resté toute la journée sur le canapé du salon à regarder la télé. Après sa séance de
-x=70.9	y=713.1	kiné du matin, il ne quitte plus le canapé. Mais au moment où l’heure du retour de Maman
-x=70.9	y=733.8	approche, il se lave les cheveux, se brosse les dents et fait même la vaisselle tard, comme s’il
-x=70.9	y=754.5	avait eu une journée productive.
-
-===== PAGE 19 =====
-x=291.6	y=780.6	18
-x=99.3	y=71.4	Maman, qui ne soupçonne rien, s’inquiète seulement pour son cou et ses épaules. Pour
-x=70.9	y=92.1	moi, Papa n’a pas l’air d’avoir si mal. Devant Maman, il fait le gamin.
-x=70.9	y=133.5	Samedi 26 mars
-x=70.9	y=154.2	Heureusement je suis arrivé dix minutes en avance chez Tante Jeong-su. Comme j’avais aussi
-x=70.9	y=174.9	fini tous les devoirs de maths, j’ai été félicité. Quand j’ai demandé si Hee-jeong ne venait pas
-x=70.9	y=195.6	aujourd’hui, Tante Jeong-su a dit qu’elle était prise et avait pris le cours du samedi matin la
-x=70.9	y=216.3	semaine précédente. — Pourquoi ? Tu t’intéresses à Hee-jeong ? a demandé Tante Jeong-su.
-x=70.9	y=237.0	Mon visage est devenu rouge comme une tomate.
-x=99.3	y=257.7	Même si c’était samedi, Maman est allée travailler. Elle dit que l’agence de voyages est
-x=70.9	y=278.4	très occupée en ce moment. Comme s’il y avait jamais eu des périodes calmes. Papa et moi
-x=70.9	y=299.1	avons mangé du ramyeon pour le déjeuner. Maintenant que nous ne sommes même plus un
-x=70.9	y=319.8	foyer à double revenu, manger du ramyeon est un peu triste. Au moins une pizza !
-x=70.9	y=361.3	Dimanche 27 mars
-x=70.9	y=382.0	J’ai dit à Papa et Maman que je voulais un smartphone pour mon anniversaire mais ils ont fait
-x=70.9	y=402.7	comme s’ils n’avaient pas entendu.
-x=99.3	y=423.4	Papa a paressé sur le canapé toute la matinée puis s’est encore fait réprimander par
-x=70.9	y=444.1	Maman. À partir d’aujourd’hui toutes les tâches ménagères sont la responsabilité de Papa.
-x=70.9	y=464.8	Comme Maman est celle qui rapporte l’argent du foyer, Papa n’a pas vraiment le choix.
-x=99.3	y=485.5	Ce soir, en regardant une émission de chant, Papa a soudain déclaré que le fondement
-x=70.9	y=506.2	philosophique du programme était le darwinisme. Selon lui ce n’était pas un système qui
-x=70.9	y=526.9	sélectionnait le chanteur avec la meilleure note. C’était un système qui éliminait celui avec la
-x=70.9	y=547.6	plus basse. Exactement comme la théorie de l’évolution de Darwin. Papa a résumé le
-x=70.9	y=568.3	darwinisme en une phrase. La nature ne choisit pas. Elle élimine. Parfois Papa semble
-x=70.9	y=589.0	vraiment avoir étudié la philosophie à l’université.
-x=70.9	y=630.4	Lundi 28 mars
-x=70.9	y=651.1	Après avoir fait la vaisselle du dîner, j’ai demandé à Papa, qui fumait dans la cour, pourquoi il
-x=70.9	y=671.7	avait abandonné la philosophie pour devenir programmeur. Sans hésiter il a dit : — Tu crois
-x=70.9	y=692.4	que les gens travaillent parce qu’ils aiment ça ? Les gens travaillent pour vivre.
-x=99.3	y=713.1	Parfois Papa a l’air triste à mes yeux.
-x=70.9	y=754.5	Mardi 29 mars
-
-===== PAGE 20 =====
-x=291.6	y=780.6	19
-x=70.9	y=71.4	J’ai pris Le Voyage du Beagle de Charles Darwin dans la bibliothèque de Papa, mais Maman a
-x=70.9	y=92.1	dit que ce n’était pas un livre pour moi et m’a dit de le remettre. Papa m’a défendu. — C’est
-x=70.9	y=112.8	bon. Quand j’étais en 4e, j’ai vu Le Parrain au cinéma et j’ai compris la vie. Il n’y a pas de
-x=70.9	y=133.5	livres pour enfants ou pour adultes. Laisse-le lire.
-x=99.3	y=154.2	Alors Maman a dit : — Dans ce cas, lis-le jusqu’au bout. Ne l’abandonne pas en cours
-x=70.9	y=174.9	de route.
-x=99.3	y=195.6	Je l’ai regretté avant même d’avoir fini la première page. J’aurais dû écouter Maman…
-x=70.9	y=237.0	Mercredi 30 mars
-x=70.9	y=257.7	La clique de Jong-gu s’est fait sévèrement réprimander par Ppagasari. À midi, ils se sont
-x=70.9	y=278.4	moqués des ouvriers qui réparaient le terrain de sport de l’école et ont provoqué un énorme
-x=70.9	y=299.1	chahut. Depuis le deuxième étage, ils n’ont cessé de jeter de l’eau en les provoquant. Quand
-x=70.9	y=319.8	les ouvriers ont crié d’arrêter, ça s’est un peu calmé. Mais alors Jong-gu a sorti la tête par la
-x=70.9	y=340.6	fenêtre et a dit : — Si vous vivez comme ça, c’est parce que vous étiez nuls à l’école, non ?
-x=99.3	y=361.3	L’un des ouvriers a soudain jeté sa canette par terre et a couru vers notre salle de classe
-x=70.9	y=382.0	en hurlant : — Hé petit morveux, viens ici ! Le professeur principal de la Classe 4, Ppagasari,
-x=70.9	y=402.7	est arrivé en courant. Notre propre professeur principal était aux toilettes à ce moment-là. Les
-x=70.9	y=423.4	autres ouvriers sont aussi montés. L’atmosphère était terrifiante.
-x=99.3	y=444.1	Ppagasari s’est excusé auprès des ouvriers. La clique de Jong-gu s’est excusée à
-x=70.9	y=464.8	contrecœur. Ils ont tous été emmenés en salle de conseil. Ils méritaient une vraie réprimande.
-x=70.9	y=506.2	Jeudi 31 mars
-x=70.9	y=526.9	La mère de Jong-gu est venue à l’école, a fait un scandale et est partie. Dans la salle des
-x=70.9	y=547.6	professeurs elle a hurlé en demandant pour qui ils se prenaient à humilier son enfant. Elle a
-x=70.9	y=568.3	crié sur le professeur principal et sur Ppagasari. Le directeur et son adjoint ont dû intervenir
-x=70.9	y=589.0	pour la calmer.
-x=99.3	y=609.7	Jong-gu se vante partout qu’il va cacher le manuel de sciences sociales de Ppagasari. Ce
-x=70.9	y=630.4	livre est un trésor national. Il est couvert de notes, de schémas et de soulignages rouges
-x=70.9	y=651.1	partout. Gonflé comme s’il avait trempé dans l’eau, ce livre est la véritable source des revenus
-x=70.9	y=671.7	de Ppagasari.
-x=99.3	y=692.4	Jong-gu est vraiment un idiot. S’il voulait le cacher, il ferait mieux de le faire
-x=70.9	y=713.1	discrètement. En en parlant partout comme ça, tout le monde saura que c’est lui.
+ 294.65	 780.58	5
+  70.90	  71.41	ni le bruit d’en haut ni les aboiements, les yeux de Papa se sont presque remplis. Puis Maman
+  70.90	  92.11	m’a dit : « Byeok, et si nous déménagions dans une maison individuelle ? »
+  99.32	 112.83	Papa a bondi de sa chaise en disant qu’il fallait aller visiter des maisons immédiatement.
+  70.90	 133.53	Avant même que je puisse répondre.
+  99.32	 154.23	Nous pensions qu’habiter une maison résoudrait tout. Mais après des semaines à visiter
+  70.90	 174.93	chaque week-end, nous avons peu à peu compris que la réalité était différente.
+  99.32	 216.33	— Avantages d’une maison individuelle —
+  99.32	 236.86	1. Pas de bruit venant d’en haut. Les voisins peuvent toujours faire du bruit, mais au
+  99.32	 257.74	moins on n’a pas les vibrations boum-boum-boum.
+  99.32	 278.26	2. Il y a une cour.
+  99.32	 298.96	3. Il y a des arbres dans le parterre.
+  99.32	 319.66	4. On a sa propre terrasse sur le toit.
+  99.32	 361.26	— Inconvénients d’une maison individuelle —
+  99.32	 381.79	1. Pas de gardien comme dans un immeuble. Le lieu est moins sûr.
+  99.32	 402.49	2. Même dans une maison, il est difficile d’échapper aux chiens qui aboient.
+  99.32	 423.19	3. Mauvaise isolation. Plus chaud en été et plus froid en hiver qu’un appartement.
+  99.32	 443.89	4. Personne pour réceptionner les livraisons.
+  99.32	 485.46	Nous avons décidé d’acheter une maison individuelle. Mais pour que je n’aie pas à
+  70.90	 506.16	changer d’école, nous avons cherché à Gugil-dong, dans le même secteur scolaire que
+  70.90	 526.86	Bamseom. Au bout de deux mois, nous avons enfin trouvé une maison en briques bleues à
+  70.90	 547.56	deux étages qui nous plaisait. Dans un parterre grand comme une motte de fumier, il y avait
+  70.90	 568.26	un plaqueminier et deux genévriers. Dans un coin de la cour, à peine grand comme une paume,
+  70.90	 588.98	un petit robinet était installé. Et étrangement, c’est cela que Maman préférait. Ce minuscule
+  70.90	 609.68	point d’eau. La maison avait été rénovée deux ans plus tôt, donc elle était claire et propre.
+  70.90	 630.38	Rez-de-chaussée : salon et cuisine. À l’étage : la chambre de mes parents et la mienne. Il y
+  70.90	 651.08	avait une salle de bain en bas et une autre en haut. Comparée à notre ancien appartement
+  70.90	 671.68	étriqué et absurdement cher de Bamseom, c’était pratiquement le paradis. Le seul regret était
+  70.90	 692.38	que pendant la rénovation, ils avaient oublié le sous-sol. Un jour, si nous le nettoyions
+  70.90	 713.08	correctement, cela pourrait devenir un petit repaire douillet.
+  99.32	 733.78	Sur le chemin du retour après la signature, Papa a dit que nous allions désormais payer
+  70.90	 754.48	un loyer à la banque. J’ai demandé si cela faisait de nous des propriétaires fauchés. Maman a
 
 ===== PAGE 21 =====
-x=291.6	y=780.6	20
-x=261.5	y=133.5	CHAPITRE 2
-x=284.8	y=174.9	Avril
-x=257.4	y=195.6	Le vrai courage
-x=70.9	y=278.4	Vendredi 1er avril
-x=70.9	y=299.1	Aujourd’hui est le jour le plus important de l’année. C’est le premier avril. Ce qui veut dire
-x=70.9	y=319.8	que c’est mon anniversaire. J’ai officiellement quatorze ans. J’aimerais pouvoir prendre deux
-x=70.9	y=340.6	ans d’un coup chaque année pour devenir adulte plus vite.
-x=70.9	y=361.3	Comme prévu je n’ai pas eu de smartphone. Maman m’a acheté des baskets. Comme celles
-x=70.9	y=382.0	que je porte sont usées de toute façon, elle dit que c’est faire d’une pierre deux coups. Papa
-x=70.9	y=402.7	m’a offert Les Aventures de Tintin de Hergé. Le Secret de La Licorne, Le Trésor de Rackham
-x=70.9	y=423.4	le Rouge, Tintin au Tibet et Tintin au Congo. Papa a le culot d’appeler des BD qu’il s’est
-x=70.9	y=444.1	achetées pour lui-même un cadeau pour moi. Il croit que je ne m’en rends pas compte ? Mais
-x=70.9	y=464.8	comme il vit aussi de l’argent de poche que lui donne Maman, j’ai décidé de comprendre.
-x=70.9	y=485.5	Grand-père et Grand-mère m’ont offert l’intégrale de Sherlock Holmes. Tante Jeong-su et
-x=70.9	y=506.2	Oncle. Silence radio. On verra demain.
-x=70.9	y=526.9	Ce soir à la radio j’ai entendu un morceau incroyable. April de Deep Purple. J’ai eu
-x=70.9	y=547.6	l’impression qu’un courant électrique traversait tout mon corps.
-x=70.9	y=589.0	Samedi 2 avril
-x=70.9	y=609.7	J’ai reçu un smartphone de la part de Tante Jeong-su et Oncle pour mon anniversaire.
-x=70.9	y=630.4	Malheureusement il n’est pas neuf. Oncle a changé son téléphone et m’a donné l’ancien. Il l’a
-x=70.9	y=651.1	réinitialisé, nettoyé parfaitement, remis dans la boîte d’origine et même emballé dans un
-x=70.9	y=671.7	papier de luxe. Franchement, quand j’ai vu la boîte avec un ruban, j’ai cru que c’était le
-x=70.9	y=692.4	dernier modèle. Mon cœur a failli s’arrêter. Heureusement Tante Jeong-su m’a vite dit qu’il
-x=70.9	y=713.1	était d’occasion. En l’entendant, mon cœur est redevenu normal.
-x=99.3	y=733.8	Après les maths chez Tante Jeong-su je suis allé chez Dong-wan. Son père cirait des
-x=70.9	y=754.5	chaussures sur le balcon. Il en avait neuf paires. Mon père en a deux et les talons sont déjà
+ 291.65	 780.58	20
+ 261.55	 133.53	CHAPITRE 2
+ 284.75	 174.93	Avril
+ 257.35	 195.63	Le vrai courage
+  70.90	 278.43	Vendredi 1er avril
+  70.90	 299.13	Aujourd’hui est le jour le plus important de l’année. C’est le premier avril. Ce qui veut dire
+  70.90	 319.83	que c’est mon anniversaire. J’ai officiellement quatorze ans. J’aimerais pouvoir prendre deux
+  70.90	 340.56	ans d’un coup chaque année pour devenir adulte plus vite.
+  70.90	 361.26	Comme prévu je n’ai pas eu de smartphone. Maman m’a acheté des baskets. Comme celles
+  70.90	 381.96	que je porte sont usées de toute façon, elle dit que c’est faire d’une pierre deux coups. Papa
+  70.90	 402.66	m’a offert Les Aventures de Tintin de Hergé. Le Secret de La Licorne, Le Trésor de Rackham
+  70.90	 423.36	le Rouge, Tintin au Tibet et Tintin au Congo. Papa a le culot d’appeler des BD qu’il s’est
+  70.90	 444.06	achetées pour lui-même un cadeau pour moi. Il croit que je ne m’en rends pas compte ? Mais
+  70.90	 464.76	comme il vit aussi de l’argent de poche que lui donne Maman, j’ai décidé de comprendre.
+  70.90	 485.46	Grand-père et Grand-mère m’ont offert l’intégrale de Sherlock Holmes. Tante Jeong-su et
+  70.90	 506.16	Oncle. Silence radio. On verra demain.
+  70.90	 526.86	Ce soir à la radio j’ai entendu un morceau incroyable. April de Deep Purple. J’ai eu
+  70.90	 547.56	l’impression qu’un courant électrique traversait tout mon corps.
+  70.90	 588.98	Samedi 2 avril
+  70.90	 609.68	J’ai reçu un smartphone de la part de Tante Jeong-su et Oncle pour mon anniversaire.
+  70.90	 630.38	Malheureusement il n’est pas neuf. Oncle a changé son téléphone et m’a donné l’ancien. Il l’a
+  70.90	 651.08	réinitialisé, nettoyé parfaitement, remis dans la boîte d’origine et même emballé dans un
+  70.90	 671.68	papier de luxe. Franchement, quand j’ai vu la boîte avec un ruban, j’ai cru que c’était le
+  70.90	 692.38	dernier modèle. Mon cœur a failli s’arrêter. Heureusement Tante Jeong-su m’a vite dit qu’il
+  70.90	 713.08	était d’occasion. En l’entendant, mon cœur est redevenu normal.
+  99.32	 733.78	Après les maths chez Tante Jeong-su je suis allé chez Dong-wan. Son père cirait des
+  70.90	 754.48	chaussures sur le balcon. Il en avait neuf paires. Mon père en a deux et les talons sont déjà
 
 ===== PAGE 22 =====
-x=291.6	y=780.6	21
-x=70.9	y=71.4	mâchés. Le père de Dong-wan a dit qu’un homme devait cirer ses propres chaussures. En
-x=70.9	y=92.1	regardant de près, il faisait juste tomber la poussière et mettait une sorte de crème transparente
-x=70.9	y=112.8	bizarre. Peut-être que c’est pour ça qu’elles ne brillaient pas du tout à mes yeux. Les
-x=70.9	y=133.5	chaussures de mon père sont tellement lustrées qu’on peut presque voir son visage dedans.
-x=99.3	y=154.2	Le père de Dong-wan a mis Terminator. Un film de fou. Avec l’immense écran et le son
-x=70.9	y=174.9	qui martelait, on se serait cru au cinéma. L’idée qu’une machine plus intelligente et plus forte
-x=70.9	y=195.6	que les humains puisse dominer le futur ne m’a pas paru absurde du tout. On vit déjà dans un
-x=70.9	y=216.3	temps où l’IA bat les humains aux échecs. Et même au go, non ?
-x=99.3	y=237.0	Même si un jour ils inventent une machine à voyager dans le temps comme dans le film,
-x=70.9	y=257.7	je ne l’utiliserai jamais. Parce que voyager signifie qu’il faut partir complètement nu. Passé ou
-x=70.9	y=278.4	futur, ça ne m’intéresse pas. Même si quelqu’un me disait « Tu peux l’utiliser et visiter le
-x=70.9	y=299.1	paradis », si je dois me déshabiller je refuserai poliment.
-x=99.3	y=319.8	Quand je suis rentré Papa avait mis Flash Girl et s’était endormi sur le canapé. Ils disent
-x=70.9	y=340.6	que si l’IA continue d’avancer, même les programmes informatiques ne seront plus écrits par
-x=70.9	y=361.3	des humains. L’IA les écrira elle-même. Si ça arrive, à quel point Papa serait-il heureux ?
-x=99.3	y=382.0	Pour ne pas le réveiller je suis monté à l’étage en silence et j’ai lu Sherlock Holmes.
-x=70.9	y=402.7	C’est captivant. Je me suis demandé si je deviendrais un détective ou un écrivain un jour.
-x=70.9	y=444.1	Dimanche 3 avril
-x=70.9	y=464.8	Papa et moi avons déballé les cartons empilés au sous-sol. Rien qu’ouvrir quelques cartons de
-x=70.9	y=485.5	livres a englouti toute la matinée. Les vieux livres sentaient un peu le moisi mais je n’ai rien
-x=70.9	y=506.2	contre cette odeur.
-x=99.3	y=526.9	Après déjeuner Papa voulait continuer à déballer mais Maman l’en a empêché, disant
-x=70.9	y=547.6	qu’il ne devait pas forcer. Alors Papa a dit qu’il allait juste monter les disques vinyles au
-x=70.9	y=568.3	débarras de l’étage. Le sous-sol est humide et apparemment les vinyles moisissent. Maman a
-x=70.9	y=589.0	dit qu’il vaudrait mieux vendre ou jeter ceux qu’on n’écoute plus. Papa a répondu « D’accord
-x=70.9	y=609.7	d’accord » mais il a porté les six cartons comme des reliques sacrées et les a installés à l’étage.
-x=70.9	y=630.4	Je ne comprends pas ce qu’il y a de si précieux dans ces disques.
-x=99.3	y=651.1	Je me suis endormi en lisant Sherlock Holmes. Au fond, être détective semble plus
-x=70.9	y=671.7	amusant qu’être écrivain.
-x=70.9	y=713.1	Lundi 4 avril
-x=70.9	y=733.8	Avec Dong-wan nous avons feuilleté un magazine scientifique à la bibliothèque. Le nombre
-x=70.9	y=754.5	d’animaux abattus chaque année pour l’alimentation est délirant. 1,7 million de chameaux, 24
+ 291.65	 780.58	21
+  70.90	  71.41	mâchés. Le père de Dong-wan a dit qu’un homme devait cirer ses propres chaussures. En
+  70.90	  92.11	regardant de près, il faisait juste tomber la poussière et mettait une sorte de crème transparente
+  70.90	 112.83	bizarre. Peut-être que c’est pour ça qu’elles ne brillaient pas du tout à mes yeux. Les
+  70.90	 133.53	chaussures de mon père sont tellement lustrées qu’on peut presque voir son visage dedans.
+  99.32	 154.23	Le père de Dong-wan a mis Terminator. Un film de fou. Avec l’immense écran et le son
+  70.90	 174.93	qui martelait, on se serait cru au cinéma. L’idée qu’une machine plus intelligente et plus forte
+  70.90	 195.63	que les humains puisse dominer le futur ne m’a pas paru absurde du tout. On vit déjà dans un
+  70.90	 216.33	temps où l’IA bat les humains aux échecs. Et même au go, non ?
+  99.32	 237.03	Même si un jour ils inventent une machine à voyager dans le temps comme dans le film,
+  70.90	 257.74	je ne l’utiliserai jamais. Parce que voyager signifie qu’il faut partir complètement nu. Passé ou
+  70.90	 278.43	futur, ça ne m’intéresse pas. Même si quelqu’un me disait « Tu peux l’utiliser et visiter le
+  70.90	 299.13	paradis », si je dois me déshabiller je refuserai poliment.
+  99.32	 319.83	Quand je suis rentré Papa avait mis Flash Girl et s’était endormi sur le canapé. Ils disent
+  70.90	 340.56	que si l’IA continue d’avancer, même les programmes informatiques ne seront plus écrits par
+  70.90	 361.26	des humains. L’IA les écrira elle-même. Si ça arrive, à quel point Papa serait-il heureux ?
+  99.32	 381.96	Pour ne pas le réveiller je suis monté à l’étage en silence et j’ai lu Sherlock Holmes.
+  70.90	 402.66	C’est captivant. Je me suis demandé si je deviendrais un détective ou un écrivain un jour.
+  70.90	 444.06	Dimanche 3 avril
+  70.90	 464.76	Papa et moi avons déballé les cartons empilés au sous-sol. Rien qu’ouvrir quelques cartons de
+  70.90	 485.46	livres a englouti toute la matinée. Les vieux livres sentaient un peu le moisi mais je n’ai rien
+  70.90	 506.16	contre cette odeur.
+  99.32	 526.86	Après déjeuner Papa voulait continuer à déballer mais Maman l’en a empêché, disant
+  70.90	 547.56	qu’il ne devait pas forcer. Alors Papa a dit qu’il allait juste monter les disques vinyles au
+  70.90	 568.26	débarras de l’étage. Le sous-sol est humide et apparemment les vinyles moisissent. Maman a
+  70.90	 588.98	dit qu’il vaudrait mieux vendre ou jeter ceux qu’on n’écoute plus. Papa a répondu « D’accord
+  70.90	 609.68	d’accord » mais il a porté les six cartons comme des reliques sacrées et les a installés à l’étage.
+  70.90	 630.38	Je ne comprends pas ce qu’il y a de si précieux dans ces disques.
+  99.32	 651.08	Je me suis endormi en lisant Sherlock Holmes. Au fond, être détective semble plus
+  70.90	 671.68	amusant qu’être écrivain.
+  70.90	 713.08	Lundi 4 avril
+  70.90	 733.78	Avec Dong-wan nous avons feuilleté un magazine scientifique à la bibliothèque. Le nombre
+  70.90	 754.48	d’animaux abattus chaque année pour l’alimentation est délirant. 1,7 million de chameaux, 24
 
 ===== PAGE 23 =====
-x=291.6	y=780.6	22
-x=70.9	y=71.4	millions de buffles, 300 millions de vaches, 400 millions de chèvres, 500 millions de moutons,
-x=70.9	y=92.1	600 millions de dindes, 1,1 milliard de lapins, 1,3 milliard de porcs, 2,6 milliards de canards
-x=70.9	y=112.8	et 52 milliards de poulets ! Soudain la viande m’a fait peur.
-x=99.3	y=133.5	Nous ricanions, Dong-wan et moi, en disant que des gens mangeaient même des
-x=70.9	y=154.2	chameaux quand Hee-jeong est arrivée avec sa meilleure amie Hye-seon et nous a demandé
-x=70.9	y=174.9	de faire moins de bruit. Nous nous sommes tus comme si nous avions avalé du miel. Et nous
-x=70.9	y=195.6	avons rougi.
-x=70.9	y=239.0	Mardi 5 avril (Jour de l’Arbre)
-x=70.9	y=268.1	Dong-wan dit que si l’IA continue d’avancer, non seulement les programmeurs mais
-x=70.9	y=288.8	beaucoup d’autres métiers disparaîtront. Dans les usines il n’y aura plus que des robots. Plus
-x=70.9	y=309.5	rien pour les humains. Alors en Europe ils pensent à taxer les robots. Je ne comprends pas.
-x=70.9	y=330.2	Quel argent un robot a-t-il pour payer des impôts ? Ne faudrait-il pas taxer le propriétaire
-x=70.9	y=351.0	plutôt ?
-x=99.3	y=371.7	En cours d’histoire on a appris quelque chose de semblable. Dans le passé les esclaves
-x=70.9	y=392.4	travaillaient en échange de leur liberté enlevée, et en retour ils n’étaient pas taxés. Les robots
-x=70.9	y=413.1	sont comme des esclaves, non ? Pourquoi devraient-ils travailler 24 heures sur 24 et en plus
-x=70.9	y=433.8	payer des impôts ? C’est quoi ? Le crime d’être né robot ?
-x=70.9	y=475.2	Mercredi 6 avril
-x=70.9	y=495.9	J’ai demandé à Grand-père ce que c’était que cette taxe robot. Il a dit que ce n’était pas le
-x=70.9	y=516.6	robot qui payait mais le propriétaire. Comme la taxe sur les navires. Ce n’est pas le navire,
-x=70.9	y=537.3	c’est l’armateur. Ouf. Quel soulagement. Je me suis inquiété pour rien.
-x=99.3	y=558.0	Grand-père dit qu’un jour même dans les procès les humains pourraient ne plus être
-x=70.9	y=578.7	nécessaires. Un juge IA sans émotions pourrait rendre le verdict le plus impartial. Peut-être
-x=70.9	y=599.4	que Dong-wan devrait repenser son rêve de devenir juge. Mais comment pourrais-je lui dire
-x=70.9	y=620.1	ça ? Il serait tellement déçu.
-x=99.3	y=640.8	En rentrant j’ai relu Sherlock Holmes. Pour résoudre une affaire, le plus important est
-x=70.9	y=661.5	toujours de sécuriser les preuves. Problème. Autour de moi il n’y a pas un seul incident digne
-x=70.9	y=682.2	d’être appelé une affaire.
-x=99.3	y=702.9	Et Dr Watson. Je ne suis toujours pas sûr à quoi il sert exactement.
-x=70.9	y=744.3	Jeudi 7 avril
+ 291.65	 780.58	22
+  70.90	  71.41	millions de buffles, 300 millions de vaches, 400 millions de chèvres, 500 millions de moutons,
+  70.90	  92.11	600 millions de dindes, 1,1 milliard de lapins, 1,3 milliard de porcs, 2,6 milliards de canards
+  70.90	 112.83	et 52 milliards de poulets ! Soudain la viande m’a fait peur.
+  99.32	 133.53	Nous ricanions, Dong-wan et moi, en disant que des gens mangeaient même des
+  70.90	 154.23	chameaux quand Hee-jeong est arrivée avec sa meilleure amie Hye-seon et nous a demandé
+  70.90	 174.93	de faire moins de bruit. Nous nous sommes tus comme si nous avions avalé du miel. Et nous
+  70.90	 195.63	avons rougi.
+  70.90	 238.96	Mardi 5 avril (Jour de l’Arbre)
+  70.90	 268.13	Dong-wan dit que si l’IA continue d’avancer, non seulement les programmeurs mais
+  70.90	 288.83	beaucoup d’autres métiers disparaîtront. Dans les usines il n’y aura plus que des robots. Plus
+  70.90	 309.53	rien pour les humains. Alors en Europe ils pensent à taxer les robots. Je ne comprends pas.
+  70.90	 330.23	Quel argent un robot a-t-il pour payer des impôts ? Ne faudrait-il pas taxer le propriétaire
+  70.90	 350.96	plutôt ?
+  99.32	 371.66	En cours d’histoire on a appris quelque chose de semblable. Dans le passé les esclaves
+  70.90	 392.36	travaillaient en échange de leur liberté enlevée, et en retour ils n’étaient pas taxés. Les robots
+  70.90	 413.06	sont comme des esclaves, non ? Pourquoi devraient-ils travailler 24 heures sur 24 et en plus
+  70.90	 433.76	payer des impôts ? C’est quoi ? Le crime d’être né robot ?
+  70.90	 475.16	Mercredi 6 avril
+  70.90	 495.86	J’ai demandé à Grand-père ce que c’était que cette taxe robot. Il a dit que ce n’était pas le
+  70.90	 516.56	robot qui payait mais le propriétaire. Comme la taxe sur les navires. Ce n’est pas le navire,
+  70.90	 537.26	c’est l’armateur. Ouf. Quel soulagement. Je me suis inquiété pour rien.
+  99.32	 557.96	Grand-père dit qu’un jour même dans les procès les humains pourraient ne plus être
+  70.90	 578.68	nécessaires. Un juge IA sans émotions pourrait rendre le verdict le plus impartial. Peut-être
+  70.90	 599.38	que Dong-wan devrait repenser son rêve de devenir juge. Mais comment pourrais-je lui dire
+  70.90	 620.08	ça ? Il serait tellement déçu.
+  99.32	 640.78	En rentrant j’ai relu Sherlock Holmes. Pour résoudre une affaire, le plus important est
+  70.90	 661.48	toujours de sécuriser les preuves. Problème. Autour de moi il n’y a pas un seul incident digne
+  70.90	 682.18	d’être appelé une affaire.
+  99.32	 702.88	Et Dr Watson. Je ne suis toujours pas sûr à quoi il sert exactement.
+  70.90	 744.28	Jeudi 7 avril
 
-===== PAGE 24 =====
-x=291.6	y=780.6	23
-x=70.9	y=71.4	Du 21 au 23 nous partons en voyage scolaire à Sokcho. Deux nuits trois jours. Notre
-x=70.9	y=92.1	professeur principal dit qu’on doit préparer une performance pour la soirée. Catastrophe. Je
-x=70.9	y=112.8	n’ai hérité d’aucun talent de mes parents. À mon avis une des pires inventions de l’humanité
-x=70.9	y=133.5	est de forcer tout le monde à passer du numéro un au dernier pour se montrer. Pourquoi ne pas
-x=70.9	y=154.2	laisser seulement ceux qui veulent se montrer ?
-x=70.9	y=195.6	Vendredi 8 avril
-x=70.9	y=216.3	Les unités monétaires dans Sherlock Holmes sont trop compliquées. Pound crown penny
-x=70.9	y=237.0	shilling guinea. Je ne comprends rien. J’aimerais savoir ce que valait vraiment une livre il y a
-x=70.9	y=257.7	cent ans.
-x=70.9	y=299.1	Samedi 9 avril
-x=70.9	y=319.8	Après avoir fini les maths chez Tante Jeong-su je suis allé chez Dong-wan. Son père n’était
-x=70.9	y=340.6	pas là donc on n’a pas pu regarder un film. Alors après avoir demandé à sa mère, Dong-wan
-x=70.9	y=361.3	est venu chez moi.
-x=99.3	y=382.0	En voyant les livres dans notre salon, Dong-wan avait l’air vraiment choqué. Papa
-x=70.9	y=402.7	achète des livres sans même les lire. Il dit qu’il les a déjà lus à l’université. Est-ce vrai ? Je ne
-x=70.9	y=423.4	comprends pas pourquoi on achèterait des livres qu’on a déjà lus. Chez nous on a même trois
-x=70.9	y=444.1	exemplaires de L’Attrape-cœurs.
-x=99.3	y=464.8	J’ai demandé à Dong-wan pourquoi il restait calme même quand Jong-gu se moquait de
-x=70.9	y=485.5	lui. Dong-wan a répondu qu’au fond Jong-gu était plutôt pitoyable. Il m’a montré son poing
-x=70.9	y=506.2	serré aussi fort qu’il pouvait. Immense comme celui d’un adulte. Il a dit qu’il avait promis à
-x=70.9	y=526.9	sa mère de ne frapper personne. Il a ajouté qu’il pourrait facilement battre Jong-gu par la force
-x=70.9	y=547.6	mais qu’il n’en voyait simplement pas l’utilité.
-x=99.3	y=568.3	En allant chez Grand-père avec Dong-wan nous nous sommes arrêtés au stand du
-x=70.9	y=589.0	Hyung du bungeo-ppang. Il passait de la musique entraînante à son étal. Quand j’ai demandé
-x=70.9	y=609.7	ce que c’était il a dit que c’était Take Five de Dave Brubeck.
-x=99.3	y=630.4	Grand-père a vu Dong-wan, lui a tapoté la tête et lui a dit de devenir le juge le plus juste
-x=70.9	y=651.1	du monde. J’ai dit à Grand-père que les unités monétaires anglaises étaient beaucoup trop
-x=70.9	y=671.7	compliquées. Alors Grand-père a pris une encyclopédie et me l’a expliqué gentiment.
-x=99.3	y=692.4	Une livre vaut quatre crowns. Quatre crowns valent vingt shillings. Et vingt shillings
-x=70.9	y=713.1	valent deux cent quarante pence. Autrement dit une livre vaut soit vingt shillings soit deux
-x=70.9	y=733.8	cent quarante pence. Un crown vaut cinq shillings, un florin vaut deux. Un shilling fait douze
-x=70.9	y=754.5	pence et vingt et un shillings forment une guinea. Et aujourd’hui une livre vaut environ cent
+===== PAGE 41 =====
+ 291.65	 780.58	40
+  99.32	  71.41	Après le petit-déjeuner je lisais Tintin au Tibet quand Dong-wan a appelé pour me dire
+  70.90	  92.11	de venir. Son père m’a vu et m’a appelé « petit héros ».
+  99.32	 112.83	— Je ne suis pas petit, ai-je répondu.
+  99.32	 133.53	Il a ri et s’est excusé.
+  99.32	 154.23	— Waaah ! a crié Jong-gu en voyant le home cinéma.
+  99.32	 174.93	— Mon père, lui, télécharge tout gratuitement… a commencé Jong-gu, puis il a laissé la
+  70.90	 195.63	phrase mourir.
+  99.32	 216.33	Le père de Dong-wan a mis Les Évadés et a demandé :
+  99.32	 237.03	— C’est interdit aux moins de 15 ans. Tu as bien quinze ans, non ?
+  99.32	 257.74	— Ouuui, ai-je répondu fièrement. Dans ces situations, Papa m’a appris qu’on ne
+  70.90	 278.43	compte pas « l’âge international ». On triche un peu.
+  99.32	 299.13	Le film nous a secoués. Jong-gu était surexcité. C’était devenu son numéro un de tous
+  70.90	 319.83	les temps.
+  99.32	 340.56	— Putain ce film est dingue ! Le directeur de la prison, quel salaud ! Mais Andy… il est
+  70.90	 361.26	irréel, pas vrai ?
+  99.32	 381.96	Des mots qu’on ne pourrait jamais dire chez nous sortaient de sa bouche un par un. Puis
+  70.90	 402.66	il a lâché :
+  99.32	 423.36	— Au fait, je parie que Hee-jeong t’aime vraiment, Byeok.
+  99.32	 444.06	— …
+  99.32	 464.76	J’ai regardé Dong-wan puis Jong-gu comme un idiot.
+  99.32	 485.46	— Tu ne savais pas ? Toute la classe est au courant, a dit Jong-gu.
+  99.32	 506.16	Aujourd’hui j’ai découvert le secret de Hee-jeong. Pour la première fois de ma vie j’ai
+  70.90	 526.86	prié Dieu pour que ce ne soit pas une blague.
+  70.90	 568.26	Mercredi 11 mai
+  70.90	 588.98	J’ai l’impression que toutes les chansons du monde parlent de moi.
+  99.32	 609.68	Papa dit qu’il en a assez de cette pluie qui n’arrête pas depuis des jours, mais pour moi
+  70.90	 630.38	elle est absolument magnifique.
+  99.32	 651.08	Je crois que je comprends enfin la phrase que Papa fredonne à chaque fois qu’il pleut : «
+  70.90	 671.68	L’amour est comme la pluie derrière la fenêtre ».
+  70.90	 713.08	Jeudi 12 mai
+  70.90	 733.78	En maths, le prof Bousier a écrit une équation compliquée au tableau et a demandé qui
+  70.90	 754.48	pouvait la résoudre. Dong-wan, Jong-gu et Hee-jeong ont levé la main. Le prof a dit :
 
-===== PAGE 25 =====
-x=291.6	y=780.6	24
-x=70.9	y=71.4	mille wons. Donc comme une livre vaut quatre crowns, un crown vaut vingt-cinq mille wons.
-x=70.9	y=92.1	Et comme un crown vaut cinq shillings, un shilling vaut cinq mille wons. Un florin de deux
-x=70.9	y=112.8	shillings vaut dix mille wons. Comme un shilling fait douze pence, un penny vaut environ
-x=70.9	y=133.5	quatre cent seize wons. Enfin comme une guinea fait vingt et un shillings, elle vaut
-x=70.9	y=154.2	aujourd’hui environ cent cinq mille wons.
-x=99.3	y=174.9	Aujourd’hui j’ai compris pourquoi les maths existent.
-x=70.9	y=216.3	Dimanche 10 avril
-x=70.9	y=237.0	Je suis anxieux à cause de cette stupide performance pour le voyage scolaire. Maman chante
-x=70.9	y=257.7	mal, Papa chante mal et bien sûr moi aussi. Maman danse mal, Papa danse mal et moi aussi.
-x=70.9	y=278.4	Aucun instrument. Rien. Zéro talent à montrer.
-x=99.3	y=299.1	Je continue de lire Sherlock Holmes. C’est mille fois plus intéressant que Le Voyage du
-x=70.9	y=319.8	Beagle. Pour devenir détective il faut bien observer. Alors aujourd’hui j’ai entraîné mes
-x=70.9	y=340.6	pouvoirs d’observation dans toute la maison. J’ai même pris des photos avec mon smartphone
-x=70.9	y=361.3	pour les preuves.
-x=99.3	y=404.6	— Liste d’observation —
-x=99.3	y=433.6	1. Papa ne s’est pas lavé les cheveux. Il les a juste mouillés rapidement et a menti à
-x=99.3	y=454.5	Maman. Maman n’a rien vu.
-x=99.3	y=475.0	2. L’escalier du salon (1er étage) à ma chambre (2e étage) a exactement dix-sept
-x=99.3	y=495.9	marches.
-x=99.3	y=516.4	3. Les serviettes jetées dans la chambre de mes parents sont là depuis déjà trois jours.
-x=99.3	y=537.1	4. Derrière la télé j’ai trouvé le porte-cartes professionnel perdu de Papa.
-x=99.3	y=557.8	5. Sous le tapis de la cuisine j’ai trouvé le mouchoir perdu de Maman.
-x=99.3	y=578.5	6. J’ai vu Papa cacher secrètement de l’argent d’urgence. Il le cache dans Les Entretiens
-x=99.3	y=599.4	de Confucius. Il m’a donné 10 000 wons et m’a dit de me taire.
-x=99.3	y=640.8	Au fond il vaut mieux être un détective qui gagne de l’argent qu’un écrivain qui reste
-x=70.9	y=661.5	pauvre.
-x=70.9	y=702.9	Lundi 11 avril
-x=70.9	y=723.6	Le manuel d’éducation civique de Ppagasari a disparu !
-x=99.3	y=744.3	Depuis ce matin Ppagasari court partout pour le chercher. Trop de suspects pour les
+===== PAGE 42 =====
+ 291.65	 780.58	41
+  99.32	  71.41	— Pas vous trois. Quelqu’un d’autre ?
+  99.32	  92.11	Du fond, Cheol-jin a dit de cette petite voix audible :
+  99.32	 112.83	— Byeok.
+  99.32	 133.53	Le prof m’a regardé.
+  99.32	 154.23	— Très bien, Byeok. Vas-y.
+  99.32	 174.93	J’ai recopié et résolu. Le prof, bras croisés adossé à la fenêtre, me regardait
+  70.90	 195.63	attentivement. Quand j’ai terminé, il a dit :
+  99.32	 216.33	— La réponse est correcte. Le raisonnement est parfait. Ceux qui ne comprennent pas,
+  70.90	 237.03	notez-le.
+  99.32	 257.74	J’étais gêné. J’ai levé légèrement la tête et j’ai regardé vers Hee-jeong. Un sourire a
+  70.90	 278.43	glissé sur ses lèvres. Mon cœur a battu 3,14 fois plus vite.
+  99.32	 299.13	Dong-wan dit que je devrais lui parler. Mais le courage ne vient pas. J’ai peur de vivre
+  70.90	 319.83	toute ma vie sans petite amie.
+  99.32	 340.56	En fin de journée, notre professeur principal a distribué un avis. Pour la Fête des
+  70.90	 361.26	Professeurs, les cadeaux sont interdits. Ne vous inquiétez pas monsieur. Mes parents
+  70.90	 381.96	n’allaient rien donner de toute façon.
+  70.90	 423.36	Vendredi 13 mai
+  70.90	 444.06	Pendant le petit-déjeuner, j’ai vu une petite araignée filer sous la table. Sans réfléchir, je l’ai
+  70.90	 464.76	écrasée du pied. Toute la journée j’ai eu le cœur lourd. J’aurais dû la mettre dehors, dans le
+  70.90	 485.46	jardin…
+  70.90	 526.86	Samedi 14 mai
+  70.90	 547.56	Je suis arrivé tôt chez Tante Jeong-su pour les maths. Hee-jeong était déjà là en train d’étudier.
+  70.90	 568.26	Tante Jeong-su m’a donné une pile de questions et m’a dit de les faire seul à la table de la
+  70.90	 588.98	cuisine. Comme c’étaient des faciles, j’ai vite fini. Je regardais la pièce d’étude où était Hee-
+  70.90	 609.68	jeong et je pensais à son sourire. Ma salive coulait dans ma bouche et me collait la gorge.
+  70.90	 630.38	Quand j’ai toussé, Tante Jeong-su m’a dit d’arrêter de faire du bruit et de boire de l’eau.
+  99.32	 651.08	Quand le cours de Hee-jeong a pris fin, Tante Jeong-su est sortie. En regardant mes
+  70.90	 671.68	réponses, elle a semblé un peu surprise.
+  99.32	 692.38	— Byeok, tu n’as encore jamais appris trois de ces questions. Comment tu as fait ? Tu
+  70.90	 713.08	étudies les maths à part ?
+  99.32	 733.78	— Non. On n’a pas déjà fait ça ?
+  99.32	 754.48	Hee-jeong est intervenue.
+
+===== PAGE 61 =====
+ 291.65	 780.58	60
+  70.90	  71.41	reprennent un peu de couleur. Ils veulent désespérément un verre de makgeolli. Début de la
+  70.90	  92.11	vallée : bain de pieds. Pieds gelés, tête gelée. Mais quel bonheur.
+  70.90	 112.83	15 h 00 Descente finie. Photo devant la stèle du poète Kim Su-yeong.
+  70.90	 133.53	16 h 30 Embouteillage. Arrivée chez Hee-jeong avec trente minutes de retard.
+  70.90	 154.23	17 h 00 Tout le monde au jjimjilbang. Les deux pères vont dans la salle de repos et ronflent.
+  70.90	 174.93	C’est si fort que les autres hommes fuient. Quelqu’un dit : « Double canon. »
+  70.90	 195.63	20 h 00 Mon père déclare qu’il ne retournera pas à la montagne pendant un moment. Le père
+  70.90	 216.33	de Hee-jeong joint la déclaration. Les mères applaudissent.
+  99.32	 257.74	Je me suis endormi en pensant au toucher de la main de Hee-jeong à Sinseon-dae.
+  70.90	 299.13	Lundi 20 juin
+  70.90	 319.83	Fin du bonheur, début du malheur. Le calendrier des examens finaux est sorti.
+  99.32	 361.09	 Mardi 5 juillet : Coréen, Études, sociales Morale
+  99.32	 381.79	 Mercredi 6 juillet : Anglais, Musique
+  99.32	 402.49	 Jeudi 7 juillet : Sciences, Caractères Chinois
+  99.32	 423.19	 Vendredi 8 juillet : Maths
+  99.32	 464.76	Après l’école je suis allé étudier chez Dong-wan. Il y a huit matières. Je ne sais pas par
+  70.90	 485.46	où commencer. Dong-wan m’a dit de verrouiller d’abord coréen–anglais–maths, puis
+  70.90	 506.16	d’aborder plus calmement les matières de mémorisation ensuite. Donc cette semaine je me
+  70.90	 526.86	concentre sur les maths.
+  99.32	 547.56	Le coréen et l’anglais me font peur.
+  70.90	 588.98	Mardi 21 juin
+  70.90	 609.68	Encore chez Dong-wan après l’école. Je voulais me concentrer sur les maths, mais
+  70.90	 630.38	l’inquiétude pour le coréen et l’anglais m’empêchait d’avancer. Les matières par cœur
+  70.90	 651.08	m’angoissent aussi.
+  70.90	 692.38	Mercredi 22 juin
+  70.90	 713.08	Tante Jeong-su a appelé à la maison. Cette semaine, dit-elle, c’est « maths uniquement ».
+  70.90	 733.78	Maman et Papa, eux, ne montrent aucun intérêt pour mes examens finaux…
+
+===== PAGE 81 =====
+ 291.65	 780.58	80
+  70.90	  71.41	13 h 55 Le père de Hee-jeong se plaint qu’il a faim. Soudain moi aussi j’ai faim.
+  70.90	  92.11	14 h 05 Décollage. Les oreilles se bouchent. J’avale. Je couvre mon visage avec un magazine.
+  70.90	 112.83	Hee-jeong me prend la main. Ça aide à peine. J’apprends que moi aussi j’ai peur de l’avion.
+  70.90	 133.53	14 h 20 Extinction du signal de ceinture. Hommage aux frères Wright !
+  70.90	 154.23	15 h 00 Repas. Bibimbap. Le père de Hee-jeong demande un bol de riz chauffé
+  70.90	 174.93	supplémentaire. L’hôtesse l’apporte. Puis Papa demande aussi un supplément de riz. On dirait
+  70.90	 195.63	des ours se préparant à hiberner.
+  70.90	 216.33	16 h 45 Turbulences. L’avion secoue violemment.
+  70.90	 237.03	19 h 30 Hee-jeong me réveille. — Mange quelque chose.
+  70.90	 257.74	20 h 00 Je règle mon téléphone à l’heure de Paris. À cause de l’heure d’été, il y a sept heures
+  70.90	 278.43	de décalage. Paris, 13 h 00.
+  70.90	 299.13	15 h 00 (heure de Paris) Le commandant annonce que nous survolons Moscou. Je sursaute.
+  70.90	 319.83	Qui a demandé exactement ?
+  70.90	 340.56	15 h 40 Hee-jeong se lève elle aussi. Encore trois heures et nous arrivons. Papa se lève, se
+  70.90	 361.26	lave le visage, se brosse les dents. Il ressemble à quelqu’un qui prend souvent l’avion.
+  70.90	 381.96	Pourtant je ne l’ai jamais vu partir en voyage d’affaires… Serait-il un espion infiltré déguisé
+  70.90	 402.66	en programmeur ?
+  70.90	 423.36	16 h 00 Le père de Hee-jeong se réveille et va aux toilettes.
+  70.90	 444.06	16 h 15 Une hôtesse frappe à la porte des toilettes. Peut-être qu’elle craint un incident. Hee-
+  70.90	 464.76	jeong lui dit que c’est une maladie professionnelle. L’hôtesse n’arrive pas à retenir son rire.
+  70.90	 485.46	Hee-jeong dit qu’elle va porter plainte auprès de la compagnie aérienne.
+  70.90	 506.16	17 h 00 Il reste encore une heure avant l’atterrissage mais tout le monde est déjà debout, prêt à
+  70.90	 526.86	s’échapper. Si on leur donnait des parachutes ils sauteraient immédiatement.
+  70.90	 547.56	18 h 05 Annonce d’atterrissage. Les hôtesses forcent les gens à se rasseoir. Il y a toujours
+  70.90	 568.26	quelqu’un qui n’obéit jamais et continue d’errer.
+  70.90	 588.98	18 h 25 Atterrissage en sécurité. Je découvre ce que signifie la stabilité psychologique lorsque
+  70.90	 609.68	mes deux pieds touchent enfin le sol.
+  70.90	 630.38	18 h 30 Papa et moi nous occupons des bagages. Hee-jeong s’occupe de son père.
+  70.90	 651.08	18 h 45 Entrer en France ne représente presque rien. Un tampon et c’est fait.
+  70.90	 671.68	18 h 50 Le père de Hee-jeong disparaît. Papa part le chercher dans les toilettes pour hommes.
+  70.90	 692.38	18 h 55 Hee-jeong lui dit qu’il devrait nous prévenir avant de disparaître. Il dit qu’il était trop
+  70.90	 713.08	pressé. Il ne s’excuse pas. Pas une seule fois.
+  70.90	 733.78	19 h 05 Nos sacs n’apparaissent toujours pas.
+  70.90	 754.48	19 h 15 Enfin nous récupérons les valises.
+
+===== PAGE 101 =====
+ 288.65	 780.58	100
+  99.32	  71.41	Mais je reste mal à l’aise. J’ai peur de vivre avec des gens qui ne pensent pas comme
+  70.90	  92.11	moi. Si Cheol-jin n’avait pas seulement détourné les yeux et s’il avait voulu se battre. Qu’est-
+  70.90	 112.83	ce qui se serait passé ? Rien que d’y penser j’ai peur. J’aurais pu me retrouver à vivre avec
+  70.90	 133.53	toute la classe — non, toute l’école — comme ennemis.
+  99.32	 154.23	Tout à coup j’ai l’impression d’être devenu adulte. Mais cette humeur sombre et lourde.
+  70.90	 174.93	Qu’est-ce que c’est ? À quoi pense Dong-wan en ce moment ? Qu’a dit sa mère ? Et son père.
+  70.90	 195.63	Que ressent-il ?
+  99.32	 216.33	Ce soir Papa me manque. Papa est probablement dans un train quelque part entre Paris
+  70.90	 237.03	et Milan…
+
+===== PAGE 121 =====
+ 288.65	 780.58	120
+  99.32	  71.41	— C’est vrai. Mais quand tu seras grand tu comprendras. N’essaie pas de tout
+  70.90	  92.11	comprendre d’un coup, mon fils.
+  99.32	 112.83	Quand je serai grand, qu’est-ce que je comprendrai ? Je suis curieux. Mais ce n’est pas
+  70.90	 133.53	grave. Papa est heureux maintenant. Et il passe du temps avec moi. Ces derniers mois j’ai
+  70.90	 154.23	passé plus de temps avec lui que toutes les années d’avant. Il ne dit plus qu’il est fatigué ni
+  70.90	 174.93	que sa tête est pleine. Il ne s’effondre plus sur le canapé. J’adore l’année sabbatique de Papa.
+  99.32	 195.63	Au dîner, Maman a dit qu’elle avait organisé un bilan de santé pour Papa avec la
+  70.90	 216.33	compagnie d’assurance. La semaine prochaine une infirmière viendra à la maison.
+  70.90	 257.74	Dimanche 16 octobre
+  70.90	 278.43	J’ai aidé à aménager l’atelier de Papa. Pour garder le sous-sol sec j’ai mis du charbon dans de
+  70.90	 299.13	petits paniers et les ai disposés partout. De peur qu’il fasse froid en hiver nous avons aussi
+  70.90	 319.83	acheté un petit poêle à l’avance. Nous avons accroché quelques images au mur. L’une était
+  70.90	 340.56	une photo d’étoiles appelée la nébuleuse de la Baleine. Papa dit qu’il l’a trouvée sur le site de
+  70.90	 361.26	la NASA. Il a aussi accroché une pochette de disque de Miles Davis.
+  99.32	 381.96	L’atelier de Papa ressemble maintenant à un joli café d’un drama télé. À midi Maman
+  70.90	 402.66	est descendue et a dit : « C’est joliment fait. » Elle s’est affaissée dans le fauteuil et a
+  70.90	 423.36	demandé à Papa de mettre quelque chose. Papa a cherché un vinyle longtemps puis a mis la
+  70.90	 444.06	Symphonie n° 9 d’un certain Mahler. Une musique étrange a coulé des enceintes.
+  99.32	 464.76	— Quand ton père était étudiant il aimait tellement le classique et le jazz.
+  99.32	 485.46	— Vraiment ? Et Flash Girl ?
+  99.32	 506.16	— Quand on sortait ensemble ton père ne parlait que de musique et de livres. Il avait
+  70.90	 526.86	l’air très cultivé, très classe.
+  99.32	 547.56	— Sérieusement ?
+  99.32	 568.26	— Bien sûr. Il était très populaire auprès des étudiantes. Et finalement ta mère l’a gagné.
+  70.90	 588.98	Ta mère le suivait partout, vraiment.
+  99.32	 609.68	Papa dit des choses qu’il ne devrait pas.
+  99.32	 630.38	— Enfin bref, si tu rates le test anti-tabac ton année sabbatique est finie, compris ? a
+  70.90	 651.08	lancé Maman en remontant l’escalier.
+  99.32	 671.68	Papa avait l’air nerveux comme quelqu’un en manque.
+  70.90	 713.08	Lundi 17 octobre
+  70.90	 733.78	Monsieur Sisina a été agressé par des voyous du quartier. Alors qu’il marchait un chien s’est
+  70.90	 754.48	jeté sur lui. Il a dit au propriétaire de tenir son chien et le propriétaire l’a insulté : « sale petit
+
+===== PAGE 141 =====
+ 288.65	 780.58	140
+  70.90	  71.41	Demain est enfin le jour décisif.
+  99.32	  92.11	Maths, attends-moi !
+  99.32	 112.83	J’arrive !
+  99.32	 133.53	Et toi, week-end où Mahler m’attend… dépêche-toi de venir !
+  70.90	 174.93	Mardi 6 décembre
+  99.32	 195.63	— Premier jour des examens —
+  99.32	 216.16	 Coréen. On voit que j’ai étudié. Ma note va beaucoup monter.
+  99.32	 236.86	 Sciences sociales. J’ai étudié sérieusement par respect pour Mr Kim Su-yeong. Ça
+  99.32	 257.74	devrait aller.
+  99.32	 278.26	 Morale. Beaucoup trop facile. C’est normal qu’il n’y ait aucune discrimination ?
+  99.32	 319.83	Et si je finissais premier de la classe ? Ce serait gênant. Je devrais le garder secret.
+  70.90	 361.26	Mercredi 7 décembre
+  99.32	 381.96	— Deuxième jour des examens —
+  99.32	 402.49	 Anglais. L’épreuve était beaucoup trop difficile. Je ne suis pas le seul à l’avoir trouvée
+  99.32	 423.36	dure, si ?
+  99.32	 443.89	 Musique. Autant la passer en chantant !
+  99.32	 485.46	Au moins, je n’ai plus à m’inquiéter de terminer premier. En fait, je n’avais aucune
+  70.90	 506.16	raison de m’en inquiéter.
+  70.90	 547.56	Jeudi 8 décembre
+  99.32	 568.26	— Troisième jour des examens —
+  99.32	 588.81	 Sciences. C’était un peu facile aujourd’hui ? En tout cas, étudier valait le coup.
+  99.32	 609.51	 Caractères Chinois. Le professeur a dû faire un sujet facile parce qu’il a peur que la
+  99.32	 630.38	matière disparaisse. Aucune autre explication !
+  99.32	 671.68	L’espoir que j’avais abandonné hier recommence à battre. Même si je ne suis pas
+  70.90	 692.38	premier, il y a tout de même un classement, non ? Demain c’est les maths. La matière la plus
+  70.90	 713.08	facile. Enfin… les maths faciles ? Je suis devenu fou ?
+  70.90	 754.48	Vendredi 9 décembre
+
+===== PAGE 161 =====
+ 288.65	 780.58	160
+  70.90	  71.41	appris, mais c’est plus une cuisine de survie qu’une cuisine de saveur. Depuis que Papa
+  70.90	  92.11	s’occupe de la maison, ma nutrition est franchement devenue très déséquilibrée. Bref. Parce
+  70.90	 112.83	qu’il avait étudié le riz frit pendant des lustres, en se concentrant sur un seul plat, c’était
+  70.90	 133.53	délicieux. Hee-jeong a dit que c’était le meilleur riz frit du monde. Papa a dévoilé son grand
+  70.90	 154.23	secret aujourd’hui : il faut utiliser du riz froid. Quoi ? Il y a vraiment des gens qui font du riz
+  70.90	 174.93	frit avec du riz chaud ?
+  99.32	 195.63	Après le déjeuner, nous sommes descendus dans l’atelier de Papa. Il a tenté d’arracher
+  70.90	 216.33	les résolutions du Nouvel An du mur, pris de panique, mais c’était trop tard. Hee-jeong
+  70.90	 237.03	souriait déjà jusqu’aux oreilles.
+  99.32	 257.74	Elle adorait mes résolutions pour l’année. Surtout la n° 1. Être loyal envers Hee-jeong.
+  70.90	 278.43	Elle paraissait très fière. Et parce qu’elle était heureuse, mon propre cœur débordait.
+  99.32	 299.13	Papa nous a passé un album. Time Out de Dave Brubeck. Une piste m’a semblé
+  70.90	 319.83	immédiatement familière. « Take Five ». Ce morceau entraînant que le Hyung des bungeo-
+  70.90	 340.56	ppang m’avait fait découvrir. Voyant que Hee-jeong et moi tombions dedans, Papa nous a dit
+  70.90	 361.26	que le compositeur était Paul Desmond. Il a ajouté que lorsqu’ils travaillent ensemble,
+  70.90	 381.96	Brubeck et Desmond produisent des chefs-d’œuvre, mais que lorsqu’ils sortent chacun un
+  70.90	 402.66	album solo, la musique devient étrangement plate.
+  99.32	 423.36	Peut-être que la relation entre Brubeck et Desmond ressemblait à celle entre Hee-jeong
+  70.90	 444.06	et moi.
+  70.90	 485.46	Dimanche 8 janvier
+  70.90	 506.16	Les chatons se rétablissent vite. Maman et Papa n’arrivent pas à décider si nous allons les
+  70.90	 526.86	garder ou non. Pour être honnête, Papa et moi ne sommes pas vraiment en position de dire
+  70.90	 547.56	gardons-les, puisque c’est Maman qui fait vivre Papa, moi et Baduk. Elle a dit que nous
+  70.90	 568.26	reporterions la décision jusqu’à ce que les chats soient complètement remis.
+  70.90	 609.68	Lundi 9 janvier
+  70.90	 630.38	Ces jours-ci, Papa ne fait que paresser dans son atelier. Quand Maman rentre et demande : —
+  70.90	 651.08	Alors, tu as bien écrit aujourd’hui ? Papa répond : — Oui je travaille dur. Mais quand je
+  70.90	 671.68	descends voir, il écoute de la musique ou lit. Bien sûr, selon Papa, tout cela compte comme du
+  70.90	 692.38	travail.
+  70.90	 733.78	Mardi 10 janvier
+  70.90	 754.48	Hee-jeong et moi avons beaucoup parlé de l’avenir. Elle hésite. Un lycée général ou un lycée
+
+===== PAGE 181 =====
+ 288.65	 780.58	180
+  70.90	  92.11	Jeudi 23 février
+  70.90	 112.83	Je suis passé chez Hee-jeong pour donner à Seok-hee des brochures de l’agence de voyage de
+  70.90	 133.53	Maman. Il les a prises et a commencé à les lire depuis la première page avec un sérieux
+  70.90	 154.23	terrifiant. Seok-hee est minutieux quoi qu’il fasse. J’étais en train de dire à Hee-jeong que je
+  70.90	 174.93	ne comprenais pas pourquoi on avait trois exemplaires de L’Attrape-cœurs quand Seok-hee a
+  70.90	 195.63	dit quelque chose d’effrayant.
+  99.32	 216.33	— Tu connais John Lennon ? Le chanteur des Beatles.
+  99.32	 237.03	J’ai dit : — Oui, je connais.
+  99.32	 257.74	Il a continué : — Celui qui l’a assassiné était Mark Chapman. Et après avoir tué John
+  70.90	 278.43	Lennon, ce type aurait déclaré que tout le monde devait lire L’Attrape-cœurs.
+  99.32	 299.13	— Sérieusement ?
+  99.32	 319.83	— C’est un livre un peu tordu. Mais pourquoi vous en avez trois chez vous ?
+  99.32	 340.56	Aïe… il faut que je découvre s’il est arrivé quelque chose à Papa.
+  70.90	 381.96	Vendredi 24 février
+  70.90	 402.66	Après le travail, mon Samchon est passé chez nous. Il a dit qu’il venait récupérer les livres
+  70.90	 423.36	qu’il avait laissés ici et il a commencé à choisir les siens dans la bibliothèque de Papa. À vue
+  70.90	 444.06	d’œil, il y en avait au moins deux cents. Il a aussi pris les trois exemplaires de L’Attrape-
+  70.90	 464.76	cœurs. Je lui ai même apporté les livres qui étaient dans ma chambre. Mon Samchon a
+  70.90	 485.46	emballé les trois exemplaires dans un carton avec un soin particulier.
+  99.32	 506.16	Je lui ai demandé pourquoi il en avait trois. Il n’a pas répondu. Il a juste souri pfft et
+  70.90	 526.86	m’a tapoté une fois la tête.
+  99.32	 547.56	Quelle histoire se cache derrière tout ça ?
+  70.90	 588.98	Samedi 25 février
+  70.90	 609.68	Au petit déjeuner j’ai demandé à Maman pourquoi mon Samchon avait trois exemplaires de
+  70.90	 630.38	L’Attrape-cœurs. Maman m’a regardé un instant puis a jeté un œil à Papa.
+  70.90	 651.08	Papa m’a dit :
+  99.32	 671.68	— C’est un souvenir de ta tante. Elle aimait ce livre.
+  99.32	 692.38	— …
+  99.32	 713.08	Je n’ai rien ajouté. J’ai mangé en silence puis je suis parti étudier chez Tante Jeong-su.
+  99.32	 733.78	Pendant toute la leçon, l’image de mon Samchon, avec son petit sourire de travers, ne
+  70.90	 754.48	m’a pas quitté. Je suis trop jeune et c’était trop longtemps avant ma naissance, donc je n’ai
