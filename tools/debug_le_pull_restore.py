@@ -81,7 +81,14 @@ try:
                     newpara=True
                     after_date=False
                 elif x >= 90:
-                    newpara=True
+                    # PDF list items use a hanging indent: wrapped continuation lines can
+                    # start at the same x-position as the item itself. Keep those together.
+                    if cur is not None and LIST_RE.match(cur["text"]) and not LIST_RE.match(text):
+                        newpara=False
+                    elif cur is not None and cur["text"].endswith("-"):
+                        newpara=False
+                    else:
+                        newpara=True
     
                 if newpara:
                     if cur is not None:
