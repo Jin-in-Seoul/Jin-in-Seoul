@@ -1,4 +1,5 @@
 import traceback
+from pathlib import Path
 try:
     from pathlib import Path
     import fitz, re, html, unicodedata
@@ -12,7 +13,8 @@ try:
     def norm(s):
         s=s.replace("\uf09f","•")
         s=unicodedata.normalize("NFC",s)
-        s=re.sub(r"-\s+", "-", s)\n    s=re.sub(r"\s+"," ",s).strip()
+        s=re.sub(r"-\s+", "-", s)
+        s=re.sub(r"\s+"," ",s).strip()
         return s
     
     doc=fitz.open(PDF)
