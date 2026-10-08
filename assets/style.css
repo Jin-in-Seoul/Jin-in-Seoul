@@ -429,6 +429,7 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 .short-story-prose p {
   margin: 0;
   text-indent: 1em;
+  line-height: 2.0;
 }
 .short-story-prose p.section-number,
 .short-story-prose p[style*="text-align:center"],
@@ -440,6 +441,7 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 .galactic-prose p {
   margin: 0;
   text-indent: 1em;
+  line-height: 2.0;
 }
 .galactic-prose p.deck,
 .galactic-prose p.part-label,
@@ -453,6 +455,7 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 .sweater-prose p {
   margin: 0;
   text-indent: 1em;
+  line-height: 2.0;
 }
 .sweater-prose p.entry-date,
 .sweater-prose p.section-number,
@@ -465,6 +468,7 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 .scarecrow-prose p {
   margin: 0;
   text-indent: 1em;
+  line-height: 2.0;
 }
 .scarecrow-prose p.section-number,
 .scarecrow-prose p[style*="text-align:center"],
@@ -476,6 +480,7 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 .children-prose p {
   margin: 0;
   text-indent: 1em;
+  line-height: 2.0;
 }
 .children-prose p.section-number,
 .children-prose p[style*="text-align:center"],
