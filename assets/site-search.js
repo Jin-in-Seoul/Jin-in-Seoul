@@ -41,6 +41,21 @@
     var end = Math.min(text.length, position + query.length + 125);
     return (start ? '…' : '') + text.slice(start, end).trim() + (end < text.length ? '…' : '');
   }
+  function highlight(element, value, query) {
+    var needle = normalize(query);
+    if (!needle) { element.textContent = value; return; }
+    var lower = value.toLocaleLowerCase();
+    var pos = lower.indexOf(query.toLocaleLowerCase());
+    if (pos < 0) {
+      element.textContent = value;
+      return;
+    }
+    element.appendChild(document.createTextNode(value.slice(0, pos)));
+    var mark = document.createElement('mark');
+    mark.textContent = value.slice(pos, pos + query.length);
+    element.appendChild(mark);
+    element.appendChild(document.createTextNode(value.slice(pos + query.length)));
+  }
   function runSearch() {
     var q = field.value.trim(), lang = language.value;
     results.replaceChildren();
@@ -61,10 +76,10 @@
         var item=hit.item;
         var article=document.createElement('article');article.className='search-result';
         var h=document.createElement('h2'), link=document.createElement('a');
-        link.href=item.url;link.textContent=item.title || item.url;h.appendChild(link);
+        link.href=item.url;highlight(link,item.title || item.url,q);h.appendChild(link);
         var meta=document.createElement('p');meta.className='search-result-meta';meta.textContent=item.lang.toUpperCase();
         var snippet=document.createElement('p');snippet.className='search-result-excerpt';
-        snippet.textContent=excerpt(item.text,q);
+        highlight(snippet,excerpt(item.text,q),q);
         article.append(h,meta,snippet);results.appendChild(article);
       });
     }).catch(function() {
