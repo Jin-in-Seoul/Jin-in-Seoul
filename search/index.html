@@ -16,6 +16,7 @@
     .search-form input { flex: 1 1 270px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 2px; font: inherit; font-size: 17px; min-width: 0; }
     .search-form select, .search-form button { padding: 12px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); font: inherit; font-size: 16px; }
     .search-form button { cursor: pointer; border-color: var(--ink); }
+    .search-result mark { background: #fff1a8; color: inherit; padding: 0 1px; }
     .search-status { margin: 24px 0 20px; color: var(--muted); font-size: 15px; }
     .search-result { border-top: 1px solid var(--line); padding: 19px 0 23px; }
     .search-result h2 { font-size: 21px; border: 0; padding: 0; margin: 0 0 8px; }
@@ -28,10 +29,9 @@
     {% include header.html %}
     <h1>Search</h1>
     <div class="search-container">
-      <p>Search published fiction by title or exact word / phrase. Results link to the corresponding language edition.</p>
       <form id="search-form" class="search-form" role="search">
         <label for="search-query" class="sr-only">Search text</label>
-        <input id="search-query" type="search" placeholder="e.g. slow ship / 느린 배" aria-label="Search published works" required>
+        <input id="search-query" type="search" aria-label="Search published works" required>
         <select id="search-language" aria-label="Language">
           <option value="all">All languages</option>
           <option value="en">English</option>
@@ -41,7 +41,7 @@
         </select>
         <button type="submit">Search</button>
       </form>
-      <p id="search-status" class="search-status" role="status" aria-live="polite">Enter a word or phrase to search published works.</p>
+      <p id="search-status" class="search-status" role="status" aria-live="polite">Enter a word or phrase to search in English, French, Japanese, or Korean.</p>
       <div id="search-results"></div>
     </div>
     {% include footer.html %}
