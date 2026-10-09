@@ -18,21 +18,7 @@
     return indexPromise;
   }
   function matchPosition(text, query) {
-    var original = String(text || '');
-    var plain = normalize(original), needle = normalize(query);
-    var direct = plain.indexOf(needle);
-    if (direct >= 0) return direct;
-    if (!/[가-힣ㄱ-ㅎㅏ-ㅣ]/.test(needle)) return -1;
-    var compactNeedle = needle.replace(/\s+/g, '');
-    var compact = '', positions = [];
-    for (var i = 0; i < original.length; i++) {
-      if (!/\s/.test(original[i])) {
-        positions.push(i);
-        compact += original[i];
-      }
-    }
-    var offset = compact.normalize('NFKC').toLocaleLowerCase().indexOf(compactNeedle);
-    return offset < 0 ? -1 : positions[offset];
+    return normalize(text).indexOf(normalize(query));
   }
   function excerpt(text, query) {
     var position = matchPosition(text, query);
