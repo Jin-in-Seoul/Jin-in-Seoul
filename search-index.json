@@ -1,0 +1,24 @@
+---
+layout: null
+permalink: /search-index.json
+---
+[
+{%- assign sep = '' -%}
+{%- for item in site.pages -%}
+  {%- assign route = item.url | default: '' -%}
+  {%- assign lang = '' -%}
+  {%- if route contains '/en/' -%}{%- assign lang = 'en' -%}
+  {%- elsif route contains '/fr/' -%}{%- assign lang = 'fr' -%}
+  {%- elsif route contains '/ja/' -%}{%- assign lang = 'ja' -%}
+  {%- elsif route contains '/ko/' -%}{%- assign lang = 'ko' -%}
+  {%- endif -%}
+  {%- if lang != '' and item.content contains 'class="prose' and item.content contains '</article>' -%}
+    {%- assign heading = item.content | split: '<h1' | last | split: '>' | slice: 1, 999 | join: '>' | split: '</h1>' | first | strip_html | strip -%}
+    {%- assign chunk = item.content | split: '<article class="prose' | last | split: '</article>' | first -%}
+    {%- assign clean = chunk | strip_html | normalize_whitespace | strip -%}
+    {{- sep -}}
+    {"url":{{ route | relative_url | jsonify }},"lang":{{ lang | jsonify }},"title":{{ heading | jsonify }},"text":{{ clean | jsonify }}}
+    {%- assign sep = ',' -%}
+  {%- endif -%}
+{%- endfor -%}
+]
