@@ -17,12 +17,28 @@
     });
     return indexPromise;
   }
+  function matchPosition(text, query) {
+    var original = String(text || '');
+    var plain = normalize(original), needle = normalize(query);
+    var direct = plain.indexOf(needle);
+    if (direct >= 0) return direct;
+    if (!/[가-힣ㄱ-ㅎㅏ-ㅣ]/.test(needle)) return -1;
+    var compactNeedle = needle.replace(/\s+/g, '');
+    var compact = '', positions = [];
+    for (var i = 0; i < original.length; i++) {
+      if (!/\s/.test(original[i])) {
+        positions.push(i);
+        compact += original[i];
+      }
+    }
+    var offset = compact.normalize('NFKC').toLocaleLowerCase().indexOf(compactNeedle);
+    return offset < 0 ? -1 : positions[offset];
+  }
   function excerpt(text, query) {
-    var folded = normalize(text), needle = normalize(query);
-    var position = folded.indexOf(needle);
+    var position = matchPosition(text, query);
     if (position < 0) return text.slice(0, 220);
     var start = Math.max(0, position - 95);
-    var end = Math.min(text.length, position + needle.length + 125);
+    var end = Math.min(text.length, position + query.length + 125);
     return (start ? '…' : '') + text.slice(start, end).trim() + (end < text.length ? '…' : '');
   }
   function runSearch() {
@@ -34,10 +50,10 @@
       var needle=normalize(q);
       var hits=items.filter(function(item) {
         if(lang !== 'all' && item.lang !== lang) return false;
-        return normalize(item.title).includes(needle) || normalize(item.text).includes(needle);
+        return matchPosition(item.title, q) >= 0 || matchPosition(item.text, q) >= 0;
       }).map(function(item) {
-        var titleHit=normalize(item.title).includes(needle);
-        var contents=normalize(item.text), at=contents.indexOf(needle);
+        var titleHit=matchPosition(item.title,q)>=0;
+        var at=matchPosition(item.text,q);
         return {item:item, titleHit:titleHit, at:at, score:(titleHit?100000:0)+(at<0?0:Math.max(0,10000-at))};
       }).sort(function(a,b){return b.score-a.score;});
       status.textContent=hits.length+' result'+(hits.length===1?'':'s')+' found.';
