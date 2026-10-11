@@ -17,7 +17,6 @@
 .full-part{margin:70px 0 38px;font-size:clamp(26px,3vw,36px);line-height:1.35}
 .full-entry{margin:0 0 76px}
 .full-entry h3{font-size:clamp(25px,2.8vw,34px);line-height:1.35;margin:0 0 32px}
-.full-status{color:var(--muted);margin:20px 0 36px}
 .full-entry .prose{margin-top:0}
 @media(max-width:620px){.full-entry{margin-bottom:58px}}
 </style>
@@ -27,15 +26,12 @@
 {% include header.html %}
 <nav class="contents-nav" aria-label="목차"><a href="/a-dictionary-of-galactic-extinction/ko/">목차</a></nav>
 <h1>은하 멸망 사전</h1>
-<p class="deck">한국어판 · 전체 보기</p>
-<p id="full-status" class="full-status" role="status">게시된 항목을 불러오는 중입니다.</p>
 <div id="full-text"></div>
 {% include footer.html %}
 </main>
 <script>
 (async function(){
   const base='/a-dictionary-of-galactic-extinction/ko/';
-  const status=document.getElementById('full-status');
   const root=document.getElementById('full-text');
   try{
     const tocResponse=await fetch(base,{cache:'no-cache'});
@@ -73,9 +69,8 @@
         article.innerHTML=results[i++];section.appendChild(article);root.appendChild(section);
       }
     }
-    status.textContent='총 '+entries.length+'개 항목을 모두 불러왔습니다.';
 
-  }catch(err){root.replaceChildren();status.textContent='전체 보기를 완성하지 못했습니다: '+err.message}
+  }catch(err){root.replaceChildren();root.textContent='전체 보기를 불러오지 못했습니다: '+err.message}
 })();
 </script>
 </body>
