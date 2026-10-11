@@ -62,9 +62,9 @@
     for(const group of groups){
       const heading=document.createElement('h2');
       heading.className='full-part';heading.textContent=group.title;root.appendChild(heading);
-      for(const entry of group.entries){
+      for(const [entryIndex,entry] of group.entries.entries()){
         const section=document.createElement('section');section.className='full-entry';
-        const h3=document.createElement('h3');h3.textContent=entry.title;section.appendChild(h3);
+        const h3=document.createElement('h3');h3.textContent=(entryIndex+1)+'. '+entry.title;section.appendChild(h3);
         const article=document.createElement('article');article.className='prose galactic-prose';
         article.innerHTML=results[i++];section.appendChild(article);root.appendChild(section);
       }
