@@ -1,0 +1,77 @@
+---
+---
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-72EG8XPTN7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-72EG8XPTN7');</script>
+<meta charset="utf-8">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tout lire - Dictionnaire de l’extinction galactique - Jin-in-Seoul</title>
+<meta name="description" content="Lire tous les articles publiés en français du Dictionnaire de l’extinction galactique sur une seule page.">
+<meta name="robots" content="noindex,follow">
+<link rel="stylesheet" href="../../../assets/style.css?v=051">
+<style>
+.full-part{margin:70px 0 38px;font-size:clamp(26px,3vw,36px);line-height:1.35}
+.full-entry{margin:0 0 76px}
+.full-entry h3{font-size:clamp(25px,2.8vw,34px);line-height:1.35;margin:0 0 32px}
+.full-entry .prose{margin-top:0}
+@media(max-width:620px){.full-entry{margin-bottom:58px}}
+</style>
+</head>
+<body>
+<main class="shell">
+{% include header.html %}
+<nav class="contents-nav" aria-label="Sommaire"><a href="/a-dictionary-of-galactic-extinction/fr/">Sommaire</a></nav>
+<h1>Dictionnaire de l’extinction galactique</h1>
+<div id="full-text"></div>
+{% include footer.html %}
+</main>
+<script>
+(async function(){
+  const base='/a-dictionary-of-galactic-extinction/fr/';
+  const root=document.getElementById('full-text');
+  try{
+    const tocResponse=await fetch(base,{cache:'no-cache'});
+    if(!tocResponse.ok)throw new Error('Impossible de charger le sommaire.');
+    const toc=new DOMParser().parseFromString(await tocResponse.text(),'text/html');
+    const sections=Array.from(toc.querySelectorAll('.toc-part'));
+    const groups=sections.map(section=>({
+      title:section.querySelector('h2')?.textContent.trim()||'',
+      entries:Array.from(section.querySelectorAll('ol a[href]')).filter(a=>/^part-\d+\/entry-\d+\/$/.test(a.getAttribute('href')||'')).map(a=>({title:a.textContent.trim(),url:new URL(a.getAttribute('href'),new URL(base,window.location.origin)).href}))
+    })).filter(group=>group.entries.length);
+    const entries=groups.flatMap(group=>group.entries);
+    if(!entries.length)throw new Error('Aucun article publié.');
+    const results=new Array(entries.length);
+    let next=0;
+    async function worker(){
+      while(next<entries.length){
+        const i=next++;
+        const response=await fetch(entries[i].url,{cache:'no-cache'});
+        if(!response.ok)throw new Error(entries[i].title+' : chargement impossible.');
+        const doc=new DOMParser().parseFromString(await response.text(),'text/html');
+        const article=doc.querySelector('article.prose');
+        if(!article)throw new Error(entries[i].title+' : texte introuvable.');
+        results[i]=article.innerHTML;
+      }
+    }
+    await Promise.all(Array.from({length:Math.min(6,entries.length)},()=>worker()));
+    let i=0;
+    for(const group of groups){
+      const heading=document.createElement('h2');
+      heading.className='full-part';heading.textContent=group.title;root.appendChild(heading);
+      for(const [entryIndex,entry] of group.entries.entries()){
+        const section=document.createElement('section');section.className='full-entry';
+        const h3=document.createElement('h3');h3.textContent=(entryIndex+1)+'. '+entry.title;section.appendChild(h3);
+        const article=document.createElement('article');article.className='prose galactic-prose';
+        article.innerHTML=results[i++];section.appendChild(article);root.appendChild(section);
+      }
+    }
+
+  }catch(err){root.replaceChildren();root.textContent='Impossible de charger tous les articles : '+err.message}
+})();
+</script>
+</body>
+</html>
