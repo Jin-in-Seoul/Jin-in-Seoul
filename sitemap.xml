@@ -12,9 +12,6 @@
     <loc>https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/en/</loc>
   </url>
   <url>
-    <loc>https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/en/part-01/</loc>
-  </url>
-  <url>
     <loc>https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/en/part-01/entry-01/</loc>
   </url>
   <url>
@@ -40,9 +37,6 @@
   </url>
   <url>
     <loc>https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/en/part-01/entry-09/</loc>
-  </url>
-  <url>
-    <loc>https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/en/part-02/</loc>
   </url>
   <url>
     <loc>https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/en/part-02/entry-01/</loc>
@@ -123,9 +117,6 @@
     <loc>https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/fr/</loc>
   </url>
   <url>
-    <loc>https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/fr/part-01/</loc>
-  </url>
-  <url>
     <loc>https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/fr/part-01/entry-01/</loc>
   </url>
   <url>
@@ -171,9 +162,6 @@
     <loc>https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/ko/</loc>
   </url>
   <url>
-    <loc>https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/ko/part-01/</loc>
-  </url>
-  <url>
     <loc>https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/ko/part-01/entry-01/</loc>
   </url>
   <url>
@@ -199,9 +187,6 @@
   </url>
   <url>
     <loc>https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/ko/part-01/entry-09/</loc>
-  </url>
-  <url>
-    <loc>https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/ko/part-02/</loc>
   </url>
   <url>
     <loc>https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/ko/part-02/entry-01/</loc>
@@ -250,9 +235,6 @@
   </url>
   <url>
     <loc>https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/ko/part-02/entry-16/</loc>
-  </url>
-  <url>
-    <loc>https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/ko/part-03/</loc>
   </url>
   <url>
     <loc>https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/ko/part-03/entry-01/</loc>
@@ -599,24 +581,6 @@
   </url>
   <url>
     <loc>https://jin-in-seoul.com/sweater/ja/chapter-12/</loc>
-  </url>
-  <url>
-    <loc>https://jin-in-seoul.com{{ post.url }}</loc>
-  </url>
-  <url>
-    <loc>https://jin-in-seoul.com/short-stories/books-rule/</loc>
-  </url>
-  <url>
-    <loc>https://jin-in-seoul.com/short-stories/books-rule/ko/</loc>
-  </url>
-  <url>
-    <loc>https://jin-in-seoul.com/short-stories/books-rule/en/</loc>
-  </url>
-  <url>
-    <loc>https://jin-in-seoul.com/short-stories/books-rule/ja/</loc>
-  </url>
-  <url>
-    <loc>https://jin-in-seoul.com/short-stories/books-rule/fr/</loc>
   </url>
   <url>
     <loc>https://jin-in-seoul.com/childrens-books/</loc>
