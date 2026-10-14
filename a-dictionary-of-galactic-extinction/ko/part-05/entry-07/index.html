@@ -81,6 +81,10 @@
       .galactic-prose > p[style*="Malgun Gothic"] { font-size: 16.5px; }
     }
   
+    /* 제7장 연대기: 인용문 매 문단 사이에 정확히 한 행 높이의 여백 */
+    .galactic-prose > p[style*="Malgun Gothic"] + p[style*="Malgun Gothic"] {
+      margin-top: 1.7em !important;
+    }
     /* PDF 기록물 앞뒤 한 줄 여백: 제5부에만 적용 */
     .galactic-prose > p.archive-start { margin-top: 1.8em !important; }
     .galactic-prose > p.archive-end { margin-bottom: 1.8em !important; }
