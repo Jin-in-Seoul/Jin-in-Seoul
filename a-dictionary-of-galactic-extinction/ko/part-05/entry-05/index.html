@@ -80,6 +80,10 @@
     @media (max-width: 620px) {
       .galactic-prose > p[style*="Malgun Gothic"] { font-size: 16.5px; }
     }
+  
+    /* PDF 기록물 앞뒤 한 줄 여백: 제5부에만 적용 */
+    .galactic-prose > p.archive-start { margin-top: 1.8em !important; }
+    .galactic-prose > p.archive-end { margin-bottom: 1.8em !important; }
   </style>
 </head>
 <body>
@@ -93,7 +97,7 @@
 
     <article class="prose galactic-prose">
       <p>은하관광연합이 발행한 최후의 여행 안내서. 초판 제목은 《사라지기 전에 가봐야 할 1,000개의 별》이었다. 소개된 별 가운데 666개가 출간 전에 항로 지도에서 제외되자 제목에서 숫자가 삭제되었다. 아래 내용은 제814개정판에서 발췌하였다.</p>
-      <p style="margin:1.25em 0 .6em;font-family:'Malgun Gothic',sans-serif;font-weight:700;text-indent:0;">지금 떠나야 하는 이유</p>
+      <p class="archive-start " style="margin:1.25em 0 .6em;font-family:'Malgun Gothic',sans-serif;font-weight:700;text-indent:0;">지금 떠나야 하는 이유</p>
       <p style="margin:0 0 .38em;font-family:'Malgun Gothic',sans-serif;white-space:pre-line;text-indent:0;line-height:1.7;">은하는 변하고 있습니다.
 어제의 항로가 오늘 닫히고,
 어린 시절 창문에서 보았던 별이 내일이면 보이지 않을 수 있습니다.
@@ -133,7 +137,7 @@
       <p style="margin:1.25em 0 .6em;font-family:'Malgun Gothic',sans-serif;font-weight:700;text-indent:0;">폐업 인사</p>
       <p style="margin:0 0 .38em;font-family:'Malgun Gothic',sans-serif;text-indent:0;">오랫동안 은하관광연합과 함께 여행해 주셔서 감사합니다. 우리는 여행이 문명 사이의 이해를 넓히고, 낯선 생명을 이웃으로 만들며, 서로 다른 세계의 아름다움을 보존한다고 믿었습니다. 우리의 믿음은 틀리지 않았습니다. 우리의 계산이 틀렸습니다.</p>
       <p style="margin:0 0 .38em;font-family:'Malgun Gothic',sans-serif;text-indent:0;">우리는 아름다운 곳으로 사람들을 데려갔고, 사람들이 도착할 수 있도록 통로를 열었으며, 통로를 유지하기 위해 그 아름다운 곳의 에너지를 사용했습니다. 어떤 장소는 사랑받지 않았다면 더 오래 남았을 것입니다.</p>
-      <p style="margin:0 0 .38em;font-family:'Malgun Gothic',sans-serif;text-indent:0;">마지막 상품은 본사 전망대 관광입니다. 현재 위치에서 도보로 이동할 수 있어 웜홀을 사용하지 않습니다. 전망대에서는 은하 중심부를 볼 수 있습니다. 예약은 필요하지 않습니다. 직원도 없습니다. 문이 열려 있다면 들어오십시오.</p>
+      <p class="archive-end" style="margin:0 0 .38em;font-family:'Malgun Gothic',sans-serif;text-indent:0;">마지막 상품은 본사 전망대 관광입니다. 현재 위치에서 도보로 이동할 수 있어 웜홀을 사용하지 않습니다. 전망대에서는 은하 중심부를 볼 수 있습니다. 예약은 필요하지 않습니다. 직원도 없습니다. 문이 열려 있다면 들어오십시오.</p>
     </article>
 
     {% include footer.html %}
