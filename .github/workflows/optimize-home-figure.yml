@@ -1,0 +1,59 @@
+name: Optimize homepage figure losslessly
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/optimize-home-figure.yml'
+permissions:
+  contents: write
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install lossless PNG optimizer
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y optipng
+      - name: Backup and try pixel-identical optimization
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import shutil, subprocess
+          from PIL import Image, ImageChops
+          import io
+          target=Path('assets/images/jin-in-seoul-figure.png')
+          original=target.read_bytes()
+          with Image.open(io.BytesIO(original)) as image:
+              image.load()
+              print('Original:',image.size,image.mode,'bytes',len(original))
+          subprocess.run(['optipng','-o7','-strip','all','-quiet',str(target)],check=True)
+          optimized=target.read_bytes()
+          with Image.open(io.BytesIO(optimized)) as im1, Image.open(io.BytesIO(original)) as im0:
+              im1.load(); im0.load()
+              assert im1.size==im0.size and im1.mode==im0.mode and ImageChops.difference(im1,im0).getbbox() is None, 'Pixel mismatch: abort'
+          saved=len(original)-len(optimized)
+          print('Optimized:',len(optimized),'saved:',saved,'percent:',round(100*saved/len(original),2))
+          if saved < len(original)*0.10:
+              target.write_bytes(original)
+              print('Less than 10% savings: retaining original without any site changes')
+          else:
+              backup=Path('assets/images/originals/jin-in-seoul-figure-original.png')
+              backup.parent.mkdir(parents=True,exist_ok=True)
+              backup.write_bytes(original)
+              print('Original backed up to',backup,'and pixel-identical optimized image retained')
+          PY
+      - name: Commit only if meaningful lossless reduction
+        run: |
+          git add assets/images/jin-in-seoul-figure.png assets/images/originals/ || true
+          if git diff --cached --quiet; then
+            echo "No site change necessary"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Losslessly optimize homepage figure; preserve original backup"
+            git push
+          fi
