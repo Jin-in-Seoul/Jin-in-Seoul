@@ -69,16 +69,15 @@
       .entry-title { font-size: 34px; margin-bottom: 40px; }
     }
   
-    /* 제5부: PDF 기록편의 해설문(명조 12pt) / 원문(고딕 11pt) 구분 */
-    .galactic-prose { font-family: "Nanum Myeongjo", "Noto Serif KR", serif; font-size: 19px; line-height: 1.85; overflow-wrap: break-word; word-break: keep-all; }
-    .galactic-prose > p { font-family: inherit; font-size: 1em; line-height: 1.85; }
+    /* 제5부: 공통 페이지/해설은 제1~4부와 동일, 기록물 원문만 별도 */
     .galactic-prose > p[style*="Malgun Gothic"] {
-      font-family: "Malgun Gothic", "맑은 고딕", "Apple SD Gothic Neo", sans-serif !important;
-      font-size: 17.4px; line-height: 1.7; text-indent: 0;
+      font-family: "Malgun Gothic", "맑은 고딕", "Apple SD Gothic Neo", sans-serif;
+      font-size: 17.4px;
+      line-height: 1.7;
+      text-indent: 0;
     }
     .galactic-prose > p[style*="white-space:pre-line"] { white-space: pre-line; }
     @media (max-width: 620px) {
-      .galactic-prose { font-size: 18px; }
       .galactic-prose > p[style*="Malgun Gothic"] { font-size: 16.5px; }
     }
   </style>
