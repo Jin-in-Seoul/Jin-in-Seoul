@@ -68,3 +68,19 @@ The remaining 1 WARN and 2 INFO from the source audit concerned optional metadat
 For each future SEO change, record date, changed files, reason, GitHub commit, source audit, live audit, and Pages deployment result. Keep this document current. Do not write unverified success claims.
 
 Related documentation: [README.md](README.md) · [CSS-MAINTENANCE.md](CSS-MAINTENANCE.md).
+
+## Site quality verification (2026-10-14)
+
+Read-only site quality workflow: https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions/runs/38585658888
+- `scripts/audit_site_quality.py` + `.github/workflows/site-quality-audit.yml`
+- Published sitemap pages fetched: **233/233**; distinct internal link targets **254**, assets **35**.
+- **ERROR 0, WARN 0, INFO 5**. Three heading-level skips (children's books, music, short stories), one search button accessible-name review, and one homepage figure PNG approximately 1.22 MB. No broken internal targets or missing assets found.
+- This is static HTML/HTTP inspection, not a full interactive accessibility or device test.
+
+Mobile Lighthouse workflow: https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions/runs/38585718512
+- `.github/workflows/browser-quality-audit.yml` uses headless Chrome and Lighthouse on three representative published pages.
+- Homepage: performance **68**, accessibility **100**, best practices **100**; FCP 3.8s, LCP 4.6s, CLS 0.
+- Sweater English landing page: performance **91**, accessibility **100**, best practices **100**; FCP/LCP 2.1s, CLS 0.
+- Dictionary Korean part-05 entry-07: performance **59**, accessibility **100**, best practices **100**; FCP 6.0s, LCP 7.0s, CLS 0.
+- Scores are a one-run mobile simulation, not real-user Core Web Vitals or proof of flawless visual layout across phones.
+- **Performance improvement is an optional follow-up**, especially the homepage image and render-blocking resources. Do not alter prose, CSS, or typography without explicit authorization and a visual regression plan.
