@@ -1,0 +1,5 @@
+/* English/French short stories only: opening paragraphs are flush left. */
+.short-story-prose > p:first-child,
+.short-story-prose > p.section-number + p {
+  text-indent: 0;
+}
