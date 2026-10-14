@@ -75,7 +75,7 @@ for url,p in pages.items():
   internal.setdefault(key,[]).append((url,part.fragment))
 checked={}
 with ThreadPoolExecutor(max_workers=8) as pool:
- for target,status,final,ct,body,err in pool.map(lambda x:(x[0],*get(x[0])),internal):
+ for target,status,final,ct,body,err in pool.map(lambda x:(x,*get(x)),internal):
   checked[target]=(status,final,ct)
   if status>=400 or status==0:
    refs=internal[target];flag("ERROR","BROKEN_INTERNAL_LINK",refs[0][0],f"{target} HTTP {status}; references {len(refs)}")
@@ -93,7 +93,7 @@ for url,p in pages.items():
   a=urljoin(url,asset)
   if urlsplit(a).netloc==HOST:assets.setdefault(urldefrag(a)[0],[]).append(url)
 with ThreadPoolExecutor(max_workers=8) as pool:
- for asset,status,final,ct,body,err in pool.map(lambda x:(x[0],*get(x[0])),assets):
+ for asset,status,final,ct,body,err in pool.map(lambda x:(x,*get(x)),assets):
   if status!=200:flag("ERROR","ASSET_FETCH",assets[asset][0],f"{asset} HTTP {status}")
   elif len(body)>500000:flag("INFO","LARGE_ASSET",assets[asset][0],f"{asset}: at least {len(body)} bytes (3MB cap)")
 counts=Counter(x[0] for x in findings)
