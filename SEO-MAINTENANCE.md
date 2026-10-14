@@ -29,7 +29,7 @@ Last updated: 2026-10-14. Repository: `Jin-in-Seoul/Jin-in-Seoul` (`main`). Publ
 | Redirects (phase 3) | `sweater/index.html` and `a-dictionary-of-galactic-extinction/index.html` set to `noindex,follow`, canonicalized to English destination | Source re-fetched |
 | Sitemap additions (phase 3) | Added 20 Korean dictionary entries (part 03: 1; part 04: 12; part 05: 7), removed the two root redirect URLs | 233 `<loc>` entries in source |
 | Source audit | Added `scripts/audit_seo.py` and `.github/workflows/seo-audit.yml`; excluded Jekyll `_includes` and `_layouts` from standalone-page checks | 240 HTML pages; 233 sitemap entries; 0 ERROR, 1 WARN, 2 INFO on run 38583032725 |
-| Live audit | Added `scripts/audit_seo_live.py` and `.github/workflows/seo-live-audit.yml`; reads deployed sitemap and tests published URLs | Code committed; live run results require separate verification |
+| Live audit | Added `scripts/audit_seo_live.py` and `.github/workflows/seo-live-audit.yml`; reads deployed sitemap and tests published URLs | Verified on live run 38584877114: 233 sitemap URLs, 233 fetched HTTP 200, 0 ERROR, 1 WARN (search OG), 1 INFO (search JSON-LD) |
 
 The remaining 1 WARN and 2 INFO from the source audit concerned optional metadata on `search/index.html`. Do not change search indexing policy without deciding it deliberately.
 
@@ -46,7 +46,7 @@ The remaining 1 WARN and 2 INFO from the source audit concerned optional metadat
 - Run: `python3 scripts/audit_seo_live.py` from a network-enabled environment.
 - Workflow: https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions/workflows/seo-live-audit.yml
 - Report artifact: `seo-live-report` containing `seo-live-report.md`.
-- Intended to run after successful Pages deployment or by manual dispatch.
+- Triggered by audit script/workflow pushes, after successful Pages deployment, or by manual dispatch. Initial push-triggered verification succeeded on run 38584877114.
 - Checks the live sitemap, URL responses, metadata, and hreflang reciprocity among sitemap URLs.
 - The live checker is read-only. It does not establish actual Google/Naver indexing, nor does it prove that unsitemapped URLs work.
 
@@ -57,8 +57,8 @@ The remaining 1 WARN and 2 INFO from the source audit concerned optional metadat
 
 ## Remaining work for the next session
 
-1. **Fetch the latest `SEO live audit` run and download `seo-live-report`.** Check whether all 233 deployed sitemap URLs returned HTTP 200; inspect actual errors before any changes. Do not claim this test passed without the report.
-2. Confirm deployed sitemap and `robots.txt` are reachable and that redirects and noindex pages are not listed.
+1. **Completed 2026-10-14:** Live audit run [38584877114](https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions/runs/38584877114), report artifact `11904801736`: sitemap HTTP 200, 233/233 HTML fetched, ERROR 0, WARN 1 (`/search/` OG), INFO 1 (`/search/` JSON-LD). These two optional search-page findings require no immediate edits.
+2. On the next maintenance cycle, confirm `robots.txt` and intentionally unsitemapped redirect pages separately; the 233-URL audit covers only sitemap URLs.
 3. Review real-world canonical/hreflang reciprocity and language codes. Separate actual problems from generated-page and intentional exceptions.
 4. Check Google Search Console and Naver Search Advisor indexing/sitemap reports **only with authorized access**. A GitHub audit cannot substitute for search-engine account data.
 5. After corrections, re-run source/live audits and verify Pages deployment; record exact commit SHAs and results here.
