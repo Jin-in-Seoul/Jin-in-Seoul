@@ -1,0 +1,23 @@
+name: Site quality audit
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/audit_site_quality.py'
+      - '.github/workflows/site-quality-audit.yml'
+permissions:
+  contents: read
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit deployed links, accessibility and assets
+        run: python3 scripts/audit_site_quality.py
+      - name: Upload quality report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-quality-report
+          path: site-quality-report.md
