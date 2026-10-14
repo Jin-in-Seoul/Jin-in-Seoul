@@ -86,6 +86,10 @@
       line-height: 1.75;
       text-indent: 0;
     }
+  
+    /* PDF 기록물 앞뒤 한 줄 여백: 제5부에만 적용 */
+    .galactic-prose > p.archive-start { margin-top: 1.8em !important; }
+    .galactic-prose > p.archive-end { margin-bottom: 1.8em !important; }
   </style>
 </head>
 <body>
@@ -99,7 +103,7 @@
 
     <article class="prose galactic-prose">
       <p>이 작품의 본래 제목은 아무도 정확히 모른다. 작자의 이름도 처음 공연된 행성도 남아 있지 않다. 후대의 기록자들은 첫 구절을 따라 그것을 《빛이 줄어든 해의 노래》라고 불렀다. 모두 7막으로 이루어진 오페라였다고 하나 현존하는 것은 제1막과 마지막 합창뿐이다. 악보에는 한 가지 기묘한 지시가 반복된다. “무대의 조명을 매 절마다 조금씩 낮출 것. 관객이 그 사실을 알아차리지 못할 만큼 천천히.” 그 지시가 음악적 표현인지, 당시 시행되던 극장 에너지 할당제를 따른 것인지는 밝혀지지 않았다.</p>
-      <p style="margin:1.5em 0 .9em;font-weight:700;white-space:pre-line;text-indent:0;line-height:1.75;">제1막 — 밤이 밤보다 먼저 왔다</p>
+      <p class="archive-start " style="margin:1.5em 0 .9em;font-weight:700;white-space:pre-line;text-indent:0;line-height:1.75;">제1막 — 밤이 밤보다 먼저 왔다</p>
       <p style="margin:0 0 1.05em;white-space:pre-line;text-indent:0;line-height:1.75;">그해에는 밤이 밤보다 먼저 왔다.</p>
       <p style="margin:0 0 1.05em;white-space:pre-line;text-indent:0;line-height:1.75;">항구의 태양은 정해진 시각에 떠올랐고
 거리의 조명은 한 번도 꺼지지 않았으며
@@ -169,7 +173,7 @@
 그도 용서하지 마라.
 용서가 끝나는 곳에서조차
 원인은 끝나지 않으므로.</p>
-      <p style="margin:0 0 1.05em;white-space:pre-line;text-indent:0;line-height:1.75;">이제 어둠이 오리라.
+      <p class="archive-end" style="margin:0 0 1.05em;white-space:pre-line;text-indent:0;line-height:1.75;">이제 어둠이 오리라.
 아무도 알아차리지 못할 만큼 천천히.
 마지막 얼굴이 보이지 않을 때까지.
 마지막 얼굴이 없었다는 듯이.</p>
