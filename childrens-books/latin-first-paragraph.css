@@ -1,0 +1,5 @@
+/* English and French children's books: no indent on opening prose paragraphs. */
+.children-prose > p:first-child,
+.children-prose > h2 + p {
+  text-indent: 0;
+}
