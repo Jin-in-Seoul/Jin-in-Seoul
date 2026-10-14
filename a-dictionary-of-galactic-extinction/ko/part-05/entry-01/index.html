@@ -81,6 +81,12 @@
       .galactic-prose { font-size: 18px; }
       .galactic-prose > p[style*="Malgun Gothic"] { font-size: 16.5px; }
     }
+  
+    /* 제1장: 오페라 가사는 PDF의 맑은 고딕 11pt로 별도 조판 */
+    .galactic-prose > p[style*="white-space:pre-line"] {
+      font-family: "Malgun Gothic", "맑은 고딕", "Apple SD Gothic Neo", sans-serif;
+      font-size: 17.4px; line-height: 1.75; text-indent: 0;
+    }
   </style>
 </head>
 <body>
