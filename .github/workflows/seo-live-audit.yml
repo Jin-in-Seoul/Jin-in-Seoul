@@ -1,0 +1,26 @@
+name: SEO live audit
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
+
+permissions:
+  contents: read
+
+jobs:
+  live-audit:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit published sitemap and HTML
+        run: python3 scripts/audit_seo_live.py
+      - name: Upload live SEO report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-live-report
+          path: seo-live-report.md
+          if-no-files-found: warn
