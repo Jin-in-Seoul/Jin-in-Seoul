@@ -56,12 +56,6 @@ for page in sorted(ROOT.rglob("*.html")):
             issues.append(f"{rel}: missing Latin-language CSS: {expected}")
         if not expected and (STORY_CSS in linked or CHILD_CSS in linked):
             issues.append(f"{rel}: Latin-language CSS linked from {lang}")
-    if len(bits) == 6 and bits[0] == DICT and bits[2].startswith("part-") and bits[3].startswith("entry-"):
-        # A standard dictionary chapter path has 5 parts, not 6.
-        pass
-    if bits[0] == DICT and "entry-common.css" in html and len(bits) > 1:
-        # The file itself is resolved and checked above.
-        pass
 
 print(f"HTML files scanned: {scanned}")
 print("CSS link targets (path: links):")
