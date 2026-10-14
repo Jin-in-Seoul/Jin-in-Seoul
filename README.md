@@ -12,6 +12,8 @@ https://jin-in-seoul.com
 
 ## SEO audit
 
+- **[SEO maintenance and cross-session handoff](SEO-MAINTENANCE.md)** — verified changes, safety rules, audit links, and outstanding checks.
+
 - Read-only full-source SEO audit: `python3 scripts/audit_seo.py`
 - GitHub Actions: [SEO source audit](https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions/workflows/seo-audit.yml), runs on relevant changes and supports manual dispatch.
 - Download the `seo-audit-report` artifact from the workflow run to review per-page findings. ERROR/WARN/INFO are diagnostic flags, not automatically confirmed production errors.
