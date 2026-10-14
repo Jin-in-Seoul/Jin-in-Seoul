@@ -1,0 +1,35 @@
+name: Browser quality audit
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/browser-quality-audit.yml'
+permissions:
+  contents: read
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: browser-actions/setup-chrome@v2
+        id: chrome
+      - name: Install Lighthouse
+        run: npm install --no-save lighthouse@12
+      - name: Audit mobile rendering and performance
+        env:
+          CHROME_PATH: ${{ steps.chrome.outputs.chrome-path }}
+        run: |
+          mkdir -p browser-audit
+          for item in "home https://jin-in-seoul.com/" "sweater https://jin-in-seoul.com/sweater/en/" "dictionary-ko https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/ko/part-05/entry-07/"; do
+            set -- $item
+            ./node_modules/.bin/lighthouse "$2" --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" --only-categories=performance,accessibility,best-practices --output=json --output-path="browser-audit/$1.json" --quiet || echo "$1 failed" >> browser-audit/failures.txt
+          done
+          node -e 'const fs=require("fs");let out=["# Mobile Lighthouse audit","","Representative pages only; not a 233-page device test.","","| Page | Performance | Accessibility | Best practices | Final URL |","|---|---:|---:|---:|---|"];for(const n of ["home","sweater","dictionary-ko"]){const p="browser-audit/"+n+".json";if(!fs.existsSync(p)){out.push("|"+n+"|FAILED|FAILED|FAILED| - |");continue;}const d=JSON.parse(fs.readFileSync(p)),c=d.categories;out.push("|"+n+"|"+["performance","accessibility","best-practices"].map(k=>Math.round(c[k].score*100)).join("|")+"|"+d.finalUrl+"|");}fs.writeFileSync("browser-audit/summary.md",out.join("\n")+"\n");console.log(out.join("\n"));'
+      - name: Upload browser results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-quality-report
+          path: browser-audit/
+          if-no-files-found: warn
