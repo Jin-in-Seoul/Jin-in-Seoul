@@ -1,0 +1,4 @@
+/* English/French Scarecrow Distance chapters: opening prose paragraph flush left. */
+.scarecrow-prose > p:first-child {
+  text-indent: 0;
+}
