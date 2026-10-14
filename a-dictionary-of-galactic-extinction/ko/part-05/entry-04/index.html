@@ -80,6 +80,10 @@
     @media (max-width: 620px) {
       .galactic-prose > p[style*="Malgun Gothic"] { font-size: 16.5px; }
     }
+  
+    /* PDF 기록물 앞뒤 한 줄 여백: 제5부에만 적용 */
+    .galactic-prose > p.archive-start { margin-top: 1.8em !important; }
+    .galactic-prose > p.archive-end { margin-bottom: 1.8em !important; }
   </style>
 </head>
 <body>
@@ -93,7 +97,7 @@
 
     <article class="prose galactic-prose">
       <p style="margin:.4em 0 .35em;">은하항로국 폐쇄천체과에서 작성한 목록. 원본의 정식 명칭은 《항행 기준광원 장기 미검출 현황》이다. 처음 이 문서는 항로 지도에서 사용할 수 없게 된 별들을 정리하기 위해 만들어졌다. 별 하나를 항로 지도에서 사용할 수 없게 될 때마다 담당자는 좌표, 질량, 최종 관측 시각과 추정 원인을 기입했다. 목록의 앞부분은 정확하고 간결하다. 뒤로 갈수록 기록자들은 규정을 지키지 못했다.</p>
-      <p style="margin:1.35em 0 .18em;font-family:'Malgun Gothic',sans-serif;font-weight:700;text-indent:0;">▣ 04-771-가</p>
+      <p class="archive-start " style="margin:1.35em 0 .18em;font-family:'Malgun Gothic',sans-serif;font-weight:700;text-indent:0;">▣ 04-771-가</p>
       <p style="margin:0;font-family:'Malgun Gothic',sans-serif;text-indent:0;">분류: 황색 주계열성</p>
       <p style="margin:0;font-family:'Malgun Gothic',sans-serif;text-indent:0;">최종 관측: 은하 표준력 88,201년 17주기</p>
       <p style="margin:0;font-family:'Malgun Gothic',sans-serif;text-indent:0;">상태: 항행 기준광원 자격 상실</p>
@@ -135,7 +139,7 @@
       <p style="margin:0;font-family:'Malgun Gothic',sans-serif;text-indent:0;">상태: 보임</p>
       <p style="margin:0;font-family:'Malgun Gothic',sans-serif;text-indent:0;">추정 원인: 해당 없음</p>
       <p style="margin:.4em 0 .35em;font-family:'Malgun Gothic',sans-serif;text-indent:0;">이 별은 아직 보인다. 창문 왼쪽 아래, 냉각탑의 그림자 바로 위에 있다. 오늘은 어제보다 약해졌으나 계측값을 첨부할 장비가 없다. 나는 목록을 작성하는 사람이지 관측자가 아니다. 목록 작성 규정에는 개인적 진술을 기입할 수 없다고 되어 있다. 규정을 알고 있다. 삭제할 담당자가 남아 있다면 삭제해도 좋다. 나는 이 별에이름이 있는지 모른다. 좌표를 조회하는 데 필요한 전력을 배정받지 못했다. 그래서이름을 붙인다. ‘아직.’</p>
-      <p style="margin:.4em 0 .35em;font-family:'Malgun Gothic',sans-serif;text-indent:0;">아직은 보인다. 이것이 목록에 남은 마지막 항목이다. ‘아직’이라는 이름의 별이언제 사라졌는지는 기록되지 않았다. 항로국의 자동 문서 체계는 이후 73년 동안빈 목록을 발행했다. 새로 소멸한 별이 없어서가 아니었다. 소멸을 보고할 기관이더는 접속하지 않았기 때문이다.</p>
+      <p class="archive-end" style="margin:.4em 0 .35em;font-family:'Malgun Gothic',sans-serif;text-indent:0;">아직은 보인다. 이것이 목록에 남은 마지막 항목이다. ‘아직’이라는 이름의 별이언제 사라졌는지는 기록되지 않았다. 항로국의 자동 문서 체계는 이후 73년 동안빈 목록을 발행했다. 새로 소멸한 별이 없어서가 아니었다. 소멸을 보고할 기관이더는 접속하지 않았기 때문이다.</p>
     </article>
 
     {% include footer.html %}
