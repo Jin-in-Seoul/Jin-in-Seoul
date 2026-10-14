@@ -19,6 +19,31 @@
 .full-entry h3{font-size:clamp(25px,2.8vw,34px);line-height:1.35;margin:0 0 32px}
 .full-entry .prose{margin-top:0}
 @media(max-width:620px){.full-entry{margin-bottom:58px}}
+
+/* 제5부 기록물 스타일: 개별 장의 서식을 전체보기에서도 재현 */
+.full-entry.part-05 .galactic-prose > p[style*="Malgun Gothic"] {
+  font-family:"Malgun Gothic","맑은 고딕","Apple SD Gothic Neo",sans-serif;
+  font-size:17.4px;
+  line-height:1.7;
+  text-indent:0;
+}
+.full-entry.part-05 .galactic-prose > p[style*="white-space:pre-line"]{white-space:pre-line}
+.full-entry.part-05.entry-01 .galactic-prose > p[style*="white-space:pre-line"]{
+  font-family:"Malgun Gothic","맑은 고딕","Apple SD Gothic Neo",sans-serif;
+  font-size:17.4px;
+  line-height:1.75;
+  text-indent:0;
+}
+.full-entry.part-05 .galactic-prose > p.archive-start{margin-top:1.8em !important}
+.full-entry.part-05 .galactic-prose > p.archive-end{margin-bottom:1.8em !important}
+.full-entry.part-05.entry-07 .galactic-prose > p[style*="Malgun Gothic"]{
+  margin:0 !important;
+  padding:0 0 1.7em !important;
+}
+.full-entry.part-05.entry-07 .galactic-prose > p.archive-end{padding-bottom:0 !important}
+@media(max-width:620px){
+  .full-entry.part-05 .galactic-prose > p[style*="Malgun Gothic"]{font-size:16.5px}
+}
 </style>
 </head>
 <body>
@@ -64,6 +89,11 @@
       heading.className='full-part';heading.textContent=group.title;root.appendChild(heading);
       for(const [entryIndex,entry] of group.entries.entries()){
         const section=document.createElement('section');section.className='full-entry';
+        if(entry.url.includes('/part-05/')){
+          section.classList.add('part-05');
+          const match=entry.url.match(/\/entry-(\d+)\//);
+          if(match)section.classList.add('entry-'+match[1]);
+        }
         const h3=document.createElement('h3');h3.textContent=(entryIndex+1)+'. '+entry.title;section.appendChild(h3);
         const article=document.createElement('article');article.className='prose galactic-prose';
         article.innerHTML=results[i++];section.appendChild(article);root.appendChild(section);
