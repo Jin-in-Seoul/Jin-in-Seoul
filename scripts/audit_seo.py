@@ -71,7 +71,7 @@ class HeadParser(HTMLParser):
             self.head = False
 
 for file in sorted(ROOT.rglob("*.html")):
-    if any(part in {".git", "_site", "vendor", "node_modules"} for part in file.parts):
+    if any(part in {".git", "_site", "vendor", "node_modules", "_includes", "_layouts"} for part in file.relative_to(ROOT).parts):
         continue
     path = file.relative_to(ROOT).as_posix()
     try:
