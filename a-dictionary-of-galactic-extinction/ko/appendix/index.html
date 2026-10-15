@@ -40,6 +40,11 @@
 .appendix-related + .appendix-related{margin-top:.2em!important;}
 .appendix-event{font-size:18px;font-weight:600;line-height:1.65;margin:1.35em 0 .25em;}
 .appendix-event+.appendix-prose{margin-top:0!important;}
+/* Chronology: PDF uses a square for each era, bullets for events, and flush-left descriptions. */
+.appendix-group:last-child > .appendix-term::before{content:"■";display:inline-block;width:1.65em;font-size:.78em;vertical-align:.06em;}
+.appendix-group:last-child > .appendix-event::before{content:"•";display:inline-block;width:1.3em;font-size:1em;}
+.appendix-group:last-child > .appendix-event{margin:1.35em 0 .22em;}
+.appendix-group:last-child > .appendix-event + .appendix-prose{margin:0 0 1.65em!important;text-indent:0!important;line-height:1.8;}
 @media(max-width:620px){.appendix-term{font-size:19px}.appendix-event{font-size:17px}}
 </style>
 </head>
