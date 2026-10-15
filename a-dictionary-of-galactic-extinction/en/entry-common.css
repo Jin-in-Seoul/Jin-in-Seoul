@@ -15,7 +15,7 @@
 
 /* Copyright notice: shown only on chapters that explicitly include it. */
 .work-copyright {
-  margin: 64px 0 36px;
+  margin: 0 0 36px;
   color: var(--muted);
   font-size: 12px;
   line-height: 1.8;
