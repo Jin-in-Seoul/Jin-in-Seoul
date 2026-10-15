@@ -83,6 +83,35 @@
       }
     }
 
+
+    // The appendix is a stand-alone source and follows the five numbered parts.
+    const appendixHref=toc.querySelector('a[href="appendix/"]');
+    if(appendixHref){
+      const appendixUrl=new URL(appendixHref.getAttribute('href'),new URL(base,window.location.origin));
+      const appendixResponse=await fetch(appendixUrl,{cache:'no-cache'});
+      if(!appendixResponse.ok)throw new Error('부록을 불러오지 못했습니다.');
+      const appendixDoc=new DOMParser().parseFromString(await appendixResponse.text(),'text/html');
+      const appendixArticle=appendixDoc.querySelector('article.appendix-content');
+      if(!appendixArticle)throw new Error('부록 본문을 찾을 수 없습니다.');
+      const appendixHeading=document.createElement('h2');
+      appendixHeading.className='full-part';
+      appendixHeading.textContent='부록';
+      root.appendChild(appendixHeading);
+      const appendixSection=document.createElement('section');
+      appendixSection.className='full-entry appendix';
+      const appendixTitle=document.createElement('h3');
+      appendixTitle.textContent='은하에서 길 잃은 자를 위한 색인';
+      appendixSection.appendChild(appendixTitle);
+      const appendixBody=document.createElement('article');
+      appendixBody.className='prose galactic-prose appendix-content';
+      appendixBody.innerHTML=appendixArticle.innerHTML;
+      appendixSection.appendChild(appendixBody);
+      root.appendChild(appendixSection);
+      const appendixStyle=document.createElement('style');
+      appendixStyle.textContent='@scope (.full-entry.appendix) {\n'+Array.from(appendixDoc.querySelectorAll('head style')).map(el=>el.textContent).join('\n')+'\n}';
+      root.appendChild(appendixStyle);
+    }
+
   }catch(err){root.replaceChildren();root.textContent='전체 보기를 불러오지 못했습니다: '+err.message}
 })();
 </script>
