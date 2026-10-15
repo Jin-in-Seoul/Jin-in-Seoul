@@ -35,6 +35,9 @@
 .appendix-fact::before{content:"•";margin-right:.7em;}
 .appendix-prose{margin:1.15em 0 1.15em!important;text-indent:1.2em!important;line-height:1.8;}
 .appendix-related{margin:1.15em 0 1.65em!important;text-indent:0!important;line-height:1.8;}
+/* Keep consecutive reference lines (e.g. people + related entries) close together. */
+.appendix-related:has(+ .appendix-related){margin-bottom:.2em!important;}
+.appendix-related + .appendix-related{margin-top:.2em!important;}
 .appendix-event{font-size:18px;font-weight:600;line-height:1.65;margin:1.35em 0 .25em;}
 .appendix-event+.appendix-prose{margin-top:0!important;}
 @media(max-width:620px){.appendix-term{font-size:19px}.appendix-event{font-size:17px}}
