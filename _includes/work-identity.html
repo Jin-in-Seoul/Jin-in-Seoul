@@ -144,6 +144,6 @@
 {% endif %}
 {% if work_title != '' and work_genre != '' %}
 <p class="work-identity" style="margin:0 0 18px;font:400 15px/1.5 Arial,Helvetica,sans-serif;color:#555;">
-  <span>{{ work_genre }}</span> <a href="{{ work_link }}" style="color:inherit;text-decoration:none;" aria-label="{{ work_genre }} {{ work_title }} — Contents">{% if work_lang == 'ko' %}『{{ work_title }}』{% elsif work_lang == 'ja' %}『{{ work_title }}』{% elsif work_lang == 'fr' %}« {{ work_title }} »{% else %}《{{ work_title }}》{% endif %}</a>
+  <span>{{ work_genre }}</span> <a href="{{ work_link }}" style="color:inherit;text-decoration:none;" aria-label="{{ work_genre }} {{ work_title }} — Contents">{% if work_kind == 'a-dictionary-of-galactic-extinction' or work_kind == 'sweater' or work_kind == 'scarecrow-distance' %}『{{ work_title }}』{% else %}「{{ work_title }}」{% endif %}</a>
 </p>
 {% endif %}
