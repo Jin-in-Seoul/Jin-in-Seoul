@@ -1,0 +1,115 @@
+{% comment %}Visible work identity on literary reading pages only. Titles match the published editions.{% endcomment %}
+{% assign work_segments = page.url | split: '/' %}
+{% assign work_kind = work_segments[1] %}
+{% assign work_slug = '' %}
+{% assign work_lang = '' %}
+{% assign work_genre = '' %}
+{% assign work_title = '' %}
+{% assign work_link = '' %}
+{% if work_kind == 'a-dictionary-of-galactic-extinction' and work_segments[3] contains 'part-' and work_segments[4] contains 'entry-' %}
+  {% assign work_slug = work_kind %}
+  {% assign work_lang = work_segments[2] %}
+  {% assign work_link = '/a-dictionary-of-galactic-extinction/' | append: work_lang | append: '/' %}
+{% elsif work_kind == 'sweater' or work_kind == 'scarecrow-distance' %}
+  {% if work_segments[3] contains 'chapter-' %}
+    {% assign work_slug = work_kind %}
+    {% assign work_lang = work_segments[2] %}
+    {% assign work_link = '/' | append: work_kind | append: '/' | append: work_lang | append: '/' %}
+  {% endif %}
+{% elsif work_kind == 'short-stories' or work_kind == 'childrens-books' %}
+  {% assign work_slug = work_segments[2] %}
+  {% assign work_lang = work_segments[3] %}
+  {% assign work_link = '/' | append: work_kind | append: '/' %}
+{% endif %}
+{% if work_slug != '' %}
+  {% if work_kind == 'short-stories' %}
+    {% case work_lang %}{% when 'ko' %}{% assign work_genre = '단편소설' %}{% when 'ja' %}{% assign work_genre = '短編小説' %}{% when 'fr' %}{% assign work_genre = 'Nouvelle' %}{% when 'en' %}{% assign work_genre = 'Short Story' %}{% endcase %}
+  {% elsif work_kind == 'childrens-books' %}
+    {% case work_lang %}{% when 'ko' %}{% assign work_genre = '동화' %}{% when 'ja' %}{% assign work_genre = '童話' %}{% when 'fr' %}{% assign work_genre = 'Conte pour enfants' %}{% when 'en' %}{% assign work_genre = 'Children’s Story' %}{% endcase %}
+  {% else %}
+    {% case work_lang %}{% when 'ko' %}{% assign work_genre = '장편소설' %}{% when 'ja' %}{% assign work_genre = '長編小説' %}{% when 'fr' %}{% assign work_genre = 'Roman' %}{% when 'en' %}{% assign work_genre = 'Novel' %}{% endcase %}
+  {% endif %}
+  {% case work_slug %}
+  {% when 'a-dictionary-of-galactic-extinction' %}
+    {% case work_lang %}
+    {% when 'ko' %}{% assign work_title = '은하 멸망 사전' %}
+    {% when 'en' %}{% assign work_title = 'A Dictionary of Galactic Extinction' %}
+    {% when 'fr' %}{% assign work_title = 'Dictionnaire de l’extinction galactique' %}
+    {% when 'ja' %}{% assign work_title = '銀河滅亡辞典' %}
+    {% endcase %}
+  {% when 'sweater' %}
+    {% case work_lang %}
+    {% when 'ko' %}{% assign work_title = '스웨터' %}
+    {% when 'en' %}{% assign work_title = 'Sweater' %}
+    {% when 'fr' %}{% assign work_title = 'Le Pull' %}
+    {% when 'ja' %}{% assign work_title = 'セーター' %}
+    {% endcase %}
+  {% when 'scarecrow-distance' %}
+    {% case work_lang %}
+    {% when 'ko' %}{% assign work_title = '허수아비 거리 (Scarecrow Distance)' %}
+    {% when 'en' %}{% assign work_title = 'Scarecrow Distance' %}
+    {% when 'fr' %}{% assign work_title = 'Mal reçu' %}
+    {% when 'ja' %}{% assign work_title = '案山子の距離' %}
+    {% endcase %}
+  {% when 'a-sunday-that-was-only-afternoon' %}
+    {% case work_lang %}
+    {% when 'ko' %}{% assign work_title = '오후만 있던 일요일' %}
+    {% when 'en' %}{% assign work_title = 'A Sunday That Was Only Afternoon' %}
+    {% when 'fr' %}{% assign work_title = 'Un dimanche qui n’avait que l’après-midi' %}
+    {% when 'ja' %}{% assign work_title = '午後しかなかった日曜日' %}
+    {% endcase %}
+  {% when 'marijuana' %}
+    {% case work_lang %}
+    {% when 'ko' %}{% assign work_title = '마리화나' %}
+    {% when 'en' %}{% assign work_title = 'Marijuana' %}
+    {% when 'fr' %}{% assign work_title = 'Marijuana' %}
+    {% when 'ja' %}{% assign work_title = 'マリファナ' %}
+    {% endcase %}
+  {% when 'a-stolen-afternoon' %}
+    {% case work_lang %}
+    {% when 'ko' %}{% assign work_title = '훔친 오후' %}
+    {% when 'en' %}{% assign work_title = 'A Stolen Afternoon' %}
+    {% when 'fr' %}{% assign work_title = 'L’Après-midi volé' %}
+    {% when 'ja' %}{% assign work_title = '盗んだ午後' %}
+    {% endcase %}
+  {% when 'the-basics-of-logic' %}
+    {% case work_lang %}
+    {% when 'ko' %}{% assign work_title = '논리학의 기초' %}
+    {% when 'en' %}{% assign work_title = 'The Basics of Logic' %}
+    {% when 'fr' %}{% assign work_title = 'Les bases de la logique' %}
+    {% when 'ja' %}{% assign work_title = '論理学の基礎' %}
+    {% endcase %}
+  {% when 'hyungs-life' %}
+    {% case work_lang %}
+    {% when 'ko' %}{% assign work_title = '형의 인생' %}
+    {% when 'en' %}{% assign work_title = 'Hyung’s Life' %}
+    {% endcase %}
+  {% when 'adjunct-lecturer-k-007-briefcase' %}
+    {% case work_lang %}
+    {% when 'ko' %}{% assign work_title = '시간강사 K의 007가방' %}
+    {% when 'en' %}{% assign work_title = 'Adjunct Lecturer K’s 007 Briefcase' %}
+    {% endcase %}
+  {% when 'aftershock' %}
+    {% case work_lang %}
+    {% when 'ko' %}{% assign work_title = '여진' %}
+    {% when 'en' %}{% assign work_title = 'Aftershock' %}
+    {% endcase %}
+  {% when 'books-rule' %}
+    {% case work_lang %}
+    {% when 'ko' %}{% assign work_title = '책이 왕초야' %}
+    {% when 'en' %}{% assign work_title = 'Books Rule!' %}
+    {% when 'fr' %}{% assign work_title = 'Les livres, c’est le top !' %}
+    {% when 'ja' %}{% assign work_title = '本って最高！' %}
+    {% endcase %}
+  {% when 'coco-and-the-doll-friends' %}
+    {% case work_lang %}
+    {% when 'ko' %}{% assign work_title = '코코와 인형 친구들' %}
+    {% when 'en' %}{% assign work_title = 'Coco and the Doll Friends' %}
+    {% endcase %}
+  {% endcase %}
+{% endif %}
+{% if work_title != '' and work_genre != '' %}
+<p class="work-identity" style="margin:0 0 18px;font:400 15px/1.5 Arial,Helvetica,sans-serif;color:#555;">
+  <span>{{ work_genre }}</span> <a href="{{ work_link }}" style="color:inherit;text-decoration:none;" aria-label="{{ work_genre }} {{ work_title }} — Contents">{% if work_lang == 'ko' %}『{{ work_title }}』{% elsif work_lang == 'ja' %}『{{ work_title }}』{% elsif work_lang == 'fr' %}« {{ work_title }} »{% else %}{{ work_title }}{% endif %}</a>
+</p>
+{% endif %}
