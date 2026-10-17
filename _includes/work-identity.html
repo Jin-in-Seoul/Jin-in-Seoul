@@ -20,10 +20,28 @@
   {% assign work_slug = work_segments[2] %}
   {% assign work_lang = work_segments[3] %}
   {% assign work_link = '/' | append: work_kind | append: '/' %}
+{% elsif work_kind == 'music' and work_segments[2] != blank %}
+  {% assign work_slug = work_segments[2] %}
+  {% assign work_lang = 'multi' %}
+  {% assign work_link = '/music/' %}
+{% elsif work_kind == 'haiku' and work_segments[5] != blank %}
+  {% assign work_slug = work_segments[2] | append: '-' | append: work_segments[3] | append: '-' | append: work_segments[4] | append: '-' | append: work_segments[5] %}
+  {% assign work_lang = 'multi' %}
+  {% assign work_link = '/haiku/' %}
+{% elsif page.layout == 'gray-note-post' %}
+  {% assign work_slug = 'gray-note-entry' %}
+  {% assign work_lang = page.lang | default: 'en' %}
+  {% assign work_link = '/gray-note/' %}
 {% endif %}
 {% if work_slug != '' %}
   {% if work_kind == 'short-stories' %}
     {% case work_lang %}{% when 'ko' %}{% assign work_genre = '단편소설' %}{% when 'ja' %}{% assign work_genre = '短編小説' %}{% when 'fr' %}{% assign work_genre = 'Nouvelle' %}{% when 'en' %}{% assign work_genre = 'Short Story' %}{% endcase %}
+  {% elsif work_kind == 'music' %}
+    {% assign work_genre = 'Music' %}
+  {% elsif work_kind == 'haiku' %}
+    {% assign work_genre = 'Haiku' %}
+  {% elsif work_slug == 'gray-note-entry' %}
+    {% case work_lang %}{% when 'ko' %}{% assign work_genre = '에세이' %}{% when 'ja' %}{% assign work_genre = 'エッセイ' %}{% when 'fr' %}{% assign work_genre = 'Essai' %}{% else %}{% assign work_genre = 'Essay' %}{% endcase %}
   {% elsif work_kind == 'childrens-books' %}
     {% case work_lang %}{% when 'ko' %}{% assign work_genre = '동화' %}{% when 'ja' %}{% assign work_genre = '童話' %}{% when 'fr' %}{% assign work_genre = 'Conte pour enfants' %}{% when 'en' %}{% assign work_genre = 'Children’s Story' %}{% endcase %}
   {% else %}
@@ -106,6 +124,22 @@
     {% when 'ko' %}{% assign work_title = '코코와 인형 친구들' %}
     {% when 'en' %}{% assign work_title = 'Coco and the Doll Friends' %}
     {% endcase %}
+  {% when 'gray-note-entry' %}{% assign work_title = page.title %}
+  {% when 'points-lines-planes' %}{% assign work_title = 'Points, Lines and Planes — 점과 선과 면' %}
+  {% when 'fried-food' %}{% assign work_title = 'Fried Food — 튀김' %}
+  {% when 'distant-light' %}{% assign work_title = 'Distant Light — 멀리 있는 빛' %}
+  {% when 'on-the-street' %}{% assign work_title = 'On the Street — 거리에서' %}
+  {% when 'fingertips' %}{% assign work_title = 'Fingertips — 손끝' %}
+  {% when 'shadow' %}{% assign work_title = 'Shadow — 그림자' %}
+  {% when 'gray-notebook' %}{% assign work_title = 'Gray Notebook — 회색 노트' %}
+  {% when 'stolen-afternoon' %}{% assign work_title = 'Stolen Afternoon — 훔친 오후' %}
+  {% when '2026-10-16-001' %}{% assign work_title = '来るはずの秋 — The Promised Autumn' %}
+  {% when '2026-10-06-001' %}{% assign work_title = '落ち葉の道 — Leaf-Strewn Road' %}
+  {% when '2026-10-03-001' %}{% assign work_title = '秋の仕事場 — Autumn Studio' %}
+  {% when '2026-10-02-001' %}{% assign work_title = 'トマトスープ — Tomato Soup' %}
+  {% when '2026-10-02-002' %}{% assign work_title = '左腕の痛み — The Left Arm' %}
+  {% when '2026-10-02-003' %}{% assign work_title = 'タイレノール神 — Tylenol God' %}
+  {% when '2026-10-02-004' %}{% assign work_title = '秋の一万歩 — Ten Thousand Steps in Autumn' %}
   {% endcase %}
 {% endif %}
 {% if work_title != '' and work_genre != '' %}
