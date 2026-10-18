@@ -50,6 +50,29 @@
   <link rel="stylesheet" href="assets/style.css?v=088">
 
   <style>
+    /* Compact homepage news box, directly below the language introduction. */
+    .site-title + .subtitle { margin-bottom: 18px; }
+    .homepage-news {
+      max-width: 700px;
+      border: 1px solid var(--line);
+      padding: 16px 20px;
+      color: #555;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    .homepage-news h2 {
+      margin: 0 0 8px;
+      padding: 0;
+      border: 0;
+      font: 600 14px/1.5 Arial, Helvetica, sans-serif;
+      color: #444;
+    }
+    .homepage-news p { margin: 0 0 6px; }
+    .homepage-news p:last-child { margin-bottom: 0; }
+    @media (max-width: 620px) {
+      .homepage-news { padding: 14px 16px; }
+    }
+
     .site-title-link {
       color: inherit;
       text-decoration: none;
@@ -229,6 +252,12 @@
     </h1>
 
     <p class="subtitle">A multilingual archive of fiction — English · 日本語 · Français · 한국어</p>
+
+    <aside class="homepage-news" aria-label="News">
+      <h2>News</h2>
+      <p>English, Japanese, and French translations of <em>A Dictionary of Galactic Extinction</em> are in progress.</p>
+      <p>Planned — Volume II: <em>Bring Me the Head of Elian Mor</em>.</p>
+    </aside>
 
 
     <section class="featured-work">
