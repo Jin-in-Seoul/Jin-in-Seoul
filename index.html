@@ -50,30 +50,22 @@
   <link rel="stylesheet" href="assets/style.css?v=088">
 
   <style>
-    /* Compact homepage news box, directly below the language introduction. */
-    .site-title + .subtitle { margin-bottom: 18px; }
-    .homepage-news {
-      max-width: 700px;
-      border: 1px solid var(--line);
-      padding: 16px 20px;
-      color: #555;
-      font-size: 14px;
-      line-height: 1.65;
-    }
+    /* Compact, unboxed publication news beneath the site introduction. */
+    .site-title + .subtitle { margin-bottom: 22px; }
+    .homepage-news { max-width: 700px; color: #555; font-size: 14px; line-height: 1.65; }
     .homepage-news h2 {
-      margin: 0 0 8px;
-      padding: 0;
-      border: 0;
-      font: 600 14px/1.5 Arial, Helvetica, sans-serif;
+      margin: 0 0 13px;
+      padding: 0 0 9px;
+      border-bottom: 1px solid var(--line);
+      font: 600 15px/1.5 Arial, Helvetica, sans-serif;
       color: #444;
     }
-    .homepage-news p { margin: 0 0 6px; }
-    .homepage-news p:last-child { margin-bottom: 0; }
-    @media (max-width: 620px) {
-      .homepage-news { padding: 14px 16px; }
-    }
+    .homepage-news h2 a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+    .homepage-news ul { margin: 0; padding-left: 1.3em; }
+    .homepage-news li { margin: 0 0 7px; padding-left: 0.1em; }
+    .homepage-news .news-date { margin: 8px 0 0; text-align: right; font-size: 12px; color: #777; }
 
-    .site-title-link {
+        .site-title-link {
       color: inherit;
       text-decoration: none;
     }
@@ -254,9 +246,13 @@
     <p class="subtitle">A multilingual archive of fiction — English · 日本語 · Français · 한국어</p>
 
     <aside class="homepage-news" aria-label="News">
-      <h2>News</h2>
-      <p>English, Japanese, and French translations of <em>A Dictionary of Galactic Extinction</em> are in progress.</p>
-      <p>Planned — Volume II: <em>Bring Me the Head of Elian Mor</em>.</p>
+      <h2><a href="/publication-log/">News</a> — A Dictionary of Galactic Extinction</h2>
+      <ul>
+        <li>The Korean edition is complete and has been published in full on this website.</li>
+        <li>English, Japanese, and French translations are in progress and will be published as soon as they are completed.</li>
+        <li>Volume II, <em>Bring Me the Head of Elian Mor</em>, is planned.</li>
+      </ul>
+      <p class="news-date">(October 18, 2026)</p>
     </aside>
 
 
