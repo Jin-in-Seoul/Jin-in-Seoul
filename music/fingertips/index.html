@@ -46,6 +46,10 @@
 }
   </script>
   <link rel="stylesheet" href="/assets/style.css?v=070">
+  <style>
+    .music-post .version-label { margin: 0 0 10px; }
+    .music-post .version-player { margin: 0 0 22px; }
+  </style>
 </head>
 <body>
   <main class="shell">
@@ -57,14 +61,14 @@
 
     <article class="music-post">
       <h1>Fingertips <span class="music-title-translation" lang="ko">— 손끝</span></h1>
-      <p class="music-language-note">Original Version — 한국어</p>
-      <audio class="music-player" controls preload="metadata">
+      <p class="music-language-note version-label">Original Version — 한국어</p>
+      <audio class="music-player version-player" controls preload="metadata">
         <source src="/assets/audio/music/fingertips.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
 
-      <p class="music-language-note">Japanese Version — <span lang="ja">指先</span></p>
-      <audio class="music-player" controls preload="metadata">
+      <p class="music-language-note version-label">Japanese Version — <span lang="ja">指先</span></p>
+      <audio class="music-player version-player" controls preload="metadata">
         <source src="/assets/audio/music/fingertips-ja.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
