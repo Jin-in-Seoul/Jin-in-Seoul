@@ -4,7 +4,7 @@
 Run from repository root: python3 scripts/audit_css_links.py
 Does not edit files or fetch remote resources.
 """
-from collections import Counter, defaultdict
+from collections import Counter
 from pathlib import Path
 import re
 import sys
@@ -17,7 +17,7 @@ STORY_CSS = "short-stories/latin-first-paragraph.css"
 CHILD_CSS = "childrens-books/latin-first-paragraph.css"
 DICT = "a-dictionary-of-galactic-extinction"
 issues = []
-versions = defaultdict(Counter)
+versions = Counter()
 usage = Counter()
 scanned = 0
 
