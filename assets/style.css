@@ -522,3 +522,17 @@ main.shell:has(.children-prose) > h1 {
     margin-bottom: 28px;
   }
 }
+
+/* Mobile header shortcut: comfortable touch target and right inset. */
+@media (max-width: 620px) {
+  .topbar-links { gap: 7px; }
+  .header-bottom-link {
+    box-sizing: border-box;
+    width: 44px;
+    height: 44px;
+    padding: 6px;
+    margin-right: 10px;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+}
