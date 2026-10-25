@@ -1,0 +1,79 @@
+---
+---
+<!doctype html>
+<html lang="fr">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-72EG8XPTN7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-72EG8XPTN7');</script>
+<meta charset="utf-8">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tout lire - Le Pull - Jin-in-Seoul</title>
+<meta name="description" content="Lire les douze chapitres de Le Pull sur une seule page.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://jin-in-seoul.com/sweater/fr/all/">
+<link rel="alternate" hreflang="en" href="https://jin-in-seoul.com/sweater/en/all/">
+<link rel="alternate" hreflang="ja" href="https://jin-in-seoul.com/sweater/ja/all/">
+<link rel="alternate" hreflang="fr" href="https://jin-in-seoul.com/sweater/fr/all/">
+<link rel="alternate" hreflang="x-default" href="https://jin-in-seoul.com/sweater/en/all/">
+<link rel="stylesheet" href="../../../assets/style.css?v=051">
+<style>
+.complete-chapter{margin:68px 0 80px}
+.complete-chapter>h2{font-size:clamp(26px,3vw,36px);line-height:1.35;margin:0 0 36px}
+.complete-chapter .prose{margin-top:0}
+.complete-chapter .sweater-prose>p:first-child{text-indent:0}
+</style>
+</head>
+<body>
+<main class="shell">
+{% include header.html %}
+<nav class="contents-nav" aria-label="Sommaire"><a href="/sweater/fr/">Sommaire</a></nav>
+<h1>Le Pull</h1>
+<div id="full-text"></div>
+{% include footer.html %}
+</main>
+<script>
+(async function(){
+  const base='/sweater/fr/';
+  const output=document.getElementById('full-text');
+  try{
+    const response=await fetch(base,{cache:'no-cache'});
+    if(!response.ok)throw new Error('Contents could not be loaded');
+    const toc=new DOMParser().parseFromString(await response.text(),'text/html');
+    const anchors=[...toc.querySelectorAll('.work-list a[href]')].filter(a=>/^chapter-\d{2}\/$/.test(a.getAttribute('href')||''));
+    if(anchors.length!==12)throw new Error('Expected twelve chapters');
+    const results=new Array(anchors.length);
+    let next=0;
+    async function worker(){
+      while(next<anchors.length){
+        const i=next++, a=anchors[i];
+        const url=new URL(a.getAttribute('href'),new URL(base,location.origin));
+        const res=await fetch(url,{cache:'no-cache'});
+        if(!res.ok)throw new Error('Failed to load '+a.textContent);
+        const html=new DOMParser().parseFromString(await res.text(),'text/html');
+        const chapter=html.querySelector('section.prose.sweater-prose');
+        if(!chapter)throw new Error('Chapter body missing: '+a.textContent);
+        results[i]=chapter.innerHTML;
+      }
+    }
+    await Promise.all(Array.from({length:Math.min(4,anchors.length)},()=>worker()));
+    const fragment=document.createDocumentFragment();
+    for(let i=0;i<anchors.length;i++){
+      const container=document.createElement('section');
+      container.className='complete-chapter';
+      const heading=document.createElement('h2');
+      heading.textContent=anchors[i].textContent.trim();
+      container.appendChild(heading);
+      const prose=document.createElement('section');
+      prose.className='prose sweater-prose';
+      prose.innerHTML=results[i];
+      container.appendChild(prose);
+      fragment.appendChild(container);
+    }
+    output.replaceChildren(fragment);
+  }catch(error){output.textContent='Impossible de charger les chapitres : '+error.message;}
+})();
+</script>
+</body>
+</html>
