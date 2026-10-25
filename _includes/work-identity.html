@@ -10,6 +10,10 @@
   {% assign work_slug = work_kind %}
   {% assign work_lang = work_segments[2] %}
   {% assign work_link = '/a-dictionary-of-galactic-extinction/' | append: work_lang | append: '/' %}
+{% elsif work_kind == 'a-dictionary-of-galactic-extinction' and work_segments[2] == 'en' and work_segments[3] == 'appendix' %}
+  {% assign work_slug = work_kind %}
+  {% assign work_lang = work_segments[2] %}
+  {% assign work_link = '/a-dictionary-of-galactic-extinction/' | append: work_lang | append: '/' %}
 {% elsif work_kind == 'sweater' or work_kind == 'scarecrow-distance' %}
   {% if work_segments[3] contains 'chapter-' %}
     {% assign work_slug = work_kind %}
