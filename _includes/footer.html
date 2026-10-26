@@ -19,7 +19,7 @@
   {% endunless %}
 {% elsif work_path contains '/haiku/20' %}
   {% assign show_work_copyright = true %}
-{% elsif work_path == '/a-dictionary-of-galactic-extinction/ko/appendix/' %}
+{% elsif work_path == '/a-dictionary-of-galactic-extinction/ko/appendix/' or work_path == '/a-dictionary-of-galactic-extinction/en/appendix/' %}
   {% assign show_work_copyright = true %}
 {% endif %}
 {% if work_path contains '/a-dictionary-of-galactic-extinction/en/part-01/entry-' %}
