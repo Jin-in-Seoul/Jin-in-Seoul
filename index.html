@@ -249,6 +249,15 @@
       margin-top: 56px;
     }
 
+    /* Keep lower homepage sections on the same compact vertical rhythm. */
+    .translation-principles-section > h2 { margin-top: 0; }
+    .writer { margin-top: 30px; }
+    .writer > h2 { margin-top: 0; }
+    .writer + .site-footer { margin-top: 28px; }
+    @media (max-width: 620px) {
+      .writer { margin-top: 26px; }
+      .writer + .site-footer { margin-top: 24px; }
+    }
     /* Homepage-only vertical rhythm refinement; reading pages are unaffected. */
     .shell { padding-top: 32px; }
     .topbar { margin-bottom: 20px; padding-bottom: 12px; }
