@@ -56,7 +56,20 @@
 
   <style>
     /* Compact, unboxed publication news beneath the site introduction. */
-    .site-title + .subtitle { margin-bottom: 42px; }
+    /* Homepage-only compact introduction and navigation spacing. */
+    .shell { padding-top: 40px; }
+    .topbar { margin-bottom: 26px; padding-bottom: 14px; }
+    .home-intro { margin: 10px 0 27px; }
+    .home-intro .subtitle { margin: 0; color: var(--ink); font-size: 19px; line-height: 1.5; }
+    .home-languages { margin: 15px 0 0; color: var(--muted); font-size: 16px; line-height: 1.5; }
+    .home-language-list { margin: 4px 0 0; color: var(--muted); font-size: 16px; line-height: 1.5; }
+    @media (max-width: 620px) {
+      .shell { padding-top: 26px; }
+      .topbar { margin-bottom: 22px; padding-bottom: 12px; }
+      .home-intro { margin-bottom: 24px; }
+      .home-intro .subtitle { font-size: 18px; }
+      .home-languages, .home-language-list { font-size: 15px; }
+    }
     .homepage-news { max-width: 700px; color: #555; font-size: 14px; line-height: 1.65; }
     .homepage-news h2 {
       margin: 0 0 13px;
@@ -249,7 +262,11 @@
       <a class="site-title-link" href="/">Jin-in-Seoul</a>
     </h1>
 
-    <p class="subtitle">A Literary Site for Novels, Short Stories &amp; Experimental Literature — English · 日本語 · Français · 한국어</p>
+    <div class="home-intro">
+      <p class="subtitle">A Literary Site for Novels, Short Stories &amp; Experimental Literature</p>
+      <p class="home-languages">Read literary works in four languages:</p>
+      <p class="home-language-list">English · 한국어 · 日本語 · Français</p>
+    </div>
 
     <aside class="homepage-news" aria-label="News">
       <h2><a href="/publication-log/">News</a> — A Dictionary of Galactic Extinction</h2>
