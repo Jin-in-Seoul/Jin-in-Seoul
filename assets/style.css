@@ -527,6 +527,23 @@ main.shell:has(.children-prose) > h1 {
   }
 }
 
+/* Children's books: compact footer gap after the text on phones. */
+@media (max-width: 620px) {
+  main.shell:has(.children-prose) > .site-footer {
+    margin-top: 36px;
+  }
+}
+
+/* Children's book category trail, ahead of the contents link. */
+.children-work-kicker {
+  margin: 12px 0 14px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.children-work-kicker a { color: inherit; text-decoration: none; }
+.children-work-kicker a:hover { text-decoration: underline; }
+
 /* Mobile header shortcut: comfortable touch target and right inset. */
 @media (max-width: 620px) {
   .topbar-links { gap: 7px; }
