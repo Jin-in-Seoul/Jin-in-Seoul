@@ -450,6 +450,10 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 .short-story-prose p[style*="text-align: center"] {
   text-indent: 0;
 }
+/* One blank line before each new short-story section, not before section 1. */
+.short-story-prose p.section-number:not(:first-child) {
+  margin-top: 2em;
+}
 
 /* Galactic Extinction book-style paragraph setting */
 .galactic-prose p {
