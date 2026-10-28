@@ -560,5 +560,5 @@ main.shell:has(.children-prose) > h1 {
 
 /* Short-story reading pages: keep the footer close to the copyright notice. */
 main.shell:has(.short-story-prose) > .site-footer {
-  margin-top: 32px;
+  margin-top: 20px;
 }
