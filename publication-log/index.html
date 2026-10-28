@@ -43,6 +43,11 @@
     .publication-log h3 { margin: 28px 0 10px; font-size: 21px; font-weight: 500; }
     .publication-log ul { margin: 0; padding-left: 1.4em; font-size: 17px; line-height: 1.72; }
     .publication-log li { margin: 0 0 8px; }
+    .publication-log + .site-footer { margin-top: 28px; }
+    @media (max-width: 620px) {
+      main.shell:has(.publication-log) { padding-bottom: 24px; }
+      .publication-log + .site-footer { margin-top: 20px; }
+    }
   </style>
 </head>
 <body>
