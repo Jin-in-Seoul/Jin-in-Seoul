@@ -408,6 +408,8 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 }
 .haiku-list-item h2 {
   margin: 8px 0 0;
+  padding-bottom: 0;
+  border-bottom: none;
   font-size: 22px;
   font-weight: 400;
   line-height: 1.45;
