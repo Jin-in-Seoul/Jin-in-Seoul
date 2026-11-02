@@ -327,6 +327,34 @@
       .short-stories-section, .childrens-books-section,
       .gray-note-section, .haiku-section, .music-section { margin-top: 34px; }
     }
+    /* Supplementary documents belong visually to the galactic novel above. */
+    .galactic-supplements {
+      margin: 29px 0 0 18px;
+      padding-left: 20px;
+      border-left: 2px solid var(--line);
+    }
+    .galactic-supplement + .galactic-supplement { margin-top: 24px; }
+    .galactic-supplement h2 {
+      margin: 0 0 7px;
+      padding: 0;
+      border: 0;
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 1.45;
+    }
+    .galactic-supplement p {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .galactic-supplement .translation-principles-links { margin-bottom: 0; }
+    @media (max-width: 620px) {
+      .galactic-supplements { margin: 24px 0 0 8px; padding-left: 14px; }
+      .galactic-supplement h2 { font-size: 19px; }
+      .galactic-supplement p { font-size: 14px; }
+      .galactic-supplement + .galactic-supplement { margin-top: 21px; }
+    }
   </style>
 </head>
 
@@ -415,7 +443,8 @@
 
     </section>
 
-    <section class="translation-principles-section">
+    <div class="galactic-supplements" aria-label="Additional materials for A Dictionary of Galactic Extinction">
+    <section class="galactic-supplement">
 
       <h2>Translation Principles</h2>
 
@@ -436,12 +465,12 @@
 
     </section>
 
-    <section class="translation-principles-section">
+    <section class="galactic-supplement">
       <h2>Thought Experiment Notes</h2>
       <p>A record of 26 questions and answers tracing how the scientific ideas behind <em>A Dictionary of Galactic Extinction</em> developed and changed.</p>
       <p class="translation-principles-links"><a href="/a-dictionary-of-galactic-extinction/thought-experiment-notes/en/">English</a> · <a href="/a-dictionary-of-galactic-extinction/thought-experiment-notes/ko/">한국어</a></p>
     </section>
-
+    </div>
 
 
     <section class="major-work">
