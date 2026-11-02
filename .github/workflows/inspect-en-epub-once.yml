@@ -1,0 +1,29 @@
+name: Inspect Sweater English EPUB time entry structure
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/inspect-en-epub-once.yml']
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print limited EPUB structure near sample time entries
+        run: |
+          python3 - <<'PY'
+          import zipfile,re,html
+          p='assets/downloads/sweater/en/sweater-en-20260930-ver-001.epub'
+          with zipfile.ZipFile(p) as z:
+            for f in z.namelist():
+              if f.lower().endswith(('.xhtml','.html','.htm')):
+                s=z.read(f).decode('utf-8')
+                for v in ('07.40','06.00','07.05','18.45','22.30'):
+                  i=s.find(v)
+                  if i>=0:
+                    print('MATCH',f,'TOKEN',v,'START',i)
+                    print(repr(s[max(0,i-160):i+390]))
+                matches=len(re.findall(r'\b\d{1,2}[.:]\d{2}\s',s))
+                if matches>10:print('COUNT',f,matches,'p-tags',s.count('<p'), 'brs',s.count('<br'))
+          PY
