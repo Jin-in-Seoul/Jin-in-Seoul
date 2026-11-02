@@ -1,0 +1,80 @@
+name: Repair French Sweater EPUB timestamp paragraphs
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/repair-fr-epub-timestamps-once.yml']
+permissions:
+  contents: write
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore only time-entry paragraph boundaries
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re, zipfile, tempfile, os
+          p=Path('assets/downloads/sweater/fr/le-pull-fr-20260930-ver-001.epub')
+          with zipfile.ZipFile(p) as z:
+              infos=z.infolist(); old={i.filename:z.read(i.filename) for i in infos}; comment=z.comment
+          new=dict(old)
+          # Source has run-together diary times in chapters 4 (hike), 6 (Paris), and 10 (year-end trip).
+          # Work only inside these XHTML files and only at a time token preceded by a space.
+          changes={}
+          for n in (4,6,10):
+              found=[k for k in old if re.search(r'chapter-0?'+str(n)+r'\.(xhtml|html)$',k,re.I)]
+              if len(found)!=1:raise RuntimeError(f'Unexpected chapter file for {n}: {found}')
+              key=found[0]
+              s=old[key].decode('utf-8')
+              # Each entry uses HH h MM and optionally a full stop; keep every original character except boundary space.
+              stamp=re.compile(r'(?<!\w)(\d{2} h \d{2})(?!\w)')
+              count=[0];found_count=[0]
+              def split_paragraph(m):
+                  chunk=m.group(0)
+                  t=list(stamp.finditer(chunk))
+                  found_count[0]+=len(t)
+                  # The timestamp is an entry marker when followed by text and is not inside a tag.
+                  cuts=[]
+                  for hit in t:
+                      before=chunk[:hit.start()]
+                      if before.endswith(' ') and (hit.start()==0 or '<' not in chunk[max(0,hit.start()-8):hit.start()]):
+                          # Do not introduce a paragraph break if already at the start of this paragraph.
+                          if before.strip()!='<p>' and not re.fullmatch(r'<p\s+[^>]*>',before.strip(),re.I):
+                              cuts.append(hit.start())
+                  for pos in reversed(cuts):
+                      chunk=chunk[:pos-1]+'</p>\n<p>'+chunk[pos:]
+                  count[0]+=len(cuts)
+                  return chunk
+              out=re.sub(r'<p(?:\s+[^>]*)?>[\s\S]*?</p>',split_paragraph,s,flags=re.I)
+              if found_count[0]<35 or count[0]<30:raise RuntimeError(f'Too few matches in chapter {n}: {found_count[0]} / {count[0]}')
+              # Preserve exact body text: joining split paragraphs with one space restores original bytes.
+              if out.replace('</p>\n<p>',' ')!=s.replace('</p>\n<p>',' '):raise RuntimeError('Content preservation failed')
+              new[key]=out.encode('utf-8')
+              changes[key]=count[0]
+          assert len(changes)==3
+          assert {k for k in old if old[k]!=new[k]}==set(changes)
+          fd,tmp=tempfile.mkstemp(suffix='.epub',dir=p.parent);os.close(fd)
+          try:
+              with zipfile.ZipFile(tmp,'w') as z:
+                  z.comment=comment
+                  for info in infos:z.writestr(info,new[info.filename])
+              with zipfile.ZipFile(tmp) as z:
+                  assert z.testzip() is None
+                  assert z.namelist()==[i.filename for i in infos]
+                  assert z.read('mimetype')==b'application/epub+zip'
+                  for key in old:
+                      assert z.read(key)==new[key]
+              os.replace(tmp,p)
+          finally:
+              if os.path.exists(tmp):os.unlink(tmp)
+          print('Restored paragraph boundaries:',changes,'TOTAL',sum(changes.values()))
+          PY
+      - name: Commit only French EPUB
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/downloads/sweater/fr/le-pull-fr-20260930-ver-001.epub
+          git diff --cached --quiet && { echo "No EPUB changes made"; exit 1; }
+          git commit -m "Restore timed diary paragraph breaks in Sweater French EPUB"
+          git push origin HEAD:main
