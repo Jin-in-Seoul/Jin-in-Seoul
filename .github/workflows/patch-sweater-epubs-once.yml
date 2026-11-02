@@ -1,0 +1,81 @@
+name: One-time correction of Sweater English and Japanese EPUBs
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/patch-sweater-epubs-once.yml'
+permissions:
+  contents: write
+jobs:
+  patch-epubs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Correct one punctuation passage in each EPUB
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import tempfile, zipfile, os, re
+          targets = [
+              ('assets/downloads/sweater/en/sweater-en-20260930-ver-001.epub', [
+                  ('The fact that the four of us. Dad, Hee-jeong’s dad, Hee-jeong and me. Made it all the way', 'The fact that the four of us—Dad, Hee-jeong’s dad, Hee-jeong and me—made it all the way'),
+                  ("The fact that the four of us. Dad, Hee-jeong's dad, Hee-jeong and me. Made it all the way", "The fact that the four of us—Dad, Hee-jeong's dad, Hee-jeong and me—made it all the way"),
+              ]),
+              ('assets/downloads/sweater/ja/sweater-ja-20261003-ver-001.epub', [
+                  ('うちの父さん、ヒジョンのお父さん、ヒジョン、そして僕。この四人が無事に', 'うちの父さん、ヒジョンのお父さん、ヒジョン、そして僕の四人が無事に'),
+              ])
+          ]
+          for path, candidates in targets:
+              original = Path(path)
+              with zipfile.ZipFile(original, 'r') as zin:
+                  infos = zin.infolist()
+                  payload = {i.filename: zin.read(i.filename) for i in infos}
+                  comment = zin.comment
+              found = []
+              for name in list(payload):
+                  if not name.lower().endswith(('.xhtml', '.html', '.htm')):
+                      continue
+                  try:
+                      data = payload[name].decode('utf-8')
+                  except UnicodeDecodeError:
+                      continue
+                  for old, new in candidates:
+                      if old in data:
+                          if found:
+                              raise RuntimeError(f'Multiple matches: {path}: {found} and {name}')
+                          count = data.count(old)
+                          if count != 1:
+                              raise RuntimeError(f'Expected one match, found {count}: {name}')
+                          payload[name] = data.replace(old, new).encode('utf-8')
+                          found.append((name, old, new))
+              if len(found) != 1:
+                  raise RuntimeError(f'Unable to locate the exact passage in {path}. No file replaced. Contents scanned: {list(payload)[:20]}')
+              fd, tmp = tempfile.mkstemp(suffix='.epub', dir=original.parent)
+              os.close(fd)
+              try:
+                  with zipfile.ZipFile(tmp, 'w') as zout:
+                      zout.comment = comment
+                      for info in infos:
+                          zout.writestr(info, payload[info.filename])
+                  with zipfile.ZipFile(tmp, 'r') as check:
+                      assert check.testzip() is None
+                      assert check.namelist() == [i.filename for i in infos]
+                      assert check.read('mimetype') == b'application/epub+zip'
+                      assert sum(check.read(i.filename) != old for i, old in [(i, zipfile.ZipFile(original).read(i.filename)) for i in infos]) == 1
+                  os.replace(tmp, original)
+              finally:
+                  if os.path.exists(tmp):
+                      os.unlink(tmp)
+              print('Corrected:', path, 'inside', found[0][0])
+          PY
+      - name: Commit the two corrected EPUBs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/downloads/sweater/en/sweater-en-20260930-ver-001.epub assets/downloads/sweater/ja/sweater-ja-20261003-ver-001.epub
+          git diff --cached --quiet && { echo "No changes"; exit 1; }
+          git commit -m "Correct punctuation in Sweater English and Japanese EPUBs"
+          git push origin HEAD:main
