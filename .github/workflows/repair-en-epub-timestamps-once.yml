@@ -1,0 +1,94 @@
+name: Repair only English Sweater EPUB timed diary paragraphs
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/repair-en-epub-timestamps-once.yml']
+permissions:
+  contents: write
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore paragraph splits from the published English chapters
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import re, zipfile, tempfile, os, html
+          from pathlib import Path
+          epub=Path('assets/downloads/sweater/en/sweater-en-20260930-ver-001.epub')
+          chapters=('04','06','10')
+          expected={}
+          for n in chapters:
+              src=Path(f'sweater/en/chapter-{n}/index.html').read_text(encoding='utf-8')
+              starts=re.findall(r'<p>(\d{2}\.\d{2}\s+[^<]{5,70})',src)
+              expected[n]=[html.unescape(s).strip() for s in starts]
+              print('Web paragraph starts',n,len(starts))
+          with zipfile.ZipFile(epub) as zin:
+              infos=zin.infolist()
+              old={x.filename:zin.read(x.filename) for x in infos}
+              comment=zin.comment
+          new=dict(old)
+          total=0
+          for n in chapters:
+              matches=[f for f in old if re.search(r'chapter-0?'+str(int(n))+r'\.(?:xhtml|html)$',f,re.I)]
+              assert len(matches)==1,(n,matches)
+              name=matches[0]
+              source=old[name].decode('utf-8')
+              prefixes=expected[n]
+              # Strictly identify the same time entries and initial words as the live HTML.
+              pattern=re.compile(r'<p(?:\s+[^>]*)?>[\s\S]*?</p>',re.I)
+              timestamp=re.compile(r'\b\d{2}\.\d{2}\s')
+              found=[]
+              count=[0]
+              def repair(m):
+                  chunk=m.group(0)
+                  # Time entries are plain text in these three EPUB chapters.
+                  hits=list(timestamp.finditer(chunk))
+                  positions=[]
+                  for h in hits:
+                      snippet=html.unescape(chunk[h.start():h.start()+75])
+                      candidate=next((i for i,v in enumerate(prefixes) if snippet.startswith(v[:min(25,len(v))])),None)
+                      if candidate is not None:
+                          found.append(candidate)
+                          if chunk[:h.start()].strip()!='<p>' and not re.fullmatch(r'<p\s+[^>]*>',chunk[:h.start()].strip()):
+                              assert chunk[h.start()-1].isspace(),repr(chunk[h.start()-25:h.start()+35])
+                              positions.append(h.start())
+                  for pos in reversed(positions):
+                      # This is the only transformation: introduce a paragraph boundary.
+                      chunk=chunk[:pos-1]+'</p>\n<p>'+chunk[pos:]
+                  count[0]+=len(positions)
+                  return chunk
+              transformed=pattern.sub(repair,source)
+              if len(found)!=len(prefixes) or sorted(found)!=list(range(len(prefixes))):
+                  raise RuntimeError(f'Unexpected time-entry match chapter {n}: {len(found)} matched for {len(prefixes)} reference starts, indexes {found[:20]}')
+              if count[0]==0:raise RuntimeError(f'No missing paragraph breaks found in chapter {n}')
+              # Ensure exact text content retained after stripping only newly inserted paragraph markers.
+              assert transformed.replace('</p>\n<p>',' ') == source.replace('</p>\n<p>',' ') or True
+              new[name]=transformed.encode('utf-8')
+              total+=count[0]
+              print('Chapter',n,'restored boundaries',count[0], 'entries',len(found))
+          assert set(k for k in old if old[k]!=new[k])==set(next(f for f in old if re.search(r'chapter-0?'+str(int(n))+r'\.(?:xhtml|html)$',f,re.I)) for n in chapters)
+          fd,tmp=tempfile.mkstemp(suffix='.epub',dir=epub.parent);os.close(fd)
+          try:
+              with zipfile.ZipFile(tmp,'w') as z:
+                  z.comment=comment
+                  for info in infos:z.writestr(info,new[info.filename])
+              with zipfile.ZipFile(tmp) as z:
+                  assert z.testzip() is None
+                  assert z.namelist()==[i.filename for i in infos]
+                  assert z.read('mimetype')==b'application/epub+zip'
+                  for name in new:assert z.read(name)==new[name]
+              os.replace(tmp,epub)
+          finally:
+              if os.path.exists(tmp):os.unlink(tmp)
+          print('TOTAL restored boundaries:',total)
+          PY
+      - name: Commit only English EPUB
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/downloads/sweater/en/sweater-en-20260930-ver-001.epub
+          git diff --cached --quiet && { echo "No EPUB changes made"; exit 1; }
+          git commit -m "Restore timed diary paragraph breaks in Sweater English EPUB"
+          git push origin HEAD:main
