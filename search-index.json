@@ -3,7 +3,14 @@ layout: null
 permalink: /search-index.json
 ---
 [
-{%- assign sep = '' -%}
+{"url":"/sweater/en/","lang":"en","title":"Sweater","series":"Sweater","text":""},
+{"url":"/sweater/fr/","lang":"fr","title":"Le Pull","series":"Le Pull / Sweater","text":""},
+{"url":"/sweater/ja/","lang":"ja","title":"セーター","series":"セーター / Sweater","text":""},
+{"url":"/scarecrow-distance/en/","lang":"en","title":"Scarecrow Distance","series":"Scarecrow Distance","text":""},
+{"url":"/scarecrow-distance/fr/","lang":"fr","title":"Mal reçu","series":"Mal reçu / Scarecrow Distance","text":""},
+{"url":"/scarecrow-distance/ja/","lang":"ja","title":"案山子の距離","series":"案山子の距離 / Scarecrow Distance","text":""},
+{"url":"/scarecrow-distance/ko/","lang":"ko","title":"허수아비 거리","series":"허수아비 거리 / Scarecrow Distance","text":""}
+{%- assign sep = ',' -%}
 {%- for item in site.pages -%}
   {%- assign route = item.url | default: '' -%}
   {%- assign lang = '' -%}
@@ -13,17 +20,32 @@ permalink: /search-index.json
   {%- elsif route contains '/ko/' -%}{%- assign lang = 'ko' -%}
   {%- endif -%}
   {%- if lang != '' and item.content contains 'class="prose' -%}
+    {%- assign series = '' -%}
+    {%- if route contains '/sweater/' -%}
+      {%- if lang == 'en' -%}{%- assign series = 'Sweater' -%}
+      {%- elsif lang == 'fr' -%}{%- assign series = 'Le Pull / Sweater' -%}
+      {%- elsif lang == 'ja' -%}{%- assign series = 'セーター / Sweater' -%}
+      {%- endif -%}
+    {%- elsif route contains '/scarecrow-distance/' -%}
+      {%- if lang == 'en' -%}{%- assign series = 'Scarecrow Distance' -%}
+      {%- elsif lang == 'fr' -%}{%- assign series = 'Mal reçu / Scarecrow Distance' -%}
+      {%- elsif lang == 'ja' -%}{%- assign series = '案山子の距離 / Scarecrow Distance' -%}
+      {%- elsif lang == 'ko' -%}{%- assign series = '허수아비 거리 / Scarecrow Distance' -%}
+      {%- endif -%}
+    {%- endif -%}
     {%- assign heading = item.content | split: '<h1' | last | split: '>' | slice: 1, 999 | join: '>' | split: '</h1>' | first | strip_html | strip -%}
     {%- if item.content contains '<article class="prose' -%}
       {%- assign chunk = item.content | split: '<article class="prose' | last | split: '</article>' | first | split: '>' | slice: 1, 999999 | join: '>' -%}
     {%- elsif item.content contains '<section class="prose' -%}
       {%- assign chunk = item.content | split: '<section class="prose' | last | split: '</section>' | first | split: '>' | slice: 1, 999999 | join: '>' -%}
+    {%- elsif item.content contains '<div class="prose' -%}
+      {%- assign chunk = item.content | split: '<div class="prose' | last | split: '</div>' | first | split: '>' | slice: 1, 999999 | join: '>' -%}
     {%- else -%}
       {%- assign chunk = '' -%}
     {%- endif -%}
     {%- assign clean = chunk | strip_html | normalize_whitespace | strip -%}
     {{- sep -}}
-    {"url":{{ route | relative_url | jsonify }},"lang":{{ lang | jsonify }},"title":{{ heading | jsonify }},"text":{{ clean | jsonify }}}
+    {"url":{{ route | relative_url | jsonify }},"lang":{{ lang | jsonify }},"title":{{ heading | jsonify }},"series":{{ series | jsonify }},"text":{{ clean | jsonify }}}
     {%- assign sep = ',' -%}
   {%- endif -%}
 {%- endfor -%}
