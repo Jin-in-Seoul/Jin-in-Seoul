@@ -18,34 +18,81 @@ permalink: /search-index.json
   {%- elsif route contains '/fr/' -%}{%- assign lang = 'fr' -%}
   {%- elsif route contains '/ja/' -%}{%- assign lang = 'ja' -%}
   {%- elsif route contains '/ko/' -%}{%- assign lang = 'ko' -%}
+  {%- elsif item.lang -%}{%- assign lang = item.lang -%}
   {%- endif -%}
-  {%- if lang != '' and item.content contains 'class="prose' -%}
-    {%- assign series = '' -%}
-    {%- if route contains '/sweater/' -%}
-      {%- if lang == 'en' -%}{%- assign series = 'Sweater' -%}
-      {%- elsif lang == 'fr' -%}{%- assign series = 'Le Pull' -%}
-      {%- elsif lang == 'ja' -%}{%- assign series = 'セーター' -%}
+  {%- assign literary = false -%}
+  {%- if route contains '/sweater/' or route contains '/scarecrow-distance/' or route contains '/short-stories/' or route contains '/childrens-books/' or route contains '/a-dictionary-of-galactic-extinction/' or route contains '/gray-note/20' -%}
+    {%- assign literary = true -%}
+  {%- endif -%}
+  {%- unless route contains '/all/' -%}
+    {%- if literary and lang != '' -%}
+      {%- assign category = 'prose' -%}
+      {%- if route contains '/translation-principles/' -%}
+        {%- assign category = 'principles' -%}
+      {%- elsif route contains '/thought-experiment-notes/' -%}
+        {%- assign category = 'thought' -%}
+      {%- elsif route contains '/gray-note/' -%}
+        {%- assign category = 'gray-note' -%}
       {%- endif -%}
-    {%- elsif route contains '/scarecrow-distance/' -%}
-      {%- if lang == 'en' -%}{%- assign series = 'Scarecrow Distance' -%}
-      {%- elsif lang == 'fr' -%}{%- assign series = 'Mal reçu' -%}
-      {%- elsif lang == 'ja' -%}{%- assign series = '案山子の距離' -%}
-      {%- elsif lang == 'ko' -%}{%- assign series = '허수아비 거리' -%}
-      {%- endif -%}
-    {%- endif -%}
-    {%- assign heading = item.content | split: '<h1' | last | split: '>' | slice: 1, 999 | join: '>' | split: '</h1>' | first | strip_html | strip -%}
-    {%- if item.content contains '<article class="prose' -%}
-      {%- assign chunk = item.content | split: '<article class="prose' | last | split: '</article>' | first | split: '>' | slice: 1, 999999 | join: '>' -%}
-    {%- elsif item.content contains '<section class="prose' -%}
-      {%- assign chunk = item.content | split: '<section class="prose' | last | split: '</section>' | first | split: '>' | slice: 1, 999999 | join: '>' -%}
-    {%- elsif item.content contains '<div class="prose' -%}
-      {%- assign chunk = item.content | split: '<div class="prose' | last | split: '</div>' | first | split: '>' | slice: 1, 999999 | join: '>' -%}
-    {%- else -%}
       {%- assign chunk = '' -%}
+      {%- assign heading = '' -%}
+      {%- if category == 'gray-note' and item.layout == 'gray-note-post' -%}
+        {%- assign chunk = item.content | markdownify -%}
+        {%- assign heading = item.title -%}
+      {%- elsif category == 'principles' and item.content contains '<article class="principles">' -%}
+        {%- assign chunk = item.content | split: '<article class="principles">' | last | split: '</article>' | first -%}
+      {%- elsif category == 'thought' and item.content contains '<article class="thought">' -%}
+        {%- assign chunk = item.content | split: '<article class="thought">' | last | split: '</article>' | first -%}
+      {%- elsif category == 'prose' and item.content contains 'class="prose' -%}
+        {%- if item.content contains '<article class="prose' -%}
+          {%- assign chunk = item.content | split: '<article class="prose' | last | split: '</article>' | first | split: '>' | slice: 1, 999999 | join: '>' -%}
+        {%- elsif item.content contains '<section class="prose' -%}
+          {%- assign chunk = item.content | split: '<section class="prose' | last | split: '</section>' | first | split: '>' | slice: 1, 999999 | join: '>' -%}
+        {%- elsif item.content contains '<div class="prose' -%}
+          {%- assign chunk = item.content | split: '<div class="prose' | last | split: '</div>' | first | split: '>' | slice: 1, 999999 | join: '>' -%}
+        {%- endif -%}
+      {%- endif -%}
+      {%- if chunk != '' -%}
+        {%- if heading == '' -%}
+          {%- assign heading = item.content | split: '<h1' | last | split: '>' | slice: 1, 999 | join: '>' | split: '</h1>' | first | strip_html | strip -%}
+        {%- endif -%}
+        {%- assign series = '' -%}
+        {%- if route contains '/sweater/' -%}
+          {%- if lang == 'en' -%}{%- assign series = 'Sweater' -%}
+          {%- elsif lang == 'fr' -%}{%- assign series = 'Le Pull' -%}
+          {%- elsif lang == 'ja' -%}{%- assign series = 'セーター' -%}
+          {%- endif -%}
+        {%- elsif route contains '/scarecrow-distance/' -%}
+          {%- if lang == 'en' -%}{%- assign series = 'Scarecrow Distance' -%}
+          {%- elsif lang == 'fr' -%}{%- assign series = 'Mal reçu' -%}
+          {%- elsif lang == 'ja' -%}{%- assign series = '案山子の距離' -%}
+          {%- elsif lang == 'ko' -%}{%- assign series = '허수아비 거리' -%}
+          {%- endif -%}
+        {%- elsif route contains '/a-dictionary-of-galactic-extinction/' and category == 'prose' -%}
+          {%- if lang == 'en' -%}{%- assign series = 'A Dictionary of Galactic Extinction' -%}
+          {%- elsif lang == 'fr' -%}{%- assign series = "Dictionnaire de l’extinction galactique" -%}
+          {%- elsif lang == 'ja' -%}{%- assign series = '銀河滅亡辞典' -%}
+          {%- elsif lang == 'ko' -%}{%- assign series = '은하 멸망 사전' -%}
+          {%- endif -%}
+        {%- endif -%}
+        {%- assign clean = chunk | strip_html | normalize_whitespace | strip -%}
+        {%- if category == 'thought' and lang == 'en' -%}
+          {%- capture additional_notes -%}{%- include_relative a-dictionary-of-galactic-extinction/thought-experiment-notes/en/part-1.html -%}{%- include_relative a-dictionary-of-galactic-extinction/thought-experiment-notes/en/part-2.html -%}{%- endcapture -%}
+          {%- assign additional_clean = additional_notes | strip_html | normalize_whitespace | strip -%}
+          {%- assign clean = clean | append: ' ' | append: additional_clean -%}
+        {%- endif -%}
+        {{- sep -}}
+        {"url":{{ route | relative_url | jsonify }},"lang":{{ lang | jsonify }},"title":{{ heading | jsonify }},"series":{{ series | jsonify }},"text":{{ clean | jsonify }}}
+        {%- assign sep = ',' -%}
+      {%- endif -%}
     {%- endif -%}
-    {%- assign clean = chunk | strip_html | normalize_whitespace | strip -%}
+  {%- endunless -%}
+{%- endfor -%}
+{%- for item in site.posts -%}
+  {%- if item.layout == 'gray-note-post' and item.lang -%}
+    {%- assign clean = item.content | markdownify | strip_html | normalize_whitespace | strip -%}
     {{- sep -}}
-    {"url":{{ route | relative_url | jsonify }},"lang":{{ lang | jsonify }},"title":{{ heading | jsonify }},"series":{{ series | jsonify }},"text":{{ clean | jsonify }}}
+    {"url":{{ item.url | relative_url | jsonify }},"lang":{{ item.lang | jsonify }},"title":{{ item.title | jsonify }},"series":"","text":{{ clean | jsonify }}}
     {%- assign sep = ',' -%}
   {%- endif -%}
 {%- endfor -%}
