@@ -22,7 +22,7 @@ permalink: /search-index.json
   {%- elsif item.lang -%}{%- assign lang = item.lang -%}
   {%- endif -%}
   {%- assign is_literary = false -%}
-  {%- if route contains '/sweater/' or route contains '/scarecrow-distance/' or route contains '/short-stories/' or route contains '/childrens-books/' or route contains '/a-dictionary-of-galactic-extinction/' or route contains '/gray-note/001/' or route contains '/gray-note/002/' -%}
+  {%- if route contains '/sweater/' or route contains '/scarecrow-distance/' or route contains '/short-stories/' or route contains '/childrens-books/' or route contains '/a-dictionary-of-galactic-extinction/' or route contains '/gray-note/' -%}
     {%- assign is_literary = true -%}
   {%- endif -%}
   {%- unless route contains '/all/' -%}
