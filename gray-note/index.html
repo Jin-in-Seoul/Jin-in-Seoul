@@ -54,27 +54,23 @@
     <p class="deck">Available in English · 日本語 · Français · 한국어</p>
 
     <div class="gray-note-list">
-      {% if site.posts.size > 0 %}
-        {% for post in site.posts %}
-          <article class="gray-note-list-item">
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-            {% if post.url == "/gray-note/2026/09/30/001/" %}
-              <p class="gray-note-language-links">
-                <a href="/gray-note/2026/09/30/001/">English</a>
-                <span aria-hidden="true">·</span>
-                <a href="/gray-note/2026/09/30/001/ja/">日本語</a>
-                <span aria-hidden="true">·</span>
-                <a href="/gray-note/2026/09/30/001/fr/">Français</a>
-                <span aria-hidden="true">·</span>
-                <a href="/gray-note/2026/09/30/001/ko/">한국어</a>
-              </p>
-            {% endif %}
-          </article>
-        {% endfor %}
-      {% else %}
-        <p class="gray-note-empty">No entries yet.</p>
-      {% endif %}
+      <article class="gray-note-list-item">
+        <time datetime="2026-10-01T00:00:00+09:00">October 1, 2026</time>
+        <h2><a href="/gray-note/2026/10/01/001/">Spring to Summer, 2026 — Living in Seoul</a></h2>
+      </article>
+      <article class="gray-note-list-item">
+        <time datetime="2026-09-30T00:00:00+09:00">September 30, 2026</time>
+        <h2><a href="/gray-note/2026/09/30/001/">A Galaxy That Began with a Single Candle</a></h2>
+        <p class="gray-note-language-links">
+          <a href="/gray-note/2026/09/30/001/">English</a>
+          <span aria-hidden="true">·</span>
+          <a href="/gray-note/2026/09/30/001/ja/">日本語</a>
+          <span aria-hidden="true">·</span>
+          <a href="/gray-note/2026/09/30/001/fr/">Français</a>
+          <span aria-hidden="true">·</span>
+          <a href="/gray-note/2026/09/30/001/ko/">한국어</a>
+        </p>
+      </article>
     </div>
 
     {% include footer.html %}
