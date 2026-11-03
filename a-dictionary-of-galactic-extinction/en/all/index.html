@@ -21,6 +21,8 @@
 .full-entry .galactic-prose > ul:first-child + p{text-indent:0}
 .part-two-entry .galactic-prose > p:first-child{text-indent:0}
 .part-three-entry .galactic-prose > p:first-child{text-indent:0}
+.part-four-entry .galactic-prose > p:first-child{text-indent:0}
+.part-five-entry .galactic-prose > p:first-child{text-indent:0}
 @media(max-width:620px){.full-entry{margin-bottom:58px}}
 
 #full-text > .full-entry:last-of-type{margin-bottom:0}
@@ -63,7 +65,7 @@
         const doc=new DOMParser().parseFromString(await response.text(),'text/html');
         const article=doc.querySelector('article.prose');
         if(!article)throw new Error(entries[i].title+' has no article text.');
-        results[i]=article.innerHTML;
+        results[i]={html:article.innerHTML,recordStyle:entries[i].url.includes('/part-05/')?Array.from(doc.querySelectorAll('head style')).map(el=>el.textContent).join('\n'):''};
       }
     }
     await Promise.all(Array.from({length:Math.min(6,entries.length)},()=>worker()));
@@ -72,11 +74,44 @@
       const heading=document.createElement('h2');
       heading.className='full-part';heading.textContent=group.title;root.appendChild(heading);
       for(const [entryIndex,entry] of group.entries.entries()){
-        const section=document.createElement('section');section.className=entry.url.includes('/part-02/')?'full-entry part-two-entry':entry.url.includes('/part-03/')?'full-entry part-three-entry':'full-entry';
+        const section=document.createElement('section');section.className='full-entry';
+        for(const n of [2,3,4,5]) if(entry.url.includes('/part-0'+n+'/'))section.classList.add(['','', 'part-two-entry','part-three-entry','part-four-entry','part-five-entry'][n]);
+        if(entry.url.includes('/part-05/')){const match=entry.url.match(/\/entry-(\d+)\//);if(match)section.classList.add('part-05','entry-'+match[1]);}
         const h3=document.createElement('h3');h3.textContent=(entryIndex+1)+'. '+entry.title;section.appendChild(h3);
         const article=document.createElement('article');article.className='prose galactic-prose';
-        article.innerHTML=results[i++];section.appendChild(article);root.appendChild(section);
+        const result=results[i++];
+        article.innerHTML=result.html;section.appendChild(article);root.appendChild(section);
+        if(result.recordStyle){const scoped=document.createElement('style');scoped.textContent='@scope (.full-entry.part-05.entry-'+String(entryIndex+1).padStart(2,'0')+') {\n'+result.recordStyle+'\n}';root.appendChild(scoped);}
       }
+    }
+
+
+    // Appendix follows the five parts, using its existing published page.
+    const appendixHref=toc.querySelector('a[href="appendix/"]');
+    if(appendixHref){
+      const appendixUrl=new URL(appendixHref.getAttribute('href'),new URL(base,window.location.origin));
+      const appendixResponse=await fetch(appendixUrl,{cache:'no-cache'});
+      if(!appendixResponse.ok)throw new Error('The appendix could not be loaded.');
+      const appendixDoc=new DOMParser().parseFromString(await appendixResponse.text(),'text/html');
+      const appendixArticle=appendixDoc.querySelector('article.appendix-content');
+      if(!appendixArticle)throw new Error('The appendix has no article text.');
+      const appendixHeading=document.createElement('h2');
+      appendixHeading.className='full-part';
+      appendixHeading.textContent='Appendix';
+      root.appendChild(appendixHeading);
+      const appendixSection=document.createElement('section');
+      appendixSection.className='full-entry appendix';
+      const appendixTitle=document.createElement('h3');
+      appendixTitle.textContent='Glossary and Chronology of Galactic Civilization';
+      appendixSection.appendChild(appendixTitle);
+      const appendixBody=document.createElement('article');
+      appendixBody.className='prose galactic-prose appendix-content';
+      appendixBody.innerHTML=appendixArticle.innerHTML;
+      appendixSection.appendChild(appendixBody);
+      root.appendChild(appendixSection);
+      const appendixStyle=document.createElement('style');
+      appendixStyle.textContent='@scope (.full-entry.appendix) {\\n'+Array.from(appendixDoc.querySelectorAll('head style')).map(el=>el.textContent).join('\\n')+'\\n}';
+      root.appendChild(appendixStyle);
     }
 
   }catch(err){root.replaceChildren();root.textContent='Could not load all entries: '+err.message}
