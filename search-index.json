@@ -3,9 +3,9 @@ layout: null
 permalink: /search-index.json
 ---
 [
-{"url":"/sweater/en/","lang":"en","title":"Sweater","series":"Sweater","text":""},
-{"url":"/sweater/fr/","lang":"fr","title":"Le Pull","series":"Le Pull / Sweater","text":""},
-{"url":"/sweater/ja/","lang":"ja","title":"セーター","series":"セーター / Sweater","text":""},
+{"url":"/sweater/en/","lang":"en","title":"Sweater","series":"Sweater / 스웨터","text":""},
+{"url":"/sweater/fr/","lang":"fr","title":"Le Pull","series":"Le Pull / Sweater / 스웨터","text":""},
+{"url":"/sweater/ja/","lang":"ja","title":"セーター","series":"セーター / Sweater / 스웨터","text":""},
 {"url":"/scarecrow-distance/en/","lang":"en","title":"Scarecrow Distance","series":"Scarecrow Distance","text":""},
 {"url":"/scarecrow-distance/fr/","lang":"fr","title":"Mal reçu","series":"Mal reçu / Scarecrow Distance","text":""},
 {"url":"/scarecrow-distance/ja/","lang":"ja","title":"案山子の距離","series":"案山子の距離 / Scarecrow Distance","text":""},
@@ -22,9 +22,9 @@ permalink: /search-index.json
   {%- if lang != '' and item.content contains 'class="prose' -%}
     {%- assign series = '' -%}
     {%- if route contains '/sweater/' -%}
-      {%- if lang == 'en' -%}{%- assign series = 'Sweater' -%}
-      {%- elsif lang == 'fr' -%}{%- assign series = 'Le Pull / Sweater' -%}
-      {%- elsif lang == 'ja' -%}{%- assign series = 'セーター / Sweater' -%}
+      {%- if lang == 'en' -%}{%- assign series = 'Sweater / 스웨터' -%}
+      {%- elsif lang == 'fr' -%}{%- assign series = 'Le Pull / Sweater / 스웨터' -%}
+      {%- elsif lang == 'ja' -%}{%- assign series = 'セーター / Sweater / 스웨터' -%}
       {%- endif -%}
     {%- elsif route contains '/scarecrow-distance/' -%}
       {%- if lang == 'en' -%}{%- assign series = 'Scarecrow Distance' -%}
