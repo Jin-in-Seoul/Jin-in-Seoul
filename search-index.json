@@ -3,7 +3,16 @@ layout: null
 permalink: /search-index.json
 ---
 [
-{%- assign sep = '' -%}
+{"url":"/sweater/en/","lang":"en","title":"Sweater","text":""},
+{"url":"/sweater/fr/","lang":"fr","title":"Le Pull","text":""},
+{"url":"/sweater/ja/","lang":"ja","title":"セーター","text":""},
+{"url":"/sweater/en/","lang":"ko","displayLang":"en","title":"스웨터","text":""},
+{"url":"/scarecrow-distance/en/","lang":"en","title":"Scarecrow Distance","text":""},
+{"url":"/scarecrow-distance/fr/","lang":"fr","title":"Mal reçu","text":""},
+{"url":"/scarecrow-distance/ja/","lang":"ja","title":"案山子の距離","text":""},
+{"url":"/scarecrow-distance/ko/","lang":"ko","title":"허수아비 거리","text":""}
+{%- assign sep = ',' -%}
+{%- assign langs = 'en,fr,ja,ko' | split: ',' -%}
 {%- for item in site.pages -%}
   {%- assign route = item.url | default: '' -%}
   {%- assign lang = '' -%}
@@ -11,19 +20,83 @@ permalink: /search-index.json
   {%- elsif route contains '/fr/' -%}{%- assign lang = 'fr' -%}
   {%- elsif route contains '/ja/' -%}{%- assign lang = 'ja' -%}
   {%- elsif route contains '/ko/' -%}{%- assign lang = 'ko' -%}
+  {%- elsif item.lang -%}{%- assign lang = item.lang -%}
   {%- endif -%}
-  {%- if lang != '' and item.content contains 'class="prose' -%}
-    {%- assign heading = item.content | split: '<h1' | last | split: '>' | slice: 1, 999 | join: '>' | split: '</h1>' | first | strip_html | strip -%}
-    {%- if item.content contains '<article class="prose' -%}
-      {%- assign chunk = item.content | split: '<article class="prose' | last | split: '</article>' | first | split: '>' | slice: 1, 999999 | join: '>' -%}
-    {%- elsif item.content contains '<section class="prose' -%}
-      {%- assign chunk = item.content | split: '<section class="prose' | last | split: '</section>' | first | split: '>' | slice: 1, 999999 | join: '>' -%}
-    {%- else -%}
+  {%- assign is_literary = false -%}
+  {%- if route contains '/sweater/' or route contains '/scarecrow-distance/' or route contains '/short-stories/' or route contains '/childrens-books/' or route contains '/a-dictionary-of-galactic-extinction/' or route contains '/gray-note/20' -%}
+    {%- assign is_literary = true -%}
+  {%- endif -%}
+  {%- unless route contains '/all/' -%}
+    {%- if is_literary and lang != '' -%}
       {%- assign chunk = '' -%}
+      {%- assign heading = '' -%}
+      {%- if item.layout == 'gray-note-post' -%}
+        {%- assign chunk = item.content | markdownify -%}
+        {%- assign heading = item.title -%}
+      {%- elsif route contains '/translation-principles/' -%}
+        {%- if item.content contains '<article class="principles">' -%}
+          {%- assign chunk = item.content | split: '<article class="principles">' | last | split: '</article>' | first -%}
+        {%- endif -%}
+      {%- elsif route contains '/thought-experiment-notes/' -%}
+        {%- if item.content contains '<article class="thought">' -%}
+          {%- assign chunk = item.content | split: '<article class="thought">' | last | split: '</article>' | first -%}
+        {%- endif -%}
+      {%- elsif item.content contains 'class="prose' -%}
+        {%- if item.content contains '<article class="prose' -%}
+          {%- assign chunk = item.content | split: '<article class="prose' | last | split: '</article>' | first | split: '>' | slice: 1, 999999 | join: '>' -%}
+        {%- elsif item.content contains '<section class="prose' -%}
+          {%- assign chunk = item.content | split: '<section class="prose' | last | split: '</section>' | first | split: '>' | slice: 1, 999999 | join: '>' -%}
+        {%- elsif item.content contains '<div class="prose' -%}
+          {%- assign chunk = item.content | split: '<div class="prose' | last | split: '</div>' | first | split: '>' | slice: 1, 999999 | join: '>' -%}
+        {%- endif -%}
+      {%- endif -%}
+      {%- if chunk != '' -%}
+        {%- if heading == '' -%}
+          {%- assign heading = item.content | split: '<h1' | last | split: '>' | slice: 1, 999 | join: '>' | split: '</h1>' | first | strip_html | strip -%}
+        {%- endif -%}
+        {%- assign clean = chunk | strip_html | normalize_whitespace | strip -%}
+        {%- if route contains '/thought-experiment-notes/en/' -%}
+          {%- capture note_parts -%}{%- include_relative a-dictionary-of-galactic-extinction/thought-experiment-notes/en/part-1.html -%}{%- include_relative a-dictionary-of-galactic-extinction/thought-experiment-notes/en/part-2.html -%}{%- endcapture -%}
+          {%- assign extra = note_parts | strip_html | normalize_whitespace | strip -%}
+          {%- assign clean = clean | append: ' ' | append: extra -%}
+        {%- endif -%}
+        {{- sep -}}
+        {"url":{{ route | relative_url | jsonify }},"lang":{{ lang | jsonify }},"title":{{ heading | jsonify }},"text":{{ clean | jsonify }}}
+        {%- assign sep = ',' -%}
+      {%- endif -%}
     {%- endif -%}
-    {%- assign clean = chunk | strip_html | normalize_whitespace | strip -%}
+  {%- endunless -%}
+  {%- if route contains '/haiku/2026/' -%}
+    {%- for locale in langs -%}
+      {%- assign open_section = '<section lang="' | append: locale | append: '">' -%}
+      {%- if item.content contains open_section -%}
+        {%- assign portion = item.content | split: open_section | last | split: '</section>' | first -%}
+        {%- assign title = portion | split: '<h2' | last | split: '>' | slice: 1, 999 | join: '>' | split: '</h2>' | first | strip_html | strip -%}
+        {%- assign clean = portion | strip_html | normalize_whitespace | strip -%}
+        {{- sep -}}
+        {"url":{{ route | relative_url | jsonify }},"lang":{{ locale | jsonify }},"title":{{ title | jsonify }},"text":{{ clean | jsonify }}}
+        {%- assign sep = ',' -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- elsif route contains '/music/' and route != '/music/' -%}
+    {%- for locale in langs -%}
+      {%- assign open_section = '<section class="lyrics-section lyrics-' | append: locale | append: '" lang="' | append: locale | append: '">' -%}
+      {%- if item.content contains open_section -%}
+        {%- assign portion = item.content | split: open_section | last | split: '</section>' | first -%}
+        {%- assign title = portion | split: '<h3' | last | split: '>' | slice: 1, 999 | join: '>' | split: '</h3>' | first | strip_html | strip -%}
+        {%- assign clean = portion | strip_html | normalize_whitespace | strip -%}
+        {{- sep -}}
+        {"url":{{ route | relative_url | jsonify }},"lang":{{ locale | jsonify }},"title":{{ title | jsonify }},"text":{{ clean | jsonify }}}
+        {%- assign sep = ',' -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- for item in site.posts -%}
+  {%- if item.layout == 'gray-note-post' and item.lang -%}
+    {%- assign clean = item.content | markdownify | strip_html | normalize_whitespace | strip -%}
     {{- sep -}}
-    {"url":{{ route | relative_url | jsonify }},"lang":{{ lang | jsonify }},"title":{{ heading | jsonify }},"text":{{ clean | jsonify }}}
+    {"url":{{ item.url | relative_url | jsonify }},"lang":{{ item.lang | jsonify }},"title":{{ item.title | jsonify }},"text":{{ clean | jsonify }}}
     {%- assign sep = ',' -%}
   {%- endif -%}
 {%- endfor -%}
