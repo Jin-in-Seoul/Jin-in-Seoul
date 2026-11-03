@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <title>Search - Jin-in-Seoul</title>
-  <meta name="description" content="Search the published fiction archive of Jin-in-Seoul in English, French, Japanese, and Korean.">
+  <meta name="description" content="Search fiction, essays, poems, music lyrics and literary notes in their original languages.">
   <link rel="canonical" href="https://jin-in-seoul.com/search/">
   <link rel="stylesheet" href="/assets/style.css?v=046">
   <style>
@@ -33,7 +33,7 @@
         <label for="search-query" class="sr-only">Search text</label>
         <input id="search-query" type="search" aria-label="Search published works" required>
         <select id="search-language" aria-label="Language">
-          <option value="all">All languages</option>
+          <option value="" selected disabled>Choose language</option>
           <option value="en">English</option>
           <option value="fr">Français</option>
           <option value="ja">日本語</option>
@@ -41,11 +41,11 @@
         </select>
         <button type="submit">Search</button>
       </form>
-      <p id="search-status" class="search-status" role="status" aria-live="polite">Enter a word or phrase to search in English, French, Japanese, or Korean.</p>
+      <p id="search-status" class="search-status" role="status" aria-live="polite">Select a language and enter a word or phrase to search all published creative works.</p>
       <div id="search-results"></div>
     </div>
     {% include footer.html %}
   </main>
-  <script src="/assets/site-search.js?v=004" defer></script>
+  <script src="/assets/site-search.js?v=007" defer></script>
 </body>
 </html>
