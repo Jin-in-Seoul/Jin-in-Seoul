@@ -3,13 +3,13 @@ layout: null
 permalink: /search-index.json
 ---
 [
-{"url":"/sweater/en/","lang":"en","title":"Sweater","series":"Sweater / 스웨터","text":""},
-{"url":"/sweater/fr/","lang":"fr","title":"Le Pull","series":"Le Pull / Sweater / 스웨터","text":""},
-{"url":"/sweater/ja/","lang":"ja","title":"セーター","series":"セーター / Sweater / 스웨터","text":""},
+{"url":"/sweater/en/","lang":"en","title":"Sweater","series":"Sweater","text":""},
+{"url":"/sweater/fr/","lang":"fr","title":"Le Pull","series":"Le Pull","text":""},
+{"url":"/sweater/ja/","lang":"ja","title":"セーター","series":"セーター","text":""},
 {"url":"/scarecrow-distance/en/","lang":"en","title":"Scarecrow Distance","series":"Scarecrow Distance","text":""},
-{"url":"/scarecrow-distance/fr/","lang":"fr","title":"Mal reçu","series":"Mal reçu / Scarecrow Distance","text":""},
-{"url":"/scarecrow-distance/ja/","lang":"ja","title":"案山子の距離","series":"案山子の距離 / Scarecrow Distance","text":""},
-{"url":"/scarecrow-distance/ko/","lang":"ko","title":"허수아비 거리","series":"허수아비 거리 / Scarecrow Distance","text":""}
+{"url":"/scarecrow-distance/fr/","lang":"fr","title":"Mal reçu","series":"Mal reçu","text":""},
+{"url":"/scarecrow-distance/ja/","lang":"ja","title":"案山子の距離","series":"案山子の距離","text":""},
+{"url":"/scarecrow-distance/ko/","lang":"ko","title":"허수아비 거리","series":"허수아비 거리","text":""}
 {%- assign sep = ',' -%}
 {%- for item in site.pages -%}
   {%- assign route = item.url | default: '' -%}
@@ -22,15 +22,15 @@ permalink: /search-index.json
   {%- if lang != '' and item.content contains 'class="prose' -%}
     {%- assign series = '' -%}
     {%- if route contains '/sweater/' -%}
-      {%- if lang == 'en' -%}{%- assign series = 'Sweater / 스웨터' -%}
-      {%- elsif lang == 'fr' -%}{%- assign series = 'Le Pull / Sweater / 스웨터' -%}
-      {%- elsif lang == 'ja' -%}{%- assign series = 'セーター / Sweater / 스웨터' -%}
+      {%- if lang == 'en' -%}{%- assign series = 'Sweater' -%}
+      {%- elsif lang == 'fr' -%}{%- assign series = 'Le Pull' -%}
+      {%- elsif lang == 'ja' -%}{%- assign series = 'セーター' -%}
       {%- endif -%}
     {%- elsif route contains '/scarecrow-distance/' -%}
       {%- if lang == 'en' -%}{%- assign series = 'Scarecrow Distance' -%}
-      {%- elsif lang == 'fr' -%}{%- assign series = 'Mal reçu / Scarecrow Distance' -%}
-      {%- elsif lang == 'ja' -%}{%- assign series = '案山子の距離 / Scarecrow Distance' -%}
-      {%- elsif lang == 'ko' -%}{%- assign series = '허수아비 거리 / Scarecrow Distance' -%}
+      {%- elsif lang == 'fr' -%}{%- assign series = 'Mal reçu' -%}
+      {%- elsif lang == 'ja' -%}{%- assign series = '案山子の距離' -%}
+      {%- elsif lang == 'ko' -%}{%- assign series = '허수아비 거리' -%}
       {%- endif -%}
     {%- endif -%}
     {%- assign heading = item.content | split: '<h1' | last | split: '>' | slice: 1, 999 | join: '>' | split: '</h1>' | first | strip_html | strip -%}
