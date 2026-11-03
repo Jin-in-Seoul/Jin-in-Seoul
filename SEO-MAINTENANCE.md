@@ -12,10 +12,10 @@ Last updated: 2026-10-14. Repository: `Jin-in-Seoul/Jin-in-Seoul` (`main`). Publ
 
 ## Site configuration and SEO conventions
 
-- GitHub Pages / Jekyll; `_config.yml` defines `url: https://jin-in-seoul.com` and Gray Note permalink `/gray-note/:year/:month/:day/:title/`.
+- GitHub Pages / Jekyll; `_config.yml` defines `url: https://jin-in-seoul.com` and Gray Note numbered HTML pages (`/gray-note/001/{lang}/`, `/gray-note/002/`).
 - `robots.txt` allows crawling and references `https://jin-in-seoul.com/sitemap.xml`.
 - `sitemap.xml` is a Jekyll-templated XML source with front matter. Do not assume raw Liquid placeholders are broken in deployed output.
-- Gray Note pages may be generated from `_posts/*.md` and `gray-note/**/index.md`; absence of a matching `index.html` does not prove a broken URL.
+- Gray Note uses standalone HTML under numbered folders: `gray-note/001/{lang}/index.html` and `gray-note/002/index.html`. There are no Gray Note posts in `_posts`.
 - Canonical and hreflang should reference real, indexable language variants; `x-default` normally points to English where appropriate.
 - Intentional `noindex` pages include full-view pages and redirect pages. Never add such URLs to the sitemap.
 - Search page metadata warnings are optional improvements, not automatically errors.
