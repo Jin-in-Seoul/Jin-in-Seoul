@@ -48,9 +48,8 @@
     if(!q) {status.textContent='Enter a word or phrase to search published works.';return;}
     status.textContent='Searching…';
     loadIndex().then(function(items) {
-      var needle=normalize(q);
       var hits=items.filter(function(item) {
-        if(lang !== 'all' && item.lang !== lang) return false;
+        if(item.lang !== lang) return false;
         return matchPosition(item.title, q) >= 0 || matchPosition(item.series, q) >= 0 || matchPosition(item.text, q) >= 0;
       }).map(function(item) {
         var titleHit=matchPosition(item.title,q)>=0;
