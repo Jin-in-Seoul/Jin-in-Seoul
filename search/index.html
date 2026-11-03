@@ -33,7 +33,7 @@
         <label for="search-query" class="sr-only">Search text</label>
         <input id="search-query" type="search" aria-label="Search published works" required>
         <select id="search-language" aria-label="Language">
-          <option value="" selected disabled>Choose language</option>
+          <option value="all" selected>All languages</option>
           <option value="en">English</option>
           <option value="fr">Français</option>
           <option value="ja">日本語</option>
@@ -41,11 +41,11 @@
         </select>
         <button type="submit">Search</button>
       </form>
-      <p id="search-status" class="search-status" role="status" aria-live="polite">Select a language and enter a word or phrase to search all published creative works.</p>
+      <p id="search-status" class="search-status" role="status" aria-live="polite">Enter a word or phrase to search published works in all languages, or select a language.</p>
       <div id="search-results"></div>
     </div>
     {% include footer.html %}
   </main>
-  <script src="/assets/site-search.js?v=007" defer></script>
+  <script src="/assets/site-search.js?v=008" defer></script>
 </body>
 </html>
