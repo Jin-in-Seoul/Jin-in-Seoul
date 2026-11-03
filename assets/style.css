@@ -228,8 +228,25 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 .gray-note-date {
   margin: 0 0 42px;
 }
+.gray-note-subtitle {
+  margin: 0 0 12px;
+  font-family: "Noto Serif KR", Batang, serif;
+  font-size: 19px;
+  line-height: 1.65;
+  font-weight: 400;
+  font-style: normal;
+}
 .gray-note-prose {
   margin-top: 0;
+}
+.gray-note-image-caption {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+  font-style: normal;
+}
+@media (max-width: 620px) {
+  .gray-note-subtitle { font-size: 18px; }
 }
 
 .gray-note-photo-essay {
