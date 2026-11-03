@@ -6,7 +6,6 @@ permalink: /search-index.json
 {"url":"/sweater/en/","lang":"en","title":"Sweater","text":""},
 {"url":"/sweater/fr/","lang":"fr","title":"Le Pull","text":""},
 {"url":"/sweater/ja/","lang":"ja","title":"セーター","text":""},
-{"url":"/sweater/en/","lang":"ko","displayLang":"en","title":"스웨터","text":""},
 {"url":"/scarecrow-distance/en/","lang":"en","title":"Scarecrow Distance","text":""},
 {"url":"/scarecrow-distance/fr/","lang":"fr","title":"Mal reçu","text":""},
 {"url":"/scarecrow-distance/ja/","lang":"ja","title":"案山子の距離","text":""},
