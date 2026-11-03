@@ -54,11 +54,6 @@ permalink: /search-index.json
           {%- assign heading = item.content | split: '<h1' | last | split: '>' | slice: 1, 999 | join: '>' | split: '</h1>' | first | strip_html | strip -%}
         {%- endif -%}
         {%- assign clean = chunk | strip_html | normalize_whitespace | strip -%}
-        {%- if route contains '/thought-experiment-notes/en/' -%}
-          {%- capture note_parts -%}{%- include_relative a-dictionary-of-galactic-extinction/thought-experiment-notes/en/part-1.html -%}{%- include_relative a-dictionary-of-galactic-extinction/thought-experiment-notes/en/part-2.html -%}{%- endcapture -%}
-          {%- assign extra = note_parts | strip_html | normalize_whitespace | strip -%}
-          {%- assign clean = clean | append: ' ' | append: extra -%}
-        {%- endif -%}
         {{- sep -}}
         {"url":{{ route | relative_url | jsonify }},"lang":{{ lang | jsonify }},"title":{{ heading | jsonify }},"text":{{ clean | jsonify }}}
         {%- assign sep = ',' -%}
