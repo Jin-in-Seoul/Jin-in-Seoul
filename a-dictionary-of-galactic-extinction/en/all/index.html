@@ -110,7 +110,7 @@
       appendixSection.appendChild(appendixBody);
       root.appendChild(appendixSection);
       const appendixStyle=document.createElement('style');
-      appendixStyle.textContent='@scope (.full-entry.appendix) {\\n'+Array.from(appendixDoc.querySelectorAll('head style')).map(el=>el.textContent).join('\\n')+'\\n}';
+      appendixStyle.textContent='@scope (.full-entry.appendix) {\n'+Array.from(appendixDoc.querySelectorAll('head style')).map(el=>el.textContent).join('\n')+'\n}';
       root.appendChild(appendixStyle);
     }
 
