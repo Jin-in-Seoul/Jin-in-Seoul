@@ -1,7 +1,7 @@
 {% comment %}Copyright on published work pages only; navigational pages are excluded. The nine English Part I entries already carry an identical notice.{% endcomment %}
 {% assign work_path = page.url | default: '' %}
 {% assign show_work_copyright = false %}
-{% if work_path contains '/gray-note/001/' or work_path == '/gray-note/002/' or work_path contains '/thought-experiment-notes/' %}
+{% if work_path contains '/gray-note/0' or work_path contains '/thought-experiment-notes/' or work_path contains '/translation-principles/' %}
   {% assign show_work_copyright = true %}
 {% elsif work_path contains '/entry-' or work_path contains '/chapter-' %}
   {% assign show_work_copyright = true %}
