@@ -40,6 +40,8 @@ permalink: /search-index.json
         {%- if item.content contains '<article class="thought">' -%}
           {%- assign chunk = item.content | split: '<article class="thought">' | last | split: '</article>' | first -%}
         {%- endif -%}
+      {%- elsif route contains '/gray-note/003/' and item.content contains '<div class="prose gray-note-prose">' -%}
+        {%- assign chunk = item.content | split: '<div class="prose gray-note-prose">' | last | split: '</article>' | first -%}
       {%- elsif item.content contains 'class="prose' -%}
         {%- if item.content contains '<article class="prose' -%}
           {%- assign chunk = item.content | split: '<article class="prose' | last | split: '</article>' | first | split: '>' | slice: 1, 999999 | join: '>' -%}
