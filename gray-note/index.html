@@ -93,7 +93,10 @@
       </article>
     </div>
 
-    <style>main.shell:has(.gray-note-list) > .site-footer { margin-top: 28px; }</style>
+    <style>
+      main.shell .gray-note-list > .gray-note-list-item:last-child { border-bottom: 0; }
+      main.shell:has(.gray-note-list) > .site-footer { margin-top: 28px; }
+    </style>
     {% include footer.html %}
   </main>
 </body>
