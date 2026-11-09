@@ -4,6 +4,10 @@ A multilingual archive of fiction.
 
 https://jin-in-seoul.com
 
+## Asset maintenance
+
+- [Images, audio, PDF/EPUB storage and publication policy](ASSET-MAINTENANCE.md) — preserve existing paths and originals; optimize web photographs; review total image size per essay; retain the November 2, 2026 digital-edition suspension.
+
 ## CSS maintenance
 
 - [CSS ownership, typography, cache-version policy, and safety checklist](CSS-MAINTENANCE.md)
