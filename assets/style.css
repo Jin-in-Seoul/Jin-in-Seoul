@@ -162,6 +162,29 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
   }
 }
 
+
+/* Gray Note subtitle hierarchy across articles, archive, and homepage */
+.gray-note-post .gray-note-context {
+  font-size: 20px !important; /* override legacy inline 15px subtitles */
+  line-height: 1.55 !important;
+  color: var(--ink) !important;
+}
+.gray-note-list-item > p:not(.gray-note-language-links) {
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.gray-note-section .galactic-supplement > p:not(.translation-principles-links) {
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+@media (max-width: 620px) {
+  .gray-note-post .gray-note-context { font-size: 19px !important; }
+  .gray-note-list-item > p:not(.gray-note-language-links) { font-size: 18px; }
+  .gray-note-section .galactic-supplement > p:not(.translation-principles-links) { font-size: 18px; }
+}
+
 /* Gray Note */
 .gray-note-section {
   margin-top: 54px;
