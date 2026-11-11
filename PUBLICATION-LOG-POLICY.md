@@ -17,7 +17,7 @@ This document establishes the rules for maintaining that record across editors, 
 - Verify the English title against the live site's English edition, listing, or other approved source before entering it. Never create a new "official" title by guessing or retranslating a foreign-language title.
 - Where a section heading already identifies the work in English, the language-specific entry may simply say "Japanese edition — Chapters 1–4 added" without repeating its title.
 - For groups of short stories, list the same approved English story titles in every language entry.
-- Preserve distinct work, chapter, and appendix identities. Do not substitute the English edition's appendix title for a differently titled Korean edition appendix. If an established English title is not confirmed, use a factual English description, without italics or other suggestion that it is an official title, until the author approves an English title.
+- Preserve distinct work, chapter, and appendix identities. Do not substitute the English edition's appendix title for a differently titled Korean edition appendix. If an established English title is not confirmed, use a factual English description without presenting it as an official title. When the author specifically requires an appendix entry to match its own edition's table of contents, retain that edition's exact appendix title, even if it is not in English; this is a narrow exception to the common-English-title rule and must not be translated or invented.
 - **Exceptions:** Haiku may retain Japanese originals with English titles; Music may retain the existing English/Korean/Japanese bilingual or multilingual song-title presentation. Do not standardize those titles without author approval.
 
 ## 3. Language order
