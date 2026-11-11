@@ -4,6 +4,10 @@ A multilingual archive of fiction.
 
 https://jin-in-seoul.com
 
+## Publication log maintenance
+
+- [Publication Log policy and cross-session handoff](PUBLICATION-LOG-POLICY.md) — English work titles, fixed language order (English, Japanese, French, Korean), actual publication dates, historical preservation, and verification procedures.
+
 ## Asset maintenance
 
 - [Images, audio, PDF/EPUB storage and publication policy](ASSET-MAINTENANCE.md) — preserve existing paths and originals; optimize web photographs; review total image size per essay; retain the November 2, 2026 digital-edition suspension.
