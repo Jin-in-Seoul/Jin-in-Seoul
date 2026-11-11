@@ -6,7 +6,7 @@ Source file: `publication-log/index.html`.
 
 ## 1. Purpose and authority
 
-The Publication Log is a chronological historical record of releases, translations, completed chapters, and significant publication-related changes on Jin-in-Seoul.
+The Publication Log is a chronological historical record of releases, translations, chapter additions, and significant publication-related changes on Jin-in-Seoul.
 
 This document establishes the rules for maintaining that record across editors, maintainers, and ChatGPT sessions. It governs the Publication Log only; it does not change the names, wording, translation, or publication dates on individual literary pages. The author has final editorial authority.
 
@@ -47,9 +47,8 @@ Use the following terms according to the event that actually occurred:
 - **added:** a newly published work, chapter, language edition, or downloadable edition.
 - **updated:** a maintenance or technical change to an existing published file or page without necessarily changing the literary text.
 - **revised:** an authorized substantive revision of published literary text.
-- **completed:** the completion of a work, part, or language edition; it does not by itself mean that another language edition is completed.
 
-Keep existing historical meaning intact; do not relabel an update as a literary revision or assume that a published edition is complete.
+Prefer neutral release wording such as **English edition added** or **French edition added**. Do not use **complete**, **completed**, **full text published**, or similar claims of finality in Publication Log entries; a work or edition may be revised after release. Preserve actual chapter numbers, collection size, and publication events without declaring a work permanently finished. Do not relabel an update as a literary revision.
 
 ## 6. Titles, subtitles, and consistency
 
