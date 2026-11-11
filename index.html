@@ -251,6 +251,34 @@
       padding-top: 0;
     }
 
+    /* Match the left-hand grouping bar used by Gray Note on the homepage. */
+    .short-stories-section > .home-short-stories-list,
+    .childrens-books-section > .works {
+      margin: 24px 0 0 18px;
+      padding-left: 20px;
+      border-left: 2px solid var(--line);
+    }
+    .short-stories-section > .home-short-stories-list > .work,
+    .childrens-books-section > .works > .work {
+      padding: 0;
+      border-bottom: 0;
+    }
+    .short-stories-section > .home-short-stories-list > .work + .work,
+    .childrens-books-section > .works > .work + .work {
+      margin-top: 24px;
+    }
+    @media (max-width: 620px) {
+      .short-stories-section > .home-short-stories-list,
+      .childrens-books-section > .works {
+        margin: 24px 0 0 8px;
+        padding-left: 14px;
+      }
+      .short-stories-section > .home-short-stories-list > .work + .work,
+      .childrens-books-section > .works > .work + .work {
+        margin-top: 21px;
+      }
+    }
+
     /* Subordinate story titles to their category headings on the homepage. */
     .short-stories-section .work h3,
     .childrens-books-section .work h3 {
