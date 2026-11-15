@@ -18,9 +18,11 @@
 <meta property="og:url" content="https://jin-in-seoul.com/a-dictionary-of-galactic-extinction/">
 <link rel="stylesheet" href="/assets/style.css?v=046">
 <style>
-.series-volume-list { list-style: none; margin: 28px 0 0; padding: 0; }
-.series-volume-list li { margin: 0 0 22px; font-size: 20px; line-height: 1.65; }
-.series-volume-list a { color: var(--link); text-decoration: underline; }
+.series-volume { margin-top: 40px; }
+.series-volume + .series-volume { margin-top: 36px; }
+.series-volume h2 { margin: 0; }
+.series-volume a { color: inherit; text-decoration: none; }
+.series-volume a:hover { text-decoration: underline; text-underline-offset: 4px; }
 </style>
 </head>
 <body>
@@ -28,10 +30,12 @@
 {% include header.html %}
 <h1>A Dictionary of Galactic Extinction</h1>
 <h2>Contents</h2>
-<ul class="series-volume-list">
-  <li><a href="/a-dictionary-of-galactic-extinction/en/">Volume I — A Dictionary of Galactic Extinction</a></li>
-  <li><a href="/the-last-no-mercy-of-elian-mor/en/">Volume II — The Last No Mercy of Elian Mor</a></li>
-</ul>
+<section class="series-volume">
+  <h2><a href="/a-dictionary-of-galactic-extinction/en/">Volume I — A Dictionary of Galactic Extinction</a></h2>
+</section>
+<section class="series-volume">
+  <h2><a href="/the-last-no-mercy-of-elian-mor/en/">Volume II — The Last No Mercy of Elian Mor</a></h2>
+</section>
 {% include footer.html %}
 </main>
 </body>
