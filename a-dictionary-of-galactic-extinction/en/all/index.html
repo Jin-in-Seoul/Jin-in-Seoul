@@ -48,7 +48,7 @@
     const tocResponse=await fetch(base,{cache:'no-cache'});
     if(!tocResponse.ok)throw new Error('Could not load the contents.');
     const toc=new DOMParser().parseFromString(await tocResponse.text(),'text/html');
-    const sections=Array.from(toc.querySelectorAll('.volume-one-contents .toc-part'));
+    const sections=Array.from(toc.querySelectorAll('.toc-part'));
     const groups=sections.map(section=>({
       title:section.querySelector('h2')?.textContent.trim()||'',
       entries:Array.from(section.querySelectorAll('ol a[href]')).filter(a=>/^part-\d+\/entry-\d+\/$/.test(a.getAttribute('href')||'')).map(a=>({title:a.textContent.trim(),url:new URL(a.getAttribute('href'),new URL(base,window.location.origin)).href}))
