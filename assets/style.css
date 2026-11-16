@@ -483,8 +483,8 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 
 /* Short-story book-style paragraph setting */
 .short-story-prose p {
-  margin: 0;
-  text-indent: 1em;
+  margin: 0 0 1.3em;
+  text-indent: 0;
   line-height: 2.0;
 }
 .short-story-prose p.section-number,
@@ -499,8 +499,8 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 
 /* Galactic Extinction book-style paragraph setting */
 .galactic-prose p {
-  margin: 0;
-  text-indent: 1em;
+  margin: 0 0 1.3em;
+  text-indent: 0;
   line-height: 2.0;
 }
 .galactic-prose p.deck,
@@ -513,8 +513,8 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 
 /* Sweater book-style paragraph setting */
 .sweater-prose p {
-  margin: 0;
-  text-indent: 1em;
+  margin: 0 0 1.3em;
+  text-indent: 0;
   line-height: 2.0;
 }
 .sweater-prose p.entry-date,
@@ -526,8 +526,8 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 
 /* Scarecrow Distance book-style paragraph setting */
 .scarecrow-prose p {
-  margin: 0;
-  text-indent: 1em;
+  margin: 0 0 1.3em;
+  text-indent: 0;
   line-height: 2.0;
 }
 .scarecrow-prose p.section-number,
