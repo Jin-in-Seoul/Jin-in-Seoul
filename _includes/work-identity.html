@@ -165,26 +165,20 @@
   {% when '2026-10-02-004' %}{% assign work_title = '秋の一万歩 — Ten Thousand Steps in Autumn' %}
   {% endcase %}
 {% endif %}
-{% comment %}Volume identifiers for dictionary chapter Contents links. The Volume II link points to the home page until its own contents page is published.{% endcomment %}
+{% comment %}Show series book position on dictionary chapter identity only; Contents remains the chapter's navigation link.{% endcomment %}
+{% assign series_book_label = '' %}
 {% if work_kind == 'a-dictionary-of-galactic-extinction' and work_segments[3] contains 'part-' and work_segments[4] contains 'entry-' %}
   {% case work_lang %}
-    {% when 'ko' %}{% assign volume_contents_suffix = ' — 제1권' %}
-    {% when 'ja' %}{% assign volume_contents_suffix = ' — 第1巻' %}
-    {% when 'fr' %}{% assign volume_contents_suffix = ' — Tome I' %}
-    {% else %}{% assign volume_contents_suffix = ' — Volume I' %}
+    {% when 'ko' %}{% assign series_book_label = '제1권 (총 10권)' %}
+    {% when 'ja' %}{% assign series_book_label = '全10巻中 第1巻' %}
+    {% when 'fr' %}{% assign series_book_label = 'Livre 1 sur 10' %}
+    {% else %}{% assign series_book_label = 'Book 1 of 10' %}
   {% endcase %}
 {% elsif work_kind == 'the-last-no-mercy-of-elian-mor' and work_segments[3] contains 'part-' and work_segments[4] contains 'entry-' %}
-  {% if work_lang == 'ko' %}{% assign volume_contents_suffix = ' — 제2권' %}{% else %}{% assign volume_contents_suffix = ' — Volume II' %}{% endif %}
-{% else %}
-  {% assign volume_contents_suffix = '' %}
-{% endif %}
-{% if volume_contents_suffix != '' %}
-<style>
-  .contents-nav::after { content: '{{ volume_contents_suffix }}'; font-size: 1em; color: var(--muted); }
-</style>
+  {% if work_lang == 'ko' %}{% assign series_book_label = '제2권 (총 10권)' %}{% else %}{% assign series_book_label = 'Book 2 of 10' %}{% endif %}
 {% endif %}
 {% if work_title != '' and work_genre != '' %}
 <p class="work-identity" style="margin:0 0 18px;font:400 15px/1.5 Arial,Helvetica,sans-serif;color:#555;">
-  <span>{{ work_genre }}</span> <a href="{{ work_link }}" style="color:inherit;text-decoration:none;" aria-label="{{ work_genre }} {{ work_title }} — Contents">{% if work_kind == 'a-dictionary-of-galactic-extinction' or work_kind == 'the-last-no-mercy-of-elian-mor' or work_kind == 'sweater' or work_kind == 'scarecrow-distance' %}『{{ work_title }}』{% else %}「{{ work_title }}」{% endif %}</a>
+  <span>{{ work_genre }}</span> <a href="{{ work_link }}" style="color:inherit;text-decoration:none;" aria-label="{{ work_genre }} {{ work_title }} — Contents">{% if work_kind == 'a-dictionary-of-galactic-extinction' or work_kind == 'the-last-no-mercy-of-elian-mor' or work_kind == 'sweater' or work_kind == 'scarecrow-distance' %}『{{ work_title }}』{% else %}「{{ work_title }}」{% endif %}</a>{% if series_book_label != '' %} <span class="series-book-position">— {{ series_book_label }}</span>{% endif %}
 </p>
 {% endif %}
