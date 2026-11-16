@@ -513,8 +513,8 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 
 /* Sweater book-style paragraph setting */
 .sweater-prose p {
-  margin: 0 0 1.3em;
-  text-indent: 0;
+  margin: 0;
+  text-indent: 1em;
   line-height: 2.0;
 }
 .sweater-prose p.entry-date,
