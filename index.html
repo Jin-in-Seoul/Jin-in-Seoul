@@ -402,7 +402,36 @@
       font-weight: 400;
       line-height: 1.55;
     }
-  </style>
+  
+    /* Volume presentation stays local to the featured novel on the homepage. */
+    .featured-work .novel-series-count {
+      display: inline-block;
+      margin-left: 14px;
+      font: 400 16px/1.5 Arial, Helvetica, sans-serif;
+      color: #666;
+      vertical-align: baseline;
+    }
+    .featured-work .novel-volumes { margin: 28px 0 0 18px; padding-left: 20px; border-left: 2px solid var(--line); }
+    .featured-work .novel-volume { margin: 0; }
+    .featured-work .novel-volume + .novel-volume { margin-top: 26px; }
+    .featured-work .novel-volume h3 { font-size: 19px; line-height: 1.45; font-weight: 400; margin: 0 0 7px; }
+    .featured-work .novel-volume-languages,
+    .featured-work .novel-volume-part,
+    .featured-work .novel-volume-tags { margin: 0; font-size: 17px; line-height: 1.8; }
+    .featured-work .novel-volume-part { margin-bottom: 8px; }
+    .featured-work .novel-volume-tags + .novel-volume-tags { margin-top: 7px; }
+    .featured-work .novel-volume-tags a,
+    .featured-work .novel-volume-languages a { color: var(--link); }
+    .featured-work .novel-volume-tags span { color: #666; }
+    @media (max-width: 620px) {
+      .featured-work .novel-series-count { display: block; margin: 6px 0 0; font-size: 15px; }
+      .featured-work .novel-volumes { margin-left: 8px; padding-left: 14px; }
+      .featured-work .novel-volume h3 { font-size: 18px; }
+      .featured-work .novel-volume-languages,
+      .featured-work .novel-volume-part,
+      .featured-work .novel-volume-tags { font-size: 16px; }
+    }
+</style>
 </head>
 
 <body>
@@ -440,6 +469,7 @@
         >
           A Dictionary of Galactic Extinction
         </a>
+        <span class="novel-series-count">A Ten-Volume Novel Series</span>
       </h2>
 
       <p>
@@ -450,39 +480,18 @@
         rather than a single protagonist or plot.
       </p>
 
-      <div class="edition-grid edition-grid-four">
-
-        <a
-          class="edition-button"
-          href="a-dictionary-of-galactic-extinction/en/"
-        >
-          English
-          <span class="edition-status">Complete</span>
-        </a>
-
-        <a
-          class="edition-button"
-          href="a-dictionary-of-galactic-extinction/ja/"
-        >
-          日本語
-        </a>
-
-        <a
-          class="edition-button"
-          href="a-dictionary-of-galactic-extinction/fr/"
-        >
-          French
-        </a>
-
-        <a
-          class="edition-button"
-          href="a-dictionary-of-galactic-extinction/ko/"
-        >
-          한국어
-          <span class="edition-status">Complete</span>
-        </a>
-
-      </div>
+      <div class="novel-volumes">
+  <section class="novel-volume">
+    <h3>Volume I — A Dictionary of Galactic Extinction</h3>
+    <p class="novel-volume-languages"><a href="/a-dictionary-of-galactic-extinction/en/">English</a> · <a href="/a-dictionary-of-galactic-extinction/ja/">日本語</a> · <a href="/a-dictionary-of-galactic-extinction/fr/">Français</a> · <a href="/a-dictionary-of-galactic-extinction/ko/">한국어</a></p>
+  </section>
+  <section class="novel-volume">
+    <h3>Volume II — The Last No Mercy of Elian Mor</h3>
+    <p class="novel-volume-part">Part I — The First Slow Ship</p>
+    <p class="novel-volume-tags" lang="en"><span>#Heating</span> · <span>#Destination</span> · <span>#Engineer</span> · <span>#Happiness</span> · <span>#CloudNine</span> · <a href="/the-last-no-mercy-of-elian-mor/en/part-01/entry-07/">#Captain</a> · <span>#Backup</span> · <span>#Recycling</span> · <span>#Trial</span> · <span>#VotingRights</span> · <span>#Rebellion</span> · <span>#Access</span> · <span>#Other</span> · <span>#Funeral</span></p>
+    <p class="novel-volume-tags" lang="ko"><span>#난방</span> · <span>#목적지</span> · <span>#기술자</span> · <span>#행복</span> · <span>#클라우드9</span> · <a href="/the-last-no-mercy-of-elian-mor/ko/part-01/entry-07/">#함장</a> · <span>#백업</span> · <span>#재활용</span> · <span>#재판</span> · <span>#투표권</span> · <span>#반란</span> · <span>#열람</span> · <span>#타자</span> · <span>#장례식</span></p>
+  </section>
+</div>
 
     </section>
 
