@@ -406,12 +406,10 @@
     }
   
     /* Volume presentation stays local to the featured novel on the homepage. */
-    .featured-work .novel-series-count {
-      display: inline-block;
-      margin-left: 14px;
-      font: 400 16px/1.5 Arial, Helvetica, sans-serif;
+    .featured-work .novel-series-label {
+      margin: 0 0 6px;
+      font: 400 15px/1.5 Arial, Helvetica, sans-serif;
       color: #666;
-      vertical-align: baseline;
     }
     .featured-work .novel-volumes { margin: 28px 0 0 18px; padding-left: 20px; border-left: 2px solid var(--line); }
     .featured-work .novel-volume { margin: 0; }
@@ -427,7 +425,6 @@
     .featured-work .novel-volume-tags span { color: #666; }
     .featured-work .novel-volume-note { margin: 15px 0 0; font-size: 16px; line-height: 1.7; color: #666; }
     @media (max-width: 620px) {
-      .featured-work .novel-series-count { display: block; margin: 6px 0 0; font-size: 15px; }
       .featured-work .novel-volumes { margin-left: 8px; padding-left: 14px; }
       .featured-work .novel-volume h3 { font-size: 18px; }
       .featured-work .novel-volume-languages,
@@ -464,6 +461,8 @@
 
 
     <section class="featured-work">
+
+      <div class="novel-series-label">Novel Series</div>
 
       <h2>
         <a
