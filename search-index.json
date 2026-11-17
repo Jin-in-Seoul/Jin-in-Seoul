@@ -16,7 +16,7 @@ permalink: /search-index.json
   {%- else -%}{%- assign lang = 'en' -%}
   {%- endif -%}
   {%- assign index_page = false -%}
-  {%- if item.path contains 'index.html' and route != '/search/' and route != '/' and route != '/site-map/' -%}
+  {%- if item.path contains 'index.html' and route != '/search/' -%}
     {%- unless route contains '/all/' or route contains '/haiku/2026/' -%}
       {%- assign index_page = true -%}
       {%- if route contains '/music/' and route != '/music/' -%}
@@ -43,6 +43,9 @@ permalink: /search-index.json
       {%- assign chunk = item.content | split: '<div class="prose' | last | split: '</div>' | first | split: '>' | slice: 1, 999999 | join: '>' -%}
     {%- elsif item.content contains '<main' -%}
       {%- assign chunk = item.content | split: '<main' | last | split: '</main>' | first | split: '>' | slice: 1, 999999 | join: '>' -%}
+    {%- endif -%}
+    {%- if route == '/' or route == '/site-map/' -%}
+      {%- assign chunk = item.content | split: '<meta name="description" content="' | last | split: '"' | first -%}
     {%- endif -%}
     {%- assign clean = chunk | strip_html | normalize_whitespace | strip -%}
     {%- if chunk contains ' alt="' -%}
@@ -79,7 +82,9 @@ permalink: /search-index.json
       {%- if item.content contains open_section -%}
         {%- assign portion = item.content | split: open_section | last | split: '</section>' | first -%}
         {%- assign title = portion | split: '<h3' | last | split: '>' | slice: 1, 999 | join: '>' | split: '</h3>' | first | strip_html | strip -%}
+        {%- assign song_intro = item.content | split: '<article class="music-post">' | last | split: '<div class="lyrics-wrap">' | first | strip_html | normalize_whitespace | strip -%}
         {%- assign clean = portion | strip_html | normalize_whitespace | strip -%}
+        {%- assign clean = song_intro | append: ' ' | append: clean -%}
         {{- sep -}}
         {"url":{{ route | relative_url | jsonify }},"lang":{{ locale | jsonify }},"title":{{ title | jsonify }},"text":{{ clean | jsonify }}}
         {%- assign sep = ',' -%}
