@@ -42,6 +42,19 @@
     element.appendChild(mark);
     element.appendChild(document.createTextNode(value.slice(pos + query.length)));
   }
+  function category(url) {
+    if (url.indexOf('/the-last-no-mercy-of-elian-mor/') === 0) return 'Novel · Book 2';
+    if (url.indexOf('/a-dictionary-of-galactic-extinction/') === 0) return 'Novel · Book 1';
+    if (url.indexOf('/sweater/') === 0 || url.indexOf('/scarecrow-distance/') === 0) return 'Novel';
+    if (url.indexOf('/short-stories/') === 0) return 'Short Stories';
+    if (url.indexOf('/childrens-books/') === 0) return 'Children’s Books';
+    if (url.indexOf('/gray-note/002/') === 0) return 'Photo Essay';
+    if (url.indexOf('/gray-note/') === 0) return 'Gray Note';
+    if (url.indexOf('/music/') === 0) return 'Music';
+    if (url.indexOf('/haiku/') === 0) return 'Haiku';
+    if (url.indexOf('/publication-log/') === 0) return 'Publication Log';
+    return 'Site';
+  }
   function runSearch() {
     var q = field.value.trim(), lang = language.value;
     results.replaceChildren();
@@ -51,7 +64,7 @@
     loadIndex().then(function(items) {
       var needle=normalize(q);
       var hits=items.filter(function(item) {
-        if(lang !== 'all' && item.lang !== lang) return false;
+        if(lang !== 'all' && item.lang !== lang && item.lang !== 'multi') return false;
         return matchPosition(item.title, q) >= 0 || matchPosition(item.text, q) >= 0;
       }).map(function(item) {
         var titleHit=matchPosition(item.title,q)>=0;
@@ -64,7 +77,7 @@
         var article=document.createElement('article');article.className='search-result';
         var h=document.createElement('h2'), link=document.createElement('a');
         link.href=item.url;highlight(link,item.title || item.url,q);h.appendChild(link);
-        var meta=document.createElement('p');meta.className='search-result-meta';meta.textContent=(item.displayLang || item.lang).toUpperCase();
+        var meta=document.createElement('p');meta.className='search-result-meta';meta.textContent=(item.lang === 'multi' ? 'MULTILINGUAL' : (item.displayLang || item.lang).toUpperCase()) + ' · ' + category(item.url);
         var snippet=document.createElement('p');snippet.className='search-result-excerpt';
         highlight(snippet,excerpt(item.text,q),q);
         article.append(h,meta,snippet);results.appendChild(article);
