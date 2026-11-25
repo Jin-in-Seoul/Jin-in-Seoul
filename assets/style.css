@@ -165,6 +165,7 @@ footer { margin-top: 90px; padding-top: 20px; border-top: 1px solid var(--line);
 
 /* Gray Note subtitle hierarchy across articles, archive, and homepage */
 .gray-note-post .gray-note-context {
+  max-width: 700px;
   font-size: 20px !important; /* override legacy inline 15px subtitles */
   line-height: 1.55 !important;
   color: var(--ink) !important;
