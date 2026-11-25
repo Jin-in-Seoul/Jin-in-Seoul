@@ -4,6 +4,10 @@ A multilingual archive of fiction.
 
 https://jin-in-seoul.com
 
+## Premodern Korean fiction translation
+
+- [Translation and editing principles for premodern Korean fiction](PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md) — English and Korean; source editions, modern Korean and foreign-language translation, editorial review, and cross-session continuity.
+
 ## Publication log maintenance
 
 - [Publication Log policy and cross-session handoff](PUBLICATION-LOG-POLICY.md) — English work titles, fixed language order (English, Japanese, French, Korean), actual publication dates, historical preservation, and verification procedures.
