@@ -1,6 +1,6 @@
 # SEO maintenance and handoff — Jin-in-Seoul
 
-Last updated: 2026-10-14. Repository: `Jin-in-Seoul/Jin-in-Seoul` (`main`). Public site: https://jin-in-seoul.com/.
+Last updated: 2026-11-26. Repository: `Jin-in-Seoul/Jin-in-Seoul` (`main`). Public site: https://jin-in-seoul.com/.
 
 ## Scope and non-negotiable rules
 
@@ -84,3 +84,21 @@ Mobile Lighthouse workflow: https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions
 - Dictionary Korean part-05 entry-07: performance **59**, accessibility **100**, best practices **100**; FCP 6.0s, LCP 7.0s, CLS 0.
 - Scores are a one-run mobile simulation, not real-user Core Web Vitals or proof of flawless visual layout across phones.
 - **Performance improvement is an optional follow-up**, especially the homepage image and render-blocking resources. Do not alter prose, CSS, or typography without explicit authorization and a visual regression plan.
+
+## Structured-data attribution normalization (2026-11-26)
+
+**Approved public identity:** Jin-in-Seoul is a pen name for published creative work. In Schema.org JSON-LD, attribute the site's original works and eligible translation/publishing credits to `{"@type":"Person","name":"Jin-in-Seoul","url":"https://jin-in-seoul.com/"}`. This is a public pen name, **not a disclosure of a legal name** and not a claim of a registered organization. Do not change `Person` to `Organization` without new authorization.
+
+- Original works (novels, entries, short stories, children's books, Gray Note essays, haiku, music): preserve `author` or other existing applicable credit with the same public pen-name identity. Do **not** add `translator` indiscriminately to every language edition.
+- Anonymous classical source `The Tale of Jeon Unchi` (`tales-from-premodern-korea/jeon-unchi/ko/index.html` and `en/index.html`): preserve `"author":"Anonymous"` and `translator` as `Person / Jin-in-Seoul`, including the modern Korean edition's existing credit. The description of the edition's modern-language rendering should remain in its published explanatory text.
+- Preserve content `@type` classifications such as `Book`, `Article`, `CreativeWork`, `MusicRecording`, `CollectionPage`, and `WebSite`; do not change prose, translations, layout, canonical URLs, hreflang, sitemap, or analytics solely to unify attribution.
+
+**Work and verification history:**
+
+1. An earlier one-time normalization to unclassified attribution created commit [db303d77e](https://github.com/Jin-in-Seoul/Jin-in-Seoul/commit/db303d77e5a56252f1b5b792f0d9c270b6cf6ed6); it was **superseded** when the user explicitly selected `Person`.
+2. The final one-time workflow `restore-pen-name-person-once.yml` succeeded ([run 45641099753](https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions/runs/45641099753)). Its log reports **306 modified HTML files**, **303 author credits**, **2 translator credits**, **1 publisher credit**, and **0 parse failures**. The resulting content commit is [7c57cad976](https://github.com/Jin-in-Seoul/Jin-in-Seoul/commit/7c57cad97685db425f3a605922b3b6aa44be1dec).
+3. GitHub Pages completed successfully for this content commit ([run 45641135130](https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions/runs/45641135130)). Representative source files were re-read: homepage, dictionary landing/entry, Sweater, short stories, children's books, Gray Note, haiku, music and the two Jeon Unchi editions.
+4. The Gray Note Liquid layout `_layouts/gray-note-post.html` was updated along with standalone pages. A source audit's JSON parsing of a Liquid template is not equivalent to parsing deployed HTML; validate rendered output separately if auditing JSON-LD site-wide.
+5. The one-time workflow is to be **removed after completion**, so it cannot be triggered again. Its removal requires a separate commit and Pages deployment verification.
+
+**Audit scope:** The workflow verified that changes were confined to JSON-LD scripts and reported no JSON parse failures in its covered files. This does not itself establish comprehensive live HTML validation or actual Google/Naver indexing. Use the deployed-site SEO audits and authorized Search Console access for those claims. Preserve the anonymous original-author attribution and the public pen name in future edits.
