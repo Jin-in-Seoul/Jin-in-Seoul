@@ -1,0 +1,81 @@
+name: Normalize Jin-in-Seoul metadata once
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/normalize-literary-metadata-once.yml'
+permissions:
+  contents: write
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Normalize JSON-LD attribution without personal or corporate classification
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, re, collections, sys
+          root = pathlib.Path(".")
+          pattern = re.compile(r'(<script\b[^>]*\btype=["\']application/ld\+json["\'][^>]*>)(.*?)(</script>)', re.I|re.S)
+          roles = {'author','translator','creator','publisher','contributor','editor','composer','performer','producer','lyricist','musicBy','byArtist','copyrightHolder','recordLabel'}
+          totals = collections.Counter()
+          failures = []
+          changed_files = []
+          def normalize(value, parent=None):
+              if isinstance(value, dict):
+                  if parent in roles and value.get('name') == 'Jin-in-Seoul' and value.get('@type') in ('Person','Organization'):
+                      if set(value).issubset({'@type','name','url','@id','sameAs'}):
+                          totals[parent] += 1
+                          return 'Jin-in-Seoul'
+                  return {k: normalize(v,k) for k,v in value.items()}
+              if isinstance(value, list):
+                  return [normalize(v,parent) for v in value]
+              return value
+          for path in root.rglob('*.html'):
+              if '.git' in path.parts:
+                  continue
+              before = path.read_text(encoding='utf-8')
+              modified = [False]
+              def sub(m):
+                  raw = m.group(2)
+                  try:
+                      parsed = json.loads(raw)
+                  except (json.JSONDecodeError, UnicodeDecodeError):
+                      if 'Jin-in-Seoul' in raw and ('Person' in raw or 'Organization' in raw):
+                          failures.append(str(path))
+                      return m.group(0)
+                  normalized = normalize(parsed)
+                  if normalized == parsed:
+                      return m.group(0)
+                  modified[0] = True
+                  lead = '\n' if raw.startswith('\n') else ''
+                  trail = '\n  ' if raw.endswith('\n  ') else ('\n' if raw.endswith('\n') else '')
+                  return m.group(1) + lead + json.dumps(normalized, ensure_ascii=False, indent=2) + trail + m.group(3)
+              after = pattern.sub(sub, before)
+              if modified[0]:
+                  path.write_text(after, encoding='utf-8')
+                  changed_files.append(str(path))
+          print('FILES_CHANGED:',len(changed_files))
+          print('ATTRIBUTION_FIELDS:',dict(totals))
+          print('UNPARSEABLE_BLOCKS_WITH_IDENTITIES:',failures)
+          if failures:
+              print('Unparseable JSON-LD blocks need manual inspection', file=sys.stderr)
+              sys.exit(1)
+          if not changed_files:
+              print('No changes needed')
+          PY
+      - name: Commit normalized metadata
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.html'
+          if git diff --cached --quiet; then
+            echo "Already normalized"
+          else
+            git commit -m "Standardize Jin-in-Seoul attribution as project name in JSON-LD"
+            git push origin HEAD:main
+          fi
