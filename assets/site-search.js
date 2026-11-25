@@ -51,6 +51,7 @@
     if (url.indexOf('/gray-note/002/') === 0) return 'Photo Essay';
     if (url.indexOf('/gray-note/') === 0) return 'Gray Note';
     if (url.indexOf('/music/') === 0) return 'Music';
+    if (url.indexOf('/tales-from-premodern-korea/') === 0) return 'Tales from Premodern Korea';
     if (url.indexOf('/haiku/') === 0) return 'Haiku';
     if (url.indexOf('/publication-log/') === 0) return 'Publication Log';
     return 'Site';
