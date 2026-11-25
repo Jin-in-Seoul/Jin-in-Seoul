@@ -1,4 +1,5 @@
 name: Normalize Jin-in-Seoul metadata once
+# Gray Note Liquid template handled separately; all JSON-LD source files checked.
 on:
   push:
     branches: [main]
