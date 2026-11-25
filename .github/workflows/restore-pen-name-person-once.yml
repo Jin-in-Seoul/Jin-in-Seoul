@@ -1,0 +1,72 @@
+name: Restore Jin-in-Seoul pen-name attribution once
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/restore-pen-name-person-once.yml'
+permissions:
+  contents: write
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate and normalize attribution
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, re, collections
+          roles = {'author','translator','creator','publisher','contributor','editor','composer','performer','producer','lyricist','musicBy','byArtist','copyrightHolder','recordLabel'}
+          person = {'@type':'Person','name':'Jin-in-Seoul','url':'https://jin-in-seoul.com/'}
+          pattern = re.compile(r'(<script\b[^>]*\btype=["\']application/ld\+json["\'][^>]*>)(.*?)(</script>)',re.I|re.S)
+          totals = collections.Counter()
+          changes = {}
+          failures = []
+          def normalize(v, role=None):
+              if role in roles and v == 'Jin-in-Seoul':
+                  totals[role] += 1
+                  return dict(person)
+              if isinstance(v,dict):
+                  if role in roles and v.get('name') == 'Jin-in-Seoul' and v.get('@type') in ('Person','Organization'):
+                      if v.get('@type') == 'Organization' or v.get('url') != person['url']:
+                          totals[role] += 1
+                          return {**v, **person}
+                  return {k:normalize(x,k) for k,x in v.items()}
+              if isinstance(v,list):
+                  return [normalize(x,role) for x in v]
+              return v
+          for path in pathlib.Path('.').rglob('*.html'):
+              if '.git' in path.parts: continue
+              before = path.read_bytes().decode('utf-8')
+              def sub(m):
+                  raw = m[2]
+                  try:
+                      data = json.loads(raw)
+                  except json.JSONDecodeError:
+                      if path.as_posix() == '_layouts/gray-note-post.html':
+                          new,n = re.subn(r'("author"\s*:\s*)"Jin-in-Seoul"',lambda a:a[1]+json.dumps(person,ensure_ascii=False),raw)
+                          totals['author'] += n
+                          if '"author": "Jin-in-Seoul"' in new: failures.append(str(path))
+                          return m[1]+new+m[3]
+                      failures.append(str(path))
+                      return m[0]
+                  new = normalize(data)
+                  if new == data: return m[0]
+                  return m[1]+'\n'+json.dumps(new,ensure_ascii=False,indent=2)+'\n  '+m[3]
+              after = pattern.sub(sub,before)
+              assert pattern.sub('',before) == pattern.sub('',after),str(path)
+              if after != before: changes[path] = after
+          print('FILES_CHANGED',len(changes),'ROLES',dict(totals),'PARSE_FAILURES',failures)
+          if failures: raise SystemExit(1)
+          for p,c in changes.items(): p.write_bytes(c.encode('utf-8'))
+          PY
+      - name: Commit validated files
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.html'
+          if ! git diff --cached --quiet; then
+            git commit -m "Use Person with public pen name in literary JSON-LD"
+            git push origin HEAD:main
+          fi
