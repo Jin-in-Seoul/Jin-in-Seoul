@@ -48,7 +48,7 @@
     "url": {{ page.url | absolute_url | jsonify }},
     "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
     "inLanguage": {{ page.lang | default: "en" | jsonify }},
-    "author": "Jin-in-Seoul"
+    "author": {"@type": "Person", "name": "Jin-in-Seoul", "url": "https://jin-in-seoul.com/"}
   }
   </script>
   <!-- sitewide-gray-note-seo:end -->
