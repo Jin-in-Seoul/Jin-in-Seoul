@@ -50,6 +50,9 @@ permalink: /search-index.json
       {%- assign chunk = item.content | split: '<meta name="description" content="' | last | split: '"' | first -%}
     {%- endif -%}
     {%- assign clean = chunk | strip_html | normalize_whitespace | strip -%}
+    {%- if item.search_aliases -%}
+      {%- assign clean = clean | append: ' ' | append: item.search_aliases -%}
+    {%- endif -%}
     {%- if chunk contains ' alt="' -%}
       {%- assign image_pieces = chunk | split: ' alt="' -%}
       {%- for image_piece in image_pieces offset:1 -%}
