@@ -24,11 +24,11 @@ Vocabulary and sentence structures accessible to modern readers are used while p
 
 **6. Reading Without Annotations**
 
-Difficult archaic expressions, official titles, and religious terms are rendered in accessible language so that the text can be read without separate annotations or footnotes. Terms intelligible from context are retained, with their meanings conveyed naturally upon first appearance where necessary.
+Difficult archaic expressions, official titles, and religious terms are rendered in accessible language so that the text can be read without separate annotations or footnotes. Terms intelligible from context are retained, with their meanings conveyed naturally upon first appearance where necessary. Historical official titles and distinctive names must not disappear through paraphrase; retain the name and convey its meaning naturally at first appearance when needed.
 
 **7. Chapters and Paragraphs**
 
-The text may be divided into chapters and given chapter titles according to the development of events and the narrative flow. Paragraphs are arranged according to the continuity of dialogue, actions, and descriptions. The sequence of events and the narrative structure remain unchanged.
+The text may be divided into chapters and given chapter titles according to the development of events and the narrative flow. Paragraphs are arranged according to the continuity of dialogue, actions, and descriptions. The sequence of events and the narrative structure remain unchanged. Once the modern Korean edition is finalized, foreign-language editions preserve its paragraph boundaries one-to-one, without splitting or merging paragraphs to follow target-language conventions.
 
 **8. Dialogue Attribution and Repetition**
 
@@ -52,7 +52,7 @@ Difficult archaic expressions and damaged passages are examined using dictionari
 
 **13. Review and Revision**
 
-Revision is undertaken to correct mistranslations, omissions, distortions of meaning, and defects in expression. Natural sentences that faithfully convey the original meaning are not repeatedly revised according to the personal preferences of translators or editors. The same editorial principles apply to the modern Korean and foreign-language editions.
+Revision is undertaken to correct mistranslations, omissions, distortions of meaning, and defects in expression. Natural sentences that faithfully convey the original meaning are not repeatedly revised according to the personal preferences of translators or editors. The same editorial principles apply to the modern Korean and foreign-language editions. Review proposed changes before applying them, obtain approval, and compare the revised text with the established source again.
 
 *I translate these works for my friend Balthazar in Portugal.*
 
@@ -84,11 +84,11 @@ Revision is undertaken to correct mistranslations, omissions, distortions of mea
 
 **6. 주석 없는 독서**
 
-별도의 주석이나 각주 없이 본문을 읽을 수 있도록 어려운 고어와 관직명, 종교적 용어 등을 적절히 풀어 쓴다. 문맥으로 이해할 수 있는 명칭은 보존하며, 필요한 경우 처음 등장하는 문장에서 그 뜻을 자연스럽게 밝힌다.
+별도의 주석이나 각주 없이 본문을 읽을 수 있도록 어려운 고어와 관직명, 종교적 용어 등을 적절히 풀어 쓴다. 문맥으로 이해할 수 있는 명칭은 보존하며, 필요한 경우 처음 등장하는 문장에서 그 뜻을 자연스럽게 밝힌다. 역사적 관직명과 고유 명칭을 풀어 쓰는 과정에서 명칭 자체가 사라지지 않도록 하며, 필요한 경우 명칭과 의미를 함께 전달한다.
 
 **7. 장과 문단의 구성**
 
-사건의 전개와 서사의 흐름에 따라 장을 구분하고 제목을 붙일 수 있다. 문단은 대화와 행동, 묘사의 연속성을 고려하여 구성한다. 이 과정에서 사건의 순서나 서사 구조를 변경하지 않는다.
+사건의 전개와 서사의 흐름에 따라 장을 구분하고 제목을 붙일 수 있다. 문단은 대화와 행동, 묘사의 연속성을 고려하여 구성한다. 이 과정에서 사건의 순서나 서사 구조를 변경하지 않는다. 한국어 현대어판의 문단 구성이 확정되면 외국어판은 문단 경계를 일대일로 유지하며, 해당 언어의 관습을 이유로 문단을 분리하거나 합치지 않는다.
 
 **8. 화자 표시와 반복**
 
@@ -112,6 +112,6 @@ Revision is undertaken to correct mistranslations, omissions, distortions of mea
 
 **13. 교정과 수정**
 
-교정은 오역, 누락, 의미의 왜곡, 문장의 결함을 바로잡는 데 목적을 둔다. 원문의 의미를 충실하게 전달하는 자연스러운 문장을 번역자나 편집자의 취향에 따라 반복하여 수정하지 않는다. 한국어 현대어판과 외국어판에 동일한 교정 원칙을 적용한다.
+교정은 오역, 누락, 의미의 왜곡, 문장의 결함을 바로잡는 데 목적을 둔다. 원문의 의미를 충실하게 전달하는 자연스러운 문장을 번역자나 편집자의 취향에 따라 반복하여 수정하지 않는다. 한국어 현대어판과 외국어판에 동일한 교정 원칙을 적용한다. 수정 의견을 먼저 검토하고 승인받은 후 반영하며, 수정본을 기준 원문과 다시 대조한다.
 
 *포르투갈에 사는 내 친구 발타자르를 위해 이 소설들을 번역한다.*
