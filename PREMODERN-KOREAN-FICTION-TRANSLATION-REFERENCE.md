@@ -1,5 +1,5 @@
-# 한국 고전소설 실전 번역 가이드라인 — 전운치전
-*Practical Translation Guidelines for Premodern Korean Fiction — The Tale of Jeon Unchi*
+# 한국 고전소설 실전 번역 가이드라인
+*Practical Translation Guidelines for Premodern Korean Fiction*
 
 이 문서는 [한국 고전소설의 현대어 번역 및 편집 원칙](PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md)을 실제 외국어 번역에 적용하기 위한 작업 문서이다. 공통 용어와 판단 기준을 축적하고 작품별 결정 사항을 아래에 추가한다. 현재 영어 번역을 대상으로 하며, 프랑스어와 일본어 번역어는 각 언어의 한국어 직역 작업에서 별도로 확정한다.
 
@@ -25,6 +25,15 @@
 
 **7. 단위와 형식**  
 전통 단위는 임의로 서양식 단위로 환산하지 않는다. 확정 한국어판의 번호, 제목, 문단, 사건 순서, 의도적 모호성과 원전의 불일치를 유지한다. 별도의 주석 없이 읽을 수 있게 문맥을 활용한다.
+
+**8. 영어 표기와 표현**  
+영국식 철자법을 기본으로 한다. 한국 성씨는 관용적 로마자 표기를 허용하며 작품 안에서 일관성을 유지한다. 원문에 없는 강조어와 수식어를 추가하지 않는다. 생(生), 형(兄) 등의 호칭은 신분과 인간관계를 고려하여 전달한다. 정식 관청 명칭은 대문자로 표기한다.
+
+**9. 도술과 전통적 개념**  
+외형의 변화, 신체의 분리, 그림과 현실 사이의 이동을 구별한다. 오행 등 전통적 색채의 문화적 의미를 문맥에 따라 보존한다. 결말의 문학적 여운을 강화하려고 원문을 각색하지 않는다.
+
+**10. 최종 대조**  
+문단 수뿐 아니라 개별 문단의 내용과 경계까지 기준 한국어판과 대조한다. 수정은 검토 및 승인 후 반영하고 다시 검증한다.
 
 ## II. 공통 영어 용어집
 
@@ -53,9 +62,14 @@
 | 호조판서 | Minister of Revenue | 재정을 맡는 관직. |
 | 선전관 | royal herald | 왕명 전달 무관. 단순 전령으로 축소하지 않도록 검토. |
 | 도승지 | Chief Royal Secretary | 왕명 출납 관청의 우두머리. |
-| 포도청 | police bureau | 역사적 치안 관청. 현대 경찰 제도로 바꾸지 않는다. |
-| 포교 | officer of the police bureau / officer | 포도청 등에서 범인을 잡는 실무자. |
-| 의금부 | royal tribunal | 왕명에 따른 수사·재판 관청. |
+| 포도청 | Police Bureau | 역사적 치안 관청. 현대 경찰 제도로 바꾸지 않는다. |
+| 포교 | police officer / officer of the Police Bureau | 포도청 등에서 범인을 잡는 실무자. |
+| 의금부 | Royal Tribunal | 왕명에 따른 수사·재판 관청. |
+| 호조 | Ministry of Revenue | 국가 재정 관청. |
+| 의금부 도사 | officer of the Royal Tribunal | 의금부 관원. |
+| 사복 내승 | Sabok Naeseung | 첫 등장 시 왕실 말 관리 직무를 함께 전달한다. |
+| 문객 | retainer | 권력자와의 관계를 문맥에 따라 판단한다. |
+| 양민 | law-abiding subjects | 반역에서 벗어나 정상적인 백성으로 돌아가는 문맥. |
 | 감사 | provincial governor | 지방의 상급 관원. |
 | 과거 | civil service examination | 관리를 선발하는 시험. |
 | 장원 | first place in the examination | 시험의 수석 합격. |
@@ -80,12 +94,27 @@
 | 부적 | talisman | 글이나 표식이 있는 주술적 물건. |
 | 주문 | incantation | 술법을 행할 때 외는 말. |
 | 오행 | Five Phases | 목·화·토·금·수의 변화와 관계. 서양의 원소론으로 대체하지 않는다. |
+| 귀신 | ghost | 신령과 구별한다. |
+| 신령 | spirit | 귀신과 구별한다. |
+| 도깨비 | dokkaebi | 고유 명칭 유지. |
+| 여의주 | wish-granting pearl | 전통적 개념 유지. |
 | 천명 | mandate of Heaven / Heaven's command | 하늘의 명령이나 정당성. 문맥에 따라 구분. |
 
 ### 3. 가치관·생활·기물
 
 | 한국어 | 영어 기준안 | 의미와 적용 기준 |
 |---|---|---|
+| 은혜 | grace | 군주의 은혜 등 문맥에 따라 적용. |
+| 겁탈 | rape | 해당 행위를 뜻하는 문맥에서 사용. |
+| 청심환 | cheongsimhwan | 고유 명칭을 유지한다. |
+| 장옷 | jangot cloak | 전통 복식. |
+| 족두리 | jokduri headdress | 전통 머리 장식. |
+| 일산 | ceremonial parasol | 의례용 양산. |
+| 창고지기 | treasury keeper | 재정 창고 문맥에서 사용. |
+| 쇠뇌 | crossbow | |
+| 사경 | the fourth watch | 전통 야간 시간 구분. |
+| 발 | bal | 전통 길이 단위. |
+| 금 | geum | 전통 단위; 문맥에 따라 확인. |
 | 효성 | filial devotion | 부모를 섬기는 윤리와 행동. |
 | 정절, 수절 | chastity / remained chaste | 배우자를 여읜 뒤 정절을 지키는 맥락을 단순 미혼·비재혼으로 축소하지 않는다. |
 | 삼년상 | three years of mourning | 전통 상례. 실제 기간을 임의로 교정하지 않는다. |
@@ -129,6 +158,11 @@
 | 양문기 | Yang Mungi | 기준안 |
 | 장계창 | Jang Gyechang | 기준안 |
 | 한재경 | Han Jaegyeong | 기준안 |
+| 오생 | Oh | 관용적 성씨 표기; 선비 신분은 문맥에서 전달. |
+| 양봉안 | Yang Bongan | 교정 채택안 |
+| 정씨 | Lady Jeong | 교정 채택안 |
+| 용담 | Yongdam | 교정 채택안 |
+| 운수선생 | Master Unsu | 교정 채택안 |
 | 남서부 | Namseobu | 지명 여부 원전·지리 검증 후 확정 |
 | 송악산 | Mount Songak | 기준안 |
 | 영주산 | Mount Yeongju | 기준안 |
@@ -148,7 +182,14 @@
 | 부용승 | Buyongseung / Buyongseung cord | 고유한 노끈 명칭과 기능을 유지. 한자·뜻 확인 후 확정. |
 | 요지 | Yaochi / the celestial pond of Yaochi | 신화적 지명. 표기 검토. |
 | 오색구름 | five-coloured clouds | 오색이라는 수와 이미지 유지. |
-| 환영단, 풍도옥, 해동청, 열출주 | 미확정 | 원전 및 한국어판 문맥 확인 후 결정. |
+| 환영단 | Hwan-yeongdan | 교정 채택안. |
+| 풍도옥 | Pungdo Prison | 교정 채택안. |
+| 해동청 보라매 | a young Haedongcheong falcon | 교정 채택안. |
+| 열출주 | Yeolchulju wine | 교정 채택안. |
+| 술의 선녀 | celestial maiden of wine | 명칭의 반복 보존. |
+| 글의 선녀 | celestial maiden of letters | 술의 선녀와 대응. |
+| 진짜 몸 / 가짜 몸 | real body / false body | 동시에 존재하는 신체의 구분. |
+| 푸른 용 | azure dragon | 오행의 목에 대응하는 문맥에서 사용. |
 | 몽중선, 구십재 | Mongjungseon, Gusipjae | 자와 별호. 표기 검토. |
 
 ### 4. 서술의 목소리와 시험 번역
@@ -174,6 +215,10 @@
 4. 1~10번의 제목 번호와 문단 구성을 유지하여 번역한다.
 5. 한국어판과 문단별로 대조하여 누락·추가·오역·명칭 불일치를 확인한다.
 6. 수정은 승인 후 반영하며, 공통 용어집에 새 결정 사항을 기록한다.
+
+### 6. 영어 교정 결정 기록
+
+위 교정 채택안은 1~10번 개별 교정에서 합의한 표현이다. 전체 합본의 원문 대조 및 문단 경계 검증을 마친 뒤 최종 확정한다. 남서부의 지리적 성격은 미확정 상태로 유지한다.
 
 ## IV. 후속 작품의 추가 방식
 
