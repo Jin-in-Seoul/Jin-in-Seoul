@@ -69,7 +69,7 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
     .premodern-edition-note {
       box-sizing: border-box;
       max-width: 700px;
-      margin: 24px 0 32px;
+      margin: 24px 0 12px;
       padding: 18px 20px;
       border: 1px solid #d8d8d8;
       background: #fff;
@@ -87,15 +87,28 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
       .premodern-edition-note { font-size: 14px; padding: 14px 16px; }
     }
       .premodern-chapter-nav {
+      box-sizing: border-box;
       max-width: 700px;
+      margin: 0 0 24px;
+      padding: 18px 20px;
+      border: 1px solid #d8d8d8;
+      background: #fff;
+      color: #444;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+    .premodern-chapter-nav .chapter-nav-label {
+      display: block;
+      margin: 0 0 8px;
+      font-size: inherit;
+      font-weight: 600;
+    }
+    .premodern-chapter-nav .chapter-nav-links {
       display: flex;
       flex-wrap: wrap;
       align-items: baseline;
       column-gap: 8px;
       row-gap: 3px;
-      margin: 0 0 24px;
-      font-size: 15px;
-      line-height: 1.75;
     }
     .premodern-chapter-nav .chapter-nav-item:not(:last-child)::after {
       content: " ·";
@@ -105,7 +118,7 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
     .premodern-chapter-nav + .prose { margin-top: 24px; }
     .premodern-chapter-nav + .prose > h2[id] { scroll-margin-top: 20px; }
     @media (max-width: 620px) {
-      .premodern-chapter-nav { font-size: 14px; }
+      .premodern-chapter-nav { font-size: 14px; padding: 14px 16px; }
     }
   </style>
 </head>
@@ -120,6 +133,8 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
         <p>Jin-in-Seoul에서 공개하는 『전운치전』은 1847년에 간행된 경판 37장본 『뎐운치젼』을 바탕으로 하며, 작품의 제목과 주인공의 이름 모두 원전의 명칭을 따랐다. 장 제목과 장 구분은 새로 정하였다.</p>
       </aside>
       <nav class="premodern-chapter-nav" aria-label="목차">
+        <span class="chapter-nav-label">목차</span>
+        <div class="chapter-nav-links">
         <span class="chapter-nav-item"><a href="#chapter-1">1. 여우의 구슬</a></span>
         <span class="chapter-nav-item"><a href="#chapter-2">2. 구미호와 하늘의 책</a></span>
         <span class="chapter-nav-item"><a href="#chapter-3">3. 황금 들보</a></span>
@@ -130,6 +145,7 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
         <span class="chapter-nav-item"><a href="#chapter-8">8. 그림 속의 여인</a></span>
         <span class="chapter-nav-item"><a href="#chapter-9">9. 상사병</a></span>
         <span class="chapter-nav-item"><a href="#chapter-10">10. 영주산으로 가는 길</a></span>
+        </div>
       </nav>
       <div class="prose gray-note-prose">
 <h2 id="chapter-1">1. 여우의 구슬</h2>
