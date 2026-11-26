@@ -1,0 +1,70 @@
+{% assign editions = site.pages | where: 'edition_group', page.edition_group | sort: 'lang' -%}
+{% assign english = editions | where: 'lang', 'en' | first -%}
+{% assign default_edition = english | default: editions.first -%}
+<!doctype html>
+<html lang="{{ page.lang }}">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-72EG8XPTN7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-72EG8XPTN7');
+</script>
+  <meta charset="utf-8">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | escape }} - Gray Note - Jin-in-Seoul</title>
+  <meta name="description" content="{{ page.description | escape }}">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  {% for edition in editions %}
+  <link rel="alternate" hreflang="{{ edition.lang }}" href="{{ edition.url | absolute_url }}">
+  {% endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ default_edition.url | absolute_url }}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ page.title | escape }} - Gray Note - Jin-in-Seoul">
+  <meta property="og:description" content="{{ page.og_description | default: page.description | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="Jin-in-Seoul">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ page.title | escape }} - Gray Note - Jin-in-Seoul">
+  <meta name="twitter:description" content="{{ page.twitter_description | default: page.description | escape }}">
+  <script type="application/ld+json" data-seo="site">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.title | jsonify }},
+  "url": "{{ page.url | absolute_url }}",
+  "datePublished": {{ page.published_on | jsonify }},
+  "inLanguage": {{ page.lang | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": "Jin-in-Seoul",
+    "url": "https://jin-in-seoul.com/"
+  }
+}
+  </script>
+  <link rel="stylesheet" href="/assets/style.css?v=059">
+</head>
+<body>
+  <main class="shell">
+    {% include header.html %}
+    <nav class="contents-nav" aria-label="Gray Note index">
+      <a href="/gray-note/">Gray Note</a>
+    </nav>
+    {{ content }}
+    {% if editions.size > 1 %}
+    <nav class="gray-note-language-links" aria-label="{% case page.lang %}{% when 'ko' %}다른 언어판{% when 'fr' %}Autres langues{% when 'ja' %}他の言語版{% else %}Other languages{% endcase %}">
+      {% for edition in editions %}
+        {% unless edition.lang == page.lang %}
+        <a lang="{{ edition.lang }}" hreflang="{{ edition.lang }}" href="{{ edition.url | relative_url }}">{% case edition.lang %}{% when 'en' %}English{% when 'ja' %}日本語{% when 'fr' %}Français{% when 'ko' %}한국어{% else %}{{ edition.lang | escape }}{% endcase %}</a>
+        {% endunless %}
+      {% endfor %}
+    </nav>
+    {% endif %}
+    {% include footer.html %}
+  </main>
+</body>
+</html>
