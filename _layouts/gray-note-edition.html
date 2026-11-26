@@ -55,15 +55,6 @@
       <a href="/gray-note/">Gray Note</a>
     </nav>
     {{ content }}
-    {% if editions.size > 1 %}
-    <nav class="gray-note-language-links" aria-label="{% case page.lang %}{% when 'ko' %}다른 언어판{% when 'fr' %}Autres langues{% when 'ja' %}他の言語版{% else %}Other languages{% endcase %}">
-      {% for edition in editions %}
-        {% unless edition.lang == page.lang %}
-        <a lang="{{ edition.lang }}" hreflang="{{ edition.lang }}" href="{{ edition.url | relative_url }}">{% case edition.lang %}{% when 'en' %}English{% when 'ja' %}日本語{% when 'fr' %}Français{% when 'ko' %}한국어{% else %}{{ edition.lang | escape }}{% endcase %}</a>
-        {% endunless %}
-      {% endfor %}
-    </nav>
-    {% endif %}
     {% include footer.html %}
   </main>
 </body>
