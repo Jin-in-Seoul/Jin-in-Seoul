@@ -8,7 +8,7 @@ Source file: `publication-log/index.html`.
 
 The Publication Log is a chronological historical record of releases, translations, chapter additions, and significant publication-related changes on Jin-in-Seoul.
 
-This document establishes the rules for maintaining that record across editors, maintainers, and ChatGPT sessions. It governs the Publication Log only; it does not change the names, wording, translation, or publication dates on individual literary pages. The author has final editorial authority.
+This document establishes the rules for maintaining that record consistently over time. It governs the Publication Log only; it does not change the names, wording, translation, or publication dates on individual literary pages. The author has final editorial authority.
 
 ## 2. Record language and work titles
 
@@ -17,8 +17,8 @@ This document establishes the rules for maintaining that record across editors, 
 - Verify the English title against the live site's English edition, listing, or other approved source before entering it. Never create a new "official" title by guessing or retranslating a foreign-language title.
 - Where a section heading already identifies the work in English, the language-specific entry may simply say "Japanese edition — Chapters 1–4 added" without repeating its title.
 - For groups of short stories, list the same approved English story titles in every language entry.
-- Record appendix titles in the Publication Log using the established official English title, regardless of edition language. Use **Appendix — An Index for Those Lost in the Galaxy** for the corresponding Korean and English editions of *A Dictionary of Galactic Extinction*. The edition's own published table of contents may retain its language-specific title. Do not invent translations or confuse this common title with the dates and language identities of individual editions.
-- **Exceptions:** Haiku may retain Japanese originals with English titles; Music may retain the existing English/Korean/Japanese bilingual or multilingual song-title presentation. Do not standardize those titles without author approval.
+- Record appendix titles in the Publication Log using the established official English title, regardless of edition language. Use **Appendix — An Index for Those Lost in the Galaxy** for the corresponding Korean and English editions of *A Dictionary of Galactic Extinction*. The edition's own published table of contents may retain its language-specific title. The policy prohibits inventing translations or confuse this common title with the dates and language identities of individual editions.
+- **Exceptions:** Haiku may retain Japanese originals with English titles; Music may retain the existing English/Korean/Japanese bilingual or multilingual song-title presentation. Standardization of those titles requires author approval.
 
 ## 3. Language order
 
@@ -28,14 +28,14 @@ When editions or languages share the same date and priority, consistently order 
 
 - Apply this order both to language lists within a sentence and to individual edition entries grouped under the same work and date.
 - When only some languages are present, preserve their relative order according to that sequence.
-- Do not reorder separate historical dates to satisfy language priority.
+- Separate historical dates retain their order regardless of language priority.
 - Do not infer that an edition was published when its release is absent from the record.
 
 ## 4. Actual publication dates and history
 
 - Record each edition on the **date it was actually published**, not the date of the original work or another translation.
 - If the first editions were released on one day and later translations on another, keep separate dated entries. For instance, the English and Korean editions of Gray Note 008 were logged on November 10, 2026, while the Japanese and French editions were logged on November 11, 2026.
-- Do not backdate or combine language releases merely to make a four-language entry.
+- Language releases are not backdated or combined merely to form a four-language entry.
 - Historical log entries describe what was known, announced, or released **at that time**. Preserve past plans and publication milestones as historical records, even when later plans change; document later decisions under their own dates.
 - Preserve dates, edition languages, chapter/part numbers, release sequence, PDF/EPUB details, and the distinction between releases and maintenance events.
 - Corrections to factual errors may be made with the author's approval and should not invent a new publication event.
@@ -48,12 +48,12 @@ Use the following terms according to the event that actually occurred:
 - **updated:** a maintenance or technical change to an existing published file or page without necessarily changing the literary text.
 - **revised:** an authorized substantive revision of published literary text.
 
-Prefer neutral release wording such as **English edition added** or **French edition added**. Do not use **complete**, **completed**, **full text published**, or similar claims of finality in Publication Log entries; a work or edition may be revised after release. Preserve actual chapter numbers, collection size, and publication events without declaring a work permanently finished. Do not relabel an update as a literary revision.
+Neutral release wording is preferred, such as **English edition added** or **French edition added**. Publication Log entries exclude **complete**, **completed**, **full text published**, and similar claims of finality; a work or edition may be revised after release. Preserve actual chapter numbers, collection size, and publication events without declaring a work permanently finished. The policy prohibits relabelling an update as a literary revision.
 
 ## 6. Titles, subtitles, and consistency
 
 - Use the same approved English work title wherever the same work recurs in the log.
-- Where a particular log entry includes the work's subtitle, use the same approved subtitle for later dated entries referring to that release when relevant. Do not silently drop a subtitle merely because another language edition was added on a later day.
+- Where a particular log entry includes the work's subtitle, use the same approved subtitle for later dated entries referring to that release when relevant. The policy prohibits silently drop a subtitle merely because another language edition was added on a later day.
 - For new releases, check the English page title and subtitle, the index/listing, and the proposed log entry for consistency. Verify rather than guessing.
 - Preserve original wording in Haiku and Music under their exceptions.
 
@@ -63,8 +63,8 @@ Prefer neutral release wording such as **English edition added** or **French edi
 2. Confirm the actual release date, language(s), approved English work title, subtitle if used, and event type.
 3. Draft or update the correct dated section in chronological order, grouping entries by work and listing languages in the fixed order.
 4. Check that each language edition or chapter is recorded exactly as published, without changing unrelated historical entries.
-5. When the author requests review only, **do not edit GitHub**. Make changes only when explicitly authorized.
-6. When authorized, fetch the latest file SHA before writing to `main`. Avoid overwriting intervening changes.
+5. Review alone does not authorize GitHub changes. Changes require explicit authorization.
+6. Authorized changes to `main` require the latest file SHA and preservation of intervening changes.
 7. Re-fetch the file after committing. Verify the text and dates, language order, titles, subtitle consistency, and that previous records are intact.
 8. Check the GitHub Pages deployment and applicable repository audits. Distinguish source commits from completed live deployment in reporting.
 
