@@ -69,7 +69,7 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
     .premodern-edition-note {
       box-sizing: border-box;
       max-width: 700px;
-      margin: 24px 0 32px;
+      margin: 24px 0 12px;
       padding: 18px 20px;
       border: 1px solid #d8d8d8;
       background: #fff;
@@ -87,15 +87,28 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
       .premodern-edition-note { font-size: 14px; padding: 14px 16px; }
     }
       .premodern-chapter-nav {
+      box-sizing: border-box;
       max-width: 700px;
+      margin: 0 0 24px;
+      padding: 18px 20px;
+      border: 1px solid #d8d8d8;
+      background: #fff;
+      color: #444;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+    .premodern-chapter-nav .chapter-nav-label {
+      display: block;
+      margin: 0 0 8px;
+      font-size: inherit;
+      font-weight: 600;
+    }
+    .premodern-chapter-nav .chapter-nav-links {
       display: flex;
       flex-wrap: wrap;
       align-items: baseline;
       column-gap: 8px;
       row-gap: 3px;
-      margin: 0 0 24px;
-      font-size: 15px;
-      line-height: 1.75;
     }
     .premodern-chapter-nav .chapter-nav-item:not(:last-child)::after {
       content: " ·";
@@ -105,7 +118,7 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
     .premodern-chapter-nav + .prose { margin-top: 24px; }
     .premodern-chapter-nav + .prose > h2[id] { scroll-margin-top: 20px; }
     @media (max-width: 620px) {
-      .premodern-chapter-nav { font-size: 14px; }
+      .premodern-chapter-nav { font-size: 14px; padding: 14px 16px; }
     }
   </style>
 </head>
@@ -119,7 +132,9 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
         <p>Generally known as <i>Jeon Uchijeon</i>, this premodern Korean novel is of unknown authorship and date of composition, and survives in several editions. The 37-leaf, 22-leaf and 17-leaf Gyeongpan editions, as well as the manuscript held in the Ilsa Collection at Seoul National University, bear the title <i>Jeon Unchijeon</i>, while the movable-type edition published by Sinmungwan in 1914 bears the title <i>Jeon Uchijeon</i>. The protagonist’s name, the structure and the content of the story vary between editions. Books published in Korea today generally use the title <i>Jeon Uchijeon</i>. Some also call the protagonist Jeon Uchi in the text, while others retain the name Jeon Unchi despite using the title <i>Jeon Uchijeon</i>.</p>
         <p>The edition of <i>The Tale of Jeon Unchi</i> published by Jin-in-Seoul is based on the 37-leaf Gyeongpan edition of <i>Jeon Unchijeon</i>, printed in 1847. Both the title of the work and the protagonist’s name follow the source edition. The chapter divisions and titles have been newly established.</p>
       </aside>
-      <nav class="premodern-chapter-nav" aria-label="Chapters">
+      <nav class="premodern-chapter-nav" aria-label="Contents">
+        <span class="chapter-nav-label">Contents</span>
+        <div class="chapter-nav-links">
         <span class="chapter-nav-item"><a href="#chapter-1">1. The Fox’s Bead</a></span>
         <span class="chapter-nav-item"><a href="#chapter-2">2. The Nine-Tailed Fox and the Heavenly Books</a></span>
         <span class="chapter-nav-item"><a href="#chapter-3">3. The Golden Beam</a></span>
@@ -130,6 +145,7 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
         <span class="chapter-nav-item"><a href="#chapter-8">8. The Woman in the Painting</a></span>
         <span class="chapter-nav-item"><a href="#chapter-9">9. Lovesickness</a></span>
         <span class="chapter-nav-item"><a href="#chapter-10">10. The Road to Mount Yeongju</a></span>
+        </div>
       </nav>
       <div class="prose gray-note-prose">
 <h2 id="chapter-1">1. The Fox’s Bead</h2>
