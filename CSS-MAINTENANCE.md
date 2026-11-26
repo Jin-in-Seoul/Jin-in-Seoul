@@ -2,15 +2,15 @@
 
 Last reviewed: 2026-10-14. This document describes the **current** architecture; it does not authorize restyling.
 
-## Non-negotiable safety rules
+## Preservation and change-control principles
 
-1. **Do not modify any `sweater/` file or the diary's typography** (bold dates, spacing above/below dates, deliberate line breaks, paragraph formatting). Do not make global CSS changes that could indirectly affect Sweater.
+1. **All existing `sweater/` files and diary typography are protected** (bold dates, spacing above/below dates, deliberate line breaks, paragraph formatting). Global CSS changes that could indirectly affect Sweater are excluded.
 2. Preserve all literary text, paragraph boundaries, headings, intentional blank lines and inline markup.
-3. Do not edit `assets/style.css` merely to adjust a single work or language. Use a work/language-scoped stylesheet where appropriate.
-4. For Korean/Japanese prose, retain first-line indentation (normally `1em`), including the opening paragraph. For English/French, opening narrative paragraphs are flush left, later ordinary paragraphs retain `1em`. Do not indiscriminately remove indentation from every paragraph.
+3. Single-work or language adjustments use scoped stylesheets where appropriate and do not justify changes to `assets/style.css` alone.
+4. For Korean/Japanese prose, retain first-line indentation (normally `1em`), including the opening paragraph. For English/French, opening narrative paragraphs are flush left, later ordinary paragraphs retain `1em`. The policy prohibits indiscriminately remove indentation from every paragraph.
 5. Preserve section-number formatting. In short stories, `<p class="section-number">N</p>` is unindented. Japanese `the-basics-of-logic` uses this markup for sections 1–5.
-6. Never change CSS cache-busting query parameters across the repository without a verified reason and a full affected-page audit. Different `?v=` values are cache keys, not different source CSS files.
-7. Always inspect actual selectors and HTML before changing a stylesheet, and re-fetch every changed file after committing.
+6. Repository-wide CSS cache-key changes require a verified reason and full affected-page audit. Different `?v=` values are cache keys, not different source CSS files.
+7. Stylesheet changes require prior inspection of selectors and HTML and post-commit retrieval of every changed file.
 
 ## Stylesheet ownership (8 CSS files)
 
@@ -25,7 +25,7 @@ Last reviewed: 2026-10-14. This document describes the **current** architecture;
 | `childrens-books/latin-first-paragraph.css` | English/French children's-book opening paragraph and first paragraph after `h2` | Only linked English/French children's-book pages |
 | `scarecrow-distance/latin-first-paragraph.css` | English/French Scarecrow Distance opening paragraph for each chapter | Only linked English/French chapters 1–4 |
 
-Stylesheet loading order: the global CSS is linked first; the work-specific CSS is linked afterward. Do not attach a Latin-specific stylesheet to Korean/Japanese pages.
+Stylesheet loading order: the global CSS is linked first; the work-specific CSS is linked afterward. Latin-specific stylesheets are not applied to Korean/Japanese pages.
 
 ## Current cache-version inventory (examples, not a complete repository-wide audit)
 
@@ -36,7 +36,7 @@ Stylesheet loading order: the global CSS is linked first; the work-specific CSS 
 - Children's-book story samples: `assets/style.css?v=053`, Latin-specific CSS `?v=001`
 - Sweater English chapter sample: `assets/style.css?v=052`
 
-These all point to the **same** `assets/style.css` resource. **Do not mass-replace versions**: a version bump forces cache refresh and should be coupled to a justified change. The audit script `scripts/audit_css_links.py` produces a complete inventory without modifying pages.
+These all point to the **same** `assets/style.css` resource. **Mass replacement of versions is excluded**: a version bump forces cache refresh and should be coupled to a justified change. The audit script `scripts/audit_css_links.py` produces a complete inventory without modifying pages.
 
 ## New page / edit checklist
 
@@ -48,11 +48,11 @@ These all point to the **same** `assets/style.css` resource. **Do not mass-repla
 6. Confirm that Korean/Japanese are not linked to Latin-only CSS; check `section-number` and `h2` structure.
 7. Run `python3 scripts/audit_css_links.py` from repository root and review warnings; compare affected-page counts before and after.
 8. Verify that changed HTML differs **only** in the intended stylesheet link or agreed markup, and re-fetch changed files from GitHub after commit.
-9. Never include Sweater in bulk transformations; no global CSS modifications without separate explicit approval and regression plan.
+9. Sweater is excluded from bulk transformations; global CSS modifications require separate explicit approval and a regression plan.
 
 ## Conflict / duplication notes
 
-The global stylesheet intentionally has distinct selectors for `.galactic-prose`, `.short-story-prose`, `.children-prose`, `.sweater-prose`, etc. Similar declarations across those classes are not automatically redundant: they separate work-level formatting and protect specialized content. The scoped Latin rules intentionally override only `text-indent`. Do **not** merge or delete these rules merely because they look similar.
+The global stylesheet intentionally has distinct selectors for `.galactic-prose`, `.short-story-prose`, `.children-prose`, `.sweater-prose`, etc. Similar declarations across those classes are not automatically redundant: they separate work-level formatting and protect specialized content. The scoped Latin rules intentionally override only `text-indent`. Similarity alone does not justify merging or deleting these rules.
 
 ## Maintenance decisions
 
