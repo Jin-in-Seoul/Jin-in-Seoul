@@ -24,7 +24,7 @@ Vocabulary and sentence structures accessible to modern readers are used while p
 
 **6. Reading Without Annotations**
 
-Difficult archaic expressions, official titles, and religious terms are rendered in accessible language so that the text can be read without separate annotations or footnotes. Terms intelligible from context are retained, with their meanings conveyed naturally upon first appearance where necessary. Historical official titles and distinctive names must not disappear through paraphrase; retain the name and convey its meaning naturally at first appearance when needed.
+Difficult archaic expressions, official titles, and religious terms are rendered in accessible language so that the text can be read without separate annotations or footnotes. Terms intelligible from context are retained, with their meanings conveyed naturally upon first appearance where necessary. Historical official titles and distinctive names must not disappear through paraphrase; the name is retained and its meaning conveyed naturally at first appearance when needed.
 
 **7. Chapters and Paragraphs**
 
@@ -52,7 +52,7 @@ Difficult archaic expressions and damaged passages are examined using dictionari
 
 **13. Review and Revision**
 
-Revision is undertaken to correct mistranslations, omissions, distortions of meaning, and defects in expression. Natural sentences that faithfully convey the original meaning are not repeatedly revised according to the personal preferences of translators or editors. The same editorial principles apply to the modern Korean and foreign-language editions. Review proposed changes before applying them, obtain approval, and compare the revised text with the established source again.
+Revision is undertaken to correct mistranslations, omissions, distortions of meaning, and defects in expression. Natural sentences that faithfully convey the original meaning are not repeatedly revised according to the personal preferences of translators or editors. The same editorial principles apply to the modern Korean and foreign-language editions. Proposed changes are reviewed and approved before application, and the revised text is compared again with the established source.
 
 *I translate these works for my friend Balthazar in Portugal.*
 
