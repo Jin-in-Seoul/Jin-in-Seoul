@@ -204,9 +204,9 @@ Before publishing a new asset:
 
 - [ ] Confirmation of the intended final version and authorized publication.
 - [ ] Verification of the designated directory, filename, format, and size.
-- [ ] For photographs, use a web copy and preserve the original separately.
-- [ ] For photo essays, review the **combined image size** and mobile loading behavior.
-- [ ] Confirmation of that no existing file is overwritten unintentionally.
+- [ ] Use of web copies and separate preservation of photographic originals.
+- [ ] Review of the **combined image size** and mobile loading behavior for photo essays.
+- [ ] Confirmation that no existing file is overwritten unintentionally.
 - [ ] Addition or verification of the relevant page reference.
 - [ ] Verification of image display, playback, or download on desktop and mobile.
 - [ ] Verification of file URLs, image `alt` attributes, and relevant accessibility details.
