@@ -8,15 +8,11 @@ from collections import Counter, defaultdict
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
-import argparse
 import re
 import sys
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent.parent
-parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument("--built-dir", type=Path, help="Jekyll output for layout-backed HTML pages")
-built_dir = parser.parse_args().built_dir
 HOST = "jin-in-seoul.com"
 BASE = "https://" + HOST
 REPORT = ROOT / "seo-audit-report.md"
@@ -80,14 +76,7 @@ for file in sorted(ROOT.rglob("*.html")):
     path = file.relative_to(ROOT).as_posix()
     try:
         p = HeadParser()
-        html = file.read_text(encoding="utf-8")
-        front_matter = re.match(r"\A---\r?\n(.*?)\r?\n---(?:\r?\n|$)", html, re.S)
-        if front_matter and re.search(r'''^layout:[ \t]*["']?gray-note-edition["']?[ \t]*$''', front_matter[1], re.M):
-            if built_dir is None:
-                issue("INFO", "BUILD_REQUIRED", path, "Run with --built-dir to check rendered edition metadata")
-                continue
-            html = (built_dir / path).read_text(encoding="utf-8")
-        p.feed(html)
+        p.feed(file.read_text(encoding="utf-8"))
     except Exception as e:
         issue("ERROR", "HTML_PARSE", path, e)
         continue
@@ -182,7 +171,7 @@ else:
     issue("ERROR", "MISSING_SITEMAP", "sitemap.xml", "File not found")
 
 counts = Counter(level for level, *_ in ISSUES)
-lines = ["# SEO source audit", "", f"HTML pages scanned: **{len(PAGES)}**", f"Sitemap URLs: **{len(sitemap_urls)}**", f"Findings: **{len(ISSUES)}** (ERROR {counts['ERROR']}, WARN {counts['WARN']}, INFO {counts['INFO']})", "", "Offline check: HTTP status, deployed Jekyll output, and Google/Naver indexing are not verified.", "", "## Findings", "", "| Severity | Code | File | Detail |", "|---|---|---|---|"]
+lines = ["# SEO source audit", "", f"HTML pages scanned: **{len(PAGES)}**", f"Sitemap URLs: **{len(sitemap_urls)}**", f"Findings: **{len(ISSUES)}** (ERROR {counts['ERROR']}, WARN {counts['WARN']}, INFO {counts['INFO']})", "", "Source-only check: HTTP status, deployed Jekyll output, and Google/Naver indexing are not verified.", "", "## Findings", "", "| Severity | Code | File | Detail |", "|---|---|---|---|"]
 for level, code, path, detail in sorted(ISSUES, key=lambda x: ({"ERROR":0,"WARN":1,"INFO":2}[x[0]], x[2], x[1])):
     clean = lambda s: str(s).replace("|", "\\|").replace("`", "'")
     lines.append(f"| {level} | {code} | `{clean(path)}` | {clean(detail)} |")
