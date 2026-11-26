@@ -86,6 +86,27 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
     @media (max-width: 620px) {
       .premodern-edition-note { font-size: 14px; padding: 14px 16px; }
     }
+      .premodern-chapter-nav {
+      max-width: 700px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      column-gap: 8px;
+      row-gap: 3px;
+      margin: 0 0 24px;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+    .premodern-chapter-nav .chapter-nav-item:not(:last-child)::after {
+      content: " ·";
+      color: #777;
+    }
+    .premodern-chapter-nav a { color: var(--link); }
+    .premodern-chapter-nav + .prose { margin-top: 24px; }
+    .premodern-chapter-nav + .prose > h2[id] { scroll-margin-top: 20px; }
+    @media (max-width: 620px) {
+      .premodern-chapter-nav { font-size: 14px; }
+    }
   </style>
 </head>
 <body>
@@ -98,8 +119,20 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
         <p>Generally known as <i>Jeon Uchijeon</i>, this premodern Korean novel is of unknown authorship and date of composition, and survives in several editions. The 37-leaf, 22-leaf and 17-leaf Gyeongpan editions, as well as the manuscript held in the Ilsa Collection at Seoul National University, bear the title <i>Jeon Unchijeon</i>, while the movable-type edition published by Sinmungwan in 1914 bears the title <i>Jeon Uchijeon</i>. The protagonist’s name, the structure and the content of the story vary between editions. Books published in Korea today generally use the title <i>Jeon Uchijeon</i>. Some also call the protagonist Jeon Uchi in the text, while others retain the name Jeon Unchi despite using the title <i>Jeon Uchijeon</i>.</p>
         <p>The edition of <i>The Tale of Jeon Unchi</i> published by Jin-in-Seoul is based on the 37-leaf Gyeongpan edition of <i>Jeon Unchijeon</i>, printed in 1847. Both the title of the work and the protagonist’s name follow the source edition. The chapter divisions and titles have been newly established.</p>
       </aside>
+      <nav class="premodern-chapter-nav" aria-label="Chapters">
+        <span class="chapter-nav-item"><a href="#chapter-1">1. The Fox’s Bead</a></span>
+        <span class="chapter-nav-item"><a href="#chapter-2">2. The Nine-Tailed Fox and the Heavenly Books</a></span>
+        <span class="chapter-nav-item"><a href="#chapter-3">3. The Golden Beam</a></span>
+        <span class="chapter-nav-item"><a href="#chapter-4">4. The Wandering Magician</a></span>
+        <span class="chapter-nav-item"><a href="#chapter-5">5. Jeon Unchi Enters Royal Service</a></span>
+        <span class="chapter-nav-item"><a href="#chapter-6">6. Yeom Jun of Mount Gadal</a></span>
+        <span class="chapter-nav-item"><a href="#chapter-7">7. The False Accusation of Treason</a></span>
+        <span class="chapter-nav-item"><a href="#chapter-8">8. The Woman in the Painting</a></span>
+        <span class="chapter-nav-item"><a href="#chapter-9">9. Lovesickness</a></span>
+        <span class="chapter-nav-item"><a href="#chapter-10">10. The Road to Mount Yeongju</a></span>
+      </nav>
       <div class="prose gray-note-prose">
-<h2>1. The Fox’s Bead</h2>
+<h2 id="chapter-1">1. The Fox’s Bead</h2>
 
 <p>Towards the end of the Goryeo dynasty, there lived a renowned scholar in Namseobu. His surname was Jeon, his given name was Suk, and he was known as Master Unhwa. He came from a family that had held high office for generations, but when it came to Suk, he had no desire to enter government service. He withdrew into the mountains and devoted himself to learning. From time to time, he gathered his friends to speak of mountains and rivers, wind and moon, and so passed his days. The people of the time called him a mountain recluse. His wife, Lady Choi, was the daughter of a distinguished family, gentle and virtuous, possessing both beauty and virtue. The scholar and his wife respected each other and lived in harmony, but although they had been together for more than ten years, they had no children and lamented this day and night.</p>
 
@@ -145,7 +178,7 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
 
 <p>After three days of celebrations for the successful candidates, he returned home to see his mother. Lady Choi was both joyful and sorrowful and said, “Your father never cared for the civil service examinations when he was alive. Now that I see you attain such honour, how could I not be pleased?”</p>
 
-<h2>2. The Nine-Tailed Fox and the Heavenly Books</h2>
+<h2 id="chapter-2">2. The Nine-Tailed Fox and the Heavenly Books</h2>
 
 <p>Time passed, and the following spring arrived. Unchi travelled among famous mountains and great rivers until he came to a temple called Segeumsa. Its halls, extending over more than a thousand bays, were covered in cobwebs, and not a single monk was to be seen. Finding this strange, Unchi went down to Seongnimsa Temple. Four or five elderly monks came out to greet him. When he asked about Segeumsa, one of the monks said, “There were once more than a thousand monks between Segeumsa and this temple, but calamities began to befall both temples four or five years ago. Unable to endure them, some of the monks scattered, while others disappeared without a trace. Segeumsa is now entirely deserted, and only the four or five of us old monks remain here.”</p>
 
@@ -227,7 +260,7 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
 
 <p>Unchi gathered his books and returned home. The talisman was affixed to the first volume of the heavenly books, which was why the nine-tailed fox had been unable to take it.</p>
 
-<h2>3. The Golden Beam</h2>
+<h2 id="chapter-3">3. The Golden Beam</h2>
 
 <p>Unchi returned home and studied the heavenly books until there was no magical art he could not perform. Having lost interest in studying for the civil service examinations, he thought to himself, ‘If I am to obtain a government post and support my mother, it will take a rather long time.’ He then devised a plan.</p>
 
@@ -279,7 +312,7 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
 
 <p>The king agreed and immediately ordered proclamations to be posted upon the four gates of the city. They read: ‘Although Jeon Unchi has committed offences against the kingdom, in recognition of his talents he is hereby granted a special pardon and appointed to government office. Let him present himself without delay.’</p>
 
-<h2>4. The Wandering Magician</h2>
+<h2 id="chapter-4">4. The Wandering Magician</h2>
 
 <p>Unchi took his mother into the mountains, where they lived upon the silver. From time to time, he rode upon clouds and travelled freely in all directions.</p>
 
@@ -387,7 +420,7 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
 
 <p>The king granted permission. At the very moment Han Jaegyeong was about to be executed, a violent wind suddenly arose, and Han Jaegyeong vanished without a trace. Unchi had rescued him.</p>
 
-<h2>5. Jeon Unchi Enters Royal Service</h2>
+<h2 id="chapter-5">5. Jeon Unchi Enters Royal Service</h2>
 
 <p>As Unchi travelled from place to place, he saw the proclamations posted upon the four gates of the city and smiled scornfully. He went before the palace and cried out, “Your servant Jeon Unchi has come of his own accord.”</p>
 
@@ -449,7 +482,7 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
 
 <p>Heeding his mother’s words, Unchi returned to the capital. At daybreak, he set out with some ten officers of the Police Bureau.</p>
 
-<h2>6. Yeom Jun of Mount Gadal</h2>
+<h2 id="chapter-6">6. Yeom Jun of Mount Gadal</h2>
 
 <p>Unchi arrived at the chief government office of the province and had the officers remain there. Taking only the seal of his office and his sword, he set out alone. He shook his body, transformed himself into an eagle, and entered Mount Gadal.</p>
 
@@ -509,7 +542,7 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
 
 <p>Thereafter, all the royal heralds gathered at their government office and spoke of the dreams they had experienced that night. Every one of them told exactly the same story, as though it had come from a single mouth. From that time onwards, the royal heralds treated Unchi with exceptional care and courtesy.</p>
 
-<h2>7. The False Accusation of Treason</h2>
+<h2 id="chapter-7">7. The False Accusation of Treason</h2>
 
 <p>One day, the king asked the Minister of Revenue, “You told me some time ago that all the silver and money in the Ministry of Revenue had turned into other things. What is their condition now?”</p>
 
@@ -593,7 +626,7 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
 
 <p>Unchi returned to the hermitage. The monk still bore the likeness of Jeon Unchi. Unchi spat water towards him and recited an incantation, whereupon the monk returned to his former appearance. Unchi reprimanded him severely. “Having become a monk, you ought to honour the teachings of the Buddha. Yet you enticed a woman who had lost her husband and lived in chastity, raped her, and drove her to the point of taking her own life. Even ten thousand deaths would not atone for your crime. I intended to have you put to death by giving you the appearance of Jeon Unchi, but I could not bring myself to take a life. I therefore spare you and restore your former appearance. Never commit such an act again.”</p>
 
-<h2>8. The Woman in the Painting</h2>
+<h2 id="chapter-8">8. The Woman in the Painting</h2>
 
 <p>As Unchi was returning home, he came upon several young men who were competing with one another to examine a hanging scroll and praising it highly. “The painting on this scroll is a masterpiece unrivalled in the world.”</p>
 
@@ -671,7 +704,7 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
 
 <p>“Do not worry, my friend.” Having said this, Unchi rode upon a cloud and departed.</p>
 
-<h2>9. Lovesickness</h2>
+<h2 id="chapter-9">9. Lovesickness</h2>
 
 <p>Lady Jeong had lost her husband early in life and grieved day and night, wishing to die. As she had an elderly mother and no other siblings, the mother and daughter passed their days relying upon each other.</p>
 
@@ -749,7 +782,7 @@ search_aliases: "전운치 전운치전 전우치 전우치전 Jeon Unchi Jeon U
 
 <p>After seeing Unchi off, Hwadam reprimanded Yongdam. “You brought forth an azure dragon and a red dragon, while Unchi brought forth a white dragon and a black dragon. Azure corresponds to wood, red to fire, white to metal, and black to water. According to the principles of the Five Phases, metal overcomes wood, and water overcomes fire. How could you possibly defeat Unchi? Moreover, why would you engage in a needless contest of magical arts with a guest who has come to my house and attempt to harm him?” Yongdam apologised. Inwardly, however, he was exceedingly angry with Unchi and harboured intentions of harming him.</p>
 
-<h2>10. The Road to Mount Yeongju</h2>
+<h2 id="chapter-10">10. The Road to Mount Yeongju</h2>
 
 <p>Three days later, Unchi visited Hwadam again. Hwadam said, “There is something I wish to ask of you. Would you be willing to undertake it?”</p>
 
