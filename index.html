@@ -436,6 +436,18 @@
       .featured-work .novel-volume-part,
       .featured-work .novel-volume-tags { font-size: 16px; }
     }
+    /* Use existing inter-section space for literary category labels. */
+    .home-labeled-work { position: relative; }
+    .home-labeled-work > .novel-series-label {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      margin: 0 0 6px;
+      font: 400 15px/1.5 Arial, Helvetica, sans-serif;
+      color: #666;
+    }
+    .home-intro { margin-bottom: 10px; }
+    .homepage-news { padding-top: 8px; }
 </style>
 </head>
 
@@ -503,7 +515,8 @@
 
 
 
-    <section class="gray-note-section">
+    <section class="gray-note-section home-labeled-work">
+      <div class="novel-series-label">Essays</div>
 
       <h2>
         <a class="work-link" href="/gray-note/">Gray Note</a>
@@ -545,7 +558,8 @@
 
     </section>
 
-    <section class="major-work">
+    <section class="major-work home-labeled-work">
+      <div class="novel-series-label">Novel</div>
 
       <h2>
         <a
@@ -572,7 +586,8 @@
     </section>
 
 
-    <section class="major-work sweater-work">
+    <section class="major-work sweater-work home-labeled-work">
+      <div class="novel-series-label">Novel</div>
 
       <h2>
         <a
