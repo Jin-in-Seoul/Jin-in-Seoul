@@ -1,12 +1,12 @@
-# SEO maintenance and handoff — Jin-in-Seoul
+# SEO maintenance policy — Jin-in-Seoul
 
 Last updated: 2026-11-26. Repository: `Jin-in-Seoul/Jin-in-Seoul` (`main`). Public site: https://jin-in-seoul.com/.
 
 ## Scope and non-negotiable rules
 
-1. **Do not change literary prose, translations, paragraph breaks, intentional whitespace, typography, CSS, or the Sweater diary layout for SEO.** Restrict corrections to verified SEO metadata, sitemap, robots, redirects, or read-only audit tools.
-2. Do not treat a successful GitHub Actions job as proof that all live URLs or Google/Naver indexing are correct.
-3. Do not automatically apply audit warnings. Inspect the page, its Jekyll generation, language variants, and intended index policy first.
+1. **Literary prose, translations, paragraph breaks, intentional whitespace, typography, CSS and the Sweater diary layout are protected during SEO maintenance.** Corrections are restricted to verified SEO metadata, sitemap, robots, redirects or read-only audit tools.
+2. A successful GitHub Actions job does not establish validity of all live URLs or Google/Naver indexing.
+3. Audit warnings do not automatically authorize changes. Review of the page, its Jekyll generation, language variants and intended index policy precedes corrections.
 4. Re-fetch changed GitHub files after commits; check both the Pages deployment and the relevant audit report.
 5. Preserve Naver site verification and existing analytics tags.
 
@@ -14,13 +14,13 @@ Last updated: 2026-11-26. Repository: `Jin-in-Seoul/Jin-in-Seoul` (`main`). Publ
 
 - GitHub Pages / Jekyll; `_config.yml` defines `url: https://jin-in-seoul.com` and Gray Note numbered HTML pages (`/gray-note/001/{lang}/`, `/gray-note/002/`).
 - `robots.txt` allows crawling and references `https://jin-in-seoul.com/sitemap.xml`.
-- `sitemap.xml` is a Jekyll-templated XML source with front matter. Do not assume raw Liquid placeholders are broken in deployed output.
+- `sitemap.xml` is a Jekyll-templated XML source with front matter. The policy prohibits assuming raw Liquid placeholders are broken in deployed output.
 - Gray Note uses standalone HTML under numbered folders: `gray-note/001/{lang}/index.html` and `gray-note/002/index.html`. There are no Gray Note posts in `_posts`.
 - Canonical and hreflang should reference real, indexable language variants; `x-default` normally points to English where appropriate.
 - Intentional `noindex` pages include full-view pages and redirect pages. Never add such URLs to the sitemap.
 - Search page metadata warnings are optional improvements, not automatically errors.
 
-## Changes already made (2026-10-14)
+## Technical change history (2026-10-14)
 
 | Area | Change | Verification |
 |---|---|---|
@@ -31,7 +31,7 @@ Last updated: 2026-11-26. Repository: `Jin-in-Seoul/Jin-in-Seoul` (`main`). Publ
 | Source audit | Added `scripts/audit_seo.py` and `.github/workflows/seo-audit.yml`; excluded Jekyll `_includes` and `_layouts` from standalone-page checks | 240 HTML pages; 233 sitemap entries; 0 ERROR, 1 WARN, 2 INFO on run 38583032725 |
 | Live audit | Added `scripts/audit_seo_live.py` and `.github/workflows/seo-live-audit.yml`; reads deployed sitemap and tests published URLs | Verified on live run 38584877114: 233 sitemap URLs, 233 fetched HTTP 200, 0 ERROR, 1 WARN (search OG), 1 INFO (search JSON-LD) |
 
-The remaining 1 WARN and 2 INFO from the source audit concerned optional metadata on `search/index.html`. Do not change search indexing policy without deciding it deliberately.
+The remaining 1 WARN and 2 INFO from the source audit concerned optional metadata on `search/index.html`. The policy prohibits changing search indexing policy without deciding it deliberately.
 
 ## Automated checks and reports
 
@@ -53,19 +53,19 @@ The remaining 1 WARN and 2 INFO from the source audit concerned optional metadat
 ### Deployment
 - GitHub Pages workflow: https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions
 - Successful Pages deployment for the phase-3 SEO changes: https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions/runs/38583033007
-- Subsequent Pages deployment for live audit documentation: run `38583823275` completed successfully. Always check the newest relevant run.
+- Subsequent Pages deployment for live audit documentation: run `38583823275` completed successfully. Verification is based on the newest relevant run.
 
-## Remaining work for the next session
+## Periodic maintenance and verification
 
 1. **Completed 2026-10-14:** Live audit run [38584877114](https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions/runs/38584877114), report artifact `11904801736`: sitemap HTTP 200, 233/233 HTML fetched, ERROR 0, WARN 1 (`/search/` OG), INFO 1 (`/search/` JSON-LD). These two optional search-page findings require no immediate edits.
-2. On the next maintenance cycle, confirm `robots.txt` and intentionally unsitemapped redirect pages separately; the 233-URL audit covers only sitemap URLs.
+2. Periodic verification covers `robots.txt` and intentionally unsitemapped redirect pages separately; the 233-URL audit covers only sitemap URLs.
 3. Review real-world canonical/hreflang reciprocity and language codes. Separate actual problems from generated-page and intentional exceptions.
 4. Check Google Search Console and Naver Search Advisor indexing/sitemap reports **only with authorized access**. A GitHub audit cannot substitute for search-engine account data.
 5. After corrections, re-run source/live audits and verify Pages deployment; record exact commit SHAs and results here.
 
 ## Change log discipline
 
-For each future SEO change, record date, changed files, reason, GitHub commit, source audit, live audit, and Pages deployment result. Keep this document current. Do not write unverified success claims.
+Each SEO change record includes the date, changed files, reason, GitHub commit, source audit, live audit and Pages deployment result. This document is maintained as a current reference; unverified success claims are excluded.
 
 Related documentation: [README.md](README.md) · [CSS-MAINTENANCE.md](CSS-MAINTENANCE.md).
 
@@ -83,11 +83,11 @@ Mobile Lighthouse workflow: https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions
 - Sweater English landing page: performance **91**, accessibility **100**, best practices **100**; FCP/LCP 2.1s, CLS 0.
 - Dictionary Korean part-05 entry-07: performance **59**, accessibility **100**, best practices **100**; FCP 6.0s, LCP 7.0s, CLS 0.
 - Scores are a one-run mobile simulation, not real-user Core Web Vitals or proof of flawless visual layout across phones.
-- **Performance improvement is an optional follow-up**, especially the homepage image and render-blocking resources. Do not alter prose, CSS, or typography without explicit authorization and a visual regression plan.
+- **Performance improvement is an optional follow-up**, especially the homepage image and render-blocking resources. The policy prohibits altering prose, CSS, or typography without explicit authorization and a visual regression plan.
 
 ## Structured-data attribution normalization (2026-11-26)
 
-**Approved public identity:** Jin-in-Seoul is a pen name for published creative work. In Schema.org JSON-LD, attribute the site's original works and eligible translation/publishing credits to `{"@type":"Person","name":"Jin-in-Seoul","url":"https://jin-in-seoul.com/"}`. This is a public pen name, **not a disclosure of a legal name** and not a claim of a registered organization. Do not change `Person` to `Organization` without new authorization.
+**Approved public identity:** Jin-in-Seoul is a pen name for published creative work. In Schema.org JSON-LD, attribute the site's original works and eligible translation/publishing credits to `{"@type":"Person","name":"Jin-in-Seoul","url":"https://jin-in-seoul.com/"}`. This is a public pen name, **not a disclosure of a legal name** and not a claim of a registered organization. The policy prohibits changing `Person` to `Organization` without new authorization.
 
 - Original works (novels, entries, short stories, children's books, Gray Note essays, haiku, music): preserve `author` or other existing applicable credit with the same public pen-name identity. Do **not** add `translator` indiscriminately to every language edition.
 - Anonymous classical source `The Tale of Jeon Unchi` (`tales-from-premodern-korea/jeon-unchi/ko/index.html` and `en/index.html`): preserve `"author":"Anonymous"` and `translator` as `Person / Jin-in-Seoul`, including the modern Korean edition's existing credit. The description of the edition's modern-language rendering should remain in its published explanatory text.
@@ -95,7 +95,7 @@ Mobile Lighthouse workflow: https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions
 
 **Work and verification history:**
 
-1. An earlier one-time normalization to unclassified attribution created commit [db303d77e](https://github.com/Jin-in-Seoul/Jin-in-Seoul/commit/db303d77e5a56252f1b5b792f0d9c270b6cf6ed6); it was **superseded** when the user explicitly selected `Person`.
+1. An earlier one-time normalization to unclassified attribution created commit [db303d77e](https://github.com/Jin-in-Seoul/Jin-in-Seoul/commit/db303d77e5a56252f1b5b792f0d9c270b6cf6ed6); it was **superseded** by the approved `Person` attribution policy.
 2. The final one-time workflow `restore-pen-name-person-once.yml` succeeded ([run 45641099753](https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions/runs/45641099753)). Its log reports **306 modified HTML files**, **303 author credits**, **2 translator credits**, **1 publisher credit**, and **0 parse failures**. The resulting content commit is [7c57cad976](https://github.com/Jin-in-Seoul/Jin-in-Seoul/commit/7c57cad97685db425f3a605922b3b6aa44be1dec).
 3. GitHub Pages completed successfully for this content commit ([run 45641135130](https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions/runs/45641135130)). Representative source files were re-read: homepage, dictionary landing/entry, Sweater, short stories, children's books, Gray Note, haiku, music and the two Jeon Unchi editions.
 4. The Gray Note Liquid layout `_layouts/gray-note-post.html` was updated along with standalone pages. A source audit's JSON parsing of a Liquid template is not equivalent to parsing deployed HTML; validate rendered output separately if auditing JSON-LD site-wide.
