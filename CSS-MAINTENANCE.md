@@ -5,10 +5,10 @@ Last reviewed: 2026-10-14. This document describes the **current** architecture;
 ## Preservation and change-control principles
 
 1. **All existing `sweater/` files and diary typography are protected** (bold dates, spacing above/below dates, deliberate line breaks, paragraph formatting). Global CSS changes that could indirectly affect Sweater are excluded.
-2. Preserve all literary text, paragraph boundaries, headings, intentional blank lines and inline markup.
+2. All literary text, paragraph boundaries, headings, intentional blank lines and inline markup are preserved.
 3. Single-work or language adjustments use scoped stylesheets where appropriate and do not justify changes to `assets/style.css` alone.
-4. For Korean/Japanese prose, retain first-line indentation (normally `1em`), including the opening paragraph. For English/French, opening narrative paragraphs are flush left, later ordinary paragraphs retain `1em`. The policy prohibits indiscriminately remove indentation from every paragraph.
-5. Preserve section-number formatting. In short stories, `<p class="section-number">N</p>` is unindented. Japanese `the-basics-of-logic` uses this markup for sections 1–5.
+4. Korean/Japanese prose retains first-line indentation (normally `1em`), including the opening paragraph. For English/French, opening narrative paragraphs are flush left, later ordinary paragraphs retain `1em`. Indiscriminate removal of paragraph indentation is excluded.
+5. Section-number formatting is preserved. In short stories, `<p class="section-number">N</p>` is unindented. Japanese `the-basics-of-logic` uses this markup for sections 1–5.
 6. Repository-wide CSS cache-key changes require a verified reason and full affected-page audit. Different `?v=` values are cache keys, not different source CSS files.
 7. Stylesheet changes require prior inspection of selectors and HTML and post-commit retrieval of every changed file.
 
@@ -40,14 +40,14 @@ These all point to the **same** `assets/style.css` resource. **Mass replacement 
 
 ## New page / edit checklist
 
-1. Identify work, language, and the precise HTML page(s); record all potentially affected pages.
-2. Read `assets/style.css` and any existing work-specific CSS before editing.
-3. Reuse the established scoped CSS rather than inserting inline style blocks.
-4. For English/French Scarecrow Distance chapters 1–4, link `../../latin-first-paragraph.css?v=001` from `scarecrow-distance/<lang>/chapter-XX/index.html`; leave Korean/Japanese chapters unchanged. For English/French short stories link `../../latin-first-paragraph.css?v=001` from `short-stories/<slug>/<lang>/index.html`. For English/French children's books use the equivalent path under `childrens-books/`.
-5. For dictionary entries use the matching language's `entry-common.css`. Preserve special all-view and chapter-level formatting.
-6. Confirm that Korean/Japanese are not linked to Latin-only CSS; check `section-number` and `h2` structure.
-7. Run `python3 scripts/audit_css_links.py` from repository root and review warnings; compare affected-page counts before and after.
-8. Verify that changed HTML differs **only** in the intended stylesheet link or agreed markup, and re-fetch changed files from GitHub after commit.
+1. The work, language, precise HTML pages and potentially affected pages are identified and recorded.
+2. Prior review of `assets/style.css` and existing work-specific CSS is required.
+3. Established scoped CSS takes precedence over new inline style blocks.
+4. English/French Scarecrow Distance chapters 1–4 link `../../latin-first-paragraph.css?v=001` from `scarecrow-distance/<lang>/chapter-XX/index.html`; Korean/Japanese chapters remain unchanged. English/French short stories link `../../latin-first-paragraph.css?v=001` from `short-stories/<slug>/<lang>/index.html`. English/French children's books use the equivalent path under `childrens-books/`.
+5. Dictionary entries use the matching language's `entry-common.css`. Special all-view and chapter-level formatting is preserved.
+6. Verification covers the absence of Latin-only CSS links on Korean/Japanese pages and the `section-number` and `h2` structure.
+7. Verification includes execution of `python3 scripts/audit_css_links.py` from the repository root, review of warnings and comparison of affected-page counts before and after.
+8. Verification establishes that changed HTML differs **only** in the intended stylesheet link or agreed markup; changed files are retrieved from GitHub after commit.
 9. Sweater is excluded from bulk transformations; global CSS modifications require separate explicit approval and a regression plan.
 
 ## Conflict / duplication notes
@@ -56,7 +56,7 @@ The global stylesheet intentionally has distinct selectors for `.galactic-prose`
 
 ## Maintenance decisions
 
-- Keep the eight existing CSS files; no forced consolidation.
-- Preserve all current cache query strings until an actual global CSS release requires cache invalidation.
-- Run read-only inventory and targeted tests first; defer deleting selectors without demonstrated non-use.
+- The eight existing CSS files are retained without forced consolidation.
+- Current cache query strings are retained until a global CSS release requires cache invalidation.
+- Read-only inventory and targeted tests precede changes; deletion of selectors requires demonstrated non-use.
 - Mobile/visual verification is managed by the site owner.
