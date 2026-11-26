@@ -66,7 +66,7 @@ These filenames are examples, not required names. Existing image paths must rema
 
 ### 3.2 Image optimization
 
-Optimize new photographs before upload. Proposed defaults:
+New photographs are optimized before upload. Proposed defaults:
 
 | Property | Recommended guideline |
 | --- | --- |
@@ -78,17 +78,17 @@ Optimize new photographs before upload. Proposed defaults:
 | Color profile | sRGB |
 | Metadata | Remove unnecessary location and device metadata from web copies |
 
-These are guidelines, not absolute limits. Inspect quality visually, especially for text, architecture, and fine detail. Do not enlarge images already smaller than the recommended dimensions.
+These are guidelines, not absolute limits. Inspect quality visually, especially for text, architecture, and fine detail. The policy prohibits enlarging images already smaller than the recommended dimensions.
 
 ### 3.3 Historical authenticity and original photographs
 
 Historical travel photographs are records of the time and place in which they were made. Preserve their original appearance. Preparation for web publication should ordinarily be limited to resizing, compression, format conversion, and necessary technical corrections.
 
-Do not alter colors, composition, or depicted content merely to make the photograph more visually appealing. Do not remove, replace, or generate elements of historical photographs as routine optimization. Any substantive visual edit requires the author's explicit decision.
+The policy prohibits altering colors, composition, or depicted content merely to make the photograph more visually appealing. The policy prohibits removing, replace, or generate elements of historical photographs as routine optimization. Any substantive visual edit requires the author's explicit decision.
 
-Preserve original files in personal storage outside GitHub, and create separate optimized web copies. Never overwrite originals during conversion. Keep an independent backup of original photographs.
+Original files are preserved in personal storage outside GitHub, with separate optimized web copies and an independent backup. Originals are not overwritten during conversion.
 
-The existing `/assets/images/originals/` directory may contain legacy originals; review individual files before any change. Do not delete or relocate them merely to standardize storage.
+The existing `/assets/images/originals/` directory may contain legacy originals; review individual files before any change. The policy prohibits deleting or relocate them merely to standardize storage.
 
 ### 3.4 Photo essays
 
@@ -102,7 +102,7 @@ Use meaningful filenames and descriptive `alt` attributes. Where appropriate, sp
 
 ### 4.1 Storage location
 
-Keep published audio under `/assets/audio/music/` and music pages under `/music/`. Do not move published files solely for consistency.
+Keep published audio under `/assets/audio/music/` and music pages under `/music/`. The policy prohibits moving published files solely for consistency.
 
 ### 4.2 Audio format and naming
 
@@ -157,7 +157,7 @@ A newly authorized release should be verified for:
 - File opening on representative readers.
 - Filename, version, and download-link accuracy.
 
-Do not silently overwrite existing versioned downloads.
+The policy prohibits silently overwrite existing versioned downloads.
 
 ## 6. File Naming
 
@@ -175,7 +175,7 @@ Examples:
 - `autumn-rain-blue-night-ja.mp3`
 - `sweater-en-20260930-ver-001.pdf`
 
-Do not rename published files merely to enforce these conventions.
+Naming conventions alone do not justify renaming published files.
 
 **Preserving existing URLs takes priority over naming uniformity.**
 
@@ -192,7 +192,7 @@ Before publishing a photo essay or substantial new media collection:
 5. Check relevant repository and GitHub Pages storage constraints.
 6. Avoid redundant copies and upload additions incrementally when useful.
 
-**Do not impose an automatic image-count limit or a universal per-essay size cap.** Total size is a review signal, and the author decides the final composition. Improve compression or loading behavior first if a page is unusually heavy.
+**No automatic image-count limit or universal per-essay size cap applies.** Total size is a review signal, and the author decides the final composition. Improve compression or loading behavior first if a page is unusually heavy.
 
 Audio and downloadable editions may use more storage than optimized photographs. Review storage growth periodically.
 
@@ -221,7 +221,7 @@ An asset-only addition does not automatically require a publication-log entry.
 
 The existing published website is the reference state.
 
-Do not:
+The following practices are excluded:
 
 - Move existing asset directories or rename published files without approval.
 - Replace originals with compressed derivatives.
@@ -237,6 +237,6 @@ Before an approved change, identify affected file references, public URLs, and c
 
 Link this document from the repository `README.md` alongside `CSS-MAINTENANCE.md` and `SEO-MAINTENANCE.md`.
 
-Update these guidelines when a new file type, storage method, or publication workflow genuinely requires a new policy. Do not revise established policies merely for stylistic consistency.
+Update these guidelines when a new file type, storage method, or publication workflow genuinely requires a new policy. The policy prohibits revise established policies merely for stylistic consistency.
 
 **The author retains final editorial authority. Technical asset policies do not determine the composition of literary works.**
