@@ -65,7 +65,11 @@ permalink: /site-management/
     .management-markdown table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 18px 0; font-size: 14px; line-height: 1.65; }
     .management-markdown th, .management-markdown td { border: 1px solid #ddd; padding: 7px 10px; text-align: left; vertical-align: top; }
     .management-markdown th { background: #f7f7f7; }
-    #translation .management-markdown table th:first-child, #translation .management-markdown table td:first-child { white-space: nowrap; }
+    #translation .management-markdown { overflow-x: auto; }
+    #translation .management-markdown table { display: table; width: 100%; min-width: 680px; table-layout: fixed; }
+    #translation .management-markdown table th:first-child, #translation .management-markdown table td:first-child { width: 24%; white-space: nowrap; }
+    #translation .management-markdown table th:nth-child(2), #translation .management-markdown table td:nth-child(2) { width: 32%; }
+    #translation .management-markdown table th:nth-child(3), #translation .management-markdown table td:nth-child(3) { width: 44%; }
     .management-markdown pre { max-width: 100%; overflow-x: auto; background: #f7f7f7; padding: 12px; font-size: 13px; white-space: pre; }
     .management-markdown code { font-size: 0.9em; }
     @media (max-width: 620px) {
