@@ -237,6 +237,7 @@ permalink: /site-management/ko/
       <section class="management-document" id="translation">
         <h2>한국 고전소설 번역 및 편집 원칙</h2>
         {% capture management_markdown %}{% include_relative _management/ko/PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md %}{% endcapture %}
+        {% assign management_markdown = management_markdown | split: '## III. 작품별 번역 가이드' | first %}
         {% assign management_lines = management_markdown | split: management_newline %}
         {% capture public_management_markdown %}{% for management_line in management_lines %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
         {% assign management_html = public_management_markdown | markdownify %}
