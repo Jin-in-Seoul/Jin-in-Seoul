@@ -17,26 +17,26 @@ permalink: /site-management/
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-  <title>Site Management &amp; Maintenance - Jin-in-Seoul</title>
-  <meta name="description" content="The operating, preservation, maintenance and translation principles of Jin-in-Seoul, with the complete English management documents.">
+  <title>Management &amp; Maintenance - Jin-in-Seoul</title>
+  <meta name="description" content="The operating, preservation, maintenance and translation principles of Jin-in-Seoul, with the seven common English management documents.">
   <link rel="canonical" href="https://jin-in-seoul.com/site-management/">
   <link rel="alternate" hreflang="en" href="https://jin-in-seoul.com/site-management/">
   <link rel="alternate" hreflang="ko" href="https://jin-in-seoul.com/site-management/ko/">
   <link rel="alternate" hreflang="x-default" href="https://jin-in-seoul.com/site-management/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Site Management &amp; Maintenance - Jin-in-Seoul">
-  <meta property="og:description" content="The operating, preservation, maintenance and translation principles of Jin-in-Seoul, with the complete English management documents.">
+  <meta property="og:title" content="Management &amp; Maintenance - Jin-in-Seoul">
+  <meta property="og:description" content="The operating, preservation, maintenance and translation principles of Jin-in-Seoul, with the seven common English management documents.">
   <meta property="og:url" content="https://jin-in-seoul.com/site-management/">
   <meta property="og:site_name" content="Jin-in-Seoul">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Site Management &amp; Maintenance - Jin-in-Seoul">
-  <meta name="twitter:description" content="The operating, preservation, maintenance and translation principles of Jin-in-Seoul, with the complete English management documents.">
+  <meta name="twitter:title" content="Management &amp; Maintenance - Jin-in-Seoul">
+  <meta name="twitter:description" content="The operating, preservation, maintenance and translation principles of Jin-in-Seoul, with the seven common English management documents.">
   <script type="application/ld+json" data-seo="site">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Site Management & Maintenance",
-  "description": "The operating, preservation, maintenance and translation principles of Jin-in-Seoul, with the complete English management documents.",
+  "name": "Management & Maintenance",
+  "description": "The operating, preservation, maintenance and translation principles of Jin-in-Seoul, with the seven common English management documents.",
   "url": "https://jin-in-seoul.com/site-management/",
   "inLanguage": "en"
 }
@@ -80,11 +80,11 @@ permalink: /site-management/
   <main class="shell">
     {% include header.html %}
     <article class="management-page">
-      <h1>Site Management &amp; Maintenance</h1>
+      <h1>Management &amp; Maintenance</h1>
       <nav class="management-languages" aria-label="Language selection"><span aria-current="page">English</span> · <a href="/site-management/ko/" lang="ko" hreflang="ko">한국어</a></nav>
       <aside class="management-overview" aria-label="Overview">
         <p>Jin-in-Seoul preserves literary works and their translations as independent HTML files. Its management documents record the principles of preservation, editing, translation, publication and technical maintenance, so that the works and the operation of the site remain independent of any particular software or administrator.</p>
-        <p>The documents below are rendered directly from their official Markdown sources in the <a href="https://github.com/Jin-in-Seoul/Jin-in-Seoul">GitHub repository</a>, in English.</p>
+        <p>The seven common management documents below are rendered directly from their official Markdown sources in the <a href="https://github.com/Jin-in-Seoul/Jin-in-Seoul">GitHub repository</a>, in English. Work-specific translation guides are retained in the repository for future translations.</p>
       </aside>
       <nav class="management-contents" aria-label="Contents">
         <strong>Contents</strong>
@@ -96,8 +96,8 @@ permalink: /site-management/
           <li><a href="#assets">Asset Maintenance</a></li>
           <li><a href="#publication">Publication Log Policy</a></li>
           <li><a href="#translation">Translation and Editing Principles for Premodern Korean Fiction</a></li>
-          <li><a href="#jeon-unchi">The Tale of Jeon Unchi — Translation Guide</a></li>
-          <li><a href="#master-rabbit">The Tale of Master Rabbit — Translation Guide</a></li>
+
+
         </ol>
       </nav>
 
@@ -114,8 +114,8 @@ permalink: /site-management/
         {% assign management_html = management_html | replace: 'href="ASSET-MAINTENANCE.md"', 'href="#assets"' | replace: 'href="ASSET-MAINTENANCE.md#', 'href="#assets-' %}
         {% assign management_html = management_html | replace: 'href="PUBLICATION-LOG-POLICY.md"', 'href="#publication"' | replace: 'href="PUBLICATION-LOG-POLICY.md#', 'href="#publication-' %}
         {% assign management_html = management_html | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md"', 'href="#translation"' | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md#', 'href="#translation-' %}
-        {% assign management_html = management_html | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md"', 'href="#jeon-unchi"' | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md#', 'href="#jeon-unchi-' %}
-        {% assign management_html = management_html | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md"', 'href="#master-rabbit"' | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md#', 'href="#master-rabbit-' %}
+        {% assign management_html = management_html | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md"', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/JEON-UNCHI-TRANSLATION-GUIDE.md"' | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md#', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/JEON-UNCHI-TRANSLATION-GUIDE.md#' %}
+        {% assign management_html = management_html | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md"', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/MASTER-RABBIT-TRANSLATION-GUIDE.md"' | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md#', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/MASTER-RABBIT-TRANSLATION-GUIDE.md#' %}
         {% assign management_html = management_html | replace: 'href="../../_maintenance/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_maintenance/' | replace: 'href="../../scripts/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/scripts/' %}
         <div class="management-markdown">
           {{ management_html }}
@@ -135,8 +135,8 @@ permalink: /site-management/
         {% assign management_html = management_html | replace: 'href="ASSET-MAINTENANCE.md"', 'href="#assets"' | replace: 'href="ASSET-MAINTENANCE.md#', 'href="#assets-' %}
         {% assign management_html = management_html | replace: 'href="PUBLICATION-LOG-POLICY.md"', 'href="#publication"' | replace: 'href="PUBLICATION-LOG-POLICY.md#', 'href="#publication-' %}
         {% assign management_html = management_html | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md"', 'href="#translation"' | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md#', 'href="#translation-' %}
-        {% assign management_html = management_html | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md"', 'href="#jeon-unchi"' | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md#', 'href="#jeon-unchi-' %}
-        {% assign management_html = management_html | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md"', 'href="#master-rabbit"' | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md#', 'href="#master-rabbit-' %}
+        {% assign management_html = management_html | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md"', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/JEON-UNCHI-TRANSLATION-GUIDE.md"' | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md#', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/JEON-UNCHI-TRANSLATION-GUIDE.md#' %}
+        {% assign management_html = management_html | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md"', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/MASTER-RABBIT-TRANSLATION-GUIDE.md"' | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md#', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/MASTER-RABBIT-TRANSLATION-GUIDE.md#' %}
         {% assign management_html = management_html | replace: 'href="../../_maintenance/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_maintenance/' | replace: 'href="../../scripts/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/scripts/' %}
         <div class="management-markdown">
           {{ management_html }}
@@ -156,8 +156,8 @@ permalink: /site-management/
         {% assign management_html = management_html | replace: 'href="ASSET-MAINTENANCE.md"', 'href="#assets"' | replace: 'href="ASSET-MAINTENANCE.md#', 'href="#assets-' %}
         {% assign management_html = management_html | replace: 'href="PUBLICATION-LOG-POLICY.md"', 'href="#publication"' | replace: 'href="PUBLICATION-LOG-POLICY.md#', 'href="#publication-' %}
         {% assign management_html = management_html | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md"', 'href="#translation"' | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md#', 'href="#translation-' %}
-        {% assign management_html = management_html | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md"', 'href="#jeon-unchi"' | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md#', 'href="#jeon-unchi-' %}
-        {% assign management_html = management_html | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md"', 'href="#master-rabbit"' | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md#', 'href="#master-rabbit-' %}
+        {% assign management_html = management_html | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md"', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/JEON-UNCHI-TRANSLATION-GUIDE.md"' | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md#', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/JEON-UNCHI-TRANSLATION-GUIDE.md#' %}
+        {% assign management_html = management_html | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md"', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/MASTER-RABBIT-TRANSLATION-GUIDE.md"' | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md#', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/MASTER-RABBIT-TRANSLATION-GUIDE.md#' %}
         {% assign management_html = management_html | replace: 'href="../../_maintenance/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_maintenance/' | replace: 'href="../../scripts/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/scripts/' %}
         <div class="management-markdown">
           {{ management_html }}
@@ -177,8 +177,8 @@ permalink: /site-management/
         {% assign management_html = management_html | replace: 'href="ASSET-MAINTENANCE.md"', 'href="#assets"' | replace: 'href="ASSET-MAINTENANCE.md#', 'href="#assets-' %}
         {% assign management_html = management_html | replace: 'href="PUBLICATION-LOG-POLICY.md"', 'href="#publication"' | replace: 'href="PUBLICATION-LOG-POLICY.md#', 'href="#publication-' %}
         {% assign management_html = management_html | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md"', 'href="#translation"' | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md#', 'href="#translation-' %}
-        {% assign management_html = management_html | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md"', 'href="#jeon-unchi"' | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md#', 'href="#jeon-unchi-' %}
-        {% assign management_html = management_html | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md"', 'href="#master-rabbit"' | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md#', 'href="#master-rabbit-' %}
+        {% assign management_html = management_html | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md"', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/JEON-UNCHI-TRANSLATION-GUIDE.md"' | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md#', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/JEON-UNCHI-TRANSLATION-GUIDE.md#' %}
+        {% assign management_html = management_html | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md"', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/MASTER-RABBIT-TRANSLATION-GUIDE.md"' | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md#', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/MASTER-RABBIT-TRANSLATION-GUIDE.md#' %}
         {% assign management_html = management_html | replace: 'href="../../_maintenance/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_maintenance/' | replace: 'href="../../scripts/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/scripts/' %}
         <div class="management-markdown">
           {{ management_html }}
@@ -198,8 +198,8 @@ permalink: /site-management/
         {% assign management_html = management_html | replace: 'href="ASSET-MAINTENANCE.md"', 'href="#assets"' | replace: 'href="ASSET-MAINTENANCE.md#', 'href="#assets-' %}
         {% assign management_html = management_html | replace: 'href="PUBLICATION-LOG-POLICY.md"', 'href="#publication"' | replace: 'href="PUBLICATION-LOG-POLICY.md#', 'href="#publication-' %}
         {% assign management_html = management_html | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md"', 'href="#translation"' | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md#', 'href="#translation-' %}
-        {% assign management_html = management_html | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md"', 'href="#jeon-unchi"' | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md#', 'href="#jeon-unchi-' %}
-        {% assign management_html = management_html | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md"', 'href="#master-rabbit"' | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md#', 'href="#master-rabbit-' %}
+        {% assign management_html = management_html | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md"', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/JEON-UNCHI-TRANSLATION-GUIDE.md"' | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md#', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/JEON-UNCHI-TRANSLATION-GUIDE.md#' %}
+        {% assign management_html = management_html | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md"', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/MASTER-RABBIT-TRANSLATION-GUIDE.md"' | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md#', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/MASTER-RABBIT-TRANSLATION-GUIDE.md#' %}
         {% assign management_html = management_html | replace: 'href="../../_maintenance/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_maintenance/' | replace: 'href="../../scripts/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/scripts/' %}
         <div class="management-markdown">
           {{ management_html }}
@@ -219,8 +219,8 @@ permalink: /site-management/
         {% assign management_html = management_html | replace: 'href="ASSET-MAINTENANCE.md"', 'href="#assets"' | replace: 'href="ASSET-MAINTENANCE.md#', 'href="#assets-' %}
         {% assign management_html = management_html | replace: 'href="PUBLICATION-LOG-POLICY.md"', 'href="#publication"' | replace: 'href="PUBLICATION-LOG-POLICY.md#', 'href="#publication-' %}
         {% assign management_html = management_html | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md"', 'href="#translation"' | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md#', 'href="#translation-' %}
-        {% assign management_html = management_html | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md"', 'href="#jeon-unchi"' | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md#', 'href="#jeon-unchi-' %}
-        {% assign management_html = management_html | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md"', 'href="#master-rabbit"' | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md#', 'href="#master-rabbit-' %}
+        {% assign management_html = management_html | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md"', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/JEON-UNCHI-TRANSLATION-GUIDE.md"' | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md#', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/JEON-UNCHI-TRANSLATION-GUIDE.md#' %}
+        {% assign management_html = management_html | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md"', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/MASTER-RABBIT-TRANSLATION-GUIDE.md"' | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md#', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/MASTER-RABBIT-TRANSLATION-GUIDE.md#' %}
         {% assign management_html = management_html | replace: 'href="../../_maintenance/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_maintenance/' | replace: 'href="../../scripts/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/scripts/' %}
         <div class="management-markdown">
           {{ management_html }}
@@ -240,55 +240,15 @@ permalink: /site-management/
         {% assign management_html = management_html | replace: 'href="ASSET-MAINTENANCE.md"', 'href="#assets"' | replace: 'href="ASSET-MAINTENANCE.md#', 'href="#assets-' %}
         {% assign management_html = management_html | replace: 'href="PUBLICATION-LOG-POLICY.md"', 'href="#publication"' | replace: 'href="PUBLICATION-LOG-POLICY.md#', 'href="#publication-' %}
         {% assign management_html = management_html | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md"', 'href="#translation"' | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md#', 'href="#translation-' %}
-        {% assign management_html = management_html | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md"', 'href="#jeon-unchi"' | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md#', 'href="#jeon-unchi-' %}
-        {% assign management_html = management_html | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md"', 'href="#master-rabbit"' | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md#', 'href="#master-rabbit-' %}
+        {% assign management_html = management_html | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md"', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/JEON-UNCHI-TRANSLATION-GUIDE.md"' | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md#', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/JEON-UNCHI-TRANSLATION-GUIDE.md#' %}
+        {% assign management_html = management_html | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md"', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/MASTER-RABBIT-TRANSLATION-GUIDE.md"' | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md#', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/MASTER-RABBIT-TRANSLATION-GUIDE.md#' %}
         {% assign management_html = management_html | replace: 'href="../../_maintenance/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_maintenance/' | replace: 'href="../../scripts/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/scripts/' %}
         <div class="management-markdown">
           {{ management_html }}
         </div>
       </section>
 
-      <section class="management-document" id="jeon-unchi">
-        <h2>The Tale of Jeon Unchi — Translation Guide</h2>
-        <p class="management-source"><a href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/JEON-UNCHI-TRANSLATION-GUIDE.md">JEON-UNCHI-TRANSLATION-GUIDE.md — GitHub source</a></p>
-        {% capture management_markdown %}{% include_relative _management/en/JEON-UNCHI-TRANSLATION-GUIDE.md %}{% endcapture %}
-        {% assign management_html = management_markdown | markdownify %}
-        {% assign management_html = management_html | replace: ' id="', ' id="jeon-unchi-' | replace: ' href="#', ' href="#jeon-unchi-' %}
-        {% assign management_html = management_html | replace: 'href="ABC.md"', 'href="#abc"' | replace: 'href="ABC.md#', 'href="#abc-' %}
-        {% assign management_html = management_html | replace: 'href="README.md"', 'href="#readme"' | replace: 'href="README.md#', 'href="#readme-' %}
-        {% assign management_html = management_html | replace: 'href="CSS-MAINTENANCE.md"', 'href="#css"' | replace: 'href="CSS-MAINTENANCE.md#', 'href="#css-' %}
-        {% assign management_html = management_html | replace: 'href="SEO-MAINTENANCE.md"', 'href="#seo"' | replace: 'href="SEO-MAINTENANCE.md#', 'href="#seo-' %}
-        {% assign management_html = management_html | replace: 'href="ASSET-MAINTENANCE.md"', 'href="#assets"' | replace: 'href="ASSET-MAINTENANCE.md#', 'href="#assets-' %}
-        {% assign management_html = management_html | replace: 'href="PUBLICATION-LOG-POLICY.md"', 'href="#publication"' | replace: 'href="PUBLICATION-LOG-POLICY.md#', 'href="#publication-' %}
-        {% assign management_html = management_html | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md"', 'href="#translation"' | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md#', 'href="#translation-' %}
-        {% assign management_html = management_html | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md"', 'href="#jeon-unchi"' | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md#', 'href="#jeon-unchi-' %}
-        {% assign management_html = management_html | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md"', 'href="#master-rabbit"' | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md#', 'href="#master-rabbit-' %}
-        {% assign management_html = management_html | replace: 'href="../../_maintenance/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_maintenance/' | replace: 'href="../../scripts/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/scripts/' %}
-        <div class="management-markdown">
-          {{ management_html }}
-        </div>
-      </section>
 
-      <section class="management-document" id="master-rabbit">
-        <h2>The Tale of Master Rabbit — Translation Guide</h2>
-        <p class="management-source"><a href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/en/MASTER-RABBIT-TRANSLATION-GUIDE.md">MASTER-RABBIT-TRANSLATION-GUIDE.md — GitHub source</a></p>
-        {% capture management_markdown %}{% include_relative _management/en/MASTER-RABBIT-TRANSLATION-GUIDE.md %}{% endcapture %}
-        {% assign management_html = management_markdown | markdownify %}
-        {% assign management_html = management_html | replace: ' id="', ' id="master-rabbit-' | replace: ' href="#', ' href="#master-rabbit-' %}
-        {% assign management_html = management_html | replace: 'href="ABC.md"', 'href="#abc"' | replace: 'href="ABC.md#', 'href="#abc-' %}
-        {% assign management_html = management_html | replace: 'href="README.md"', 'href="#readme"' | replace: 'href="README.md#', 'href="#readme-' %}
-        {% assign management_html = management_html | replace: 'href="CSS-MAINTENANCE.md"', 'href="#css"' | replace: 'href="CSS-MAINTENANCE.md#', 'href="#css-' %}
-        {% assign management_html = management_html | replace: 'href="SEO-MAINTENANCE.md"', 'href="#seo"' | replace: 'href="SEO-MAINTENANCE.md#', 'href="#seo-' %}
-        {% assign management_html = management_html | replace: 'href="ASSET-MAINTENANCE.md"', 'href="#assets"' | replace: 'href="ASSET-MAINTENANCE.md#', 'href="#assets-' %}
-        {% assign management_html = management_html | replace: 'href="PUBLICATION-LOG-POLICY.md"', 'href="#publication"' | replace: 'href="PUBLICATION-LOG-POLICY.md#', 'href="#publication-' %}
-        {% assign management_html = management_html | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md"', 'href="#translation"' | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md#', 'href="#translation-' %}
-        {% assign management_html = management_html | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md"', 'href="#jeon-unchi"' | replace: 'href="JEON-UNCHI-TRANSLATION-GUIDE.md#', 'href="#jeon-unchi-' %}
-        {% assign management_html = management_html | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md"', 'href="#master-rabbit"' | replace: 'href="MASTER-RABBIT-TRANSLATION-GUIDE.md#', 'href="#master-rabbit-' %}
-        {% assign management_html = management_html | replace: 'href="../../_maintenance/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_maintenance/' | replace: 'href="../../scripts/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/scripts/' %}
-        <div class="management-markdown">
-          {{ management_html }}
-        </div>
-      </section>
     </article>
     {% include footer.html %}
   </main>
