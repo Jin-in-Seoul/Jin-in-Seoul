@@ -52,17 +52,22 @@ permalink: /site-management/
     .management-document { margin-top: 32px; padding-top: 0; scroll-margin-top: 20px; }
     .management-document + .management-document { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); }
     .management-page h2 { border-bottom: 0; padding-bottom: 0; }
-    .management-document > h2 { margin: 0 0 20px; }
+    .management-document > h2 { margin: 0 0 18px; }
     .management-page + .site-footer { margin-top: 40px; }
     .management-markdown > :last-child { margin-bottom: 0; }
     .management-markdown hr { display: none; }
+    #abc .management-markdown hr { display: block; }
     .management-markdown { font-size: 16px; line-height: 1.8; overflow-wrap: anywhere; }
-    .management-markdown h1 { font-size: 23px; margin: 28px 0 16px; }
-    .management-markdown h2 { font-size: 20px; margin: 26px 0 12px; }
-    .management-markdown h3 { font-size: 18px; margin: 22px 0 10px; }
+    .management-markdown h1 { font-size: 23px; margin: 24px 0 12px; }
+    .management-markdown h2 { font-size: 20px; margin: 26px 0 8px; }
+    .management-markdown h3 { font-size: 18px; margin: 22px 0 8px; }
     .management-markdown p, .management-markdown li { font-size: inherit; line-height: inherit; text-indent: 0; }
-    .management-markdown ul, .management-markdown ol { padding-left: 1.6em; }
-    .management-markdown table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 18px 0; font-size: 14px; line-height: 1.65; }
+    .management-markdown p { margin: 0 0 14px; }
+    .management-markdown h2 + p, .management-markdown h3 + p { margin-top: 0; }
+    .management-markdown li { margin: 0 0 5px; }
+    .management-markdown ul, .management-markdown ol { margin: 0 0 16px; padding-left: 1.6em; }
+    .management-markdown li > ul, .management-markdown li > ol { margin: 6px 0 8px; }
+    .management-markdown table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 14px 0 20px; font-size: 14px; line-height: 1.65; }
     .management-markdown th, .management-markdown td { border: 1px solid #ddd; padding: 7px 10px; text-align: left; vertical-align: top; }
     .management-markdown th { background: #f7f7f7; }
     #translation .management-markdown { overflow-x: auto; }
