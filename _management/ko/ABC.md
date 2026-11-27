@@ -115,4 +115,5 @@ Jin-in-Seoul은 소설, 단편소설, 동화, 에세이, 하이쿠, 음악 및 �
 
 - 규정의 개정은 작가의 승인을 거치며, 기존 규정과의 일관성을 유지한다.
 
-<small>* 사이트 관리 규정은 한국어판을 공식 원본으로 하며, 영어판은 이를 충실하게 반영한 공식 번역본으로 관리한다. 두 언어판은 각각 <code>_management/ko/</code>와 <code>_management/en/</code>에 동일한 파일명으로 보존한다.</small>
+<hr style="border:0;border-top:1px solid #d9d9d9;margin:28px 0 16px;">
+<p style="font-size:0.85em;color:#777;line-height:1.65;margin:0;">사이트 관리 규정은 한국어판을 공식 원본으로 하며, 영어판은 이를 충실하게 반영한 공식 번역본으로 관리한다. 두 언어판은 각각 <code>_management/ko/</code>와 <code>_management/en/</code>에 동일한 파일명으로 보존한다.</p>
