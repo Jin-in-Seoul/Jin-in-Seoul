@@ -1,6 +1,6 @@
 # SEO maintenance policy — Jin-in-Seoul
 
-Last updated: 2026-11-26. Repository: `Jin-in-Seoul/Jin-in-Seoul` (`main`). Public site: https://jin-in-seoul.com/.
+Last updated: 2026-11-27. Repository: `Jin-in-Seoul/Jin-in-Seoul` (`main`). Public site: https://jin-in-seoul.com/.
 
 ## Scope and non-negotiable rules
 
@@ -58,7 +58,7 @@ The remaining 1 WARN and 2 INFO from the source audit concerned optional metadat
 ## Periodic maintenance and verification
 
 1. **Completed 2026-10-14:** Live audit run [38584877114](https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions/runs/38584877114), report artifact `11904801736`: sitemap HTTP 200, 233/233 HTML fetched, ERROR 0, WARN 1 (`/search/` OG), INFO 1 (`/search/` JSON-LD). These two optional search-page findings require no immediate edits.
-2. Periodic verification covers `robots.txt` and intentionally unsitemapped redirect pages separately; the 233-URL audit covers only sitemap URLs.
+2. Periodic verification covers `robots.txt` and intentionally unsitemapped redirect pages separately. The 233-URL figures above refer to the 14 October 2026 audit, not the current sitemap size. On 27 November 2026, the latest `sitemap.xml` source contains 315 `<loc>` entries; this source count is not a fresh live-URL audit.
 3. Verification covers deployed canonical/hreflang reciprocity and language codes, distinguishing actual problems from generated-page and intentional exceptions.
 4. Google Search Console and Naver Search Advisor indexing/sitemap reports are reviewed **only with authorized access**. A GitHub audit cannot substitute for search-engine account data.
 5. Corrections are followed by source/live audits and Pages deployment verification, with exact commit SHAs and results recorded.
@@ -99,6 +99,6 @@ Mobile Lighthouse workflow: https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions
 2. The final one-time workflow `restore-pen-name-person-once.yml` succeeded ([run 45641099753](https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions/runs/45641099753)). Its log reports **306 modified HTML files**, **303 author credits**, **2 translator credits**, **1 publisher credit**, and **0 parse failures**. The resulting content commit is [7c57cad976](https://github.com/Jin-in-Seoul/Jin-in-Seoul/commit/7c57cad97685db425f3a605922b3b6aa44be1dec).
 3. GitHub Pages completed successfully for this content commit ([run 45641135130](https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions/runs/45641135130)). Representative source files were re-read: homepage, dictionary landing/entry, Sweater, short stories, children's books, Gray Note, haiku, music and the two Jeon Unchi editions.
 4. The Gray Note Liquid layout `_layouts/gray-note-post.html` was updated along with standalone pages. A source audit's JSON parsing of a Liquid template is not equivalent to parsing deployed HTML; site-wide JSON-LD audits require separate validation of rendered output.
-5. The one-time workflow is to be **removed after completion**, so it cannot be triggered again. Its removal requires a separate commit and Pages deployment verification.
+5. **Completed:** The one-time workflow was removed in [commit 90aff30c](https://github.com/Jin-in-Seoul/Jin-in-Seoul/commit/90aff30c7d33c26537655c7692774988aae3c131). GitHub Pages deployment for that commit succeeded. The temporary workflow is no longer present on `main`.
 
 - **Audit scope:** The workflow verified that changes were confined to JSON-LD scripts and reported no JSON parse failures in its covered files. This does not itself establish comprehensive live HTML validation or actual Google/Naver indexing. Those claims require deployed-site SEO audits and authorized Search Console access, as applicable. Anonymous original-author attribution and the public pen name remain protected.
