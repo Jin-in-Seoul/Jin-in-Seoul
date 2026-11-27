@@ -63,6 +63,8 @@ permalink: /site-management/
     .management-markdown h3 { font-size: 18px; margin: 22px 0 8px; }
     .management-markdown p, .management-markdown li { font-size: inherit; line-height: inherit; text-indent: 0; }
     .management-markdown p { margin: 0 0 14px; }
+    /* Markdown's bold-only section labels render as paragraphs, not headings. */
+    #translation .management-markdown p:has(> strong:only-child) { margin: 20px 0 4px; }
     .management-markdown h2 + p, .management-markdown h3 + p { margin-top: 0; }
     .management-markdown li { margin: 0 0 5px; }
     .management-markdown ul, .management-markdown ol { margin: 0 0 16px; padding-left: 1.6em; }
