@@ -1,6 +1,6 @@
 # SEO 관리 규정 — Jin-in-Seoul
 
-최종 갱신: 2026-11-26. 저장소: `Jin-in-Seoul/Jin-in-Seoul` (`main`). 공개 사이트: https://jin-in-seoul.com/.
+최종 갱신: 2026-11-27. 저장소: `Jin-in-Seoul/Jin-in-Seoul` (`main`). 공개 사이트: https://jin-in-seoul.com/.
 
 ## 적용 범위와 필수 원칙
 
@@ -58,7 +58,7 @@
 ## 정기 관리와 검증
 
 1. **2026-10-14 완료:** 실제 검사 실행 [38584877114](https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions/runs/38584877114), 보고서 아티팩트 `11904801736`: 사이트맵 HTTP 200, HTML 233/233개 조회, ERROR 0, WARN 1(`/search/` OG), INFO 1(`/search/` JSON-LD). 검색 페이지의 선택적 사항 2개는 즉각적인 수정이 필요하지 않다.
-2. 정기 검증에는 `robots.txt` 및 의도적으로 사이트맵에서 제외한 리디렉션 페이지의 별도 확인이 포함된다. 233개 URL 검사는 사이트맵 URL만을 대상으로 한다.
+2. 정기 검증에는 `robots.txt` 및 의도적으로 사이트맵에서 제외한 리디렉션 페이지의 별도 확인이 포함된다. 위의 233개 URL 검사 수치는 2026년 10월 14일 당시 기록으로 현재 사이트맵 규모를 나타내지 않는다. 2026년 11월 27일 최신 `sitemap.xml` 소스에는 `<loc>` 항목이 315개 있으며, 이는 실제 공개 URL을 다시 검사한 결과가 아닌 소스 기준 수치이다.
 3. 배포된 canonical/hreflang 상호 참조와 언어 코드를 확인하며 실제 문제와 생성 페이지 및 의도된 예외를 구별한다.
 4. Google Search Console 및 Naver Search Advisor 색인·사이트맵 보고서는 **승인된 접근 권한이 있을 때만** 검토한다. GitHub 검사는 검색엔진 계정 데이터를 대신할 수 없다.
 5. 수정 후 소스·실제 사이트 검사와 Pages 배포 검증을 수행하며 정확한 커밋 SHA와 결과를 기록한다.
@@ -99,6 +99,6 @@
 2. 최종 일회성 워크플로 `restore-pen-name-person-once.yml`이 성공했다([실행 45641099753](https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions/runs/45641099753)). 로그에는 **수정된 HTML 306개**, **저자 표기 303개**, **번역자 표기 2개**, **발행자 표기 1개**, **파싱 실패 0건**으로 기록되었다. 결과 콘텐츠 커밋은 [7c57cad976](https://github.com/Jin-in-Seoul/Jin-in-Seoul/commit/7c57cad97685db425f3a605922b3b6aa44be1dec)이다.
 3. 이 콘텐츠 커밋의 GitHub Pages 배포가 성공했다([실행 45641135130](https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions/runs/45641135130)). 메인 페이지, 은하 멸망 사전 랜딩 페이지와 본문, Sweater, 단편소설, 동화, Gray Note, 하이쿠, 음악, 전운치전 양쪽 언어판의 대표 소스 파일을 재조회했다.
 4. 독립 페이지와 함께 Gray Note Liquid 레이아웃 `_layouts/gray-note-post.html`도 갱신했다. 소스 검사의 Liquid 템플릿 JSON 파싱은 배포 HTML의 파싱과 동일하지 않다. 사이트 전체 JSON-LD 검사에는 렌더링된 결과의 별도 검증이 필요하다.
-5. 일회성 워크플로는 재실행할 수 없도록 **완료 후 제거해야 한다**. 제거에는 별도의 커밋과 Pages 배포 검증이 필요하다.
+5. **완료:** 일회성 워크플로는 [커밋 90aff30c](https://github.com/Jin-in-Seoul/Jin-in-Seoul/commit/90aff30c7d33c26537655c7692774988aae3c131)에서 삭제했다. 해당 커밋의 GitHub Pages 배포도 성공했으며, 임시 워크플로는 현재 `main`에 남아 있지 않다.
 
 - **검사 범위:** 해당 워크플로는 변경이 JSON-LD 스크립트에 한정되었음을 검증했고 검사 대상 파일에서 JSON 파싱 실패가 없다고 보고했다. 이것만으로 실제 HTML 전체의 유효성이나 Google/Naver 색인이 입증되는 것은 아니다. 해당 주장은 필요에 따라 배포 사이트 SEO 검사 및 승인된 Search Console 접근을 통해 확인한다. 작자 미상 원전의 저자 표기와 공개 필명은 계속 보호한다.
