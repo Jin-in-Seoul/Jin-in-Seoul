@@ -115,4 +115,5 @@ New works and translations require the following checks as applicable:
 
 - Revisions require the author's approval and maintain consistency with existing regulations.
 
-<small>* The Korean edition is the authoritative original of the site management regulations, and the English edition is maintained as an official translation that faithfully reflects it. The two editions are preserved under <code>_management/ko/</code> and <code>_management/en/</code>, respectively, with identical filenames.</small>
+<hr style="border:0;border-top:1px solid #d9d9d9;margin:28px 0 16px;">
+<p style="font-size:0.85em;color:#777;line-height:1.65;margin:0;">The Korean edition is the authoritative original of the site management regulations, and the English edition is maintained as an official translation that faithfully reflects it. The two editions are preserved under <code>_management/ko/</code> and <code>_management/en/</code>, respectively, with identical filenames.</p>
