@@ -1,6 +1,6 @@
 # CSS maintenance — Jin-in-Seoul
 
-Last reviewed: 2026-10-14. This document describes the **current** architecture; it does not authorize restyling.
+Architecture checked: 2026-11-27 (eight CSS files). Historical cache-version examples below were recorded on 2026-10-14; this document does not authorize restyling.
 
 ## Preservation and change-control principles
 
@@ -27,7 +27,7 @@ Last reviewed: 2026-10-14. This document describes the **current** architecture;
 
 - Stylesheet loading order: the global CSS is linked first; the work-specific CSS is linked afterward. Latin-specific stylesheets are not applied to Korean/Japanese pages.
 
-## Current cache-version inventory (examples, not a complete repository-wide audit)
+## Historical cache-version examples (2026-10-14; not a current inventory)
 
 - Homepage: `assets/style.css?v=088`
 - Short-story index: `assets/style.css?v=046`
