@@ -54,10 +54,9 @@ permalink: /site-management/ko/
     .management-overview p:last-child { margin-bottom: 0; }
     .management-contents { margin: 0 0 32px; border: 1px solid #d8d8d8; }
     .management-contents ol { margin: 8px 0 0; padding-left: 1.5em; }
-    .management-contents a, .management-page .management-source a, .management-markdown a { color: var(--link); overflow-wrap: anywhere; }
+    .management-contents a, .management-markdown a { color: var(--link); overflow-wrap: anywhere; }
     .management-document { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); scroll-margin-top: 20px; }
     .management-document > h2 { margin-top: 0; }
-    .management-source { font-size: 13px; }
     .management-markdown { font-size: 16px; line-height: 1.8; overflow-wrap: anywhere; }
     .management-markdown h1 { font-size: 23px; margin: 28px 0 16px; }
     .management-markdown h2 { font-size: 20px; margin: 26px 0 12px; }
@@ -86,7 +85,7 @@ permalink: /site-management/ko/
       <nav class="management-languages" aria-label="언어 선택"><a href="/site-management/" lang="en" hreflang="en">English</a> · <span aria-current="page">한국어</span></nav>
       <aside class="management-overview" aria-label="개요">
         <p>Jin-in-Seoul은 문학 작품과 번역판을 독립적인 HTML 파일로 보존한다. 관리 문서는 보존, 편집, 번역, 출판 및 기술 관리의 원칙을 기록하여 작품과 사이트 운영이 특정 소프트웨어나 관리자에게 종속되지 않도록 한다.</p>
-        <p>아래 공통 관리 문서 7개는 <a href="https://github.com/Jin-in-Seoul/Jin-in-Seoul">GitHub 저장소</a>의 한국어 관리 문서에서 직접 변환한 것이다. 작품별 번역 가이드는 향후 번역을 위해 저장소에 보존한다.</p>
+        <p>아래 공통 관리 문서 7개는 GitHub 저장소의 한국어 관리 문서에서 직접 변환한 것이다. 작품별 번역 가이드는 향후 번역을 위해 저장소에 보존한다.</p>
       </aside>
       <nav class="management-contents" aria-label="목차">
         <strong>목차</strong>
@@ -105,7 +104,6 @@ permalink: /site-management/ko/
 
       <section class="management-document" id="abc">
         <h2>ABC — 사이트 운영 및 관리 규정</h2>
-        <p class="management-source"><a href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/ko/ABC.md">ABC.md — GitHub 원본</a></p>
         {% capture management_markdown %}{% include_relative _management/ko/ABC.md %}{% endcapture %}
         {% assign management_lines = management_markdown | split: management_newline %}
         {% capture public_management_markdown %}{% for management_line in management_lines %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
@@ -119,14 +117,15 @@ permalink: /site-management/ko/
         {% assign management_html = management_html | replace: 'href="PUBLICATION-LOG-POLICY.md"', 'href="#publication"' | replace: 'href="PUBLICATION-LOG-POLICY.md#', 'href="#publication-' %}
         {% assign management_html = management_html | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md"', 'href="#translation"' | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md#', 'href="#translation-' %}
         {% assign management_html = management_html | replace: 'href="../../_maintenance/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_maintenance/' | replace: 'href="../../scripts/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/scripts/' %}
+        {% assign management_link_parts = management_html | split: '<a ' %}
+        {% capture management_public_html %}{% for management_link_part in management_link_parts %}{% if forloop.first %}{{ management_link_part }}{% else %}{% assign management_opening_tag = management_link_part | split: '>' | first %}{% if management_opening_tag contains 'href="https://github.com/' or management_opening_tag contains 'href="https://raw.githubusercontent.com/' %}{% assign management_opening_prefix = management_opening_tag | append: '>' %}{% assign management_unlinked = management_link_part | remove_first: management_opening_prefix | remove_first: '</a>' %}{{ management_unlinked }}{% else %}<a {{ management_link_part }}{% endif %}{% endif %}{% endfor %}{% endcapture %}
         <div class="management-markdown">
-          {{ management_html }}
+          {{ management_public_html }}
         </div>
       </section>
 
       <section class="management-document" id="readme">
         <h2>README — 전체 관리 체계</h2>
-        <p class="management-source"><a href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/ko/README.md">README.md — GitHub 원본</a></p>
         {% capture management_markdown %}{% include_relative _management/ko/README.md %}{% endcapture %}
         {% assign management_lines = management_markdown | split: management_newline %}
         {% capture public_management_markdown %}{% for management_line in management_lines %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
@@ -140,14 +139,15 @@ permalink: /site-management/ko/
         {% assign management_html = management_html | replace: 'href="PUBLICATION-LOG-POLICY.md"', 'href="#publication"' | replace: 'href="PUBLICATION-LOG-POLICY.md#', 'href="#publication-' %}
         {% assign management_html = management_html | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md"', 'href="#translation"' | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md#', 'href="#translation-' %}
         {% assign management_html = management_html | replace: 'href="../../_maintenance/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_maintenance/' | replace: 'href="../../scripts/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/scripts/' %}
+        {% assign management_link_parts = management_html | split: '<a ' %}
+        {% capture management_public_html %}{% for management_link_part in management_link_parts %}{% if forloop.first %}{{ management_link_part }}{% else %}{% assign management_opening_tag = management_link_part | split: '>' | first %}{% if management_opening_tag contains 'href="https://github.com/' or management_opening_tag contains 'href="https://raw.githubusercontent.com/' %}{% assign management_opening_prefix = management_opening_tag | append: '>' %}{% assign management_unlinked = management_link_part | remove_first: management_opening_prefix | remove_first: '</a>' %}{{ management_unlinked }}{% else %}<a {{ management_link_part }}{% endif %}{% endif %}{% endfor %}{% endcapture %}
         <div class="management-markdown">
-          {{ management_html }}
+          {{ management_public_html }}
         </div>
       </section>
 
       <section class="management-document" id="css">
         <h2>CSS 관리</h2>
-        <p class="management-source"><a href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/ko/CSS-MAINTENANCE.md">CSS-MAINTENANCE.md — GitHub 원본</a></p>
         {% capture management_markdown %}{% include_relative _management/ko/CSS-MAINTENANCE.md %}{% endcapture %}
         {% assign management_lines = management_markdown | split: management_newline %}
         {% capture public_management_markdown %}{% for management_line in management_lines %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
@@ -161,14 +161,15 @@ permalink: /site-management/ko/
         {% assign management_html = management_html | replace: 'href="PUBLICATION-LOG-POLICY.md"', 'href="#publication"' | replace: 'href="PUBLICATION-LOG-POLICY.md#', 'href="#publication-' %}
         {% assign management_html = management_html | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md"', 'href="#translation"' | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md#', 'href="#translation-' %}
         {% assign management_html = management_html | replace: 'href="../../_maintenance/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_maintenance/' | replace: 'href="../../scripts/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/scripts/' %}
+        {% assign management_link_parts = management_html | split: '<a ' %}
+        {% capture management_public_html %}{% for management_link_part in management_link_parts %}{% if forloop.first %}{{ management_link_part }}{% else %}{% assign management_opening_tag = management_link_part | split: '>' | first %}{% if management_opening_tag contains 'href="https://github.com/' or management_opening_tag contains 'href="https://raw.githubusercontent.com/' %}{% assign management_opening_prefix = management_opening_tag | append: '>' %}{% assign management_unlinked = management_link_part | remove_first: management_opening_prefix | remove_first: '</a>' %}{{ management_unlinked }}{% else %}<a {{ management_link_part }}{% endif %}{% endif %}{% endfor %}{% endcapture %}
         <div class="management-markdown">
-          {{ management_html }}
+          {{ management_public_html }}
         </div>
       </section>
 
       <section class="management-document" id="seo">
         <h2>SEO 관리</h2>
-        <p class="management-source"><a href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/ko/SEO-MAINTENANCE.md">SEO-MAINTENANCE.md — GitHub 원본</a></p>
         {% capture management_markdown %}{% include_relative _management/ko/SEO-MAINTENANCE.md %}{% endcapture %}
         {% assign management_lines = management_markdown | split: management_newline %}
         {% capture public_management_markdown %}{% for management_line in management_lines %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
@@ -182,14 +183,15 @@ permalink: /site-management/ko/
         {% assign management_html = management_html | replace: 'href="PUBLICATION-LOG-POLICY.md"', 'href="#publication"' | replace: 'href="PUBLICATION-LOG-POLICY.md#', 'href="#publication-' %}
         {% assign management_html = management_html | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md"', 'href="#translation"' | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md#', 'href="#translation-' %}
         {% assign management_html = management_html | replace: 'href="../../_maintenance/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_maintenance/' | replace: 'href="../../scripts/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/scripts/' %}
+        {% assign management_link_parts = management_html | split: '<a ' %}
+        {% capture management_public_html %}{% for management_link_part in management_link_parts %}{% if forloop.first %}{{ management_link_part }}{% else %}{% assign management_opening_tag = management_link_part | split: '>' | first %}{% if management_opening_tag contains 'href="https://github.com/' or management_opening_tag contains 'href="https://raw.githubusercontent.com/' %}{% assign management_opening_prefix = management_opening_tag | append: '>' %}{% assign management_unlinked = management_link_part | remove_first: management_opening_prefix | remove_first: '</a>' %}{{ management_unlinked }}{% else %}<a {{ management_link_part }}{% endif %}{% endif %}{% endfor %}{% endcapture %}
         <div class="management-markdown">
-          {{ management_html }}
+          {{ management_public_html }}
         </div>
       </section>
 
       <section class="management-document" id="assets">
         <h2>자산 관리</h2>
-        <p class="management-source"><a href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/ko/ASSET-MAINTENANCE.md">ASSET-MAINTENANCE.md — GitHub 원본</a></p>
         {% capture management_markdown %}{% include_relative _management/ko/ASSET-MAINTENANCE.md %}{% endcapture %}
         {% assign management_lines = management_markdown | split: management_newline %}
         {% capture public_management_markdown %}{% for management_line in management_lines %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
@@ -203,14 +205,15 @@ permalink: /site-management/ko/
         {% assign management_html = management_html | replace: 'href="PUBLICATION-LOG-POLICY.md"', 'href="#publication"' | replace: 'href="PUBLICATION-LOG-POLICY.md#', 'href="#publication-' %}
         {% assign management_html = management_html | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md"', 'href="#translation"' | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md#', 'href="#translation-' %}
         {% assign management_html = management_html | replace: 'href="../../_maintenance/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_maintenance/' | replace: 'href="../../scripts/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/scripts/' %}
+        {% assign management_link_parts = management_html | split: '<a ' %}
+        {% capture management_public_html %}{% for management_link_part in management_link_parts %}{% if forloop.first %}{{ management_link_part }}{% else %}{% assign management_opening_tag = management_link_part | split: '>' | first %}{% if management_opening_tag contains 'href="https://github.com/' or management_opening_tag contains 'href="https://raw.githubusercontent.com/' %}{% assign management_opening_prefix = management_opening_tag | append: '>' %}{% assign management_unlinked = management_link_part | remove_first: management_opening_prefix | remove_first: '</a>' %}{{ management_unlinked }}{% else %}<a {{ management_link_part }}{% endif %}{% endif %}{% endfor %}{% endcapture %}
         <div class="management-markdown">
-          {{ management_html }}
+          {{ management_public_html }}
         </div>
       </section>
 
       <section class="management-document" id="publication">
         <h2>발행 기록 규정</h2>
-        <p class="management-source"><a href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/ko/PUBLICATION-LOG-POLICY.md">PUBLICATION-LOG-POLICY.md — GitHub 원본</a></p>
         {% capture management_markdown %}{% include_relative _management/ko/PUBLICATION-LOG-POLICY.md %}{% endcapture %}
         {% assign management_lines = management_markdown | split: management_newline %}
         {% capture public_management_markdown %}{% for management_line in management_lines %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
@@ -224,14 +227,15 @@ permalink: /site-management/ko/
         {% assign management_html = management_html | replace: 'href="PUBLICATION-LOG-POLICY.md"', 'href="#publication"' | replace: 'href="PUBLICATION-LOG-POLICY.md#', 'href="#publication-' %}
         {% assign management_html = management_html | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md"', 'href="#translation"' | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md#', 'href="#translation-' %}
         {% assign management_html = management_html | replace: 'href="../../_maintenance/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_maintenance/' | replace: 'href="../../scripts/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/scripts/' %}
+        {% assign management_link_parts = management_html | split: '<a ' %}
+        {% capture management_public_html %}{% for management_link_part in management_link_parts %}{% if forloop.first %}{{ management_link_part }}{% else %}{% assign management_opening_tag = management_link_part | split: '>' | first %}{% if management_opening_tag contains 'href="https://github.com/' or management_opening_tag contains 'href="https://raw.githubusercontent.com/' %}{% assign management_opening_prefix = management_opening_tag | append: '>' %}{% assign management_unlinked = management_link_part | remove_first: management_opening_prefix | remove_first: '</a>' %}{{ management_unlinked }}{% else %}<a {{ management_link_part }}{% endif %}{% endif %}{% endfor %}{% endcapture %}
         <div class="management-markdown">
-          {{ management_html }}
+          {{ management_public_html }}
         </div>
       </section>
 
       <section class="management-document" id="translation">
         <h2>한국 고전소설 번역 및 편집 원칙</h2>
-        <p class="management-source"><a href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_management/ko/PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md">PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md — GitHub 원본</a></p>
         {% capture management_markdown %}{% include_relative _management/ko/PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md %}{% endcapture %}
         {% assign management_lines = management_markdown | split: management_newline %}
         {% capture public_management_markdown %}{% for management_line in management_lines %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
@@ -245,8 +249,10 @@ permalink: /site-management/ko/
         {% assign management_html = management_html | replace: 'href="PUBLICATION-LOG-POLICY.md"', 'href="#publication"' | replace: 'href="PUBLICATION-LOG-POLICY.md#', 'href="#publication-' %}
         {% assign management_html = management_html | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md"', 'href="#translation"' | replace: 'href="PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md#', 'href="#translation-' %}
         {% assign management_html = management_html | replace: 'href="../../_maintenance/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/_maintenance/' | replace: 'href="../../scripts/', 'href="https://github.com/Jin-in-Seoul/Jin-in-Seoul/blob/main/scripts/' %}
+        {% assign management_link_parts = management_html | split: '<a ' %}
+        {% capture management_public_html %}{% for management_link_part in management_link_parts %}{% if forloop.first %}{{ management_link_part }}{% else %}{% assign management_opening_tag = management_link_part | split: '>' | first %}{% if management_opening_tag contains 'href="https://github.com/' or management_opening_tag contains 'href="https://raw.githubusercontent.com/' %}{% assign management_opening_prefix = management_opening_tag | append: '>' %}{% assign management_unlinked = management_link_part | remove_first: management_opening_prefix | remove_first: '</a>' %}{{ management_unlinked }}{% else %}<a {{ management_link_part }}{% endif %}{% endif %}{% endfor %}{% endcapture %}
         <div class="management-markdown">
-          {{ management_html }}
+          {{ management_public_html }}
         </div>
       </section>
 
