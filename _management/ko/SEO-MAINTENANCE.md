@@ -65,7 +65,7 @@
 
 ## 변경 기록 원칙
 
-SEO 변경 기록마다 날짜, 변경 파일, 이유, GitHub 커밋, 소스 검사, 실제 사이트 검사 및 Pages 배포 결과를 포함한다. 이 문서는 현재 상태의 참조 자료로 유지하며 검증되지 않은 성공 주장은 제외한다.
+- SEO 변경 기록마다 날짜, 변경 파일, 이유, GitHub 커밋, 소스 검사, 실제 사이트 검사 및 Pages 배포 결과를 포함한다. 이 문서는 현재 상태의 참조 자료로 유지하며 검증되지 않은 성공 주장은 제외한다.
 
 관련 문서: [README.md](README.md) · [CSS-MAINTENANCE.md](CSS-MAINTENANCE.md).
 
@@ -87,7 +87,7 @@ SEO 변경 기록마다 날짜, 변경 파일, 이유, GitHub 커밋, 소스 검
 
 ## 구조화 데이터의 저작 주체 표기 통일 (2026-11-26)
 
-**승인된 공개 정체성:** Jin-in-Seoul은 공개 창작물에 사용하는 필명이다. 사이트의 창작물 및 해당되는 번역·발행 주체의 Schema.org JSON-LD 표기는 `{"@type":"Person","name":"Jin-in-Seoul","url":"https://jin-in-seoul.com/"}`을 사용한다. 이는 공개 필명이며, **법적 실명의 공개가 아니고** 등록된 조직이라는 주장도 아니다. `Person`에서 `Organization`으로 변경하려면 새로운 승인이 필요하다.
+- **승인된 공개 정체성:** Jin-in-Seoul은 공개 창작물에 사용하는 필명이다. 사이트의 창작물 및 해당되는 번역·발행 주체의 Schema.org JSON-LD 표기는 `{"@type":"Person","name":"Jin-in-Seoul","url":"https://jin-in-seoul.com/"}`을 사용한다. 이는 공개 필명이며, **법적 실명의 공개가 아니고** 등록된 조직이라는 주장도 아니다. `Person`에서 `Organization`으로 변경하려면 새로운 승인이 필요하다.
 
 - 창작물(소설, 개별 항목, 단편소설, 동화, Gray Note 에세이, 하이쿠, 음악): 기존 `author` 또는 해당되는 저작 주체에 동일한 공개 필명을 유지한다. 모든 언어판에 `translator` 속성을 무분별하게 추가하지 않는다.
 - 작자 미상의 고전 원전 『전운치전』(`tales-from-premodern-korea/jeon-unchi/ko/index.html` 및 `en/index.html`): `"author":"Anonymous"`와 `Person / Jin-in-Seoul`인 `translator`를 유지한다. 한국어 현대어판의 기존 번역자 표기도 포함한다. 현대어판에 대한 설명은 공개된 안내문에 유지한다.
@@ -101,4 +101,4 @@ SEO 변경 기록마다 날짜, 변경 파일, 이유, GitHub 커밋, 소스 검
 4. 독립 페이지와 함께 Gray Note Liquid 레이아웃 `_layouts/gray-note-post.html`도 갱신했다. 소스 검사의 Liquid 템플릿 JSON 파싱은 배포 HTML의 파싱과 동일하지 않다. 사이트 전체 JSON-LD 검사에는 렌더링된 결과의 별도 검증이 필요하다.
 5. 일회성 워크플로는 재실행할 수 없도록 **완료 후 제거해야 한다**. 제거에는 별도의 커밋과 Pages 배포 검증이 필요하다.
 
-**검사 범위:** 해당 워크플로는 변경이 JSON-LD 스크립트에 한정되었음을 검증했고 검사 대상 파일에서 JSON 파싱 실패가 없다고 보고했다. 이것만으로 실제 HTML 전체의 유효성이나 Google/Naver 색인이 입증되는 것은 아니다. 해당 주장은 필요에 따라 배포 사이트 SEO 검사 및 승인된 Search Console 접근을 통해 확인한다. 작자 미상 원전의 저자 표기와 공개 필명은 계속 보호한다.
+- **검사 범위:** 해당 워크플로는 변경이 JSON-LD 스크립트에 한정되었음을 검증했고 검사 대상 파일에서 JSON 파싱 실패가 없다고 보고했다. 이것만으로 실제 HTML 전체의 유효성이나 Google/Naver 색인이 입증되는 것은 아니다. 해당 주장은 필요에 따라 배포 사이트 SEO 검사 및 승인된 Search Console 접근을 통해 확인한다. 작자 미상 원전의 저자 표기와 공개 필명은 계속 보호한다.

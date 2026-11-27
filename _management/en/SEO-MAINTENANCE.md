@@ -65,7 +65,7 @@ The remaining 1 WARN and 2 INFO from the source audit concerned optional metadat
 
 ## Change log discipline
 
-Each SEO change record includes the date, changed files, reason, GitHub commit, source audit, live audit and Pages deployment result. This document is maintained as a current reference; unverified success claims are excluded.
+- Each SEO change record includes the date, changed files, reason, GitHub commit, source audit, live audit and Pages deployment result. This document is maintained as a current reference; unverified success claims are excluded.
 
 Related documentation: [README.md](README.md) · [CSS-MAINTENANCE.md](CSS-MAINTENANCE.md).
 
@@ -87,7 +87,7 @@ Mobile Lighthouse workflow: https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions
 
 ## Structured-data attribution normalization (2026-11-26)
 
-**Approved public identity:** Jin-in-Seoul is a pen name for published creative work. Schema.org JSON-LD attribution of the site's original works and eligible translation/publishing credits uses `{"@type":"Person","name":"Jin-in-Seoul","url":"https://jin-in-seoul.com/"}`. This is a public pen name, **not a disclosure of a legal name** and not a claim of a registered organization. A change from `Person` to `Organization` requires new authorization.
+- **Approved public identity:** Jin-in-Seoul is a pen name for published creative work. Schema.org JSON-LD attribution of the site's original works and eligible translation/publishing credits uses `{"@type":"Person","name":"Jin-in-Seoul","url":"https://jin-in-seoul.com/"}`. This is a public pen name, **not a disclosure of a legal name** and not a claim of a registered organization. A change from `Person` to `Organization` requires new authorization.
 
 - Original works (novels, entries, short stories, children's books, Gray Note essays, haiku, music): the existing `author` or other applicable credit retains the same public pen-name identity. The `translator` property is not added indiscriminately to every language edition.
 - Anonymous classical source `The Tale of Jeon Unchi` (`tales-from-premodern-korea/jeon-unchi/ko/index.html` and `en/index.html`): retains `"author":"Anonymous"` and `translator` as `Person / Jin-in-Seoul`, including the modern Korean edition's existing credit. The description of the edition's modern-language rendering should remain in its published explanatory text.
@@ -101,4 +101,4 @@ Mobile Lighthouse workflow: https://github.com/Jin-in-Seoul/Jin-in-Seoul/actions
 4. The Gray Note Liquid layout `_layouts/gray-note-post.html` was updated along with standalone pages. A source audit's JSON parsing of a Liquid template is not equivalent to parsing deployed HTML; site-wide JSON-LD audits require separate validation of rendered output.
 5. The one-time workflow is to be **removed after completion**, so it cannot be triggered again. Its removal requires a separate commit and Pages deployment verification.
 
-**Audit scope:** The workflow verified that changes were confined to JSON-LD scripts and reported no JSON parse failures in its covered files. This does not itself establish comprehensive live HTML validation or actual Google/Naver indexing. Those claims require deployed-site SEO audits and authorized Search Console access, as applicable. Anonymous original-author attribution and the public pen name remain protected.
+- **Audit scope:** The workflow verified that changes were confined to JSON-LD scripts and reported no JSON parse failures in its covered files. This does not itself establish comprehensive live HTML validation or actual Google/Naver indexing. Those claims require deployed-site SEO audits and authorized Search Console access, as applicable. Anonymous original-author attribution and the public pen name remain protected.

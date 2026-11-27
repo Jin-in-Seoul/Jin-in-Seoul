@@ -14,9 +14,9 @@ Objectives:
 - Separation of original materials from web-ready files.
 - Consistent procedures for future additions.
 
-**Existing published assets must not be reorganized or modified solely for consistency.** Changes to published assets require a specific reason and the author's authorization.
+- **Existing published assets must not be reorganized or modified solely for consistency.** Changes to published assets require a specific reason and the author's authorization.
 
-This is a technical management document. The author determines which photographs appear in an essay, how many are used, and where they are placed. Technical guidelines do not override literary or editorial decisions.
+- This is a technical management document. The author determines which photographs appear in an essay, how many are used, and where they are placed. Technical guidelines do not override literary or editorial decisions.
 
 ## 2. Current Repository Structure
 
@@ -62,7 +62,7 @@ assets/images/gray-note/
     └── 03-mediterranean-sea.webp
 ```
 
-These filenames are examples, not required names. Existing image paths must remain unchanged.
+- These filenames are examples, not required names. Existing image paths must remain unchanged.
 
 ### 3.2 Image optimization
 
@@ -78,37 +78,37 @@ New photographs are optimized before upload. Proposed defaults:
 | Color profile | sRGB |
 | Metadata | Remove unnecessary location and device metadata from web copies |
 
-These are guidelines, not absolute limits. Visual quality review is required, especially for text, architecture and fine detail. Images already smaller than the recommended dimensions are not enlarged.
+- These are guidelines, not absolute limits. Visual quality review is required, especially for text, architecture and fine detail. Images already smaller than the recommended dimensions are not enlarged.
 
 ### 3.3 Historical authenticity and original photographs
 
-Historical travel photographs are records of the time and place in which they were made. Their original appearance is preserved. Preparation for web publication should ordinarily be limited to resizing, compression, format conversion, and necessary technical corrections.
+- Historical travel photographs are records of the time and place in which they were made. Their original appearance is preserved. Preparation for web publication should ordinarily be limited to resizing, compression, format conversion, and necessary technical corrections.
 
-Visual appeal alone does not justify changes to colors, composition or depicted content. Routine optimization excludes removal, replacement or generation of elements in historical photographs. Any substantive visual edit requires the author's explicit decision.
+- Visual appeal alone does not justify changes to colors, composition or depicted content. Routine optimization excludes removal, replacement or generation of elements in historical photographs. Any substantive visual edit requires the author's explicit decision.
 
-Original files are preserved in personal storage outside GitHub, with separate optimized web copies and an independent backup. Originals are not overwritten during conversion.
+- Original files are preserved in personal storage outside GitHub, with separate optimized web copies and an independent backup. Originals are not overwritten during conversion.
 
-The existing `/assets/images/originals/` directory may contain legacy originals; changes require individual file review. Storage standardization alone does not justify deletion or relocation.
+- The existing `/assets/images/originals/` directory may contain legacy originals; changes require individual file review. Storage standardization alone does not justify deletion or relocation.
 
 ### 3.4 Photo essays
 
-Photographs should serve the author's narrative. There is no fixed number of images per essay.
+- Photographs should serve the author's narrative. There is no fixed number of images per essay.
 
-Meaningful filenames and descriptive `alt` attributes are used. Where appropriate, image dimensions are specified and images below the initial viewport are lazy-loaded.
+- Meaningful filenames and descriptive `alt` attributes are used. Where appropriate, image dimensions are specified and images below the initial viewport are lazy-loaded.
 
-**The author decides photograph selection, count, order, and placement.** Rearrangement of photographs, paragraphs or captions requires approval.
+- **The author decides photograph selection, count, order, and placement.** Rearrangement of photographs, paragraphs or captions requires approval.
 
 ## 4. Audio Management
 
 ### 4.1 Storage location
 
-Published audio remains under `/assets/audio/music/` and music pages under `/music/`. Consistency alone does not justify moving published files.
+- Published audio remains under `/assets/audio/music/` and music pages under `/music/`. Consistency alone does not justify moving published files.
 
 ### 4.2 Audio format and naming
 
-MP3 is the existing publication format and remains the default unless a change is approved. Duplicate copies of identical recordings are avoided. Established filename conventions and language suffixes such as `-ja` are preserved.
+- MP3 is the existing publication format and remains the default unless a change is approved. Duplicate copies of identical recordings are avoided. Established filename conventions and language suffixes such as `-ja` are preserved.
 
-New files use descriptive lowercase filenames with hyphens.
+- New files use descriptive lowercase filenames with hyphens.
 
 ### 4.3 Audio updates
 
@@ -120,7 +120,7 @@ Before adding or replacing audio:
 4. Verification of the music index and associated navigation.
 5. Review of browser caches and direct links when an authorized replacement changes a published recording.
 
-Existing audio files must not be replaced or renamed without approval.
+- Existing audio files must not be replaced or renamed without approval.
 
 ## 5. PDF and EPUB Management
 
@@ -137,15 +137,15 @@ assets/downloads/
         └── ko/
 ```
 
-The download listing remains separately under `/downloads/`.
+- The download listing remains separately under `/downloads/`.
 
 ### 5.2 Publication suspension
 
-**The publication notice dated November 2, 2026 remains in effect.**
+- **The publication notice dated November 2, 2026 remains in effect.**
 
-Uploads and updates of downloadable PDF and EPUB editions are suspended until a reliable production and verification process is established. Existing errors in those editions are not to be corrected during this suspension.
+- Uploads and updates of downloadable PDF and EPUB editions are suspended until a reliable production and verification process is established. Existing errors in those editions are not to be corrected during this suspension.
 
-The most current literary texts are available in the site's HTML pages.
+- The most current literary texts are available in the site's HTML pages.
 
 ### 5.3 If publication resumes
 
@@ -157,7 +157,7 @@ A newly authorized release should be verified for:
 - File opening on representative readers.
 - Filename, version, and download-link accuracy.
 
-Existing versioned downloads are not silently overwritten.
+- Existing versioned downloads are not silently overwritten.
 
 ## 6. File Naming
 
@@ -175,9 +175,9 @@ Examples:
 - `autumn-rain-blue-night-ja.mp3`
 - `sweater-en-20260930-ver-001.pdf`
 
-Naming conventions alone do not justify renaming published files.
+- Naming conventions alone do not justify renaming published files.
 
-**Preserving existing URLs takes priority over naming uniformity.**
+- **Preserving existing URLs takes priority over naming uniformity.**
 
 ## 7. Storage and Performance
 
@@ -192,11 +192,11 @@ Before publishing a photo essay or substantial new media collection:
 5. Review of relevant repository and GitHub Pages storage constraints.
 6. Avoidance of redundant copies and incremental uploads where useful.
 
-**No automatic image-count limit or universal per-essay size cap applies.** Total size is a review signal, and the author decides the final composition. Improve compression or loading behavior first if a page is unusually heavy.
+- **No automatic image-count limit or universal per-essay size cap applies.** Total size is a review signal, and the author decides the final composition. Improve compression or loading behavior first if a page is unusually heavy.
 
-Audio and downloadable editions may use more storage than optimized photographs. Storage growth is reviewed periodically.
+- Audio and downloadable editions may use more storage than optimized photographs. Storage growth is reviewed periodically.
 
-External hosting is not the default policy. Its adoption requires actual storage, bandwidth or operational needs that justify additional complexity.
+- External hosting is not the default policy. Its adoption requires actual storage, bandwidth or operational needs that justify additional complexity.
 
 ## 8. Publication Checklist
 
@@ -213,9 +213,9 @@ Before publishing a new asset:
 - [ ] Verification of navigation, search inclusion, and SEO metadata when adding a new page.
 - [ ] Updating the publication log when a new work or edition is formally released.
 
-New pages are governed by `SEO-MAINTENANCE.md` and stylesheet changes by `CSS-MAINTENANCE.md`.
+- New pages are governed by `SEO-MAINTENANCE.md` and stylesheet changes by `CSS-MAINTENANCE.md`.
 
-An asset-only addition does not automatically require a publication-log entry.
+- An asset-only addition does not automatically require a publication-log entry.
 
 ## 9. Preservation and Change Control
 
@@ -231,12 +231,12 @@ The following practices are excluded:
 - Changes to photo selection or layout without the author's decision.
 - Resumption of PDF/EPUB publication without authorization.
 
-Approved changes require prior identification of affected file references, public URLs and cache or indexing consequences, together with confirmation of the latest GitHub `main` and file SHA. Subsequent verification includes retrieval of every changed file and separate confirmation of Pages deployment when feasible.
+- Approved changes require prior identification of affected file references, public URLs and cache or indexing consequences, together with confirmation of the latest GitHub `main` and file SHA. Subsequent verification includes retrieval of every changed file and separate confirmation of Pages deployment when feasible.
 
 ## 10. Documentation Maintenance
 
 This document is linked from the repository `README.md` alongside `CSS-MAINTENANCE.md` and `SEO-MAINTENANCE.md`.
 
-These guidelines are updated when a new file type, storage method or publication workflow genuinely requires a new policy. Stylistic consistency alone does not justify revision of established policies.
+- These guidelines are updated when a new file type, storage method or publication workflow genuinely requires a new policy. Stylistic consistency alone does not justify revision of established policies.
 
-**The author retains final editorial authority. Technical asset policies do not determine the composition of literary works.**
+- **The author retains final editorial authority. Technical asset policies do not determine the composition of literary works.**

@@ -48,7 +48,7 @@ Publication Log는 Jin-in-Seoul의 발행, 번역, 장 추가 및 중요한 발�
 - **updated:** 기존 공개 파일이나 페이지의 관리 또는 기술적 변경이며 반드시 문학 본문을 변경하는 것은 아니다.
 - **revised:** 공개 문학 본문의 승인된 실질적 수정.
 
-**English edition added**, **French edition added**와 같은 중립적인 발행 표현을 선호한다. Publication Log 항목에는 **complete**, **completed**, **full text published**와 같은 최종 완결을 주장하는 표현을 사용하지 않는다. 작품이나 판본은 발행 후에도 수정될 수 있다. 작품이 영구적으로 완성되었다고 선언하지 않으면서 실제 장 번호, 작품 수, 발행 사건을 보존한다. 단순 갱신을 문학적 개정으로 바꾸어 기록하지 않는다.
+- **English edition added**, **French edition added**와 같은 중립적인 발행 표현을 선호한다. Publication Log 항목에는 **complete**, **completed**, **full text published**와 같은 최종 완결을 주장하는 표현을 사용하지 않는다. 작품이나 판본은 발행 후에도 수정될 수 있다. 작품이 영구적으로 완성되었다고 선언하지 않으면서 실제 장 번호, 작품 수, 발행 사건을 보존한다. 단순 갱신을 문학적 개정으로 바꾸어 기록하지 않는다.
 
 ## 6. 제목, 부제 및 일관성
 

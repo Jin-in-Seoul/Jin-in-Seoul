@@ -48,7 +48,7 @@ The following terms correspond to the event that actually occurred:
 - **updated:** a maintenance or technical change to an existing published file or page without necessarily changing the literary text.
 - **revised:** an authorized substantive revision of published literary text.
 
-Neutral release wording is preferred, such as **English edition added** or **French edition added**. Publication Log entries exclude **complete**, **completed**, **full text published**, and similar claims of finality; a work or edition may be revised after release. Actual chapter numbers, collection size and publication events are preserved without declaring a work permanently finished. The policy prohibits relabelling an update as a literary revision.
+- Neutral release wording is preferred, such as **English edition added** or **French edition added**. Publication Log entries exclude **complete**, **completed**, **full text published**, and similar claims of finality; a work or edition may be revised after release. Actual chapter numbers, collection size and publication events are preserved without declaring a work permanently finished. The policy prohibits relabelling an update as a literary revision.
 
 ## 6. Titles, subtitles, and consistency
 

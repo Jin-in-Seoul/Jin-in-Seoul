@@ -25,7 +25,7 @@ Last reviewed: 2026-10-14. This document describes the **current** architecture;
 | `childrens-books/latin-first-paragraph.css` | English/French children's-book opening paragraph and first paragraph after `h2` | Only linked English/French children's-book pages |
 | `scarecrow-distance/latin-first-paragraph.css` | English/French Scarecrow Distance opening paragraph for each chapter | Only linked English/French chapters 1–4 |
 
-Stylesheet loading order: the global CSS is linked first; the work-specific CSS is linked afterward. Latin-specific stylesheets are not applied to Korean/Japanese pages.
+- Stylesheet loading order: the global CSS is linked first; the work-specific CSS is linked afterward. Latin-specific stylesheets are not applied to Korean/Japanese pages.
 
 ## Current cache-version inventory (examples, not a complete repository-wide audit)
 
@@ -36,7 +36,7 @@ Stylesheet loading order: the global CSS is linked first; the work-specific CSS 
 - Children's-book story samples: `assets/style.css?v=053`, Latin-specific CSS `?v=001`
 - Sweater English chapter sample: `assets/style.css?v=052`
 
-These all point to the **same** `assets/style.css` resource. **Mass replacement of versions is excluded**: a version bump forces cache refresh and should be coupled to a justified change. The audit script `scripts/audit_css_links.py` produces a complete inventory without modifying pages.
+- These all point to the **same** `assets/style.css` resource. **Mass replacement of versions is excluded**: a version bump forces cache refresh and should be coupled to a justified change. The audit script `scripts/audit_css_links.py` produces a complete inventory without modifying pages.
 
 ## New page / edit checklist
 
@@ -52,7 +52,7 @@ These all point to the **same** `assets/style.css` resource. **Mass replacement 
 
 ## Conflict / duplication notes
 
-The global stylesheet intentionally has distinct selectors for `.galactic-prose`, `.short-story-prose`, `.children-prose`, `.sweater-prose`, etc. Similar declarations across those classes are not automatically redundant: they separate work-level formatting and protect specialized content. The scoped Latin rules intentionally override only `text-indent`. Similarity alone does not justify merging or deleting these rules.
+- The global stylesheet intentionally has distinct selectors for `.galactic-prose`, `.short-story-prose`, `.children-prose`, `.sweater-prose`, etc. Similar declarations across those classes are not automatically redundant: they separate work-level formatting and protect specialized content. The scoped Latin rules intentionally override only `text-indent`. Similarity alone does not justify merging or deleting these rules.
 
 ## Maintenance decisions
 
