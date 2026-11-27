@@ -10,9 +10,10 @@ https://jin-in-seoul.com
 
 ## Premodern Korean fiction translation
 
-- [Translation and editing principles for premodern Korean fiction](PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md) — English and Korean; source editions, modern Korean and foreign-language translation, editorial review, and editorial consistency.
+- [Translation and editing principles for premodern Korean fiction](PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md) — English and Korean; thirteen principles, practical translation standards, and shared English terminology.
 
-- [Practical translation guidelines and shared terminology — The Tale of Jeon Unchi](PREMODERN-KOREAN-FICTION-TRANSLATION-REFERENCE.md) — common terminology, work-specific decisions, and trial translations.
+- [Work-specific translation guide — The Tale of Jeon Unchi](JEON-UNCHI-TRANSLATION-GUIDE.md)
+- [Work-specific translation guide — The Tale of Master Rabbit](MASTER-RABBIT-TRANSLATION-GUIDE.md)
 
 ## Publication log maintenance
 

@@ -32,8 +32,9 @@ Jin-in-Seoul은 작품의 창작 및 발행에 사용되는 필명이다. 공개
 | [SEO-MAINTENANCE.md](SEO-MAINTENANCE.md) | 검색엔진 최적화 및 검사 |
 | [PUBLICATION-LOG-POLICY.md](PUBLICATION-LOG-POLICY.md) | 발행 기록 |
 | [ASSET-MAINTENANCE.md](ASSET-MAINTENANCE.md) | 디지털 자산 |
-| [PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md](PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md) | 한국의 옛소설 번역 원칙 |
-| [PREMODERN-KOREAN-FICTION-TRANSLATION-REFERENCE.md](PREMODERN-KOREAN-FICTION-TRANSLATION-REFERENCE.md) | 한국의 옛소설 번역 세부 기준 |
+| [PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md](PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md) | 한국의 옛소설 공통 번역 원칙 및 용어집 |
+| [JEON-UNCHI-TRANSLATION-GUIDE.md](JEON-UNCHI-TRANSLATION-GUIDE.md) | 전운치전 작품별 번역 가이드 |
+| [MASTER-RABBIT-TRANSLATION-GUIDE.md](MASTER-RABBIT-TRANSLATION-GUIDE.md) | 토끼전 작품별 번역 가이드 |
 
 사이트 관리에는 본 규정과 해당 분야의 세부 규정이 함께 적용된다. 과거 작업 기록과 현재 운영 상태는 구분하며, 최신 main의 실제 파일 상태를 기준으로 한다. 규정 사이에 충돌이 발견되면 변경에 앞서 확인과 승인을 거친다.
 
