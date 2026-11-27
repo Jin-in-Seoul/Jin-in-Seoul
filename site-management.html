@@ -49,8 +49,13 @@ permalink: /site-management/
     .management-contents { margin: 0 0 32px; border: 1px solid #d8d8d8; }
     .management-contents ol { margin: 8px 0 0; padding-left: 1.5em; }
     .management-contents a, .management-markdown a { color: var(--link); overflow-wrap: anywhere; }
-    .management-document { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); scroll-margin-top: 20px; }
-    .management-document > h2 { margin-top: 0; }
+    .management-document { margin-top: 32px; padding-top: 0; scroll-margin-top: 20px; }
+    .management-document + .management-document { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); }
+    .management-page h2 { border-bottom: 0; padding-bottom: 0; }
+    .management-document > h2 { margin: 0 0 20px; }
+    .management-page + .site-footer { margin-top: 40px; }
+    .management-markdown > :last-child { margin-bottom: 0; }
+    .management-markdown hr { display: none; }
     .management-markdown { font-size: 16px; line-height: 1.8; overflow-wrap: anywhere; }
     .management-markdown h1 { font-size: 23px; margin: 28px 0 16px; }
     .management-markdown h2 { font-size: 20px; margin: 26px 0 12px; }
@@ -64,7 +69,9 @@ permalink: /site-management/
     .management-markdown code { font-size: 0.9em; }
     @media (max-width: 620px) {
       .management-overview, .management-contents { padding: 14px 16px; font-size: 14px; }
-      .management-document { margin-top: 36px; padding-top: 20px; }
+      .management-document { margin-top: 24px; }
+      .management-document + .management-document { margin-top: 32px; padding-top: 20px; }
+      .management-page + .site-footer { margin-top: 32px; }
       .management-markdown { font-size: 15px; }
     }
   </style>
@@ -99,7 +106,7 @@ permalink: /site-management/
         <h2>ABC — Site Operation and Maintenance Regulations</h2>
         {% capture management_markdown %}{% include_relative _management/en/ABC.md %}{% endcapture %}
         {% assign management_lines = management_markdown | split: management_newline %}
-        {% capture public_management_markdown %}{% for management_line in management_lines %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
+        {% capture public_management_markdown %}{% for management_line in management_lines offset:1 %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
         {% assign management_html = public_management_markdown | markdownify %}
         {% assign management_html = management_html | replace: ' id="', ' id="abc-' | replace: ' href="#', ' href="#abc-' %}
         {% assign management_html = management_html | replace: 'href="ABC.md"', 'href="#abc"' | replace: 'href="ABC.md#', 'href="#abc-' %}
@@ -121,7 +128,7 @@ permalink: /site-management/
         <h2>README — Management Overview</h2>
         {% capture management_markdown %}{% include_relative _management/en/README.md %}{% endcapture %}
         {% assign management_lines = management_markdown | split: management_newline %}
-        {% capture public_management_markdown %}{% for management_line in management_lines %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
+        {% capture public_management_markdown %}{% for management_line in management_lines offset:1 %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
         {% assign management_html = public_management_markdown | markdownify %}
         {% assign management_html = management_html | replace: ' id="', ' id="readme-' | replace: ' href="#', ' href="#readme-' %}
         {% assign management_html = management_html | replace: 'href="ABC.md"', 'href="#abc"' | replace: 'href="ABC.md#', 'href="#abc-' %}
@@ -143,7 +150,7 @@ permalink: /site-management/
         <h2>CSS Maintenance</h2>
         {% capture management_markdown %}{% include_relative _management/en/CSS-MAINTENANCE.md %}{% endcapture %}
         {% assign management_lines = management_markdown | split: management_newline %}
-        {% capture public_management_markdown %}{% for management_line in management_lines %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
+        {% capture public_management_markdown %}{% for management_line in management_lines offset:1 %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
         {% assign management_html = public_management_markdown | markdownify %}
         {% assign management_html = management_html | replace: ' id="', ' id="css-' | replace: ' href="#', ' href="#css-' %}
         {% assign management_html = management_html | replace: 'href="ABC.md"', 'href="#abc"' | replace: 'href="ABC.md#', 'href="#abc-' %}
@@ -165,7 +172,7 @@ permalink: /site-management/
         <h2>SEO Maintenance</h2>
         {% capture management_markdown %}{% include_relative _management/en/SEO-MAINTENANCE.md %}{% endcapture %}
         {% assign management_lines = management_markdown | split: management_newline %}
-        {% capture public_management_markdown %}{% for management_line in management_lines %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
+        {% capture public_management_markdown %}{% for management_line in management_lines offset:1 %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
         {% assign management_html = public_management_markdown | markdownify %}
         {% assign management_html = management_html | replace: ' id="', ' id="seo-' | replace: ' href="#', ' href="#seo-' %}
         {% assign management_html = management_html | replace: 'href="ABC.md"', 'href="#abc"' | replace: 'href="ABC.md#', 'href="#abc-' %}
@@ -187,7 +194,7 @@ permalink: /site-management/
         <h2>Asset Maintenance</h2>
         {% capture management_markdown %}{% include_relative _management/en/ASSET-MAINTENANCE.md %}{% endcapture %}
         {% assign management_lines = management_markdown | split: management_newline %}
-        {% capture public_management_markdown %}{% for management_line in management_lines %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
+        {% capture public_management_markdown %}{% for management_line in management_lines offset:1 %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
         {% assign management_html = public_management_markdown | markdownify %}
         {% assign management_html = management_html | replace: ' id="', ' id="assets-' | replace: ' href="#', ' href="#assets-' %}
         {% assign management_html = management_html | replace: 'href="ABC.md"', 'href="#abc"' | replace: 'href="ABC.md#', 'href="#abc-' %}
@@ -209,7 +216,7 @@ permalink: /site-management/
         <h2>Publication Log Policy</h2>
         {% capture management_markdown %}{% include_relative _management/en/PUBLICATION-LOG-POLICY.md %}{% endcapture %}
         {% assign management_lines = management_markdown | split: management_newline %}
-        {% capture public_management_markdown %}{% for management_line in management_lines %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
+        {% capture public_management_markdown %}{% for management_line in management_lines offset:1 %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
         {% assign management_html = public_management_markdown | markdownify %}
         {% assign management_html = management_html | replace: ' id="', ' id="publication-' | replace: ' href="#', ' href="#publication-' %}
         {% assign management_html = management_html | replace: 'href="ABC.md"', 'href="#abc"' | replace: 'href="ABC.md#', 'href="#abc-' %}
@@ -232,7 +239,7 @@ permalink: /site-management/
         {% capture management_markdown %}{% include_relative _management/en/PREMODERN-KOREAN-FICTION-TRANSLATION-GUIDE.md %}{% endcapture %}
         {% assign management_markdown = management_markdown | split: '## III. Work-specific Translation Guides' | first %}
         {% assign management_lines = management_markdown | split: management_newline %}
-        {% capture public_management_markdown %}{% for management_line in management_lines %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
+        {% capture public_management_markdown %}{% for management_line in management_lines offset:1 %}{% unless management_line contains 'JEON-UNCHI-TRANSLATION-GUIDE.md' or management_line contains 'MASTER-RABBIT-TRANSLATION-GUIDE.md' %}{{ management_line }}{{ management_newline }}{% endunless %}{% endfor %}{% endcapture %}
         {% assign management_html = public_management_markdown | markdownify %}
         {% assign management_html = management_html | replace: ' id="', ' id="translation-' | replace: ' href="#', ' href="#translation-' %}
         {% assign management_html = management_html | replace: 'href="ABC.md"', 'href="#abc"' | replace: 'href="ABC.md#', 'href="#abc-' %}
