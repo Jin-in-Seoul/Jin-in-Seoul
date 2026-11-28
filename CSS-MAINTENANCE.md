@@ -1,13 +1,13 @@
 # CSS maintenance — Jin-in-Seoul
 
-Last reviewed: 2026-10-14. This document describes the **current** architecture; it does not authorize restyling.
+Architecture and paragraph-formatting rules checked: 2026-11-29 (eight CSS files). Historical cache-version examples below were recorded on 2026-10-14; this document does not authorize restyling.
 
 ## Preservation and change-control principles
 
 1. **All existing `sweater/` files and diary typography are protected** (bold dates, spacing above/below dates, deliberate line breaks, paragraph formatting). Global CSS changes that could indirectly affect Sweater are excluded.
 2. All literary text, paragraph boundaries, headings, intentional blank lines and inline markup are preserved.
 3. Single-work or language adjustments use scoped stylesheets where appropriate and do not justify changes to `assets/style.css` alone.
-4. Korean/Japanese prose retains first-line indentation (normally `1em`), including the opening paragraph. For English/French, opening narrative paragraphs are flush left, later ordinary paragraphs retain `1em`. Indiscriminate removal of paragraph indentation is excluded.
+4. Paragraph indentation and spacing follow the established typography of each work, not a uniform language-based rule. Existing work-specific formatting must not be standardized or changed without authorization. In the global CSS, ordinary prose in A Dictionary of Galactic Extinction, short stories and Scarecrow Distance has no indentation and uses paragraph spacing (`text-indent: 0`, bottom margin `1.3em`); ordinary prose in Sweater and children's books retains its existing indentation (`1em`) and paragraph margin (`0`). Preserve existing exceptions for section numbers, dates, centred paragraphs and language-specific opening paragraphs in children's books.
 5. Section-number formatting is preserved. In short stories, `<p class="section-number">N</p>` is unindented. Japanese `the-basics-of-logic` uses this markup for sections 1–5.
 6. Repository-wide CSS cache-key changes require a verified reason and full affected-page audit. Different `?v=` values are cache keys, not different source CSS files.
 7. Stylesheet changes require prior inspection of selectors and HTML and post-commit retrieval of every changed file.
@@ -20,14 +20,14 @@ Last reviewed: 2026-10-14. This document describes the **current** architecture;
 | `a-dictionary-of-galactic-extinction/ko/entry-common.css` | Korean dictionary chapter layout | Korean dictionary chapters |
 | `a-dictionary-of-galactic-extinction/en/entry-common.css` | English dictionary chapter layout and opening paragraphs | English dictionary chapters |
 | `a-dictionary-of-galactic-extinction/fr/entry-common.css` | French dictionary chapter layout and opening paragraphs | French dictionary chapters |
-| `a-dictionary-of-galactic-extinction/ja/entry-common.css` | Japanese dictionary chapter layout; preserve first-line indent | Japanese dictionary chapters |
+| `a-dictionary-of-galactic-extinction/ja/entry-common.css` | Japanese dictionary chapter layout | Japanese dictionary chapters |
 | `short-stories/latin-first-paragraph.css` | English/French short-story opening paragraph and first paragraph after section number | Only linked English/French story pages |
 | `childrens-books/latin-first-paragraph.css` | English/French children's-book opening paragraph and first paragraph after `h2` | Only linked English/French children's-book pages |
 | `scarecrow-distance/latin-first-paragraph.css` | English/French Scarecrow Distance opening paragraph for each chapter | Only linked English/French chapters 1–4 |
 
 Stylesheet loading order: the global CSS is linked first; the work-specific CSS is linked afterward. Latin-specific stylesheets are not applied to Korean/Japanese pages.
 
-## Current cache-version inventory (examples, not a complete repository-wide audit)
+## Historical cache-version examples (2026-10-14; not a current inventory)
 
 - Homepage: `assets/style.css?v=088`
 - Short-story index: `assets/style.css?v=046`
