@@ -101,7 +101,6 @@ permalink: /site-management/
         <strong>Contents</strong>
         <ol>
           <li><a href="#abc">ABC — Site Operation and Maintenance Regulations</a></li>
-          <li><a href="#readme">README — Management Overview</a></li>
           <li><a href="#css">CSS Maintenance</a></li>
           <li><a href="#seo">SEO Maintenance</a></li>
           <li><a href="#assets">Asset Maintenance</a></li>
@@ -202,45 +201,6 @@ The site's management tools support publication planning, checking proposed chan
 
 <hr style="border:0;border-top:1px solid #d9d9d9;margin:28px 0 16px;">
 <p style="font-size:0.85em;color:#777;line-height:1.65;margin:0;">The Korean edition is the authoritative original of these regulations. This English public edition presents the approved operating principles. Full bilingual management documents and technical work history are preserved separately in the repository.</p>
-{% endcapture %}
-        {% assign management_html = public_management_snapshot | markdownify %}
-        {% assign management_link_parts = management_html | split: '<a ' %}
-        {% capture management_public_html %}{% for management_link_part in management_link_parts %}{% if forloop.first %}{{ management_link_part }}{% else %}{% assign management_opening_tag = management_link_part | split: '>' | first %}{% assign management_opening_prefix = management_opening_tag | append: '>' %}{% assign management_unlinked = management_link_part | remove_first: management_opening_prefix | remove_first: '</a>' %}{{ management_unlinked }}{% endif %}{% endfor %}{% endcapture %}
-        <div class="management-markdown">{{ management_public_html }}</div>
-      </section>
-
-      <section class="management-document" id="readme">
-        <h2>README — Management Overview</h2>
-        {% capture public_management_snapshot %}
-A multilingual archive of fiction.
-
-## 1. Site operation and maintenance
-
-Jin-in-Seoul is managed as an independent literary archive. The ABC regulations establish the rights of the author and the limits of technical management.
-
-## 2. CSS maintenance
-
-Published typography, page layout and the distinctive design of individual works are preserved.
-
-## 3. Search and site verification
-
-Search maintenance supports discoverability and verifies technical conditions without rewriting literary works.
-
-## 4. Asset maintenance
-
-Photographs, audio and digital editions follow preservation principles. Technical optimization never replaces the author's editorial decisions.
-
-## 5. Publication log maintenance
-
-Actual publication dates, language editions and historical records are preserved. Later decisions do not retrospectively change earlier events.
-
-## 6. Premodern Korean fiction translation
-
-Historical sources, modern Korean editions and foreign-language translations follow approved principles. Work-specific translation guides are maintained separately.
-
-## 7. Bilingual management documents
-
-The approved Korean original and its English translation are retained in the repository. This public edition is revised periodically and is not a live display of internal work history.
 {% endcapture %}
         {% assign management_html = public_management_snapshot | markdownify %}
         {% assign management_link_parts = management_html | split: '<a ' %}
