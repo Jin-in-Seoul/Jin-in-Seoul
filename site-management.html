@@ -122,17 +122,30 @@ These regulations aim to preserve the literary identity of Jin-in-Seoul, ensure 
 ## 2. Site Identity
 
 Jin-in-Seoul is a personal literary website presenting novels, short stories, children's books, essays, haiku, music and tales from premodern Korea.
-
-- English-speaking readers are given priority. The usual multilingual display order is English · 日本語 · Français · 한국어. Existing conventions for individual collections, including haiku and music, follow their respective detailed regulations and editorial principles.
 - Jin-in-Seoul is the pen name used for the creation and publication of works. Public author information follows the approved pen name.
 
-## 3. Operating Environment
+- English-speaking readers are given priority. The usual multilingual display order is English · 日本語 · Français · 한국어. Existing conventions for individual collections, including haiku and music, follow their respective detailed regulations and editorial principles.
+
+## 3. Preservation and Editing of Works
+
+- Literary texts, titles, translations, paragraph structures and distinctive typography are respected and preserved as the results of creative and editorial work.
+- Literary and editorial changes are subject to the author's decisions. Technical maintenance is distinguished from literary editing. Existing content or publication formats are not changed merely to improve management efficiency.
+- Foreign-language translations follow the approved Korean source text. For premodern Korean fiction, the established modern Korean edition, its source edition and the applicable translation regulations are followed.
+
+## 4. Design and Reader Experience
+
+- The site seeks simple and consistent literary typography.
+- Menus, links, buttons and other visual elements are used only when they have a clear function and are necessary.
+- Multilingual publication aims to provide works to readers in their own languages. Language selection is centred on work listings; additional language-switching functions within reading pages require separate approval.
+- Established typography and design appropriate to each work are maintained. In particular, the diary typography of Sweater and its related CSS are protected under the CSS maintenance regulations.
+
+## 5. Operating Environment
 
 - Official site: https://jin-in-seoul.com/
 - Publishing environment: GitHub Pages / Jekyll
 - Existing work URLs and publication structures are maintained on a continuing basis.
 
-## 4. Management Regulations
+## 6. Management Regulations
 
 These regulations establish the fundamental principles of site operation. Understanding the management system begins with this document and README. The following documents govern the individual areas.
 
@@ -147,33 +160,7 @@ These regulations establish the fundamental principles of site operation. Unders
 
 - Both these regulations and the relevant detailed regulations apply to site management. Historical work records are distinguished from the current operating state, which is determined by the actual latest files on main. Conflicts between regulations require clarification and approval before changes are made.
 
-## 5. Preservation and Editing of Works
-
-- Literary texts, titles, translations, paragraph structures and distinctive typography are respected and preserved as the results of creative and editorial work.
-- Literary and editorial changes are subject to the author's decisions. Technical maintenance is distinguished from literary editing. Existing content or publication formats are not changed merely to improve management efficiency.
-- Foreign-language translations follow the approved Korean source text. For premodern Korean fiction, the established modern Korean edition, its source edition and the applicable translation regulations are followed.
-
-## 6. Design and Reader Experience
-
-- The site seeks simple and consistent literary typography.
-- Menus, links, buttons and other visual elements are used only when they have a clear function and are necessary.
-- Multilingual publication aims to provide works to readers in their own languages. Language selection is centred on work listings; additional language-switching functions within reading pages require separate approval.
-- Established typography and design appropriate to each work are maintained. In particular, the diary typography of Sweater and its related CSS are protected under the CSS maintenance regulations.
-
-## 7. Technical Maintenance
-
-Technical maintenance aims to improve the stability of the existing publishing system, accuracy of work and management efficiency.
-
-- New management functions are arranged independently of existing HTML, CSS and publication structures wherever possible. Work scope is established in advance, and changes outside the approved scope require separate review and approval. Requests for review or opinions are distinguished from approval to make changes.
-
-## 8. Management Tools
-
-The site's management tools support publication planning, checking proposed changes and reporting deployment status. They are maintained separately from published literary works and operate as read-only aids.
-
-- Tools do not have independent authority to alter or publish literary works. Proposals require the author's review and approval.
-- Technical tools are replaceable; the published works and the reader experience take priority.
-
-## 9. Publication of Works
+## 7. Publication of Works
 
 New works and translations require the following checks as applicable:
 
@@ -183,6 +170,19 @@ New works and translations require the following checks as applicable:
 - Publication Log
 - Publication records and search information reflect works and language editions actually published. Publication dates, language order and preservation of existing records follow the Publication Log policy.
 - Decisions concerning digital assets, including the suspension of PDF and EPUB publication, follow the asset maintenance regulations.
+
+## 8. Technical Maintenance
+
+Technical maintenance aims to improve the stability of the existing publishing system, accuracy of work and management efficiency.
+
+- New management functions are arranged independently of existing HTML, CSS and publication structures wherever possible. Work scope is established in advance, and changes outside the approved scope require separate review and approval. Requests for review or opinions are distinguished from approval to make changes.
+
+## 9. Management Tools
+
+The site's management tools support publication planning, checking proposed changes and reporting deployment status. They are maintained separately from published literary works and operate as read-only aids.
+
+- Tools do not have independent authority to alter or publish literary works. Proposals require the author's review and approval.
+- Technical tools are replaceable; the published works and the reader experience take priority.
 
 ## 10. Change Control and Verification
 
@@ -218,25 +218,25 @@ A multilingual archive of fiction.
 
 Jin-in-Seoul is managed as an independent literary archive. The ABC regulations establish the rights of the author and the limits of technical management.
 
-## 2. Premodern Korean fiction translation
+## 2. CSS maintenance
 
-Historical sources, modern Korean editions and foreign-language translations follow approved principles. Work-specific translation guides are maintained separately.
+Published typography, page layout and the distinctive design of individual works are preserved.
 
-## 3. Publication log maintenance
+## 3. Search and site verification
 
-Actual publication dates, language editions and historical records are preserved. Later decisions do not retrospectively change earlier events.
+Search maintenance supports discoverability and verifies technical conditions without rewriting literary works.
 
 ## 4. Asset maintenance
 
 Photographs, audio and digital editions follow preservation principles. Technical optimization never replaces the author's editorial decisions.
 
-## 5. CSS maintenance
+## 5. Publication log maintenance
 
-Published typography, page layout and the distinctive design of individual works are preserved.
+Actual publication dates, language editions and historical records are preserved. Later decisions do not retrospectively change earlier events.
 
-## 6. Search and site verification
+## 6. Premodern Korean fiction translation
 
-Search maintenance supports discoverability and verifies technical conditions without rewriting literary works.
+Historical sources, modern Korean editions and foreign-language translations follow approved principles. Work-specific translation guides are maintained separately.
 
 ## 7. Bilingual management documents
 
@@ -253,12 +253,11 @@ The approved Korean original and its English translation are retained in the rep
         {% capture public_management_snapshot %}
 ## 1. Preservation and change-control principles
 
-- The distinctive diary layout and typography of *Sweater* are protected against direct and indirect changes.
 - Literary text, paragraph breaks, headings, intentional blank lines and formatting are preserved.
 - Individual works and languages retain their established styles. Global design changes do not automatically override them.
+- Shared style changes require an explicit reason, the author's approval where necessary and review of their effect on published works.
 - Korean and Japanese prose retains its first-line indentation; English and French follow their approved opening-paragraph conventions.
 - Section-number formatting is preserved where it forms part of a work's structure.
-- Shared style changes require an explicit reason, the author's approval where necessary and review of their effect on published works.
 
 ## 2. Design and reader experience
 
@@ -266,6 +265,7 @@ The approved Korean original and its English translation are retained in the rep
 - Similar formatting rules may protect separate works and are not consolidated merely for code simplicity.
 - Technical maintenance does not authorize redesign or alteration of the literary text.
 - Changes are reviewed for desktop and mobile readers.
+- The distinctive diary layout and typography of *Sweater* are protected against direct and indirect changes.
 {% endcapture %}
         {% assign management_html = public_management_snapshot | markdownify %}
         {% assign management_link_parts = management_html | split: '<a ' %}
@@ -278,10 +278,12 @@ The approved Korean original and its English translation are retained in the rep
         {% capture public_management_snapshot %}
 ## 1. Scope and preservation rules
 
-- Literary prose, translations, paragraph breaks, intentional whitespace, typography and the diary layout of *Sweater* are protected during search-engine maintenance.
+- Literary prose, translations, paragraph breaks, intentional whitespace and typography are protected during search-engine maintenance.
+- Search optimization does not override the author's literary or design decisions.
 - Search-related changes concern verified metadata, discovery, language references and technical site configuration, not literary editing.
 - Automated warnings require investigation and do not independently authorize changes.
 - A successful technical audit is not proof of universal URL validity or search-engine indexing.
+- The diary layout of *Sweater* is protected during search-engine maintenance.
 - Existing site verification and analytics settings are preserved unless changes have been approved.
 
 ## 2. Publication and language information
@@ -289,7 +291,6 @@ The approved Korean original and its English translation are retained in the rep
 - Public search information reflects works and language editions actually published.
 - Canonical and alternate-language references identify the corresponding published editions.
 - Intentional redirects and pages excluded from indexing retain their approved treatment.
-- Search optimization does not override the author's literary or design decisions.
 
 ## 3. Authorship and attribution
 
@@ -316,6 +317,8 @@ The approved Korean original and its English translation are retained in the rep
 
 This document defines the management principles for images, audio files, PDF editions, and EPUB editions published on Jin-in-Seoul.com.
 
+- This is a technical management document. The author determines which photographs appear in an essay, how many are used, and where they are placed. Technical guidelines do not override literary or editorial decisions.
+- Existing published assets must not be reorganized or modified solely for consistency. Changes to published assets require a specific reason and the author's authorization.
 Objectives:
 
 - Preservation of the existing repository structure and stable published URLs.
@@ -323,26 +326,39 @@ Objectives:
 - Prevention of accidental replacement or deletion of published assets.
 - Separation of original materials from web-ready files.
 - Consistent procedures for future additions.
-- Existing published assets must not be reorganized or modified solely for consistency. Changes to published assets require a specific reason and the author's authorization.
-- This is a technical management document. The author determines which photographs appear in an essay, how many are used, and where they are placed. Technical guidelines do not override literary or editorial decisions.
 
-## 2. Historical authenticity and original photographs
+## 2. Preservation and change control
 
+The existing published website is the reference state.
+
+The following practices are excluded:
+
+- Moving existing asset directories or renaming published files without approval.
+- Replacing originals with compressed derivatives.
+- Automatic recompression, restyling or other editing of published media.
+- Deletion of apparently unused files without checking all references.
+- Modification of literary text or paragraph boundaries during asset maintenance.
+- Changes to photo selection or layout without the author's decision.
+- Resumption of PDF/EPUB publication without authorization.
+- Approved changes require prior identification of affected file references, public URLs and cache or indexing consequences, together with confirmation of the latest GitHub `main` and file SHA. Subsequent verification includes retrieval of every changed file and separate confirmation of Pages deployment when feasible.
+
+## 3. Historical authenticity and original photographs
+
+- The author decides photograph selection, count, order, and placement. Rearrangement of photographs, paragraphs or captions requires approval.
 - Historical travel photographs are records of the time and place in which they were made. Their original appearance is preserved. Preparation for web publication should ordinarily be limited to resizing, compression, format conversion, and necessary technical corrections.
-- Visual appeal alone does not justify changes to colors, composition or depicted content. Routine optimization excludes removal, replacement or generation of elements in historical photographs. Any substantive visual edit requires the author's explicit decision.
 - Original files are preserved in personal storage outside GitHub, with separate optimized web copies and an independent backup. Originals are not overwritten during conversion.
-- The existing `/assets/images/originals/` directory may contain legacy originals; changes require individual file review. Storage standardization alone does not justify deletion or relocation.
+- Visual appeal alone does not justify changes to colors, composition or depicted content. Routine optimization excludes removal, replacement or generation of elements in historical photographs. Any substantive visual edit requires the author's explicit decision.
 - Photographs should serve the author's narrative. There is no fixed number of images per essay.
 - Meaningful filenames and descriptive `alt` attributes are used. Where appropriate, image dimensions are specified and images below the initial viewport are lazy-loaded.
-- The author decides photograph selection, count, order, and placement. Rearrangement of photographs, paragraphs or captions requires approval.
+- The existing `/assets/images/originals/` directory may contain legacy originals; changes require individual file review. Storage standardization alone does not justify deletion or relocation.
 
-## 3. Audio management
+## 4. Audio management
 
 - Existing recordings and their published references are preserved.
 - Replacements, renaming or alteration require the author's approval.
 - New audio is checked for playback, completeness and its relationship to the published work.
 
-## 4. Digital editions
+## 5. Digital editions
 
 - Downloadable PDF and EPUB publication remains suspended under the established policy.
 - Uploads and updates of downloadable PDF and EPUB editions are suspended until a reliable production and verification process is established. Existing errors in those editions are not to be corrected during this suspension.
@@ -357,14 +373,16 @@ A newly authorized release should be verified for:
 - Filename, version, and download-link accuracy.
 - Existing versioned downloads are not silently overwritten.
 
-## 5. File naming
+## 6. File naming
 
 - New media use clear, consistent names, but already published files are not renamed merely to achieve uniformity.
 - Preserving established URLs and originals takes priority over naming uniformity.
 
-## 6. Storage and performance
+## 7. Storage and performance
 
 Assets stored in the repository contribute to repository size and, when published, may contribute to GitHub Pages site size and bandwidth. Repository size and published-site size are different measurements.
+
+- No automatic image-count limit or universal per-essay size cap applies. Total size is a review signal, and the author decides the final composition. Improve compression or loading behavior first if a page is unusually heavy.
 
 Before publishing a photo essay or substantial new media collection:
 
@@ -374,24 +392,8 @@ Before publishing a photo essay or substantial new media collection:
 - Review of likely page-loading impact on mobile connections, including initial images and those loaded later.
 - Review of relevant repository and GitHub Pages storage constraints.
 - Avoidance of redundant copies and incremental uploads where useful.
-- No automatic image-count limit or universal per-essay size cap applies. Total size is a review signal, and the author decides the final composition. Improve compression or loading behavior first if a page is unusually heavy.
 - Audio and downloadable editions may use more storage than optimized photographs. Storage growth is reviewed periodically.
 - External hosting is not the default policy. Its adoption requires actual storage, bandwidth or operational needs that justify additional complexity.
-
-## 7. Preservation and change control
-
-The existing published website is the reference state.
-
-The following practices are excluded:
-
-- Moving existing asset directories or renaming published files without approval.
-- Replacing originals with compressed derivatives.
-- Automatic recompression, restyling or other editing of published media.
-- Deletion of apparently unused files without checking all references.
-- Modification of literary text or paragraph boundaries during asset maintenance.
-- Changes to photo selection or layout without the author's decision.
-- Resumption of PDF/EPUB publication without authorization.
-- Approved changes require prior identification of affected file references, public URLs and cache or indexing consequences, together with confirmation of the latest GitHub `main` and file SHA. Subsequent verification includes retrieval of every changed file and separate confirmation of Pages deployment when feasible.
 {% endcapture %}
         {% assign management_html = public_management_snapshot | markdownify %}
         {% assign management_link_parts = management_html | split: '<a ' %}
@@ -408,17 +410,24 @@ The Publication Log is a chronological historical record of releases, translatio
 
 This document establishes the rules for maintaining that record consistently over time. It governs the Publication Log only; it does not change the names, wording, translation, or publication dates on individual literary pages. The author has final editorial authority.
 
-## 2. Record language and work titles
+## 2. Actual publication dates and history
+
+- Each edition is recorded on the date it was actually published, not the date of the original work or another translation.
+- Language editions released on different days retain separate dated entries.
+- Language releases are not backdated or combined merely to form a four-language entry.
+- Historical log entries describe what was known, announced, or released at that time. Past plans and publication milestones remain historical records even when plans change; later decisions are documented under their own dates.
+- Dates, edition languages, chapter/part numbers, release sequence, PDF/EPUB details and the distinction between releases and maintenance events are preserved.
+- Corrections to factual errors may be made with the author's approval and should not invent a new publication event.
+
+## 3. Record language and work titles
 
 - Log dates, headings, prose and descriptions are written in English.
 - Each work's established English title serves as its common identifier, including when recording Japanese, French, and Korean editions.
 - English titles are verified against the live English edition, listing or other approved source before entry. New official titles are not established by guesswork or retranslation.
 - Where a section heading already identifies the work in English, the language-specific entry may simply say "Japanese edition — Chapters 1–4 added" without repeating its title.
 - Groups of short stories use the same approved English titles in every language entry.
-- Appendix titles in the Publication Log use the established official English title, regardless of edition language. The applicable title is Appendix — An Index for Those Lost in the Galaxy for the corresponding Korean and English editions of *A Dictionary of Galactic Extinction*. The edition's own published table of contents may retain its language-specific title. Invented translations and confusion between this common title and individual edition dates or language identities are excluded.
-- Exceptions: Haiku may retain Japanese originals with English titles; Music may retain the existing English/Korean/Japanese bilingual or multilingual song-title presentation. Standardization of those titles requires author approval.
 
-## 3. Language order
+## 4. Language order
 
 When editions or languages share the same date and priority, the following order applies:
 
@@ -428,15 +437,6 @@ English → Japanese → French → Korean
 - When only some languages are present, their relative order follows that sequence.
 - Separate historical dates retain their order regardless of language priority.
 - Publication is not inferred from an absent release record.
-
-## 4. Actual publication dates and history
-
-- Each edition is recorded on the date it was actually published, not the date of the original work or another translation.
-- Language editions released on different days retain separate dated entries.
-- Language releases are not backdated or combined merely to form a four-language entry.
-- Historical log entries describe what was known, announced, or released at that time. Past plans and publication milestones remain historical records even when plans change; later decisions are documented under their own dates.
-- Dates, edition languages, chapter/part numbers, release sequence, PDF/EPUB details and the distinction between releases and maintenance events are preserved.
-- Corrections to factual errors may be made with the author's approval and should not invent a new publication event.
 
 ## 5. Event wording
 
@@ -452,22 +452,24 @@ The following terms correspond to the event that actually occurred:
 - The same approved English title applies wherever a work recurs in the log.
 - Where a particular log entry includes the work's subtitle, the same approved subtitle applies to later dated entries referring to that release when relevant. A later language release alone does not justify silently dropping a subtitle.
 - New releases require consistency verification between the English page title and subtitle, index/listing and proposed log entry, rather than conjecture.
+- Appendix titles in the Publication Log use the established official English title, regardless of edition language. The applicable title is Appendix — An Index for Those Lost in the Galaxy for the corresponding Korean and English editions of *A Dictionary of Galactic Extinction*. The edition's own published table of contents may retain its language-specific title. Invented translations and confusion between this common title and individual edition dates or language identities are excluded.
+- Exceptions: Haiku may retain Japanese originals with English titles; Music may retain the existing English/Korean/Japanese bilingual or multilingual song-title presentation. Standardization of those titles requires author approval.
 - Original wording in Haiku and Music is preserved under their exceptions.
 
-## 7. Editing and publishing procedure
-
-- Publication dates, approved titles, languages and events are verified against the actual editions.
-- New entries follow the established chronology and language-order rules.
-- Review alone does not authorize changes; the author's approval is required.
-- Historic entries remain intact, and authorized updates are checked for accuracy.
-
-## 8. Scope and safeguards
+## 7. Scope and safeguards
 
 - This policy does not authorize edits to the underlying literary works, translations, original photographs, audio, PDF/EPUB files, site layouts, or unrelated navigation.
 - Historical formatting cleanup must not change a release's meaning or its actual date.
 - Uncertain English translations of formerly non-English-only titles require verification or author approval, not invented equivalents.
 - Apparent inconsistencies require review of actual source pages and publication history before either entry is changed.
 - The author may revise this policy; changes should be made explicitly and documented in the repository.
+
+## 8. Editing and publishing procedure
+
+- Publication dates, approved titles, languages and events are verified against the actual editions.
+- New entries follow the established chronology and language-order rules.
+- Review alone does not authorize changes; the author's approval is required.
+- Historic entries remain intact, and authorized updates are checked for accuracy.
 {% endcapture %}
         {% assign management_html = public_management_snapshot | markdownify %}
         {% assign management_link_parts = management_html | split: '<a ' %}
